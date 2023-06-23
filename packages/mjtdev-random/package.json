@@ -1,0 +1,21 @@
+{
+  "name": "@mjtdev/random",
+  "version": "1.0.6",
+  "description": "mjtdev random",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "watch": "watch src 'npm run build'"
+  },
+  "keywords": [],
+  "author": "@mjtdev",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "pure-rand": "^6.0.2"
+  }
+}

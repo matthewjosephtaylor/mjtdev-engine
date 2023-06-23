@@ -1,0 +1,1 @@
+{"version":3,"file":"drawOnTexture.d.ts","sourceRoot":"","sources":["../../src/texture/drawOnTexture.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,uBAAuB,EAAE,MAAM,WAAW,CAAC;AAGpE,eAAO,MAAM,aAAa,YACf,cAAc,gBAEhB,uBAAuB,QACtB;IAAE,KAAK,EAAE,MAAM,CAAC;IAAC,MAAM,EAAE,MAAM,CAAC;CAAE,KACrC,IAAI,SAMV,CAAC"}

@@ -1,0 +1,21 @@
+import { assertValue } from "@mjtdev/assert/dist/assertValue";
+import { isDefined } from "@mjtdev/object";
+import { Sprite, SpriteManager } from "babylonjs";
+export const getSpriteManager = (scene, name, options = {}) => {
+    const managerMaybe = scene?.spriteManagers?.find((sm) => sm.name === name);
+    if (isDefined(managerMaybe)) {
+        return managerMaybe;
+    }
+    const { capacity, cellSize, imgUrl } = options;
+    return new SpriteManager(name, imgUrl, capacity, cellSize, scene);
+};
+export const getSprite = (scene, name, spriteManagerName) => {
+    const spriteManager = assertValue(getSpriteManager(scene, spriteManagerName));
+    const spriteMaybe = spriteManager?.sprites?.find((s) => s.name === name);
+    if (isDefined(spriteMaybe)) {
+        return spriteMaybe;
+    }
+    return new Sprite(name, spriteManager);
+};
+export const Sprites = { getSpriteManager, getSprite };
+//# sourceMappingURL=Sprites.js.map

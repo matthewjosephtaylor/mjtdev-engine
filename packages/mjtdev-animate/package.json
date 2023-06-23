@@ -1,0 +1,19 @@
+{
+  "name": "@mjtdev/animate",
+  "version": "1.0.3",
+  "description": "@mjtdev",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "tsc -b",
+    "watch": "watch ./src 'npm run build'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {}
+}

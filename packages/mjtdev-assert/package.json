@@ -1,0 +1,17 @@
+{
+  "name": "@mjtdev/assert",
+  "version": "1.0.0",
+  "description": "@mjtdev assertions",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "tsc -b",
+    "watch": "watch ./src 'npm run build'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Materials.js","sourceRoot":"","sources":["../../src/material/Materials.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAE5C,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAClD,OAAO,EAAE,sBAAsB,EAAE,MAAM,0BAA0B,CAAC;AAsBlE,MAAM,CAAC,MAAM,SAAS,GAAG;IACvB,WAAW;IACX,cAAc;IACd,sBAAsB;CACvB,CAAC"}

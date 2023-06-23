@@ -1,0 +1,1 @@
+{"version":3,"file":"AssertionMessage.js","sourceRoot":"","sources":["../../src/type/AssertionMessage.ts"],"names":[],"mappings":"","sourcesContent":["\nexport type AssertionMessage = string | (() => unknown);\n"]}

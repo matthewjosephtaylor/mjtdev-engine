@@ -1,0 +1,1 @@
+{"version":3,"file":"updateTranslucency.d.ts","sourceRoot":"","sources":["../../src/model/updateTranslucency.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAuB,MAAM,WAAW,CAAC;AAG9D,eAAO,MAAM,kBAAkB,UAAW,uBAAuB,SAiChE,CAAC;AAEF,MAAM,MAAM,uBAAuB,GAAG;IACpC,IAAI,EAAE,YAAY,CAAC;IACnB,KAAK,EAAE,MAAM,CAAC;IACd,cAAc,EAAE,MAAM,CAAC;IACvB,WAAW,EAAE,MAAM,CAAC;CACrB,CAAC"}

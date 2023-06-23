@@ -1,0 +1,3 @@
+import { Point } from "./type/Point";
+export declare const scalerPoint: (scale: Point) => ((value: import("./type/Point").Point0) => import("./type/Point").Point0) | ((value: import("./type/Point").Point1) => import("./type/Point").Point1) | ((value: import("./type/Point").Point2) => import("./type/Point").Point2) | ((value: import("./type/Point").Point3) => import("./type/Point").Point3) | ((value: import("./type/Point").Point4) => import("./type/Point").Point4);
+//# sourceMappingURL=scalerPoint.d.ts.map

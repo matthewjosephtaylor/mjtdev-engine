@@ -1,0 +1,26 @@
+{
+  "name": "@mjtdev/color",
+  "version": "1.0.7",
+  "description": "@mjtdev",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "start": "webpack serve",
+    "build": "npx tsc -b",
+    "watch": "watch ./src 'npm run build'",
+    "test": "node dist/TEST.js"
+  },
+  "keywords": [
+    "color"
+  ],
+  "author": "@mjtdev",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "@types/color": "^3.0.3",
+    "color": "^4.2.3"
+  }
+}

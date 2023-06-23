@@ -1,0 +1,1 @@
+{"version":3,"file":"immediateHashOf.js","sourceRoot":"","sources":["../src/immediateHashOf.ts"],"names":[],"mappings":";;;AAEA,qEAAkE;AAG3D,MAAM,eAAe,GAAG,KAAK,EAClC,KAAwB,EACxB,SAA6B,EAC7B,EAAE;IACF,MAAM,MAAM,GAAG,IAAA,+CAAsB,EAAC,KAAK,CAAC,CAAC;IAC7C,OAAO,MAAM,CAAC,MAAM,CAAC,MAAM,CAAC,SAAS,EAAE,MAAM,CAAC,CAAC;AACjD,CAAC,CAAC;AANW,QAAA,eAAe,mBAM1B"}

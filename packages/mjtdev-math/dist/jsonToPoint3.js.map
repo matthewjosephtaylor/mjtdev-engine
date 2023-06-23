@@ -1,0 +1,1 @@
+{"version":3,"file":"jsonToPoint3.js","sourceRoot":"","sources":["../src/jsonToPoint3.ts"],"names":[],"mappings":"AAGA,MAAM,UAAU,YAAY,CAAC,IAAY;IACvC,IAAI,IAAI,KAAK,SAAS,EAAE;QACtB,OAAO,SAAS,CAAC;KAClB;IACD,OAAO,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC;AAC1B,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"MaterialTypeMap.d.ts","sourceRoot":"","sources":["../../src/material/MaterialTypeMap.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,gBAAgB,EAAE,MAAM,WAAW,CAAC;AAE1D,MAAM,MAAM,eAAe,GAAG;IAC5B,QAAQ,EAAE,gBAAgB,CAAC;IAC3B,GAAG,EAAE,WAAW,CAAC;CAClB,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"builder.d.ts","sourceRoot":"","sources":["../../src/color/builder.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,UAAU,EAAE,YAAY,EAAE,MAAM,cAAc,CAAC;AAGnE,wBAAgB,OAAO,CAAC,EACtB,KAAK,EACL,KAAa,GACd,EAAE;IACD,KAAK,CAAC,EAAE,SAAS,CAAC;IAClB,KAAK,CAAC,EAAE,UAAU,CAAC;CACpB,GAAG,YAAY,CA0Bf"}

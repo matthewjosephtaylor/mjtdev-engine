@@ -1,0 +1,1 @@
+{"version":3,"file":"randomColor.js","sourceRoot":"","sources":["../../src/color/randomColor.ts"],"names":[],"mappings":";;;;;;AAAA,kDAA6B;AAE7B,SAAgB,WAAW,CAAC,SAAuB,IAAI,CAAC,MAAM;IAC5D,OAAO,eAAQ,CAAC,GAAG,CAAC;QAClB,GAAG,GAAG,MAAM,EAAE;QACd,GAAG,GAAG,MAAM,EAAE;QACd,GAAG,GAAG,MAAM,EAAE;KACf,CAAC,CAAC,QAAQ,EAAE,CAAC;AAChB,CAAC;AAND,kCAMC"}

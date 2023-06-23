@@ -1,0 +1,1 @@
+{"version":3,"file":"toggleInspector.js","sourceRoot":"","sources":["../../src/scene/toggleInspector.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,MAAM,eAAe,GAAG,CAAC,KAAY,EAAE,EAAE;IAC9C,IAAI,KAAK,CAAC,UAAU,CAAC,SAAS,EAAE,EAAE;QAChC,KAAK,CAAC,UAAU,CAAC,IAAI,EAAE,CAAC;KACzB;SAAM;QACL,KAAK,CAAC,UAAU,CAAC,IAAI,EAAE,CAAC;KACzB;AACH,CAAC,CAAC"}

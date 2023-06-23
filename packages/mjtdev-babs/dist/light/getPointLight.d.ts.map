@@ -1,0 +1,1 @@
+{"version":3,"file":"getPointLight.d.ts","sourceRoot":"","sources":["../../src/light/getPointLight.ts"],"names":[],"mappings":"AAAA,OAAO,EAAc,KAAK,EAAE,MAAM,WAAW,CAAC;AAE9C,OAAO,EAAE,iBAAiB,EAAE,MAAM,UAAU,CAAC;AAI7C,eAAO,MAAM,aAAa,UACjB,KAAK,QACN,MAAM,YACH,iBAAiB,SAO3B,CAAC"}

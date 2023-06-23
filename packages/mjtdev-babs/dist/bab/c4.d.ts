@@ -1,0 +1,3 @@
+import { Color4 } from "babylonjs";
+export declare const c4: (color: string) => Color4;
+//# sourceMappingURL=c4.d.ts.map

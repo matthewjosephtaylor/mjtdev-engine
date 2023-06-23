@@ -1,0 +1,1 @@
+{"version":3,"file":"isEqual.js","sourceRoot":"","sources":["../src/isEqual.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,MAAM,CAAC,MAAM,OAAO,GAAG,CAAC,CAAQ,EAAE,CAAQ,EAAE,EAAE;IAC5C,OAAO,aAAa,CAAC,CAAC,EAAE,CAAC,CAAC,KAAK,CAAC,CAAC;AACnC,CAAC,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"pickMesh.d.ts","sourceRoot":"","sources":["../../src/mesh/pickMesh.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,EAAU,KAAK,EAAE,MAAM,WAAW,CAAC;AAEhE,eAAO,MAAM,QAAQ,UACZ,KAAK,KACT,MAAM,KACN,MAAM;YAEC,MAAM;sBACI,YAAY,KAAK,OAAO;mBAU7C,CAAC"}

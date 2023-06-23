@@ -1,0 +1,2 @@
+export declare const forEach: <O extends object, K extends keyof O>(obj: O, consumer: (key: K, value: O[K]) => void, errorHandler?: (error: unknown, key: K, value: O[K]) => void) => void;
+//# sourceMappingURL=forEach.d.ts.map

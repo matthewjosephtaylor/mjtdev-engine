@@ -1,0 +1,13 @@
+import { AbstractMesh } from "babylonjs";
+import { Point3, toVec3 } from "@mjtdev/math";
+
+export const calcTopOfMeshWorldPosition = (mesh: AbstractMesh) => {
+  mesh.computeWorldMatrix(true);
+  mesh.refreshBoundingInfo();
+  const [x, y, z] = toVec3(mesh.getAbsolutePosition());
+
+  // const radius = mesh.getBoundingInfo().boundingSphere.radius;
+  const radius = mesh.getBoundingInfo().boundingSphere.radius;
+  // const top = mesh.getBoundingInfo().boundingBox.
+  return [x, y, z - radius] as Point3;
+};

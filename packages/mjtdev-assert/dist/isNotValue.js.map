@@ -1,0 +1,1 @@
+{"version":3,"file":"isNotValue.js","sourceRoot":"","sources":["../src/isNotValue.ts"],"names":[],"mappings":";;;AAAA,uCAAoC;AAGpC,SAAgB,UAAU,CAAC,KAAc;IACvC,OAAO,CAAC,IAAA,iBAAO,EAAC,KAAK,CAAC,CAAC;AACzB,CAAC;AAFD,gCAEC","sourcesContent":["import { isValue } from \"./isValue\";\n\n\nexport function isNotValue(maybe: unknown): boolean {\n  return !isValue(maybe);\n}\n"]}

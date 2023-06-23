@@ -1,0 +1,73 @@
+import { times } from "./times";
+import { timesGen } from "./timesGen";
+import { isIterable } from "./type/isIterable";
+export declare const Objects: {
+    isIterator: <T>(maybe: unknown) => maybe is Iterator<T, any, undefined>;
+    isArrayLike: <T_1>(maybe: unknown) => maybe is ArrayLike<T_1>;
+    times: typeof times;
+    first: <O, T_2 extends O>(obj: O | Iterator<O, T_2, undefined> | O[], typeGuard?: import("..").TypeGuard<T_2>) => T_2;
+    last: <T_3>(obj: T_3[]) => T_3;
+    fix: <T_4>(v: T_4) => Readonly<import("..").FixedBrand<T_4>>;
+    iff: <T_5, R>(value: T_5, mapper: (v: NonNullable<T_5>) => R) => R;
+    iffTyped: <T_6, R_1, G>(typeGuard: (maybe: unknown) => maybe is G, value: T_6, mapper: (v: T_6 & G) => R_1) => R_1;
+    includesUndefined: (...arr: unknown[]) => boolean;
+    isDefined: <T_7>(obj: T_7) => obj is NonNullable<T_7>;
+    isUndefined: <T_8>(obj: T_8) => obj is null;
+    omit: <K extends string | number, T_9 extends { [k in K]: unknown; }>(object: T_9, key: K) => Omit<T_9, K>;
+    omitUnsafe: <K_1 extends string | number, T_10 extends { [k_1 in K_1]: unknown; }>(object: T_10, key: K_1) => Omit<T_10, K_1>;
+    orElse: <T_11>(o: T_11, e: T_11) => T_11;
+    removeUndefinedValues: <T_12 extends object>(obj: object) => Partial<T_12>;
+    toMany: <T_13>(obj: T_13 | Iterable<T_13> | T_13[]) => T_13[];
+    set: <O_1 extends object, K_2 extends keyof O_1 = keyof O_1, V extends O_1[K_2] = O_1[K_2]>(obj: O_1, key: K_2, value: V) => O_1 & { [k_2 in K_2]: V; };
+    setUnsafe: <O_2 extends object, K_3 extends keyof O_2 = keyof O_2, V_1 extends O_2[K_3] = O_2[K_3]>(obj: O_2, key: K_3, value: V_1) => O_2 & { [k_3 in K_3]: V_1; };
+    get: <O_3 extends object, K_4 extends keyof O_3 = keyof O_3>(obj: O_3, key: K_4, defaultValue?: O_3[K_4]) => O_3[K_4];
+    update: <O_4 extends object, K_5 extends keyof O_4>(obj: O_4, key: K_5, mapper: (value: O_4[K_5]) => O_4[K_5]) => O_4;
+    updateUnsafe: <O_5 extends object, K_6 extends keyof O_5>(obj: O_5, key: K_6, mapper: (value: O_5[K_6]) => O_5[K_6]) => O_5;
+    entries: <O_6 extends object, K_7 extends keyof O_6, V_2 = O_6[K_7]>(obj: O_6) => [K_7, V_2][];
+    keys: <O_7 extends object, K_8 extends keyof O_7>(obj: O_7) => K_8[];
+    values: <O_8 extends object, V_3 = O_8[keyof O_8]>(obj: O_8) => V_3[];
+    forEach: <O_9 extends object, K_9 extends keyof O_9>(obj: O_9, consumer: (key: K_9, value: O_9[K_9]) => void, errorHandler?: (error: unknown, key: K_9, value: O_9[K_9]) => void) => void;
+    filter: <O_10 extends object, K_10 extends keyof O_10, V_4 extends O_10[K_10]>(obj: O_10, predicate: (key: K_10, value: V_4) => boolean) => [K_10, V_4][];
+    chain: <T_14>(initial: T_14, mappers: ((v: T_14) => T_14)[]) => T_14;
+    fromEntries: <K_11 extends string | number | symbol, V_5>(entries: readonly (readonly [K_11, V_5])[]) => Record<K_11, V_5>;
+    fromEntriesToMultimap: <K_12 extends string | number | symbol, V_6>(entries: [K_12, V_6][]) => Record<K_12, V_6[]>;
+    freeze: <T_15>(v: T_15) => Readonly<T_15>;
+    hasKey: (obj: object, key: string | string[]) => boolean;
+    tuple0: () => [];
+    tuple1: <A>(a: A) => import("./tuples").Tuple1<A>;
+    tuple2: <A_1, B>(a: A_1, b: B) => import("./tuples").Tuple2<A_1, B>;
+    tuple3: <A_2, B_1, C>(a: A_2, b: B_1, c: C) => import("./tuples").Tuple3<A_2, B_1, C>;
+    tuple4: <A_3, B_2, C_1, D>(a: A_3, b: B_2, c: C_1, d: D) => import("./tuples").Tuple4<A_3, B_2, C_1, D>;
+    tuple5: <A_4, B_3, C_2, D_1, E>(a: A_4, b: B_3, c: C_2, d: D_1, e: E) => import("./tuples").Tuple5<A_4, B_3, C_2, D_1, E>;
+    safe: <R_2>(producer: () => R_2, options?: Partial<{
+        quiet: boolean;
+        def: R_2;
+        onError: import("..").ValueProducer<string>;
+    }>) => R_2;
+    safeAsync: <R_3>(producer: () => R_3 | Promise<R_3>, options?: Partial<{
+        quiet: boolean;
+        def: R_3;
+        onError: import("..").ValueProducer<string>;
+    }>) => Promise<R_3>;
+    valueOf: <T_16>(valueProducer: import("..").ValueProducer<T_16>) => T_16;
+    mapValue: <T_17, R_4>(value: T_17, mapper: (value: T_17) => R_4) => R_4;
+    headOf: <O, T_2 extends O>(obj: O | Iterator<O, T_2, undefined> | O[], typeGuard?: import("..").TypeGuard<T_2>) => T_2;
+    tailOf: <O_11>(obj: O_11[]) => O_11[];
+    restOf: <O_11>(obj: O_11[]) => O_11[];
+    toMultiMap: <K_13 extends string | number, T_18>(maps: Record<K_13, T_18>[], options?: Partial<{
+        compact: boolean;
+    }>) => Record<K_13, T_18[]>;
+    timesGen: typeof timesGen;
+    isIterable: typeof isIterable;
+    isBrowser: () => boolean;
+    iffBrowser: <T_19>(producer: () => T_19) => T_19;
+    mapOf: <K_14 extends string | number | symbol, V_7, R_5>(obj: Record<K_14, V_7>, mapper: (key: K_14, value: V_7) => R_5) => R_5[];
+    toPromise: <T_20>(producer: (callback: () => void) => T_20) => Promise<T_20>;
+    all: {
+        <T_21>(values: Iterable<T_21 | PromiseLike<T_21>>): Promise<Awaited<T_21>[]>;
+        <T_22 extends [] | readonly unknown[]>(values: T_22): Promise<{ -readonly [P in keyof T_22]: Awaited<T_22[P]>; }>;
+    };
+    isFunction: (maybe: unknown) => maybe is Function;
+};
+export * from "./tuples";
+//# sourceMappingURL=Objects.d.ts.map

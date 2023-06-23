@@ -1,0 +1,8 @@
+import { Tick } from "./Tick";
+import { Ticker } from "./Ticker";
+export type AnimateState = Tick & {
+    tickers: Ticker[];
+    running: boolean;
+    abort: boolean;
+};
+//# sourceMappingURL=AnimateState.d.ts.map

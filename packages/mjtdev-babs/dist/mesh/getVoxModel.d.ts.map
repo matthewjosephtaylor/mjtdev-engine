@@ -1,0 +1,1 @@
+{"version":3,"file":"getVoxModel.d.ts","sourceRoot":"","sources":["../../src/mesh/getVoxModel.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AAElC,OAAO,EAAE,WAAW,EAAc,MAAM,cAAc,CAAC;AAGvD,eAAO,MAAM,WAAW,UACf,KAAK,QACN,MAAM,OACP,MAAM,YAEF,WAAW,GAClB,QAAQ;IACN,MAAM,EAAE,OAAO,CAAC;CACjB,CAAC,4CAwBL,CAAC"}

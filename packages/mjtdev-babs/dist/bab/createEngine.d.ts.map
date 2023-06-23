@@ -1,0 +1,1 @@
+{"version":3,"file":"createEngine.d.ts","sourceRoot":"","sources":["../../src/bab/createEngine.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,aAAa,EAAE,MAAM,WAAW,CAAC;AAGlD,eAAO,MAAM,YAAY,aACd,aAAa,GAAG;IACvB,SAAS,CAAC,EAAE,OAAO,CAAC;IACpB,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,MAAM,CAAC,EAAE,MAAM,CAAC;IAChB,MAAM,CAAC,EAAE,iBAAiB,GAAG,eAAe,CAAC;CAC9C,WAqBF,CAAC"}

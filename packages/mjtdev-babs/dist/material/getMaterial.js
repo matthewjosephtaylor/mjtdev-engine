@@ -1,0 +1,27 @@
+import { PBRMaterial, StandardMaterial } from "babylonjs";
+import { isDefined } from "@mjtdev/object";
+import { updateMaterial } from "./updateMaterial";
+export const getMaterial = (scene, name, options = "standard") => {
+    const material = scene.getMaterialByName(name);
+    if (isDefined(material)) {
+        // updateMaterial(scene, material, options);
+        return material;
+    }
+    const type = typeof options === "string" ? options : options?.type ?? "standard";
+    switch (type) {
+        case "standard": {
+            const material = new StandardMaterial(name, scene);
+            updateMaterial(scene, material, options);
+            return material;
+        }
+        case "pbr": {
+            const material = new PBRMaterial(name, scene);
+            updateMaterial(scene, material, options);
+            return material;
+        }
+        default: {
+            throw new Error(`Unknown material type: '${type}'`);
+        }
+    }
+};
+//# sourceMappingURL=getMaterial.js.map

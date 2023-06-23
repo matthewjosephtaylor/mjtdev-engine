@@ -1,0 +1,40 @@
+{
+  "name": "@mjtdev/babs",
+  "version": "1.0.7",
+  "description": "@mjtdev",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "start": "webpack serve",
+    "build": "clear && npx tsc -b && (tput setaf 2; echo 'build successful :)'; tput sgr0)",
+    "watch": "watch ./src 'npm run build'",
+    "test": "node dist/TEST.js"
+  },
+  "keywords": [],
+  "author": "@mjtdev",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/d3-array": "^3.0.3",
+    "@types/offscreencanvas": "^2019.7.0",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "babylonjs": "^5.29.0",
+    "babylonjs-inspector": "^5.29.0",
+    "babylonjs-loaders": "^5.29.0"
+  },
+  "dependencies": {
+    "@mjtdev/animate": "^1.0.3",
+    "@mjtdev/assert": "^1.0.0",
+    "@mjtdev/color": "^1.0.7",
+    "@mjtdev/image": "^1.0.4",
+    "@mjtdev/input": "^1.0.4",
+    "@mjtdev/magica-voxels": "^1.0.0",
+    "@mjtdev/math": "^1.0.4",
+    "@mjtdev/noise": "^1.0.1",
+    "@mjtdev/object": "^1.1.9",
+    "@mjtdev/random": "^1.0.4",
+    "@mjtdev/string": "^1.0.0",
+    "d3-array": "^3.1.1"
+  }
+}

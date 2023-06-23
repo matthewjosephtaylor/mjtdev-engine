@@ -1,0 +1,1 @@
+{"version":3,"file":"AnimateState.d.ts","sourceRoot":"","sources":["../../src/type/AnimateState.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,QAAQ,CAAC;AAC9B,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAGlC,MAAM,MAAM,YAAY,GAAG,IAAI,GAAG;IAChC,OAAO,EAAE,MAAM,EAAE,CAAC;IAClB,OAAO,EAAE,OAAO,CAAC;IACjB,KAAK,EAAE,OAAO,CAAA;CACf,CAAC"}
