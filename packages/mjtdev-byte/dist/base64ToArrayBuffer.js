@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.base64ToArrayBuffer = void 0;
-const base64ToArrayBuffer = (input) => {
+export const base64ToArrayBuffer = (input) => {
     // if (typeof window === "undefined") {
     //   return Buffer.from(input, "base64");
     // }
@@ -15,5 +12,4 @@ const base64ToArrayBuffer = (input) => {
     });
     return result;
 };
-exports.base64ToArrayBuffer = base64ToArrayBuffer;
 //# sourceMappingURL=base64ToArrayBuffer.js.map

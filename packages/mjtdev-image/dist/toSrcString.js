@@ -1,12 +1,6 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toSrcString = void 0;
-const byte_1 = require("@mjtdev/byte");
-const image_js_1 = __importDefault(require("image-js"));
-const toSrcString = (imageLike) => {
+import { Bytes } from "@mjtdev/byte";
+import ImageJs from "image-js";
+export const toSrcString = (imageLike) => {
     return new Promise(async (resolve, reject) => {
         try {
             if (typeof imageLike === "string") {
@@ -25,8 +19,8 @@ const toSrcString = (imageLike) => {
                 resolve(imageLike.toDataURL());
                 return;
             }
-            const arrayBuffer = await byte_1.Bytes.toArrayBuffer(imageLike);
-            const ijs = await image_js_1.default.load(arrayBuffer);
+            const arrayBuffer = await Bytes.toArrayBuffer(imageLike);
+            const ijs = await ImageJs.load(arrayBuffer);
             resolve(ijs.toDataURL());
         }
         catch (reason) {
@@ -34,5 +28,4 @@ const toSrcString = (imageLike) => {
         }
     });
 };
-exports.toSrcString = toSrcString;
 //# sourceMappingURL=toSrcString.js.map

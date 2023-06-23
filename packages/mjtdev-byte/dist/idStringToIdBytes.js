@@ -1,10 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.idStringToIdBytes = void 0;
-const assert_1 = require("@mjtdev/assert");
-const idStringToIdBytes = ({ id }) => {
+import { Asserts } from "@mjtdev/assert";
+export const idStringToIdBytes = ({ id }) => {
     const splitValue = id.split(":");
-    assert_1.Asserts.assert(splitValue.length === 2);
+    Asserts.assert(splitValue.length === 2);
     // TODO only SHA FOR NOW
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [algorithm, base64] = splitValue;
@@ -18,5 +15,4 @@ const idStringToIdBytes = ({ id }) => {
     });
     return result;
 };
-exports.idStringToIdBytes = idStringToIdBytes;
 //# sourceMappingURL=idStringToIdBytes.js.map

@@ -1,23 +1,6 @@
-"use strict";
 // @see https://raw.githubusercontent.com/josephg/noisejs/master/perlin.js
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Noises = exports.noiseStream = exports.noiseBoolean = exports.noiseUnit = exports.noiseHash = exports.noise = void 0;
-const serializableNoiseStream_1 = require("./serializableNoiseStream");
-const noiseRange_1 = require("./noiseRange");
+import { serializableNoiseStream } from "./serializableNoiseStream";
+import { noiseRange } from "./noiseRange";
 // Skewing and unskewing factors for 2, 3, and 4 dimensions
 var F2 = 0.5 * (Math.sqrt(3) - 1);
 var G2 = (3 - Math.sqrt(3)) / 6;
@@ -347,16 +330,15 @@ function lerp(a, b, t) {
 /**
  * @returns 'random' 32bit unsigned
  */
-function noise(seed) {
+export function noise(seed) {
     return squirrel3(seed);
 }
-exports.noise = noise;
 /**
  * creates a hash number using noise function
  * @param data
  * @returns
  */
-function noiseHash(data) {
+export function noiseHash(data) {
     if (data === undefined || data.length === 0) {
         return undefined;
     }
@@ -374,27 +356,24 @@ function noiseHash(data) {
     hash = hash >>> 0;
     return hash;
 }
-exports.noiseHash = noiseHash;
 /**
  * @returns number between 0 and 1
  */
-function noiseUnit(seed) {
+export function noiseUnit(seed) {
     return noise(seed) / MAX_UNSIGNED_32_BIT;
 }
-exports.noiseUnit = noiseUnit;
 /**
  * @param position will be converted to 32bit unsigned
  * @returns 'random' boolean
  */
-function noiseBoolean(position) {
+export function noiseBoolean(position) {
     return noise(position) / MAX_UNSIGNED_32_BIT > 0.5;
 }
-exports.noiseBoolean = noiseBoolean;
 const BIT_NOISE1 = 0xb5297a4d;
 const BIT_NOISE2 = 0x68e31da4;
 const BIT_NOISE3 = 0x1b56c4e9;
 const MAX_UNSIGNED_32_BIT = 4294967295;
-function noiseStream(seed = 0) {
+export function noiseStream(seed = 0) {
     const sab = new ArrayBuffer(8);
     const ta = new Uint32Array(sab);
     Atomics.store(ta, 0, Math.round(seed));
@@ -402,7 +381,6 @@ function noiseStream(seed = 0) {
         return noiseUnit(Atomics.add(ta, 0, 1));
     };
 }
-exports.noiseStream = noiseStream;
 /**
  *
  * @param position
@@ -419,8 +397,8 @@ function squirrel3(position) {
     mangled = mangled >>> 0;
     return mangled;
 }
-__exportStar(require("./type/SerializableNoiseState"), exports);
-exports.Noises = {
+export * from "./type/SerializableNoiseState";
+export const Noises = {
     seed,
     perlin2: (x, y) => {
         return (perlin2(x * 255, y * 255) + 1) / 2;
@@ -438,7 +416,7 @@ exports.Noises = {
     noiseUnit,
     noiseBoolean,
     noiseStream,
-    noiseRange: noiseRange_1.noiseRange,
-    serializableNoiseStream: serializableNoiseStream_1.serializableNoiseStream,
+    noiseRange,
+    serializableNoiseStream,
 };
 //# sourceMappingURL=index.js.map

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBufferToHex = void 0;
-const arrayBufferToHex = (input) => {
+export const arrayBufferToHex = (input) => {
     const inputUint8Array = new Uint8Array(input);
     const output = [];
     for (let i = 0; i < inputUint8Array.length; ++i) {
@@ -9,5 +6,4 @@ const arrayBufferToHex = (input) => {
     }
     return output.join("");
 };
-exports.arrayBufferToHex = arrayBufferToHex;
 //# sourceMappingURL=arrayBufferToHex.js.map

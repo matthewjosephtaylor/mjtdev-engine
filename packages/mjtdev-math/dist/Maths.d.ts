@@ -84,7 +84,7 @@ import { xOf } from "./xOf";
 import { yOf } from "./yOf";
 import { zOf } from "./zOf";
 export declare const Maths: {
-    toTransform3: (o3: Partial<import("./index").Transform3>) => import("./index").Transform3;
+    toTransform3: (o3: Partial<import(".").Transform3>) => import(".").Transform3;
     add: (a: number, b: number) => number;
     add0: typeof add0;
     add1: typeof add1;
@@ -100,7 +100,7 @@ export declare const Maths: {
     blend4: typeof blend4;
     blendPoint: typeof blendPoint;
     clamp: typeof clamp;
-    contains: (point: import("./index").Point, needle: number) => boolean;
+    contains: (point: import(".").Point, needle: number) => boolean;
     distance: typeof distance;
     distance0: typeof distance0;
     distance1: typeof distance1;
@@ -114,7 +114,7 @@ export declare const Maths: {
     divide2: typeof divide2;
     divide3: typeof divide3;
     divide4: typeof divide4;
-    dividePoint: (a: import("./index").Point, b: import("./index").Point) => import("./index").Point;
+    dividePoint: (a: import(".").Point, b: import(".").Point) => import(".").Point;
     isPoint: typeof isPoint;
     isPoint0: typeof isPoint0;
     isPoint1: typeof isPoint1;
@@ -140,12 +140,12 @@ export declare const Maths: {
     length4: typeof length4;
     lengthPoint: typeof lengthPoint;
     lerp: typeof lerp;
-    lerp0: (a: import("./index").Point0, b: import("./index").Point0, alpha: number) => import("./index").Point0;
-    lerp1: (a: import("./index").Point1, b: import("./index").Point1, alpha: number) => import("./index").Point1;
-    lerp2: (a: import("./index").Point2, b: import("./index").Point2, alpha: number) => import("./index").Point2;
-    lerp3: (a: import("./index").Point3, b: import("./index").Point3, alpha: number) => import("./index").Point3;
-    lerp4: (a: import("./index").Point4, b: import("./index").Point4, alpha: number) => import("./index").Point4;
-    lerpPoint: (a: import("./index").Point, b: import("./index").Point, alpha: number) => number | import("./index").PointObject1 | import("./index").Vec1 | import("./index").Vec2 | import("./index").Vec3 | import("./index").Vec4;
+    lerp0: (a: import(".").Point0, b: import(".").Point0, alpha: number) => import(".").Point0;
+    lerp1: (a: import(".").Point1, b: import(".").Point1, alpha: number) => import(".").Point1;
+    lerp2: (a: import(".").Point2, b: import(".").Point2, alpha: number) => import(".").Point2;
+    lerp3: (a: import(".").Point3, b: import(".").Point3, alpha: number) => import(".").Point3;
+    lerp4: (a: import(".").Point4, b: import(".").Point4, alpha: number) => import(".").Point4;
+    lerpPoint: (a: import(".").Point, b: import(".").Point, alpha: number) => number | import(".").PointObject1 | import(".").Vec1 | import(".").Vec2 | import(".").Vec3 | import(".").Vec4;
     midPoint2: typeof midPoint2;
     midPoint3: typeof midPoint3;
     multiply: typeof multiply;
@@ -160,7 +160,7 @@ export declare const Maths: {
     normalize2: typeof normalize2;
     normalize3: typeof normalize3;
     normalize4: typeof normalize4;
-    normalizePoint: (point: import("./index").Point) => import("./index").Point;
+    normalizePoint: (point: import(".").Point) => import(".").Point;
     point3ToJson: typeof point3ToJson;
     quant: ({ v, q, s }: {
         v: number;
@@ -168,12 +168,12 @@ export declare const Maths: {
         s?: number;
     }) => number;
     scaler: (scale: number) => (value: number) => number;
-    scaler0: (scale: import("./index").Point0) => (value: import("./index").Point0) => import("./index").Point0;
-    scaler1: (scale: import("./index").Point1) => (value: import("./index").Point1) => import("./index").Point1;
-    scaler2: (scale: import("./index").Point2) => (value: import("./index").Point2) => import("./index").Point2;
-    scaler3: (scale: import("./index").Point3) => (value: import("./index").Point3) => import("./index").Point3;
-    scaler4: (scale: import("./index").Point4) => (value: import("./index").Point4) => import("./index").Point4;
-    scalerPoint: (scale: import("./index").Point) => ((value: import("./index").Point0) => import("./index").Point0) | ((value: import("./index").Point1) => import("./index").Point1) | ((value: import("./index").Point2) => import("./index").Point2) | ((value: import("./index").Point3) => import("./index").Point3) | ((value: import("./index").Point4) => import("./index").Point4);
+    scaler0: (scale: import(".").Point0) => (value: import(".").Point0) => import(".").Point0;
+    scaler1: (scale: import(".").Point1) => (value: import(".").Point1) => import(".").Point1;
+    scaler2: (scale: import(".").Point2) => (value: import(".").Point2) => import(".").Point2;
+    scaler3: (scale: import(".").Point3) => (value: import(".").Point3) => import(".").Point3;
+    scaler4: (scale: import(".").Point4) => (value: import(".").Point4) => import(".").Point4;
+    scalerPoint: (scale: import(".").Point) => ((value: import(".").Point0) => import(".").Point0) | ((value: import(".").Point1) => import(".").Point1) | ((value: import(".").Point2) => import(".").Point2) | ((value: import(".").Point3) => import(".").Point3) | ((value: import(".").Point4) => import(".").Point4);
     subtract: typeof subtract;
     subtract0: typeof subtract0;
     subtract1: typeof subtract1;
@@ -188,12 +188,12 @@ export declare const Maths: {
     toVec3: typeof toVec3;
     toVec4: typeof toVec4;
     translater: (a: number) => (b: number) => number;
-    translater0: (translatePoint: import("./index").Point0) => (pos: import("./index").Point0) => import("./index").Point0;
-    translater1: (translatePoint: import("./index").Point1) => (pos: import("./index").Point1) => import("./index").Point1;
-    translater2: (translatePoint: import("./index").Point2) => (pos: import("./index").Point2) => import("./index").Point2;
-    translater3: (translatePoint: import("./index").Point3) => (pos: import("./index").Point3) => import("./index").Point3;
-    translater4: (translatePoint: import("./index").Point4) => (pos: import("./index").Point4) => import("./index").Point4;
-    translaterPoint: (translatePoint: import("./index").Point) => (position: import("./index").Point) => import("./index").Point;
+    translater0: (translatePoint: import(".").Point0) => (pos: import(".").Point0) => import(".").Point0;
+    translater1: (translatePoint: import(".").Point1) => (pos: import(".").Point1) => import(".").Point1;
+    translater2: (translatePoint: import(".").Point2) => (pos: import(".").Point2) => import(".").Point2;
+    translater3: (translatePoint: import(".").Point3) => (pos: import(".").Point3) => import(".").Point3;
+    translater4: (translatePoint: import(".").Point4) => (pos: import(".").Point4) => import(".").Point4;
+    translaterPoint: (translatePoint: import(".").Point) => (position: import(".").Point) => import(".").Point;
     wOf: typeof wOf;
     xOf: typeof xOf;
     yOf: typeof yOf;
@@ -204,8 +204,8 @@ export declare const Maths: {
     dOf: <T_3>(pointVector: T_3[]) => T_3;
     eOf: <T_4>(pointVector: T_4[]) => T_4;
     distancePoints2: typeof distancePoints2;
-    includesPoint: (points: import("./index").Point[], p: import("./index").Point) => boolean;
-    removeDuplicatePoints: <P extends import("./index").Point>(points: P[]) => P[];
-    isEqual: (a: import("./index").Point, b: import("./index").Point) => boolean;
+    includesPoint: (points: import(".").Point[], p: import(".").Point) => boolean;
+    removeDuplicatePoints: <P extends import(".").Point>(points: P[]) => P[];
+    isEqual: (a: import(".").Point, b: import(".").Point) => boolean;
 };
 //# sourceMappingURL=Maths.d.ts.map

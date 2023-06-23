@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.operateOn = void 0;
-const Colors_1 = require("./Colors");
-const operateOn = (spec) => {
+import { Colors } from "./Colors";
+export const operateOn = (spec) => {
     if (!spec) {
         return undefined;
     }
@@ -12,10 +9,9 @@ const operateOn = (spec) => {
             return;
         }
         if (typeof operand === "number") {
-            color = Colors_1.Colors[operation](color, operand);
+            color = Colors[operation](color, operand);
         }
     });
     return color;
 };
-exports.operateOn = operateOn;
 //# sourceMappingURL=operateOn.js.map

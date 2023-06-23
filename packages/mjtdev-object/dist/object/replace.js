@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.replace = void 0;
-const isUndefined_1 = require("./isUndefined");
-const replace = (typeGuard, arr, mapper) => {
-    if ((0, isUndefined_1.isUndefined)(arr)) {
+import { isUndefined } from "./isUndefined";
+export const replace = (typeGuard, arr, mapper) => {
+    if (isUndefined(arr)) {
         return undefined;
     }
     return arr.map((a) => {
@@ -13,5 +10,4 @@ const replace = (typeGuard, arr, mapper) => {
         return a;
     });
 };
-exports.replace = replace;
 //# sourceMappingURL=replace.js.map

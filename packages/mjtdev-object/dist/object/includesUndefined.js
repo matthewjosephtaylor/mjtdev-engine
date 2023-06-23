@@ -1,12 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.includesUndefined = void 0;
-const isUndefined_1 = require("./isUndefined");
-const includesUndefined = (...arr) => {
-    if ((0, isUndefined_1.isUndefined)(arr)) {
+import { isUndefined } from "./isUndefined";
+export const includesUndefined = (...arr) => {
+    if (isUndefined(arr)) {
         return true;
     }
-    arr.findIndex((x) => (0, isUndefined_1.isUndefined)(x)) === -1;
+    arr.findIndex((x) => isUndefined(x)) === -1;
 };
-exports.includesUndefined = includesUndefined;
 //# sourceMappingURL=includesUndefined.js.map

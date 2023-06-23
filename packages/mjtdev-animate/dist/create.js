@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.create = void 0;
-const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = true, errorHandler = (error) => {
+export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = true, errorHandler = (error) => {
     throw error;
 }, request = requestAnimationFrame, }) => {
     // convert parameters
@@ -62,5 +59,4 @@ const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = true, er
     animate();
     return state;
 };
-exports.create = create;
 //# sourceMappingURL=create.js.map

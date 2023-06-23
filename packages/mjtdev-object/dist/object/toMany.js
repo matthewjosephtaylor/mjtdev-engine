@@ -1,16 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toMany = void 0;
-const isUndefined_1 = require("./isUndefined");
-const isIterable_1 = require("./type/isIterable");
-const toMany = (obj) => {
-    if ((0, isUndefined_1.isUndefined)(obj)) {
+import { isUndefined } from "./isUndefined";
+import { isIterable } from "./type/isIterable";
+export const toMany = (obj) => {
+    if (isUndefined(obj)) {
         return [];
     }
-    if ((0, isIterable_1.isIterable)(obj)) {
+    if (isIterable(obj)) {
         return Array.from(obj);
     }
     return Array.isArray(obj) ? obj : [obj];
 };
-exports.toMany = toMany;
 //# sourceMappingURL=toMany.js.map

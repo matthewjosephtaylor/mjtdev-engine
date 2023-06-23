@@ -1,1 +1,1 @@
-{"version":3,"file":"restOf.js","sourceRoot":"","sources":["../../src/object/restOf.ts"],"names":[],"mappings":";;;AAAA,qCAAkC;AAGrB,QAAA,MAAM,GAAG,eAAM,CAAC"}
+{"version":3,"file":"restOf.js","sourceRoot":"","sources":["../../src/object/restOf.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAGlC,MAAM,CAAC,MAAM,MAAM,GAAG,MAAM,CAAC"}

@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toArrayBuffer = void 0;
-const arrayToFloat64Array_1 = require("./arrayToFloat64Array");
-const toArrayBuffer = async (bytes) => {
+import { arrayToFloat64Array } from "./arrayToFloat64Array";
+export const toArrayBuffer = async (bytes) => {
     if (bytes instanceof ArrayBuffer) {
         return bytes;
     }
@@ -17,9 +14,8 @@ const toArrayBuffer = async (bytes) => {
         return bytes.buffer;
     }
     if (Array.isArray(bytes)) {
-        return (0, arrayToFloat64Array_1.arrayToFloat64Array)(bytes);
+        return arrayToFloat64Array(bytes);
     }
     return new ArrayBuffer(0);
 };
-exports.toArrayBuffer = toArrayBuffer;
 //# sourceMappingURL=toArrayBuffer.js.map

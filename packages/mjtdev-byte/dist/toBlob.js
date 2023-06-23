@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toBlob = void 0;
-const arrayToFloat64Array_1 = require("./arrayToFloat64Array");
-const toBlob = (bytes, mediaType = "application/octet-stream") => {
+import { arrayToFloat64Array } from "./arrayToFloat64Array";
+export const toBlob = (bytes, mediaType = "application/octet-stream") => {
     if (bytes instanceof Blob) {
         return bytes;
     }
@@ -16,9 +13,8 @@ const toBlob = (bytes, mediaType = "application/octet-stream") => {
         return new Blob([bytes], { type: mediaType });
     }
     if (Array.isArray(bytes)) {
-        return new Blob([(0, arrayToFloat64Array_1.arrayToFloat64Array)(bytes)], { type: mediaType });
+        return new Blob([arrayToFloat64Array(bytes)], { type: mediaType });
     }
     return new Blob([]);
 };
-exports.toBlob = toBlob;
 //# sourceMappingURL=toBlob.js.map

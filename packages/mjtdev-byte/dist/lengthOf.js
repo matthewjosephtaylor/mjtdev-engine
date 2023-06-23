@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.lengthOf = void 0;
-const lengthOf = (bytes) => {
+export const lengthOf = (bytes) => {
     if (typeof bytes === "string") {
         return bytes.length;
     }
@@ -15,5 +12,4 @@ const lengthOf = (bytes) => {
         return bytes.byteLength;
     }
 };
-exports.lengthOf = lengthOf;
 //# sourceMappingURL=lengthOf.js.map

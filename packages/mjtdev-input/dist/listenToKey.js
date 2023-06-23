@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.listenToKey = void 0;
-const animate_1 = require("@mjtdev/animate");
-const object_1 = require("@mjtdev/object");
-const listenToKey = (keyAction, options = {}) => {
+import { Animates } from "@mjtdev/animate";
+import { isDefined, Objects } from "@mjtdev/object";
+export const listenToKey = (keyAction, options = {}) => {
     const { ratePerSecond: ticksPerSecond = 60, parent = document.body, debug = false, autoUp = true, propagate = true, signal, dropMultiple = false, } = options;
     const curKeys = {};
-    const animationState = animate_1.Animates.create({
+    const animationState = Animates.create({
         ticksPerSecond,
         ticker: () => {
             Object.entries(curKeys)
@@ -16,7 +13,7 @@ const listenToKey = (keyAction, options = {}) => {
                     curKeys[k] = false;
                 }
                 const action = ignoreCaseKeyActions[k];
-                if ((0, object_1.isDefined)(action)) {
+                if (isDefined(action)) {
                     action();
                 }
             });
@@ -36,7 +33,7 @@ const listenToKey = (keyAction, options = {}) => {
                 metaKey ? "meta" : undefined,
                 key.toUpperCase(),
             ]
-                .filter(object_1.isDefined)
+                .filter(isDefined)
                 .join("+")
                 .toUpperCase();
             if (debug) {
@@ -61,7 +58,7 @@ const listenToKey = (keyAction, options = {}) => {
             metaKey ? "meta" : undefined,
             key.toUpperCase(),
         ]
-            .filter(object_1.isDefined)
+            .filter(isDefined)
             .join("+")
             .toUpperCase();
         if (debug) {
@@ -70,11 +67,10 @@ const listenToKey = (keyAction, options = {}) => {
         curKeys[keyCombo] = true;
         return propagate;
     }, { signal });
-    const ignoreCaseKeyActions = object_1.Objects.fromEntries(object_1.Objects.entries(keyAction).map(([key, action]) => [
+    const ignoreCaseKeyActions = Objects.fromEntries(Objects.entries(keyAction).map(([key, action]) => [
         key.toUpperCase(),
         action,
     ]));
     return animationState;
 };
-exports.listenToKey = listenToKey;
 //# sourceMappingURL=listenToKey.js.map

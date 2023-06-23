@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadHTMLImageElement = void 0;
-const loadHTMLImageElement = (src) => {
+export const loadHTMLImageElement = (src) => {
     const img = document.createElement("img");
     return new Promise((resolve, reject) => {
         img.onload = () => {
@@ -13,5 +10,4 @@ const loadHTMLImageElement = (src) => {
         img.src = src;
     });
 };
-exports.loadHTMLImageElement = loadHTMLImageElement;
 //# sourceMappingURL=loadHTMLImageElement.js.map

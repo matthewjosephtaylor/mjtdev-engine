@@ -12,5 +12,6 @@ build({
   ...sharedConfig,
   platform: 'browser',
   format: 'esm',
+  target: 'es2022',
   outfile: "dist/index.js",
 });

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toStableValue = void 0;
-const toStableValue = (obj) => {
+export const toStableValue = (obj) => {
     if (typeof obj === "undefined") {
         return obj;
     }
@@ -15,7 +12,6 @@ const toStableValue = (obj) => {
         return obj;
     }
     const keys = Object.keys(obj).sort();
-    return JSON.stringify(keys.map((key) => [key, (0, exports.toStableValue)(obj[key])]));
+    return JSON.stringify(keys.map((key) => [key, toStableValue(obj[key])]));
 };
-exports.toStableValue = toStableValue;
 //# sourceMappingURL=toStableValue.js.map

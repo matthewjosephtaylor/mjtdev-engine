@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Animates = void 0;
-const create_1 = require("./create");
-exports.Animates = {
-    create: create_1.create,
+import { create } from "./create";
+export const Animates = {
+    create,
 };
 //# sourceMappingURL=Animates.js.map

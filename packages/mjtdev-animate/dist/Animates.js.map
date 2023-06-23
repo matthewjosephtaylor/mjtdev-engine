@@ -1,1 +1,1 @@
-{"version":3,"file":"Animates.js","sourceRoot":"","sources":["../src/Animates.ts"],"names":[],"mappings":";;;AAAA,qCAAkC;AAErB,QAAA,QAAQ,GAAG;IACtB,MAAM,EAAN,eAAM;CACP,CAAC"}
+{"version":3,"file":"Animates.js","sourceRoot":"","sources":["../src/Animates.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAElC,MAAM,CAAC,MAAM,QAAQ,GAAG;IACtB,MAAM;CACP,CAAC"}

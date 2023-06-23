@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toMessage = void 0;
-function toMessage(message) {
+export function toMessage(message) {
     if (typeof message === "string") {
         return message;
     }
@@ -12,5 +9,4 @@ function toMessage(message) {
     console.error("ASSERTION FAIL VALUE", messageMaybe);
     return "Assertion Failed";
 }
-exports.toMessage = toMessage;
 //# sourceMappingURL=toMessage.js.map

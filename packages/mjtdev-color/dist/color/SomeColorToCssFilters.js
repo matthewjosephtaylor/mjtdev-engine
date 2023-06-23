@@ -1,10 +1,10 @@
-"use strict";
 // from  @see https://gist.github.com/dwjohnston/7e60bf5d4b6c071cd869f9f346241c08
 // @see https://codepen.io/sosuke/pen/Pjoqqp
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.toCssFilters = void 0;
-const builder_1 = require("./builder");
+import { builder } from "./builder";
 class Color {
+    r;
+    g;
+    b;
     constructor(r, g, b) {
         this.r = this.clamp(r);
         this.g = this.clamp(g);
@@ -143,6 +143,9 @@ class Color {
     }
 }
 class Solver {
+    target;
+    targetHSL;
+    reusedColor;
     constructor(target) {
         this.target = target;
         this.targetHSL = target.hsl();
@@ -271,8 +274,8 @@ function hexToRgb(hex) {
     }
     throw new Error("Error pasring hex: " + hex);
 }
-function toCssFilters({ someColor, from, }) {
-    const hex = (0, builder_1.builder)({ color: someColor }).hex();
+export function toCssFilters({ someColor, from, }) {
+    const hex = builder({ color: someColor }).hex();
     const rgb = hexToRgb(hex);
     const color = new Color(rgb[0], rgb[1], rgb[2]);
     const solver = new Solver(color);
@@ -280,5 +283,4 @@ function toCssFilters({ someColor, from, }) {
     const prefix = from === "white" ? "brightness(0) saturate(100%) " : "";
     return [prefix, result.filter].join("");
 }
-exports.toCssFilters = toCssFilters;
 //# sourceMappingURL=SomeColorToCssFilters.js.map

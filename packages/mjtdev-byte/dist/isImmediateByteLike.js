@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isImmediateByteLike = void 0;
-const isImmediateByteLike = (maybe) => {
+export const isImmediateByteLike = (maybe) => {
     const straw = maybe;
     if (straw instanceof ArrayBuffer) {
         return true;
@@ -17,5 +14,4 @@ const isImmediateByteLike = (maybe) => {
     }
     return false;
 };
-exports.isImmediateByteLike = isImmediateByteLike;
 //# sourceMappingURL=isImmediateByteLike.js.map

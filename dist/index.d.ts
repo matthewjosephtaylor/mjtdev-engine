@@ -396,12 +396,12 @@ export type AnimationLoopConfig = {
 	errorHandler?: (error: unknown) => void;
 	request?: AnimationRequestFunction;
 };
-type AssertionMessage = string | (() => unknown);
+export type AssertionMessage = string | (() => unknown);
 declare function assert(value: boolean, message?: AssertionMessage): void;
 declare function assertType<T>(value: unknown, typeGuard: (maybe: unknown) => maybe is T, message?: AssertionMessage): T;
 declare function assertUnreachable(value: never, message?: AssertionMessage): never;
 declare function assertValue<T>(maybe: T, message?: AssertionMessage): NonNullable<T>;
-type ListLike = ArrayLike<unknown> | ArrayBufferLike | ArrayBufferView;
+export type ListLike = ArrayLike<unknown> | ArrayBufferLike | ArrayBufferView;
 export declare const Asserts: {
 	assert: typeof assert;
 	assertUnreachable: typeof assertUnreachable;
@@ -490,9 +490,9 @@ export declare const Luts: {
 	create: typeof create;
 	expandColors: typeof expandColors;
 };
-type EventualByteLike = Blob;
-type ImmediateByteLike = string | ArrayBuffer | ArrayBufferView | unknown[];
-type ByteLike = EventualByteLike | ImmediateByteLike;
+export type EventualByteLike = Blob;
+export type ImmediateByteLike = string | ArrayBuffer | ArrayBufferView | unknown[];
+export type ByteLike = EventualByteLike | ImmediateByteLike;
 export type ImageLike = string | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | ByteLike;
 export declare const Images: {
 	toHTMLImageElement: (src: ImageLike) => Promise<HTMLImageElement>;
@@ -753,36 +753,6 @@ export declare const fixObject: <T extends object>(obj: T) => Readonly<FixedBran
 export declare const fixArray: <T>(arr: T[]) => FixedArray<T>;
 export type FixedArray<T> = Fixed<T[]> | Fixed<Fixed<T[]>> | Fixed<Fixed<T>[]>;
 export declare const extend: <T>(arr: T[], value: T) => Readonly<FixedBrand<T[]>>;
-export declare const chain: <T>(initial: T, mappers: ((v: T) => T)[]) => T, entries: <O extends object, K extends keyof O, V = O[K]>(obj: O) => [
-	K,
-	V
-][], filter: <O extends object, K extends keyof O, V extends O[K]>(obj: O, predicate: (key: K, value: V) => boolean) => [
-	K,
-	V
-][], first: <O, T extends O>(obj: O | Iterator<O, T, undefined> | O[], typeGuard?: TypeGuard<T>) => T, last: <T>(obj: T[]) => T, forEach: <O extends object, K extends keyof O>(obj: O, consumer: (key: K, value: O[K]) => void, errorHandler?: (error: unknown, key: K, value: O[K]) => void) => void, iff: <T, R>(value: T, mapper: (v: NonNullable<T>) => R) => R, orElse: <T>(o: T, e: T) => T, removeUndefinedValues: <T extends object>(obj: object) => Partial<T>, iffTyped: <T, R, G>(typeGuard: (maybe: unknown) => maybe is G, value: T, mapper: (v: T & G) => R) => R, isDefined: <T>(obj: T) => obj is NonNullable<T>, isUndefined: <T>(obj: T) => obj is null, omit: <K extends string | number, T extends {
-	[k in K]: unknown;
-}>(object: T, key: K) => Omit<T, K>, omitUnsafe: <K extends string | number, T extends {
-	[k in K]: unknown;
-}>(object: T, key: K) => Omit<T, K>, toMany: <T>(obj: T | Iterable<T> | T[]) => T[], fromEntries: <K extends string | number | symbol, V>(entries: readonly (readonly [
-	K,
-	V
-])[]) => Record<K, V>, safe: <R>(producer: () => R, options?: Partial<{
-	quiet: boolean;
-	def: R;
-	onError: ValueProducer<string>;
-}>) => R, safeAsync: <R>(producer: () => R | Promise<R>, options?: Partial<{
-	quiet: boolean;
-	def: R;
-	onError: ValueProducer<string>;
-}>) => Promise<R>, mapValue: <T, R>(value: T, mapper: (value: T) => R) => R, headOf: <O, T extends O>(obj: O | Iterator<O, T, undefined> | O[], typeGuard?: TypeGuard<T>) => T, tailOf: <O>(obj: O[]) => O[], restOf: <O>(obj: O[]) => O[], times: typeof times, isIterator: <T>(maybe: unknown) => maybe is Iterator<T, any, undefined>, toMultiMap: <K extends string | number, T>(maps: Record<K, T>[], options?: Partial<{
-	compact: boolean;
-}>) => Record<K, T[]>, timesGen: typeof timesGen, isIterable: typeof isIterable, isArrayLike: <T>(maybe: unknown) => maybe is ArrayLike<T>, iffBrowser: <T>(producer: () => T) => T, isBrowser: () => boolean, toPromise: <T>(producer: (callback: () => void) => T) => Promise<T>, all: {
-	<T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>;
-	<T_1 extends [
-	] | readonly unknown[]>(values: T_1): Promise<{
-		-readonly [P in keyof T_1]: Awaited<T_1[P]>;
-	}>;
-}, isFunction: (maybe: unknown) => maybe is Function;
 declare function v3(xOrPosition?: number | Point3 | Point2, y?: number, z?: number): Vector3;
 export declare const Babs: {
 	createEngine: (options?: import("babylonjs/Engines/thinEngine").EngineOptions & {
@@ -882,9 +852,9 @@ declare const TEXTURE_SAMPLING_MODES: {
 	linearLinear: number;
 	nearestLinear: number;
 };
-type ImmediateImage = HTMLCanvasElement | HTMLImageElement | OffscreenCanvas;
-type TextureImageSrc = string | ImmediateImage;
-type TextureLayer = Partial<{
+export type ImmediateImage = HTMLCanvasElement | HTMLImageElement | OffscreenCanvas;
+export type TextureImageSrc = string | ImmediateImage;
+export type TextureLayer = Partial<{
 	image: TextureImageSrc;
 	color: string;
 	size: number;
@@ -893,7 +863,7 @@ type TextureLayer = Partial<{
 	_material: StandardMaterial;
 	_cached: boolean;
 }>;
-type TextureBuilder = {
+export type TextureBuilder = {
 	addLayer: (layer: TextureLayer) => TextureBuilder;
 	render: () => Promise<HTMLCanvasElement | OffscreenCanvas>;
 	clear: () => TextureBuilder;
@@ -1212,7 +1182,7 @@ export declare const Meshes: {
 		material: string;
 	}>) => import("babylonjs/Meshes/mesh").Mesh;
 };
-type MaterialTypeMap = {
+export type MaterialTypeMap = {
 	standard: StandardMaterial;
 	pbr: PBRMaterial;
 };
@@ -1282,13 +1252,13 @@ export declare const Sprites: {
 export type NextRandom = {
 	(): number;
 };
-type MinMax = [
+export type MinMax = [
 	number,
 	number
 ];
 export declare const seedRandom: (seed: number) => NextRandom;
 declare function randomUuid(random?: NextRandom): string;
-type RandomIntegerConfig = {
+export type RandomIntegerConfig = {
 	minMax: MinMax;
 	random: NextRandom;
 };
@@ -1313,18 +1283,18 @@ export declare const Randoms: {
 	shuffle: typeof shuffle;
 	integerRangeStream: (random: NextRandom) => (max?: number, min?: number) => number;
 };
-type XYZ = {
+export type XYZ = {
 	x: number;
 	y: number;
 	z: number;
 };
-type XYZI = {
+export type XYZI = {
 	x: number;
 	y: number;
 	z: number;
 	i: number;
 };
-type TRN = {
+export type TRN = {
 	node_id: number;
 	attributes: object;
 	child_id: number;
@@ -1332,13 +1302,13 @@ type TRN = {
 	number_of_frames: number;
 	frame_transforms: object[];
 };
-type GRP = {
+export type GRP = {
 	id: number;
 	attributes: object;
 	num_of_children: number;
 	child_ids: number[];
 };
-type SHP = {
+export type SHP = {
 	id: number;
 	attributes: object;
 	num_of_models: number;
@@ -1347,23 +1317,27 @@ type SHP = {
 		attributes: object;
 	}[];
 };
-type LAYR = {
+export type LAYR = {
 	id: number;
 	attributes: object;
 	reserved_id: number;
 };
-type RGBA = {
+/** range: 0-255 */
+export type RGBA = {
 	r: number;
 	g: number;
 	b: number;
 	a: number;
 };
-type MATL = {
+/** key is a number in string format */
+export type MATL = {
 	id: number;
 	properties: Record<string, number>;
 };
-type OBJ = Record<string, number>;
-type VoxData = {
+/** key is a number in string format */
+export type OBJ = Record<string, number>;
+/** reverse engineered, this is NOT definitive :) */
+export type VoxData = {
 	VOX: number;
 	SIZE: XYZ;
 	XYZI: XYZI[];
@@ -1389,5 +1363,35 @@ export declare const Voxels: {
 	voxDataToMergedModel: (scene: import("babylonjs/scene").Scene, voxData: VoxData, name: string) => import("babylonjs/Meshes/mesh").Mesh;
 	voxDataToComplexModel: (scene: import("babylonjs/scene").Scene, voxData: VoxData, name: string) => import("babylonjs/Meshes/mesh").Mesh;
 };
+export declare const chain: <T_14>(initial: T_14, mappers: ((v: T_14) => T_14)[]) => T_14, entries: <O_6 extends object, K_7 extends keyof O_6, V_2 = O_6[K_7]>(obj: O_6) => [
+	K_7,
+	V_2
+][], filter: <O_10 extends object, K_10 extends keyof O_10, V_4 extends O_10[K_10]>(obj: O_10, predicate: (key: K_10, value: V_4) => boolean) => [
+	K_10,
+	V_4
+][], first: <O, T_2 extends O>(obj: O | Iterator<O, T_2, undefined> | O[], typeGuard?: TypeGuard<T_2>) => T_2, last: <T_3>(obj: T_3[]) => T_3, forEach: <O_9 extends object, K_9 extends keyof O_9>(obj: O_9, consumer: (key: K_9, value: O_9[K_9]) => void, errorHandler?: (error: unknown, key: K_9, value: O_9[K_9]) => void) => void, iff: <T_5, R>(value: T_5, mapper: (v: NonNullable<T_5>) => R) => R, orElse: <T_11>(o: T_11, e: T_11) => T_11, removeUndefinedValues: <T_12 extends object>(obj: object) => Partial<T_12>, iffTyped: <T_6, R_1, G>(typeGuard: (maybe: unknown) => maybe is G, value: T_6, mapper: (v: T_6 & G) => R_1) => R_1, isDefined: <T_7>(obj: T_7) => obj is NonNullable<T_7>, isUndefined: <T_8>(obj: T_8) => obj is null, omit: <K extends string | number, T_9 extends {
+	[k in K]: unknown;
+}>(object: T_9, key: K) => Omit<T_9, K>, omitUnsafe: <K_1 extends string | number, T_10 extends {
+	[k_1 in K_1]: unknown;
+}>(object: T_10, key: K_1) => Omit<T_10, K_1>, toMany: <T_13>(obj: T_13 | Iterable<T_13> | T_13[]) => T_13[], fromEntries: <K_11 extends string | number | symbol, V_5>(entries: readonly (readonly [
+	K_11,
+	V_5
+])[]) => Record<K_11, V_5>, safe: <R_2>(producer: () => R_2, options?: Partial<{
+	quiet: boolean;
+	def: R_2;
+	onError: ValueProducer<string>;
+}>) => R_2, safeAsync: <R_3>(producer: () => R_3 | Promise<R_3>, options?: Partial<{
+	quiet: boolean;
+	def: R_3;
+	onError: ValueProducer<string>;
+}>) => Promise<R_3>, mapValue: <T_17, R_4>(value: T_17, mapper: (value: T_17) => R_4) => R_4, headOf: <O, T_2 extends O>(obj: O | Iterator<O, T_2, undefined> | O[], typeGuard?: TypeGuard<T_2>) => T_2, tailOf: <O_11>(obj: O_11[]) => O_11[], restOf: <O_11>(obj: O_11[]) => O_11[], times: typeof times, isIterator: <T>(maybe: unknown) => maybe is Iterator<T, any, undefined>, toMultiMap: <K_13 extends string | number, T_18>(maps: Record<K_13, T_18>[], options?: Partial<{
+	compact: boolean;
+}>) => Record<K_13, T_18[]>, timesGen: typeof timesGen, isIterable: typeof isIterable, isArrayLike: <T_1>(maybe: unknown) => maybe is ArrayLike<T_1>, iffBrowser: <T_19>(producer: () => T_19) => T_19, isBrowser: () => boolean, toPromise: <T_20>(producer: (callback: () => void) => T_20) => Promise<T_20>, all: {
+	<T_21>(values: Iterable<T_21 | PromiseLike<T_21>>): Promise<Awaited<T_21>[]>;
+	<T_22 extends [
+	] | readonly unknown[]>(values: T_22): Promise<{
+		-readonly [P in keyof T_22]: Awaited<T_22[P]>;
+	}>;
+}, isFunction: (maybe: unknown) => maybe is Function;
 
 export {};

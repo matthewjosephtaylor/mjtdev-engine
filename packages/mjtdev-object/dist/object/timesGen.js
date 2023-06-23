@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.timesGen = void 0;
-function* timesGen(count, mapper) {
+export function* timesGen(count, mapper) {
     let stopped = false;
     for (let i = 0; i < count; i++) {
         if (stopped) {
@@ -12,5 +9,4 @@ function* timesGen(count, mapper) {
         });
     }
 }
-exports.timesGen = timesGen;
 //# sourceMappingURL=timesGen.js.map
