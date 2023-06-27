@@ -357,11 +357,11 @@ export declare const Maths: {
 	removeDuplicatePoints: <P extends Point>(points: P[]) => P[];
 	isEqual: (a: Point, b: Point) => boolean;
 };
-declare function match(s1: string | RegExp, s2: string | RegExp): boolean | undefined;
 declare function hashFnv32a({ str, seed }: {
 	str: string;
 	seed?: number;
 }): number;
+declare function match(s1: string | RegExp, s2: string | RegExp): boolean | undefined;
 export declare const Strings: {
 	match: typeof match;
 	hashFnv32a: typeof hashFnv32a;
@@ -1181,6 +1181,12 @@ export declare const Meshes: {
 		type: "tetrahedron" | "octahedron" | "dodecahedron" | "icosahedron" | "rhombicuboctahadron" | "triangularPrism" | "pentagonalPrism" | "hexagonalPrism" | "squarePyramid" | "pentagonalPyramid" | "triangularDipyramid" | "pentagonalDipryramid" | "elongatedSquareDipyramid" | "elongatedPentagonalDipyramid" | "elongatedPentagonalCupola";
 		material: string;
 	}>) => import("babylonjs/Meshes/mesh").Mesh;
+	updateMesh: (scene: import("babylonjs/scene").Scene, mesh: import("babylonjs/Meshes/mesh").Mesh | import("babylonjs/Meshes/instancedMesh").InstancedMesh, options: Partial<{
+		position: PointObject2 | PointObject3 | PointObject4 | Vec4 | Vec3 | Vec2;
+		color: string;
+		material: string;
+		receiveShadows: boolean;
+	}>) => void;
 };
 export type MaterialTypeMap = {
 	standard: StandardMaterial;

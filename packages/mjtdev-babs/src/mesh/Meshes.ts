@@ -29,6 +29,7 @@ import { lookAt } from "./lookAt";
 import { mergeMeshes } from "./mergeMeshes";
 import { pickMeshes } from "./pickMeshes";
 import { updateArcRotateCameraPosition } from "./updateArcRotateCameraPosition";
+import { updateMesh } from "./updateMesh";
 export const Meshes = {
   lookAt,
   getBox,
@@ -54,4 +55,5 @@ export const Meshes = {
   isInstancedMesh,
   pickMeshes,
   getPolyhedron,
+  updateMesh
 };

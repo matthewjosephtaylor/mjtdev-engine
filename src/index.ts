@@ -5,10 +5,8 @@ export * from "@mjtdev/assert";
 export * from "@mjtdev/color";
 export * from "@mjtdev/image";
 export * from "@mjtdev/input";
-export * from "@mjtdev/math";
 export * from "@mjtdev/noise";
 export * from "@mjtdev/object";
-export * from "@mjtdev/string";
 export * from "@mjtdev/babs";
 export * from "@mjtdev/random";
 

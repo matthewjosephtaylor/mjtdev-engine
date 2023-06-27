@@ -128,5 +128,11 @@ export declare const Meshes: {
         type: "tetrahedron" | "octahedron" | "dodecahedron" | "icosahedron" | "rhombicuboctahadron" | "triangularPrism" | "pentagonalPrism" | "hexagonalPrism" | "squarePyramid" | "pentagonalPyramid" | "triangularDipyramid" | "pentagonalDipryramid" | "elongatedSquareDipyramid" | "elongatedPentagonalDipyramid" | "elongatedPentagonalCupola";
         material: string;
     }>) => import("babylonjs/Meshes/mesh").Mesh;
+    updateMesh: (scene: import("babylonjs/scene").Scene, mesh: import("babylonjs/Meshes/mesh").Mesh | import("babylonjs/Meshes/instancedMesh").InstancedMesh, options: Partial<{
+        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
+        color: string;
+        material: string;
+        receiveShadows: boolean;
+    }>) => void;
 };
 //# sourceMappingURL=Meshes.d.ts.map
