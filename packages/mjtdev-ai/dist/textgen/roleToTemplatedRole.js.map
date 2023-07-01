@@ -1,0 +1,1 @@
+{"version":3,"file":"roleToTemplatedRole.js","sourceRoot":"","sources":["../../src/textgen/roleToTemplatedRole.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,mBAAmB,CAAC;AAGpD,MAAM,CAAC,MAAM,mBAAmB,GAAG,CAAC,IAAY,EAAE,EAAE;IAClD,MAAM,EAAE,YAAY,EAAE,GAAG,eAAe,CAAC,QAAQ,EAAE,CAAC;IACpD,OAAO,YAAY,CAAC,UAAU,CAAC,QAAQ,EAAE,IAAI,CAAC,CAAC;AACjD,CAAC,CAAC"}

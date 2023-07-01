@@ -1,0 +1,17 @@
+import { prependPngType } from "./prependPngType";
+
+export const rawImageStringToImg = (
+  data: string
+): Promise<HTMLImageElement> => {
+  const imgUrl = prependPngType(data);
+  const img = document.createElement("img");
+  img.src = imgUrl;
+  return new Promise((resolve, reject) => {
+    img.addEventListener("load", () => {
+      resolve(img);
+    });
+    img.addEventListener("error", (err) => {
+      reject(err);
+    });
+  });
+};

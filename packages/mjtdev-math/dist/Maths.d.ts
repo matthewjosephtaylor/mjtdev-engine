@@ -145,7 +145,7 @@ export declare const Maths: {
     lerp2: (a: import(".").Point2, b: import(".").Point2, alpha: number) => import(".").Point2;
     lerp3: (a: import(".").Point3, b: import(".").Point3, alpha: number) => import(".").Point3;
     lerp4: (a: import(".").Point4, b: import(".").Point4, alpha: number) => import(".").Point4;
-    lerpPoint: (a: import(".").Point, b: import(".").Point, alpha: number) => number | import(".").PointObject1 | import(".").Vec1 | import(".").Vec2 | import(".").Vec3 | import(".").Vec4;
+    lerpPoint: (a: import(".").Point, b: import(".").Point, alpha: number) => number | import(".").PointObject1 | import(".").Vec4 | import(".").Vec3 | import(".").Vec2 | import(".").Vec1;
     midPoint2: typeof midPoint2;
     midPoint3: typeof midPoint3;
     multiply: typeof multiply;
@@ -162,11 +162,6 @@ export declare const Maths: {
     normalize4: typeof normalize4;
     normalizePoint: (point: import(".").Point) => import(".").Point;
     point3ToJson: typeof point3ToJson;
-    quant: ({ v, q, s }: {
-        v: number;
-        q: number;
-        s?: number;
-    }) => number;
     scaler: (scale: number) => (value: number) => number;
     scaler0: (scale: import(".").Point0) => (value: import(".").Point0) => import(".").Point0;
     scaler1: (scale: import(".").Point1) => (value: import(".").Point1) => import(".").Point1;

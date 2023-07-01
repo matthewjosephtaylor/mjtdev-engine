@@ -4,6 +4,7 @@
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf dist/*",
     "start": "webpack serve",

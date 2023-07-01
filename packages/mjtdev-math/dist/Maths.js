@@ -81,7 +81,7 @@ import { normalize3 } from "./normalize3";
 import { normalize4 } from "./normalize4";
 import { normalizePoint } from "./normalizePoint";
 import { point3ToJson } from "./point3ToJson";
-import { quant } from "./quant";
+// import { quant } from "./quant";
 import { scaler } from "./scaler";
 import { scaler0 } from "./scaler0";
 import { scaler1 } from "./scaler1";
@@ -196,7 +196,7 @@ export const Maths = {
     normalize4,
     normalizePoint,
     point3ToJson,
-    quant,
+    // quant,
     scaler,
     scaler0,
     scaler1,

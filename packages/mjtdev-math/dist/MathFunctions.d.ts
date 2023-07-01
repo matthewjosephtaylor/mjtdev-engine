@@ -79,7 +79,7 @@ export { normalize3 } from "./normalize3";
 export { normalize4 } from "./normalize4";
 export { normalizePoint } from "./normalizePoint";
 export { point3ToJson } from "./point3ToJson";
-export { quant } from "./quant";
+export * from './quantFunction';
 export { scaler } from "./scaler";
 export { scaler0 } from "./scaler0";
 export { scaler1 } from "./scaler1";
