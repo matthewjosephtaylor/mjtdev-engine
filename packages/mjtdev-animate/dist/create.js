@@ -19,6 +19,9 @@ export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = t
         abort: false,
         deltaMs: 0,
         lastDeltaMs: 0,
+        destroy: () => {
+            state.abort = true;
+        },
     };
     // animation loop
     const animate = async () => {
@@ -51,7 +54,6 @@ export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = t
         state.nextTickMs = state.nextTickMs - state.costMs;
         state.frameCount++;
         if (state.abort) {
-            // console.log("terminating animation loop");
             return;
         }
         request(animate);

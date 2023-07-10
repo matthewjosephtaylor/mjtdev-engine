@@ -1,0 +1,1 @@
+{"version":3,"file":"RenderControl.d.ts","sourceRoot":"","sources":["../../src/type/RenderControl.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,kBAAkB,CAAC;AAExC,MAAM,MAAM,aAAa,GAAG;IAC1B,OAAO,EAAE,MAAM,IAAI,CAAC;IACpB,IAAI,EAAE,QAAQ,CAAC,IAAI,CAAC;IACpB,SAAS,EAAE,WAAW,CAAC;CACxB,CAAC"}

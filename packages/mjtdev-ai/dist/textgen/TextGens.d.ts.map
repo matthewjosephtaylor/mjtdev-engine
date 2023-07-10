@@ -1,1 +1,1 @@
-{"version":3,"file":"TextGens.d.ts","sourceRoot":"","sources":["../../src/textgen/TextGens.ts"],"names":[],"mappings":"AAMA,eAAO,MAAM,QAAQ;;;;;;;;;;;;;CAMpB,CAAC"}
+{"version":3,"file":"TextGens.d.ts","sourceRoot":"","sources":["../../src/textgen/TextGens.ts"],"names":[],"mappings":"AAOA,YAAY,EAAE,SAAS,EAAE,MAAM,mBAAmB,CAAC;AACnD,eAAO,MAAM,QAAQ;;;;;;;;;;;;;;;;CAOpB,CAAC"}

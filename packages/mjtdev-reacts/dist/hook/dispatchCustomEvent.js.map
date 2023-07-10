@@ -1,0 +1,1 @@
+{"version":3,"file":"dispatchCustomEvent.js","sourceRoot":"","sources":["../../src/hook/dispatchCustomEvent.ts"],"names":[],"mappings":"AACA,MAAM,CAAC,MAAM,mBAAmB,GAAG,CACjC,SAAiB,EACjB,OAAU,EACV,UAA2C,QAAQ,CAAC,IAAI,EACxD,EAAE;IACF,OAAO,CAAC,aAAa,CACnB,IAAI,WAAW,CAAC,SAAS,EAAE;QACzB,MAAM,EAAE,OAAO;KAChB,CAAC,CACH,CAAC;AACJ,CAAC,CAAC"}

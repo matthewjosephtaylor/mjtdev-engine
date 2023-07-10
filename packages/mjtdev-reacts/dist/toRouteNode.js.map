@@ -1,0 +1,1 @@
+{"version":3,"file":"toRouteNode.js","sourceRoot":"","sources":["../src/toRouteNode.tsx"],"names":[],"mappings":";AACA,OAAO,EAAE,KAAK,EAAE,MAAM,kBAAkB,CAAC;AAEzC,MAAM,CAAC,MAAM,WAAW,GAAG,CACzB,IAAY,EACZ,OAAkB,EAClB,GAAoB,EACT,EAAE;IACb,OAAO,KAAC,KAAK,IAAC,IAAI,EAAE,IAAI,EAAY,OAAO,EAAE,OAAO,IAArB,GAAG,CAAsB,CAAC;AAC3D,CAAC,CAAC"}

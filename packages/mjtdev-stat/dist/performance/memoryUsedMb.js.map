@@ -1,0 +1,1 @@
+{"version":3,"file":"memoryUsedMb.js","sourceRoot":"","sources":["../../src/performance/memoryUsedMb.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,YAAY,GAAG,GAAW,EAAE;IACvC,IAAI,WAAW,CAAC,QAAQ,CAAC,KAAK,SAAS,EAAE;QACvC,OAAO,CAAC,CAAC;KACV;IACD,aAAa;IACb,OAAO,WAAW,CAAC,MAAM,CAAC,cAAc,GAAG,IAAI,GAAG,IAAI,CAAC;AACzD,CAAC,CAAC"}

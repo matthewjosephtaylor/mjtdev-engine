@@ -3,32 +3,60 @@ import { roleToTemplatedRole } from "./roleToTemplatedRole";
 import { textToTokens } from "./textToTokens";
 import { textgen } from "./textgen";
 import { useTextGenState } from "./useTextGenState";
+export const getCharacterDescription = (character) => {
+    const { characterDescriptions } = useTextGenState.getState();
+    const desc = characterDescriptions[character];
+    if (!desc) {
+        return "";
+    }
+    const { goals, actsLike, biography, looksLike, talksLike } = desc;
+    return [
+        biography,
+        `${character} talks like:`,
+        talksLike,
+        `${character} looks like:`,
+        looksLike,
+        `${character} acts like:`,
+        actsLike,
+        `${character} major goal: ${goals.goal}
+---steps to achieve goal---
+${goals.details.map((g) => `- ${g}`).join("\n")}
+`,
+    ].join("\n");
+};
 export const expandRoleplayPrompt = (params) => {
-    const { characters, promptTemplate, roleplayContext } = useTextGenState.getState();
-    const { prompt, character, summary, history, defaultBio = "" } = params;
-    const characterBio = characters[character] || defaultBio;
-    const userBio = characters[character] || defaultBio;
+    const { characterDescriptions, roleplayContext } = useTextGenState.getState();
+    const { character, assistantLine = roleToTemplatedRole(character), prompt, summary, history, storyPlot, } = params;
+    const characterDescription = getCharacterDescription(character);
     const historyText = chatHistoryToText(history);
-    return promptTemplate
+    const context = roleplayContext
         .replace("<prompt>", prompt)
         .replace("<context>", roleplayContext)
         .replaceAll("<character>", character)
-        .replaceAll("<user>", character)
-        .replace("<character-bio>", characterBio)
-        .replace("<user-bio>", userBio)
+        .replace("<character-description>", characterDescription.trim().length > 0
+        ? `${character}'s biography:\n${characterDescription}`
+        : "")
         .replace("<chat-summary>", summary)
-        .replace("<chat-history>", historyText);
+        .replace("<story-plot>", storyPlot)
+        .replace("<chat-history>", historyText.trim().length > 0
+        ? `The conversation continues.\n${historyText}`
+        : "");
+    return `${context}\n${assistantLine}`;
 };
-export const roleplayAnswer = async (params) => {
+export const roleplayAnswer = async (params, textGenParams = {}) => {
     const expandedPrompt = expandRoleplayPrompt(params);
-    const expandedTokens = textToTokens(expandedPrompt);
-    console.log(`tl: ${expandedTokens.length}`);
-    const { user, character } = params;
+    const { debug, characterDescriptions } = useTextGenState.getState();
+    if (debug) {
+        const expandedTokens = textToTokens(expandedPrompt);
+        console.log(`tokens: ${expandedTokens.length}`);
+    }
+    const { character } = params;
+    const stopingStrings = Object.keys(characterDescriptions)
+        .map((c) => [roleToTemplatedRole(c), `${c}:`])
+        .flat();
     return textgen(expandedPrompt, {
-        stopping_strings: [
-            roleToTemplatedRole(user),
-            roleToTemplatedRole(character),
-        ],
+        stopping_strings: [...stopingStrings, "###"],
+        ...textGenParams,
     });
 };
 //# sourceMappingURL=roleplayAnswer.js.map

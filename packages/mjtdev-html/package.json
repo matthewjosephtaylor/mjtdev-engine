@@ -1,0 +1,21 @@
+{
+  "name": "@mjtdev/html",
+  "version": "1.0.0",
+  "description": "mjtdev html",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watch ./src 'npm run build'",
+    "build": "npx tsc -b"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "csstype": "^3.0.8"
+  }
+}

@@ -1,10 +1,13 @@
+import { nextTraceId } from "../common/nextTraceId";
 import { safeApi } from "./safeApi";
+import { useImageGenState } from "./useImageGenState";
 export const img2img = async (src, mask, options) => {
+    const traceId = nextTraceId();
     return safeApi(async (api) => {
         const initImg = src.toDataURL("image/png");
         const maskImg = mask.toDataURL("image/png");
-        console.log(`img2img....`);
-        console.log(options);
+        const { monitor } = useImageGenState.getState();
+        monitor(options?.prompt, "CALL", traceId);
         const response = await api.sdapi.img2ImgapiSdapiV1Img2ImgPost({
             init_images: [initImg],
             mask: maskImg,
@@ -18,14 +21,14 @@ export const img2img = async (src, mask, options) => {
             ...options,
             // denoising_strength: 0.2
         });
-        console.log(`finished img2img.`);
-        console.log(response);
         if (!response.ok) {
+            monitor(String(response.error), "ERROR", traceId);
             console.log("ERROR");
             console.log({ options });
             console.log(response.error);
             return undefined;
         }
+        monitor(response.data.info, "RESPONSE", traceId);
         return response.data;
     });
 };

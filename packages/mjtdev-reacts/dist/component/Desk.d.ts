@@ -1,0 +1,16 @@
+import React from "react";
+import { ReactNode } from "react";
+import { RouteTable } from "./type/RouteTable";
+export type DeskCtx = {
+    nodes: IdNode[];
+};
+export type IdNode = [string, ReactNode];
+export declare const useDesk: () => DeskCtx;
+export declare const useUpdateDesk: () => React.Dispatch<React.SetStateAction<DeskCtx>>;
+export declare const Desk: ({ children, routeTable, initialPath, index, }: {
+    initialPath?: string;
+    children?: ReactNode;
+    routeTable?: RouteTable;
+    index?: ReactNode;
+}) => import("react/jsx-runtime").JSX.Element;
+//# sourceMappingURL=Desk.d.ts.map

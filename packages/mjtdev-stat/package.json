@@ -1,0 +1,27 @@
+{
+  "name": "@mjtdev/stat",
+  "version": "1.0.2",
+  "description": "@mjtdev",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "start": "webpack serve",
+    "build": "clear && npx tsc -b && date && echo 'build good :)'",
+    "watch": "watch ./src 'npm run build'",
+    "test": "node dist/TEST.js"
+  },
+  "keywords": [],
+  "author": "@mjtdev",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@mjtdev/animate": "^1.0.3",
+    "@mjtdev/assert": "^1.0.0",
+    "@mjtdev/html": "^1.0.0",
+    "@mjtdev/object": "^1.1.9",
+    "stacktrace-parser": "^0.1.10"
+  }
+}

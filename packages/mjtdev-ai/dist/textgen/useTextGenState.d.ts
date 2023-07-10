@@ -1,10 +1,14 @@
-import { TextGenParams } from "./TextGenParams";
+import { TextGenParams } from "../type/TextGenParams";
+import { CharacterDescription } from "../type/CharacterDescription";
+import { MonitorFunction } from "../type/MonitorFunction";
 export declare const useTextGenState: import("zustand").UseBoundStore<import("zustand").StoreApi<{
-    characters: Record<string, string>;
+    debug: boolean;
+    characterDescriptions: Record<string, CharacterDescription>;
     promptTemplate: string;
     roleplayContext: string;
-    generationUrl: string;
-    textgenParams: TextGenParams;
+    baseUrl: string;
+    textgenParams: Partial<TextGenParams>;
     roleTemplate: string;
+    monitor: MonitorFunction;
 }>>;
 //# sourceMappingURL=useTextGenState.d.ts.map

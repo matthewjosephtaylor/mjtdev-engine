@@ -15,9 +15,11 @@ export const listenToMouse = (
     passive = false,
     debug = false,
     dropMultiple = true,
+
     animateState = Animates.create({ ticksPerSecond }),
   } = options;
 
+  const abortControllers: AbortController[] = [];
   const events: { [k in PointerEventType]: MouseEvent[] } = {
     click: [],
     auxclick: [],
@@ -36,6 +38,8 @@ export const listenToMouse = (
     if (debug) {
       console.log(`attaching to ${eventType}`, parent);
     }
+    const abortController = new AbortController();
+    abortControllers.push(abortController);
     parent.addEventListener(
       eventType,
       (event) => {
@@ -52,6 +56,7 @@ export const listenToMouse = (
         events[eventType].push(event);
       },
       {
+        signal: abortController.signal,
         passive,
       }
     );
@@ -69,5 +74,11 @@ export const listenToMouse = (
       });
     });
   });
+  const animDestroy = animateState.destroy;
+  const destroy = () => {
+    animDestroy();
+    abortControllers.forEach((ac) => ac.abort());
+  };
+  animateState.destroy = destroy;
   return animateState;
 };

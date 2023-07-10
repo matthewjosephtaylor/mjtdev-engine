@@ -2,6 +2,7 @@ import { Animates } from "@mjtdev/animate";
 import { iff } from "@mjtdev/object";
 export const listenToMouse = (mouseActions, options = {}) => {
     const { ratePerSecond: ticksPerSecond = 60, parent = document.body, propagate = true, passive = false, debug = false, dropMultiple = true, animateState = Animates.create({ ticksPerSecond }), } = options;
+    const abortControllers = [];
     const events = {
         click: [],
         auxclick: [],
@@ -19,6 +20,8 @@ export const listenToMouse = (mouseActions, options = {}) => {
         if (debug) {
             console.log(`attaching to ${eventType}`, parent);
         }
+        const abortController = new AbortController();
+        abortControllers.push(abortController);
         parent.addEventListener(eventType, (event) => {
             if (!propagate) {
                 event.preventDefault();
@@ -32,6 +35,7 @@ export const listenToMouse = (mouseActions, options = {}) => {
             }
             events[eventType].push(event);
         }, {
+            signal: abortController.signal,
             passive,
         });
     });
@@ -47,6 +51,12 @@ export const listenToMouse = (mouseActions, options = {}) => {
             });
         });
     });
+    const animDestroy = animateState.destroy;
+    const destroy = () => {
+        animDestroy();
+        abortControllers.forEach((ac) => ac.abort());
+    };
+    animateState.destroy = destroy;
     return animateState;
 };
 //# sourceMappingURL=listenToMouse.js.map

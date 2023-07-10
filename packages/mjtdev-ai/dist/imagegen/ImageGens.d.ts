@@ -6,6 +6,8 @@ export declare const ImageGens: {
     }>) => Promise<import("./api/AutomaticApi").ImageToImageResponse>;
     useImageGenState: import("zustand").UseBoundStore<import("zustand").StoreApi<{
         automaticBaseUrl: string;
+        debug: boolean;
+        monitor: import("..").MonitorFunction;
     }>>;
     drawTxt2Img: (canvas: HTMLCanvasElement, txt2imgOptions?: import("./api/AutomaticApi").StableDiffusionProcessingTxt2Img, canvasOptions?: Partial<{
         x: number;

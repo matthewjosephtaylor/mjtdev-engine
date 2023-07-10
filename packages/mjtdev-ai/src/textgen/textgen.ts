@@ -1,16 +1,19 @@
+import { nextTraceId } from "../common/nextTraceId";
 import { safe } from "../common/safe";
-import { TextGenParams } from "./TextGenParams";
+import { TextGenParams } from "../type/TextGenParams";
 import { useTextGenState } from "./useTextGenState";
 
 export const textgen = async (
   prompt: string,
   paramOverrides: Partial<TextGenParams> = {}
 ): Promise<string> => {
-  const { generationUrl, textgenParams } = useTextGenState.getState();
+  const { monitor, debug, baseUrl, textgenParams } = useTextGenState.getState();
 
+  const traceId = nextTraceId();
   return safe(
     async () => {
-      const response = await fetch(generationUrl, {
+      monitor(prompt, "CALL", traceId);
+      const response = await fetch(`${baseUrl}/api/v1/generate`, {
         method: "POST",
         body: JSON.stringify({
           ...textgenParams,
@@ -20,7 +23,22 @@ export const textgen = async (
       });
       const responseJson = await response.json();
 
-      return responseJson["results"][0]["text"];
+      if (!response.ok) {
+        monitor(String(response.statusText), "ERROR", traceId);
+        console.log("ERROR");
+        console.log({ prompt, paramOverrides });
+        console.log(response);
+        return undefined;
+      }
+      const text = responseJson["results"][0]["text"];
+      if (debug) {
+        console.log(prompt);
+        console.log("----------");
+        console.log(text);
+        console.log("----------");
+      }
+      monitor(text, "RESPONSE", traceId);
+      return text;
     },
     (error) => {
       console.log(prompt);

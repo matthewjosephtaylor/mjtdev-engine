@@ -1,5 +1,5 @@
-import { roleToTemplatedRole } from "./roleToTemplatedRole";
-import { trimHistoryContent } from "./trimHistoryContent";
+import { roleToTemplatedRole } from "../roleplay/roleToTemplatedRole";
+import { trimHistoryContent } from "../roleplay/trimHistoryContent";
 export const chatHistoryToText = (history) => {
     return history
         .filter((line) => {

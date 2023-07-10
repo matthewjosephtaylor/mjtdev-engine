@@ -1,0 +1,1 @@
+{"version":3,"file":"useAsyncEffect.d.ts","sourceRoot":"","sources":["../../src/hook/useAsyncEffect.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAoB,MAAM,OAAO,CAAC;AAEzC,eAAO,MAAM,cAAc,SACnB,MAAM,IAAI,GAAG,CAAC,MAAM,IAAI,CAAC,GAAG,QAAQ,IAAI,GAAG,CAAC,MAAM,IAAI,CAAC,CAAC,4CAEjD,MAAM,IAAI,kBAMxB,CAAC"}

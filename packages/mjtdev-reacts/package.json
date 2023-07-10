@@ -1,0 +1,37 @@
+{
+  "name": "@mjtdev/reacts",
+  "version": "1.0.15",
+  "description": "@mjtdev",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "build": "tsc -b",
+    "watch": "watch ./src 'npm run build'",
+    "test": "node dist/TEST.js"
+  },
+  "keywords": [],
+  "author": "@mjtdev",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/react": "^18.2.11",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5"
+  },
+  "dependencies": {
+    "@mjtdev/assert": "^1.0.0",
+    "@mjtdev/byte": "^1.0.1",
+    "@mjtdev/image": "^1.0.5",
+    "@mjtdev/input": "^1.0.4",
+    "@mjtdev/object": "^1.1.9",
+    "@mjtdev/random": "^1.0.6",
+    "react-ace": "^10.1.0",
+    "react-dropzone": "^11.5.1"
+  }
+}

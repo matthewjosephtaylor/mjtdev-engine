@@ -1,0 +1,1 @@
+{"version":3,"file":"createStatView.d.ts","sourceRoot":"","sources":["../../src/tick/createStatView.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,MAAM,iBAAiB,CAAC;AACvC,OAAO,EAAE,UAAU,EAAE,MAAM,mBAAmB,CAAC;AAG/C,eAAO,MAAM,cAAc;cAGf,MAAM;gBACJ,UAAU;YACd,WAAW;;UASO,IAAI;UAM/B,CAAC"}

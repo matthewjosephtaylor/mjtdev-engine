@@ -31,6 +31,9 @@ export const create = ({
     abort: false,
     deltaMs: 0,
     lastDeltaMs: 0,
+    destroy: () => {
+      state.abort = true;
+    },
   };
 
   // animation loop
@@ -65,7 +68,6 @@ export const create = ({
     state.nextTickMs = state.nextTickMs - state.costMs;
     state.frameCount++;
     if (state.abort) {
-      // console.log("terminating animation loop");
       return;
     }
     request(animate);

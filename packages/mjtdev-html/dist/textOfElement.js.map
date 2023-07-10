@@ -1,0 +1,1 @@
+{"version":3,"file":"textOfElement.js","sourceRoot":"","sources":["../src/textOfElement.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAC;AAG1D,MAAM,UAAU,aAAa,CAAC,OAAoB;IAChD,OAAO,kBAAkB,CAAC,OAAO,CAAC;SAC/B,GAAG,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,EAAE,CAAC,WAAW,CAAC;SAC3B,IAAI,EAAE,CAAC;AACZ,CAAC"}

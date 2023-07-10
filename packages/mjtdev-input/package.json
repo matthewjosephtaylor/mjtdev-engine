@@ -1,6 +1,6 @@
 {
   "name": "@mjtdev/input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -15,10 +15,10 @@
   "author": "@mjtdev",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@mjtdev/animate": "^1.0.3",
+    "@mjtdev/animate": "^1.0.4",
     "@mjtdev/object": "^1.1.9"
   }
 }

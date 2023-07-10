@@ -4,7 +4,6 @@ export type InputListenOptions = Partial<{
     parent: HTMLElement;
     debug: boolean;
     autoUp: boolean;
-    signal: AbortSignal;
     propagate: boolean;
     passive: boolean;
     dropMultiple: boolean;

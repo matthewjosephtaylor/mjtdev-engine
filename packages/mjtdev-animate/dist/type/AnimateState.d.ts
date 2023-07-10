@@ -4,5 +4,6 @@ export type AnimateState = Tick & {
     tickers: Ticker[];
     running: boolean;
     abort: boolean;
+    destroy: () => void;
 };
 //# sourceMappingURL=AnimateState.d.ts.map

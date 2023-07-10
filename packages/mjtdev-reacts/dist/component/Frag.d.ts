@@ -1,0 +1,7 @@
+import { ReactNode } from "react";
+export declare const Frag: ({ children, id, }: {
+    id?: string;
+    children?: ReactNode;
+}) => import("react/jsx-runtime").JSX.Element;
+export declare const useFragId: () => string;
+//# sourceMappingURL=Frag.d.ts.map

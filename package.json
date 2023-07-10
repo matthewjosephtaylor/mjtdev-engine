@@ -58,6 +58,10 @@
     "@mjtdev/object",
     "@mjtdev/random",
     "@mjtdev/string",
-    "@mjtdev/ai"
+    "@mjtdev/ai",
+    "@mjtdev/idb",
+    "@mjtdev/cache",
+    "@mjtdev/stat",
+    "@mjtdev/html"
   ]
 }

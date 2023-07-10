@@ -5,6 +5,7 @@ export type TextGenParams = {
     skip_special_tokens: boolean;
     seed: number;
     stopping_strings: string[];
+    repetition_penalty: number;
     preset: "None" | string;
     temperature: number;
 };
