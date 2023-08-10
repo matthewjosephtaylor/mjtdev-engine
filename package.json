@@ -1,6 +1,6 @@
 {
   "name": "@mjtdev/engine",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "MJT in a box",
   "main": "dist/index.js",
   "source": "src/index.ts",

@@ -15,6 +15,7 @@ export const textgen = async (
       monitor(prompt, "CALL", traceId);
       const response = await fetch(`${baseUrl}/api/v1/generate`, {
         method: "POST",
+        signal: textgenParams?.signal,
         body: JSON.stringify({
           ...textgenParams,
           prompt,

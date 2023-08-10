@@ -1,6 +1,9 @@
 export declare const ImageGens: {
-    txt2img: (options: import("./api/AutomaticApi").StableDiffusionProcessingTxt2Img) => Promise<import("./api/AutomaticApi").TextToImageResponse>;
+    txt2img: (options: import("./api/AutomaticApi").StableDiffusionProcessingTxt2Img & Partial<{
+        signal: AbortSignal;
+    }>) => Promise<import("./api/AutomaticApi").TextToImageResponse>;
     img2img: (src: HTMLCanvasElement, mask: HTMLCanvasElement, options: import("./api/AutomaticApi").StableDiffusionProcessingTxt2Img & Partial<{
+        signal: AbortSignal;
         outpainting_fill: 0 | 2 | 1 | 3;
         inpainting_fill: 0 | 2 | 1 | 3;
     }>) => Promise<import("./api/AutomaticApi").ImageToImageResponse>;
@@ -9,7 +12,7 @@ export declare const ImageGens: {
         debug: boolean;
         monitor: import("..").MonitorFunction;
     }>>;
-    drawTxt2Img: (canvas: HTMLCanvasElement, txt2imgOptions?: import("./api/AutomaticApi").StableDiffusionProcessingTxt2Img, canvasOptions?: Partial<{
+    drawTxt2Img: (canvasOrContext: HTMLCanvasElement | CanvasRenderingContext2D, txt2imgOptions?: import("./api/AutomaticApi").StableDiffusionProcessingTxt2Img, canvasOptions?: Partial<{
         x: number;
         y: number;
         width: number;

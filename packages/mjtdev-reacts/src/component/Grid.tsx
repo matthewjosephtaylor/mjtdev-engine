@@ -32,12 +32,12 @@ export const Grid = ({
       className={classNames}
       // className={"grid-layout"}
       style={{
-        ...style,
         display: "grid",
         gap,
         gridTemplateColumns:
           direction === "column" ? templateParams : undefined,
         gridTemplateRows: direction === "row" ? templateParams : undefined,
+        ...style,
       }}
     >
       {children}

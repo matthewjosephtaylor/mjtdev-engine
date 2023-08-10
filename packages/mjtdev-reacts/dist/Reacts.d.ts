@@ -36,11 +36,15 @@ export declare const Reacts: {
         parent: HTMLElement;
         debug: boolean;
         autoUp: boolean;
-        signal: AbortSignal;
         propagate: boolean;
         passive: boolean;
         dropMultiple: boolean;
         animateState: import("@mjtdev/animate").AnimateState;
+        keyOptions: Partial<{
+            [x: string]: {
+                preventDefault: boolean;
+            };
+        }>;
     }>) => void;
 };
 //# sourceMappingURL=Reacts.d.ts.map

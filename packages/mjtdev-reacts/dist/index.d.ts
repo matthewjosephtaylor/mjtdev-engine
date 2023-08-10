@@ -37,10 +37,14 @@ export declare const useClickOutside: typeof import("./hook/useClickOutside").us
     parent: HTMLElement;
     debug: boolean;
     autoUp: boolean;
-    signal: AbortSignal;
     propagate: boolean;
     passive: boolean;
     dropMultiple: boolean;
     animateState: import("@mjtdev/animate").AnimateState;
+    keyOptions: Partial<{
+        [x: string]: {
+            preventDefault: boolean;
+        };
+    }>;
 }>) => void, useIsFocused: () => boolean, useCustomEventListener: typeof import("./hook/useCustomEventListener").useCustomEventListener, useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string, unPx: (value: string) => number;
 //# sourceMappingURL=index.d.ts.map

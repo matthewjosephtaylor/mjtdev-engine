@@ -8,6 +8,11 @@ export declare const Inputs: {
         passive: boolean;
         dropMultiple: boolean;
         animateState: import("@mjtdev/animate").AnimateState;
+        keyOptions: Partial<{
+            [x: string]: {
+                preventDefault: boolean;
+            };
+        }>;
     }>) => import("@mjtdev/animate").AnimateState;
     listenToMouse: (mouseActions: Partial<import(".").MouseActions>, options?: Partial<{
         ratePerSecond: number;
@@ -18,6 +23,11 @@ export declare const Inputs: {
         passive: boolean;
         dropMultiple: boolean;
         animateState: import("@mjtdev/animate").AnimateState;
+        keyOptions: Partial<{
+            [x: string]: {
+                preventDefault: boolean;
+            };
+        }>;
     }>) => import("@mjtdev/animate").AnimateState;
 };
 //# sourceMappingURL=Inputs.d.ts.map

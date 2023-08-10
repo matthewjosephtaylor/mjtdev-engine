@@ -8,6 +8,7 @@ export const img2img = async (
   mask: HTMLCanvasElement,
   options: StableDiffusionProcessingTxt2Img &
     Partial<{
+      signal: AbortSignal;
       outpainting_fill: 0 | 1 | 2 | 3;
       inpainting_fill: 0 | 1 | 2 | 3;
     }>
@@ -21,20 +22,25 @@ export const img2img = async (
     const { monitor } = useImageGenState.getState();
     monitor(options?.prompt, "CALL", traceId);
 
-    const response = await api.sdapi.img2ImgapiSdapiV1Img2ImgPost({
-      init_images: [initImg],
-      mask: maskImg,
-      // 0 = blank (the mask itself?)
-      // 1 = orig image
-      // 2 = noise
-      // 3 = empty
-      // inpainting_fill: 1,
+    const response = await api.sdapi.img2ImgapiSdapiV1Img2ImgPost(
+      {
+        init_images: [initImg],
+        mask: maskImg,
+        // 0 = blank (the mask itself?)
+        // 1 = orig image
+        // 2 = noise
+        // 3 = empty
+        // inpainting_fill: 1,
 
-      steps: 5,
-      cfg_scale: 3,
-      ...options,
-      // denoising_strength: 0.2
-    });
+        steps: 5,
+        cfg_scale: 3,
+        ...options,
+        // denoising_strength: 0.2
+      },
+      {
+        signal: options?.signal,
+      }
+    );
     if (!response.ok) {
       monitor(String(response.error), "ERROR", traceId);
       console.log("ERROR");

@@ -8,5 +8,10 @@ export type InputListenOptions = Partial<{
     passive: boolean;
     dropMultiple: boolean;
     animateState: AnimateState;
+    keyOptions: Partial<{
+        [k in string]: {
+            preventDefault: boolean;
+        };
+    }>;
 }>;
 //# sourceMappingURL=InputListenOptions.d.ts.map

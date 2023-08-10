@@ -3,13 +3,12 @@ import { roleToTemplatedRole } from "./roleToTemplatedRole";
 import { useTextGenState } from "../textgen/useTextGenState";
 import { getCharacterDescriptionContextText } from "./getCharacterDescriptionContextText";
 export const expandRoleplayPrompt = (params) => {
-    const { characterDescriptions, roleplayContext } = useTextGenState.getState();
-    const { character, assistantLine = roleToTemplatedRole(character), prompt, summary, history, storyPlot, } = params;
+    const { roleplayContext } = useTextGenState.getState();
+    const { character, assistantLine = roleToTemplatedRole(character), prompt, summary, history = [], storyPlot, } = params;
     const characterDescription = getCharacterDescriptionContextText(character);
     const historyText = chatHistoryToText(history);
     const context = roleplayContext
         .replace("<prompt>", prompt)
-        .replace("<context>", roleplayContext)
         .replaceAll("<character>", character)
         .replace("<character-description>", characterDescription.trim().length > 0
         ? `${character}'s biography:\n${characterDescription}`

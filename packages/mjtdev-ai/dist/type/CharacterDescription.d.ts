@@ -5,9 +5,5 @@ export type CharacterDescription = {
     actsLike: string;
     hint: string;
     relationships: string;
-    goals: {
-        goal: string;
-        details: string[];
-    };
 };
 //# sourceMappingURL=CharacterDescription.d.ts.map

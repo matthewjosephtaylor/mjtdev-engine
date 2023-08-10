@@ -1,7 +1,7 @@
 import { Animates } from "@mjtdev/animate";
 import { isDefined, Objects } from "@mjtdev/object";
 export const listenToKey = (keyAction, options = {}) => {
-    const { ratePerSecond: ticksPerSecond = 60, parent = document.body, debug = false, autoUp = true, propagate = true, dropMultiple = false, animateState = Animates.create({ ticksPerSecond }), } = options;
+    const { ratePerSecond: ticksPerSecond = 60, parent = document.body, debug = false, autoUp = true, propagate = true, dropMultiple = false, keyOptions = {}, animateState = Animates.create({ ticksPerSecond }), } = options;
     const curKeys = {};
     animateState.tickers.push(() => {
         Object.entries(curKeys)
@@ -39,6 +39,13 @@ export const listenToKey = (keyAction, options = {}) => {
             if (debug) {
                 console.log(`keyup ${keyCombo}`, event);
             }
+            const keyOption = {
+                ...{ preventDefault: false },
+                ...(keyOptions[keyCombo] || {}),
+            };
+            if (keyOption.preventDefault) {
+                event.preventDefault();
+            }
             curKeys[keyCombo] = false;
             return propagate;
         }, {
@@ -66,6 +73,13 @@ export const listenToKey = (keyAction, options = {}) => {
                 .toUpperCase();
             if (debug) {
                 console.log(`keydown ${keyCombo}`, event);
+            }
+            const keyOption = {
+                ...{ preventDefault: false },
+                ...(keyOptions[keyCombo] || {}),
+            };
+            if (keyOption.preventDefault) {
+                event.preventDefault();
             }
             curKeys[keyCombo] = true;
             return propagate;

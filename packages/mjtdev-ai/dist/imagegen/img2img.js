@@ -20,6 +20,8 @@ export const img2img = async (src, mask, options) => {
             cfg_scale: 3,
             ...options,
             // denoising_strength: 0.2
+        }, {
+            signal: options?.signal,
         });
         if (!response.ok) {
             monitor(String(response.error), "ERROR", traceId);

@@ -1,6 +1,6 @@
 import { roleToTemplatedRole } from "./roleToTemplatedRole";
 import { trimHistoryContent } from "./trimHistoryContent";
-export const chatHistoryToText = (history) => {
+export const chatHistoryToText = (history = []) => {
     return history
         .filter((line) => {
         const { content } = line;

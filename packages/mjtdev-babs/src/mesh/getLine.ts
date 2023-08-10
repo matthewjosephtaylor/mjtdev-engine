@@ -16,31 +16,53 @@ export const getLine = (
       useVertexAlpha: boolean;
     }>
 ) => {
+  const { updatable = false } = options;
+
+  return getMesh(
+    scene,
+    name,
+    (instance: LinesMesh) => {
+      return buildLineMesh(scene, name, {
+        ...options,
+        instance,
+        // updatable: undefined,
+      });
+    },
+    updatable
+  );
+};
+
+const buildLineMesh = (
+  scene: Scene,
+  name: string,
+  options: MeshOptions &
+    Partial<{
+      points: Point3[];
+      colors: string[];
+      updatable: boolean;
+      useVertexAlpha: boolean;
+      instance: LinesMesh;
+    }>
+) => {
   const {
     colors = [],
     points = [],
     color = "white",
     updatable = false,
     useVertexAlpha,
+    instance,
   } = options;
-
-  return getMesh(
-    scene,
-    name,
-    (instance: LinesMesh) => {
-      const pointColors = points
-        .map((_, index) => colors[index] ?? color)
-        .map((c) => c4(c));
-      const mesh = MeshBuilder.CreateLines(name, {
-        points: points.map((p) => v3(p)),
-        colors: pointColors,
-        updatable,
-        useVertexAlpha,
-        instance,
-      });
-      updateMesh(scene, mesh, options);
-      return mesh;
-    },
-    updatable
-  );
+  const pointColors = points
+    .map((_, index) => colors[index] ?? color)
+    .map((c) => c4(c));
+  const fleshedPoints = points.map((p) => v3(p));
+  const mesh = MeshBuilder.CreateLines(name, {
+    points: fleshedPoints,
+    colors: pointColors,
+    updatable,
+    useVertexAlpha,
+    instance,
+  });
+  updateMesh(scene, mesh, options);
+  return mesh;
 };

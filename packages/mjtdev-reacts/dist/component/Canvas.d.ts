@@ -1,5 +1,6 @@
 import { CanvasPainter } from "./type/CanvasPainter";
-export declare const Canvas: ({ painter, width, height, style, }: {
+export declare const Canvas: ({ painter, width, height, title, style, }: {
+    title?: string;
     style?: React.CSSProperties;
     width?: number;
     height?: number;

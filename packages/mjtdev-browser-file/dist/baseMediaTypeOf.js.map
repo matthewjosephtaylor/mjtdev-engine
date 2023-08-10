@@ -1,0 +1,1 @@
+{"version":3,"file":"baseMediaTypeOf.js","sourceRoot":"","sources":["../src/baseMediaTypeOf.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,eAAe,GAAG,CAAC,SAAiB,EAAsB,EAAE;IACvE,IAAI,SAAS,KAAK,SAAS,EAAE;QAC3B,OAAO,SAAS,CAAC;KAClB;IACD,OAAO,SAAS,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC"}

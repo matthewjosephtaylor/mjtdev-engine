@@ -5,7 +5,7 @@ export const getCharacterDescriptionContextText = (character) => {
     if (!desc) {
         return "";
     }
-    const { relationships, goals, actsLike, biography, looksLike, talksLike } = desc;
+    const { relationships, actsLike, biography, looksLike, talksLike } = desc;
     return [
         biography,
         `${character} talks like:`,
@@ -17,10 +17,6 @@ export const getCharacterDescriptionContextText = (character) => {
         `${character} relationships to other characters:`,
         relationships,
         actsLike,
-        `${character} major goal: ${goals.goal}
----steps to achieve goal---
-${goals.details.map((g) => `- ${g}`).join("\n")}
-`,
     ].join("\n");
 };
 //# sourceMappingURL=getCharacterDescriptionContextText.js.map

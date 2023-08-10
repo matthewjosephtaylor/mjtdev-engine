@@ -1,0 +1,1 @@
+{"version":3,"file":"GridObject.d.ts","sourceRoot":"","sources":["../../../src/grid/type/GridObject.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,UAAU,GAAG;IACvB,QAAQ,EAAE,MAAM,CAAC;IACjB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,UAAU,CAAC,EAAE,MAAM,CAAC;IACpB,OAAO,CAAC,EAAE,MAAM,CAAC;CAClB,CAAC;AAEF,MAAM,MAAM,eAAe,GAAG,MAAM,CAAC;AAErC,eAAO,MAAM,YAAY,UAAW,GAAG,wBAEtC,CAAC"}

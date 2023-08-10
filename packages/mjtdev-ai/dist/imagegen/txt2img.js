@@ -9,6 +9,8 @@ export const txt2img = async (options) => {
         const response = await api.sdapi.text2ImgapiSdapiV1Txt2ImgPost({
             steps: 5,
             ...options,
+        }, {
+            signal: options?.signal,
         });
         if (debug) {
             console.log(options.prompt);

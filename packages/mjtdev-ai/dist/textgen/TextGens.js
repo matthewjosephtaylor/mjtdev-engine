@@ -1,15 +1,13 @@
-import { chatHistoryToText } from "../chat/chatHistoryToText";
-import { roleplayAnswer } from "../chat/roleplayAnswer";
+import { loadModel } from "./loadModel";
+import { modelInfo } from "./modelInfo";
 import { textToTokens } from "./textToTokens";
 import { textgen } from "./textgen";
-import { modelInfo } from "./modelInfo";
 import { useTextGenState } from "./useTextGenState";
 export const TextGens = {
     textgen,
-    roleplayAnswer,
     useTextGenState,
     textToTokens,
-    chatHistoryToText,
     modelInfo,
+    loadModel,
 };
 //# sourceMappingURL=TextGens.js.map

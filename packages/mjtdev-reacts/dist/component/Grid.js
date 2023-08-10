@@ -12,11 +12,11 @@ export const Grid = ({ children, direction = "column", count = Children.count(ch
     return (_jsx("div", { className: classNames, 
         // className={"grid-layout"}
         style: {
-            ...style,
             display: "grid",
             gap,
             gridTemplateColumns: direction === "column" ? templateParams : undefined,
             gridTemplateRows: direction === "row" ? templateParams : undefined,
+            ...style,
         }, children: children }));
 };
 //# sourceMappingURL=Grid.js.map

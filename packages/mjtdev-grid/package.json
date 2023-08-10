@@ -1,0 +1,22 @@
+{
+  "name": "@mjtdev/grid",
+  "version": "1.0.1",
+  "description": "@mjtdev grid",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "test": "node lib/TEST.js",
+    "build": "npx tsc -b",
+    "watch": "watch ./src 'npm run build'"
+  },
+  "keywords": [],
+  "author": "@mjtdev",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@mjtdev/assert": "^1.0.0",
+    "@mjtdev/math": "^1.0.5"
+  }
+}

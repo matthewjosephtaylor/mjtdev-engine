@@ -1,1 +1,3 @@
-export type CanvasPainter = (canvas: HTMLCanvasElement) => Promise<() => void>;
+export type CanvasPainter = (
+  canvas: HTMLCanvasElement
+) => Promise<() => void> | undefined;

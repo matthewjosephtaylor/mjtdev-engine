@@ -1,3 +1,3 @@
 import { ChatHistory } from "../type/ChatHistory";
-export declare const chatHistoryToText: (history: ChatHistory) => string;
+export declare const chatHistoryToText: (history?: ChatHistory) => string;
 //# sourceMappingURL=chatHistoryToText.d.ts.map

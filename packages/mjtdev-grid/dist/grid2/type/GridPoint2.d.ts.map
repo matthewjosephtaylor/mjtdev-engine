@@ -1,0 +1,1 @@
+{"version":3,"file":"GridPoint2.d.ts","sourceRoot":"","sources":["../../../src/grid2/type/GridPoint2.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,cAAc,CAAC;AACtC,OAAO,EAAE,KAAK,EAAE,MAAM,SAAS,CAAC;AAEhC,MAAM,MAAM,UAAU,CAAC,CAAC,IAAI;IAC1B,IAAI,EAAE,KAAK,CAAC,CAAC,CAAC,CAAC;IACf,KAAK,EAAE,MAAM,CAAC;CACf,CAAC"}

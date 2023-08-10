@@ -28,7 +28,7 @@
     "@mjtdev/assert": "^1.0.0",
     "@mjtdev/byte": "^1.0.1",
     "@mjtdev/image": "^1.0.5",
-    "@mjtdev/input": "^1.0.4",
+    "@mjtdev/input": "^1.0.5",
     "@mjtdev/object": "^1.1.9",
     "@mjtdev/random": "^1.0.6",
     "react-ace": "^10.1.0",

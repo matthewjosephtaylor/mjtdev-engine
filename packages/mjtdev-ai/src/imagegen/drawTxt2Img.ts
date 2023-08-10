@@ -3,7 +3,7 @@ import { rawImageStringToImg } from "./rawImageStringToImg";
 import { txt2img } from "./txt2img";
 
 export const drawTxt2Img = async (
-  canvas: HTMLCanvasElement,
+  canvasOrContext: HTMLCanvasElement | CanvasRenderingContext2D,
   txt2imgOptions: StableDiffusionProcessingTxt2Img = {},
   canvasOptions: Partial<{
     x: number;
@@ -14,7 +14,15 @@ export const drawTxt2Img = async (
 ) => {
   const response = await txt2img(txt2imgOptions);
   const img = await rawImageStringToImg(response.images[0]);
-  const ctx = canvas.getContext("2d");
+  const canvas =
+    canvasOrContext instanceof HTMLCanvasElement
+      ? canvasOrContext
+      : canvasOrContext.canvas;
+  // const ctx = canvasOrContext.getContext("2d");
+  const ctx =
+    canvasOrContext instanceof CanvasRenderingContext2D
+      ? canvasOrContext
+      : canvas.getContext("2d");
   const {
     x = 0,
     y = 0,

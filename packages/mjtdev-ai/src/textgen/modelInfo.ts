@@ -2,7 +2,6 @@ import { safe } from "../common/safe";
 import { ModelInfo } from "../type/ModelInfo";
 import { useTextGenState } from "./useTextGenState";
 
-
 export const modelInfo = (): Promise<ModelInfo> => {
   const { baseUrl } = useTextGenState.getState();
 
@@ -22,3 +21,5 @@ export const modelInfo = (): Promise<ModelInfo> => {
     }
   );
 };
+
+

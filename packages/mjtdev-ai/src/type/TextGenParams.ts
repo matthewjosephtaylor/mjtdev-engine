@@ -1,4 +1,5 @@
 export type TextGenParams = {
+  signal: AbortSignal;
   prompt: string;
   max_new_tokens: number;
   add_bos_token: boolean;

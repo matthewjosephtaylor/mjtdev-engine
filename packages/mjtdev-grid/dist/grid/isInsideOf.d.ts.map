@@ -1,0 +1,1 @@
+{"version":3,"file":"isInsideOf.d.ts","sourceRoot":"","sources":["../../src/grid/isInsideOf.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,cAAc,CAAC;AAItC,OAAO,EAAE,UAAU,EAAE,MAAM,mBAAmB,CAAC;AAE/C,eAAO,MAAM,UAAU,SAAU;IAC/B,SAAS,EAAE,MAAM,CAAC;IAClB,QAAQ,EAAE,MAAM,CAAC;IACjB,IAAI,EAAE,UAAU,CAAC;CAClB,YAEA,CAAC"}

@@ -14,6 +14,7 @@ export const listenToKey = (
     autoUp = true,
     propagate = true,
     dropMultiple = false,
+    keyOptions = {},
     animateState = Animates.create({ ticksPerSecond }),
   } = options;
 
@@ -58,6 +59,13 @@ export const listenToKey = (
         if (debug) {
           console.log(`keyup ${keyCombo}`, event);
         }
+        const keyOption = {
+          ...{ preventDefault: false },
+          ...(keyOptions[keyCombo] || {}),
+        };
+        if (keyOption.preventDefault) {
+          event.preventDefault();
+        }
         curKeys[keyCombo] = false;
         return propagate;
       },
@@ -89,6 +97,13 @@ export const listenToKey = (
           .toUpperCase();
         if (debug) {
           console.log(`keydown ${keyCombo}`, event);
+        }
+        const keyOption = {
+          ...{ preventDefault: false },
+          ...(keyOptions[keyCombo] || {}),
+        };
+        if (keyOption.preventDefault) {
+          event.preventDefault();
         }
         curKeys[keyCombo] = true;
         return propagate;
