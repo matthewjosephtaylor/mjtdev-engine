@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/engine",
   "version": "1.0.7",
+  "sideEffects": false,
   "description": "MJT in a box",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -47,6 +48,7 @@
   ],
   "bundleDependencies": [
     "@mjtdev/animate",
+    "@mjtdev/nlp",
     "@mjtdev/assert",
     "@mjtdev/babs",
     "@mjtdev/byte",

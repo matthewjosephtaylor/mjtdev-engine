@@ -73,7 +73,7 @@ export declare const Meshes: {
         updatable: boolean;
         useVertexAlpha: boolean;
     }>) => import("babylonjs/Meshes/linesMesh").LinesMesh;
-    walkMeshes: (mesh: import("babylonjs/scene").Scene | import("babylonjs/Meshes/abstractMesh").AbstractMesh, walker: (mesh: import("babylonjs/Meshes/abstractMesh").AbstractMesh) => void) => any;
+    walkMeshes: (mesh: import("babylonjs/Meshes/abstractMesh").AbstractMesh | import("babylonjs/scene").Scene, walker: (mesh: import("babylonjs/Meshes/abstractMesh").AbstractMesh) => void) => any;
     pickMesh: (scene: import("babylonjs/scene").Scene, x: number, y: number, options?: Partial<{
         camera: import("babylonjs/Cameras/camera").Camera;
         predicate: (mesh: import("babylonjs/Meshes/abstractMesh").AbstractMesh) => boolean;

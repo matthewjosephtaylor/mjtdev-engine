@@ -1,7 +1,8 @@
 {
   "name": "@mjtdev/ai",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI package",
+  "sideEffects": false,
   "main": "src/index.js",
   "module": "./dist/index.js",
   "scripts": {

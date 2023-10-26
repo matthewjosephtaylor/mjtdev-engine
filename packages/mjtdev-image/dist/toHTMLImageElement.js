@@ -1,5 +1,4 @@
-import { Bytes } from "@mjtdev/byte";
-import ImageJs from "image-js";
+// import ImageJs from "image-js";
 import { loadHTMLImageElement } from "./loadHTMLImageElement";
 import { toHTMLCanvasElement } from "./toHTMLCanvasElement";
 export const toHTMLImageElement = async (src) => {
@@ -17,9 +16,10 @@ export const toHTMLImageElement = async (src) => {
     }
     return new Promise(async (resolve, reject) => {
         try {
-            const arrayBuffer = await Bytes.toArrayBuffer(src);
-            const ijs = await ImageJs.load(arrayBuffer);
-            resolve(loadHTMLImageElement(ijs.toDataURL()));
+            // const arrayBuffer = await Bytes.toArrayBuffer(src);
+            // const ijs = await ImageJs.load(arrayBuffer);
+            // resolve(loadHTMLImageElement(ijs.toDataURL()));
+            reject("TODO convert to array buffer and then load as data url");
         }
         catch (reason) {
             reject(reason);

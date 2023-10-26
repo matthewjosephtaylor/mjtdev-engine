@@ -1,7 +1,9 @@
 import { pointToName } from "./pointToName";
 import { normalizePoint } from "./normalizePoint";
-export const updateValue = ({ grid, point, value, }) => {
+import { valueAt } from "./valueAt";
+export const updateValue = ({ grid, point, mapper, }) => {
     const normalizedPoint = normalizePoint({ grid, point });
-    grid.values[pointToName(normalizedPoint)] = value;
+    const updated = mapper(valueAt({ grid, point }));
+    grid.values[pointToName(normalizedPoint)] = updated;
 };
 //# sourceMappingURL=updateValue.js.map

@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/math",
   "version": "1.0.5",
+  "sideEffects": false,
   "description": "mjt math",
   "main": "./dist/index.js",
   "type": "module",

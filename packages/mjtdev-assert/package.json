@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/assert",
   "version": "1.0.0",
+  "sideEffects": false,
   "description": "@mjtdev assertions",
   "main": "./dist/index.js",
   "scripts": {

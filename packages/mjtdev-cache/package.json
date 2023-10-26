@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/cache",
   "version": "1.0.1",
+  "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

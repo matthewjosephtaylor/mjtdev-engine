@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/idb",
   "version": "1.0.4",
+  "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

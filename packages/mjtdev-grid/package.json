@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/grid",
   "version": "1.0.1",
+  "sideEffects": false,
   "description": "@mjtdev grid",
   "main": "./dist/index.js",
   "scripts": {

@@ -1,4 +1,5 @@
-export * from '@mjtdev/browser-file';
+export * from "@mjtdev/browser-file";
+export * from "@mjtdev/nlp";
 export * from "@mjtdev/reacts";
 export * from "@mjtdev/cache";
 export * from "@mjtdev/idb";

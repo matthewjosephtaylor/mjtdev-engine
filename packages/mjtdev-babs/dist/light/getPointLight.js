@@ -8,5 +8,6 @@ export const getPointLight = (scene, name, options = {}) => {
         return new PointLight(name, v3(position), scene);
     });
     updateLight(light, options);
+    return light;
 };
 //# sourceMappingURL=getPointLight.js.map

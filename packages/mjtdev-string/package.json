@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/string",
   "version": "1.0.1",
+  "sideEffects": false,
   "description": "mjtdev string",
   "main": "./dist/index.js",
   "scripts": {

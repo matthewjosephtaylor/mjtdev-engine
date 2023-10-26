@@ -8,5 +8,6 @@ export const getHemisphericLight = (scene, name, options = {}) => {
         return new HemisphericLight(name, v3(direction), scene);
     });
     updateLight(light, options);
+    return light;
 };
 //# sourceMappingURL=getHemisphericLight.js.map

@@ -19,7 +19,11 @@ import { arrayBufferToUtf8 } from "./arrayBufferToUtf8";
 import { immediateHashOf } from "./immediateHashOf";
 import { immediateToArrayBuffer } from "./immediateToArrayBuffer";
 import { isImmediateByteLike } from "./isImmediateByteLike";
+import { toDataUrl } from "./toDataUrl";
+import { dataUrlToBlob } from "./dataUrlToBlob";
 export const Bytes = {
+    toDataUrl,
+    dataUrlToBlob,
     lengthOf,
     isByteLike,
     isImmediateByteLike,

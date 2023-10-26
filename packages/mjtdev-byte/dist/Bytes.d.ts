@@ -1,5 +1,7 @@
 import { toBase64 } from "./toBase64";
 export declare const Bytes: {
+    toDataUrl: (bytes: import(".").ByteLike) => Promise<string>;
+    dataUrlToBlob: (dataUrl: string) => Blob;
     lengthOf: (bytes: import(".").ByteLike) => number;
     isByteLike: (maybe: unknown) => maybe is import(".").ByteLike;
     isImmediateByteLike: (maybe: unknown) => maybe is import(".").ImmediateByteLike;

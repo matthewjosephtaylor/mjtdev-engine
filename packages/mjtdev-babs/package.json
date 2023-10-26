@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/babs",
-  "version": "1.0.7",
+  "version": "1.0.8",
+  "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "scripts": {
@@ -27,7 +28,7 @@
     "@mjtdev/animate": "^1.0.3",
     "@mjtdev/assert": "^1.0.0",
     "@mjtdev/color": "^1.0.7",
-    "@mjtdev/image": "^1.0.4",
+    "@mjtdev/image": "^1.0.6",
     "@mjtdev/input": "^1.0.4",
     "@mjtdev/magica-voxels": "^1.0.0",
     "@mjtdev/math": "^1.0.4",

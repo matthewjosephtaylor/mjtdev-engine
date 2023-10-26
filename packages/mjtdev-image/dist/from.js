@@ -1,13 +1,37 @@
-import ImageJs from "image-js";
+// import ImageJs from "image-js";
 import { loadHTMLImageElement } from "./loadHTMLImageElement";
 import { toHTMLCanvasElement } from "./toHTMLCanvasElement";
-import { times } from "@mjtdev/object";
-// @ts-ignore Fucking Buffer
-// globalThis["Buffer"] = { isBuffer: () => false };
+export const imageHelper = (canvas) => {
+    return {
+        width: canvas.width,
+        height: canvas.height,
+        toDataURL: () => {
+            return canvas.toDataURL();
+        },
+        toBlob: () => {
+            return new Promise((resolve, reject) => {
+                try {
+                    canvas.toBlob((blob) => {
+                        return resolve(blob);
+                    });
+                }
+                catch (error) {
+                    return reject(error);
+                }
+            });
+        },
+        // getPixel: (i: number) => {
+        //   canvas.
+        //   return [];
+        // },
+    };
+};
 export const from = async (src) => {
     const canvas = await toHTMLCanvasElement(src);
-    let ijs = ImageJs.fromCanvas(canvas);
+    // let ijs = ImageJs.fromCanvas(canvas);
+    let ijs = imageHelper(canvas);
     const builder = {
+        // update: (updater: (img: ImageJs) => ImageJs) => {
         update: (updater) => {
             ijs = updater(ijs);
             return builder;
@@ -25,10 +49,22 @@ export const from = async (src) => {
             return loadHTMLImageElement(ijs.toDataURL());
         },
         mapPixels: (mapper) => {
-            const { width, height } = ijs;
-            return times(width * height, (i) => {
-                return mapper(ijs.getPixel(i));
-            });
+            throw new Error("Not image-js support removed. TODO re-implement");
+            // const { width, height } = ijs;
+            // const ctx = canvas.getContext('2d')
+            // const imageData = ctx.getImageData(0, 0, width, height)
+            // const { data} = imageData
+            //   const value = new Array(this.channels);
+            // return times(width * height, (i) => {
+            //   const target = index * this.channels;
+            //   for (let i = 0; i < this.channels; i++) {
+            //     value[i] = this.data[target + i];
+            //   }
+            //   return value;
+            //   // data.map(callbackfn)
+            //   const foo = data[i]
+            //   return mapper(ijs.getPixel(i));
+            // });
         },
     };
     return builder;

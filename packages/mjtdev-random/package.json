@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/random",
   "version": "1.0.6",
+  "sideEffects": false,
   "description": "mjtdev random",
   "main": "./dist/index.js",
   "scripts": {

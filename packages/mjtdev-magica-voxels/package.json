@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/magica-voxels",
   "version": "1.0.0",
+  "sideEffects": false,
   "description": "Parse MagicaVoxel .vox format",
   "main": "./dist/index.js",
   "scripts": {

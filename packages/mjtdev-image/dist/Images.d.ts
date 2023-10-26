@@ -4,10 +4,25 @@ export declare const Images: {
     loadHTMLImageElement: (src: string) => Promise<HTMLImageElement>;
     toSrcString: (imageLike: import("./ImageLike").ImageLike) => Promise<string>;
     from: (src: import("./ImageLike").ImageLike) => Promise<{
-        update: (updater: (img: import("image-js").Image) => import("image-js").Image) => any;
+        update: (updater: (img: {
+            width: number;
+            height: number;
+            toDataURL: () => string;
+            toBlob: () => Promise<unknown>;
+        }) => {
+            width: number;
+            height: number;
+            toDataURL: () => string;
+            toBlob: () => Promise<unknown>;
+        }) => any;
         toDataURL: () => string;
-        toBlob: () => Promise<Blob>;
-        get: <T>(getter: (img: import("image-js").Image) => T) => T;
+        toBlob: () => Promise<unknown>;
+        get: <T>(getter: (img: {
+            width: number;
+            height: number;
+            toDataURL: () => string;
+            toBlob: () => Promise<unknown>;
+        }) => T) => T;
         toHtmlImageElement: () => Promise<HTMLImageElement>;
         mapPixels: <T_1>(mapper: (pixel: number[]) => T_1) => T_1[];
     }>;

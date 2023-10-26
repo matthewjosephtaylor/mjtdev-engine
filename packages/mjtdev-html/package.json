@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/html",
   "version": "1.0.0",
+  "sideEffects": false,
   "description": "mjtdev html",
   "main": "./dist/index.js",
   "scripts": {

@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/noise",
   "version": "1.0.1",
+  "sideEffects": false,
   "description": "mjtdev noise",
   "main": "./dist/index.js",
   "scripts": {
@@ -11,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "devDependencies": {
     "typescript": "^4.8.4"
   }

@@ -1,0 +1,19 @@
+{
+  "name": "@mjtdev/nlp",
+  "version": "1.0.1",
+  "sideEffects": false,
+  "description": "mjtdev nlp",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b",
+    "watch": "watch ./src 'npm run build'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

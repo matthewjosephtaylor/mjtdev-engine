@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/browser-file",
   "version": "1.0.0",
+  "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "scripts": {

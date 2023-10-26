@@ -1,6 +1,7 @@
 {
   "name": "@mjtdev/color",
   "version": "1.0.7",
+  "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

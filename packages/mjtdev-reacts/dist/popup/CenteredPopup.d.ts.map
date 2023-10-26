@@ -1,0 +1,1 @@
+{"version":3,"file":"CenteredPopup.d.ts","sourceRoot":"","sources":["../../src/popup/CenteredPopup.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAqB,MAAM,OAAO,CAAC;AAIrD,eAAO,MAAM,aAAa;cAMd,SAAS;UACb,MAAM;aACH,MAAM,IAAI;cACT,QAAQ;QAAE,YAAY,EAAE,OAAO,CAAA;KAAE,CAAC;6CA8B7C,CAAC"}

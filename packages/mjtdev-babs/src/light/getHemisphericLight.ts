@@ -14,4 +14,5 @@ export const getHemisphericLight = (
     return new HemisphericLight(name, v3(direction), scene);
   });
   updateLight(light, options);
+  return light;
 };

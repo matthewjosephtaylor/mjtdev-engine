@@ -1,0 +1,1 @@
+{"version":3,"file":"Border.d.ts","sourceRoot":"","sources":["../../src/component/Border.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,EAAE,aAAa,EAAE,SAAS,EAAY,MAAM,OAAO,CAAC;AAGlE,eAAO,MAAM,MAAM;gBAUL,OAAO;uBACA,OAAO;kBACZ,OAAO;YACb,mBAAmB;YACnB,SAAS;eACN,SAAS;yBACC,OAAO;oCACI,OAAO,KAAK,IAAI;6CAqCjD,CAAC"}

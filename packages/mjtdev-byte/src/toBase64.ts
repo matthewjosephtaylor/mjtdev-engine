@@ -26,3 +26,5 @@ export function immediateToBase64(bytes: ImmediateByteLike): string {
   const arr = immediateToArrayBuffer(bytes);
   return btoa(String.fromCharCode(...new Uint8Array(arr)));
 }
+
+

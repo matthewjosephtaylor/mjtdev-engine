@@ -16,12 +16,12 @@ export declare const Lights: {
         intensity: number;
     }> & {
         direction: Vec3;
-    }>) => void;
+    }>) => import("babylonjs/Lights/hemisphericLight").HemisphericLight;
     getPointLight: (scene: import("babylonjs/scene").Scene, name: string, options?: Partial<Partial<{
         intensity: number;
     }> & {
         position: Vec3;
-    }>) => void;
+    }>) => import("babylonjs/Lights/pointLight").PointLight;
     updateLight: (light: import("babylonjs/Lights/light").Light, options: AllLightOptions) => void;
 };
 //# sourceMappingURL=Lights.d.ts.map

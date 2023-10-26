@@ -3,6 +3,7 @@
   "version": "1.0.15",
   "description": "@mjtdev",
   "main": "./dist/index.js",
+  "sideEffects": false,
   "module": "./dist/index.js",
   "scripts": {
     "clean": "rm -rf dist/*",
@@ -27,10 +28,14 @@
   "dependencies": {
     "@mjtdev/assert": "^1.0.0",
     "@mjtdev/byte": "^1.0.1",
+    "@mjtdev/html": "^1.0.0",
     "@mjtdev/image": "^1.0.5",
     "@mjtdev/input": "^1.0.5",
+    "@mjtdev/math": "^1.0.5",
     "@mjtdev/object": "^1.1.9",
     "@mjtdev/random": "^1.0.6",
+    "@monaco-editor/react": "^4.5.2",
+    "immer": "^10.0.2",
     "react-ace": "^10.1.0",
     "react-dropzone": "^11.5.1"
   }

@@ -25,7 +25,33 @@ export * from "./component/Win";
 export * from "./component/TextEdit";
 export * from "./component/Form";
 export * from "./component/Canvas";
+export * from "./component/Border";
+export * from "./component/ContentEditable";
+export * from "./component/ErrorBoundary";
+export * from "./component/TextScreen";
+export * from "./component/ButtonGroup";
 export * from "./Reacts";
+
+// state
+export * from "./state/States";
+export * from "./state/State";
+export * from "./state/updateState";
+export * from "./state/createState";
+export * from "./state/createStateUpdater";
+
+//popup
+export * from "./popup/Popups";
+export * from "./popup/ContextMenu";
+export * from "./popup/ActionMap";
+export * from "./popup/PopupContentDisplay";
+export * from "./popup/centerPopup";
+export * from "./popup/isPopupOpen";
+export * from "./popup/openPopup";
+export * from "./popup/closePopup";
+export * from "./popup/openContextMenu";
+export * from "./popup/PopupDisplay";
+export * from "./popup/CenteredPopup";
+export * from "./popup/openCenteredPopup";
 
 // types
 export * from "./type/FrameControl";
@@ -35,6 +61,13 @@ export * from "./type/RenderControl";
 export * from "./type/RenderGroup";
 export * from "./type/RenderState";
 export * from "./component/type/CanvasPainter";
+
+// common utils
+export * from "./util/lock";
+export * from "./util/pasteTextAtCurrentCursorPosition";
+export * from "./util/resizeElementToContent";
+export * from "./util/px";
+export * from "./util/unPx";
 
 import { Reacts } from "./Reacts";
 

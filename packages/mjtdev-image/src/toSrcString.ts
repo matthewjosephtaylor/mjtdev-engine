@@ -1,5 +1,4 @@
-import { Bytes } from "@mjtdev/byte";
-import ImageJs from "image-js";
+// import ImageJs from "image-js";
 import { ImageLike } from "./ImageLike";
 
 export const toSrcString = (imageLike: ImageLike): Promise<string> => {
@@ -22,9 +21,11 @@ export const toSrcString = (imageLike: ImageLike): Promise<string> => {
         return;
       }
 
-      const arrayBuffer = await Bytes.toArrayBuffer(imageLike);
-      const ijs = await ImageJs.load(arrayBuffer);
-      resolve(ijs.toDataURL());
+      reject("Unable to determine src URL");
+
+      // const arrayBuffer = await Bytes.toArrayBuffer(imageLike);
+      // const ijs = await ImageJs.load(arrayBuffer);
+      // resolve(ijs.toDataURL());
     } catch (reason) {
       reject(reason);
     }
