@@ -1,0 +1,1 @@
+{"version":3,"file":"createRender.d.ts","sourceRoot":"","sources":["../src/createRender.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,iBAAiB,EAAE,MAAM,EAAE,MAAM,WAAW,CAAC;AAG9D,eAAO,MAAM,YAAY,WACf,MAAM,YACL,QACP;IACE,MAAM,EAAE,iBAAiB,CAAC;CAC3B,GAAG,iBAAiB,CACtB,WAyBF,CAAC"}

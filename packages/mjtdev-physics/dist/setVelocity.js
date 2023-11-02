@@ -1,0 +1,12 @@
+import { Body } from "matter-js";
+import { findBody } from "./findBody";
+import { toMatterVector } from "./toMatterVector";
+import { isUndefined } from "@mjtdev/object";
+export const setVelocity = (world, label, velocity = [0, 0]) => {
+    const body = findBody(world, label);
+    if (isUndefined(body)) {
+        return;
+    }
+    Body.setVelocity(body, toMatterVector(velocity));
+};
+//# sourceMappingURL=setVelocity.js.map

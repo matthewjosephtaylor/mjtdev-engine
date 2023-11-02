@@ -1,0 +1,1 @@
+{"version":3,"file":"pickWithRay.d.ts","sourceRoot":"","sources":["../../src/ray/pickWithRay.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,GAAG,EAAE,KAAK,EAAE,wBAAwB,EAAE,MAAM,WAAW,CAAC;AAG/E,eAAO,MAAM,WAAW,UACf,KAAK,OACP,GAAG;sBAEY,YAAY,KAAK,OAAO;eAC/B,OAAO;uBACC,wBAAwB;sCAO9C,CAAC"}

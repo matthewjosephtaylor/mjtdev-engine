@@ -15,3 +15,4 @@ export * from "./node/Nodes";
 export * from "./layer/Layers";
 export * from "./sprite/Sprites";
 export * from "./voxel/Voxels";
+export * from "./ray/Rays";

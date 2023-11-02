@@ -1,0 +1,1 @@
+{"version":3,"file":"PhysicsTypes.d.ts","sourceRoot":"","sources":["../../src/type/PhysicsTypes.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AACxC,OAAO,EAAE,YAAY,EAAE,MAAM,iBAAiB,CAAC;AAE/C,MAAM,MAAM,WAAW,GAAG,IAAI,CAAC;AAC/B,MAAM,MAAM,aAAa,GAAG,UAAU,CAAC,OAAO,YAAY,CAAC,CAAC;AAC5D,MAAM,MAAM,YAAY,GAAG,KAAK,CAAC"}

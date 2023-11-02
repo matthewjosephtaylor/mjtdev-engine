@@ -48,6 +48,7 @@
   ],
   "bundleDependencies": [
     "@mjtdev/animate",
+    "@mjtdev/physics",
     "@mjtdev/nlp",
     "@mjtdev/assert",
     "@mjtdev/babs",
