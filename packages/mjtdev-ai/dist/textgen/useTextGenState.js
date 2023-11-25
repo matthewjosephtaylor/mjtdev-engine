@@ -7,7 +7,6 @@ export const useTextGenState = create(() => ({
     // generationUrl: "http://localhost:5000/api/v1/generate",
     // modelUrl: "http://localhost:5000/api/v1/model",
     textgenParams: {},
-    roleTemplate: "### <role>: ",
     monitor: (() => { }),
 }));
 //# sourceMappingURL=useTextGenState.js.map

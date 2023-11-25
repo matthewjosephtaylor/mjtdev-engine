@@ -5,7 +5,6 @@ export declare const useTextGenState: import("zustand").UseBoundStore<import("zu
     promptTemplate: string;
     baseUrl: string;
     textgenParams: Partial<TextGenParams>;
-    roleTemplate: string;
     monitor: MonitorFunction;
 }>>;
 //# sourceMappingURL=useTextGenState.d.ts.map

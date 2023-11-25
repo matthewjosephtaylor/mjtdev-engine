@@ -6,7 +6,6 @@ export declare const TextGens: {
         promptTemplate: string;
         baseUrl: string;
         textgenParams: Partial<import("..").TextGenParams>;
-        roleTemplate: string;
         monitor: import("..").MonitorFunction;
     }>>;
     textToTokens: (text: string) => string[];

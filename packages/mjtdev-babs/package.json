@@ -20,9 +20,9 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "babylonjs": "^6.14.0",
-    "babylonjs-inspector": "^6.14.0",
-    "babylonjs-loaders": "^6.14.0"
+    "babylonjs": "^6.30.0",
+    "babylonjs-inspector": "^6.30.0",
+    "babylonjs-loaders": "^6.30.0"
   },
   "dependencies": {
     "@mjtdev/animate": "^1.0.3",

@@ -15,6 +15,6 @@
   "author": "@mjtdev",
   "license": "UNLICENSED",
   "devDependencies": {
-    "typescript": "^4.8.4"
+    "typescript": "^5.3.2"
   }
 }

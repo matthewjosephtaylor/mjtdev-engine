@@ -1,32 +1,46 @@
-import { create } from "zustand";
-export const lock = (fn, timeoutMs = 100) => {
-    const { available } = useLockState.getState();
+import { isDefined, isUndefined } from "@mjtdev/object";
+import { createState } from "../state/createState";
+export const lock = (fn, options = {}) => {
+    const { cycleMs = 100, name = "", maxCycles } = options;
+    const { locks } = getLockState();
+    const available = isUndefined(locks[name]);
     if (available) {
         return new Promise(async (resolve, reject) => {
             try {
-                useLockState.setState((state) => ({ ...state, available: false }));
+                updateLockState((state) => {
+                    state.locks[name] = Date.now();
+                });
                 const result = await fn();
-                useLockState.setState((state) => ({ ...state, available: true }));
                 resolve(result);
             }
             catch (e) {
-                useLockState.setState((state) => ({ ...state, available: true }));
                 reject(e);
+            }
+            finally {
+                updateLockState((state) => {
+                    delete state.locks[name];
+                });
             }
         });
     }
     return new Promise((resolve, reject) => {
+        if (isDefined(maxCycles) && maxCycles <= 0) {
+            reject(new Error(`Max cycles reached for lock ${name}`));
+        }
         setTimeout(() => {
             try {
-                resolve(lock(fn, timeoutMs));
+                const updatedMaxCycles = isDefined(maxCycles)
+                    ? maxCycles - 1
+                    : undefined;
+                resolve(lock(fn, { cycleMs: cycleMs, maxCycles: updatedMaxCycles }));
             }
             catch (e) {
                 reject(e);
             }
-        }, timeoutMs);
+        }, cycleMs);
     });
 };
-export const useLockState = create(() => ({
-    available: true,
-}));
+export const [useLockState, updateLockState, getLockState] = createState({
+    locks: {},
+});
 //# sourceMappingURL=lock.js.map

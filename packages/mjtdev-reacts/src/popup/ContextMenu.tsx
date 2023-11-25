@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import { closePopup } from "./closePopup";
 import { Objects } from "@mjtdev/object";
 import { Grid } from "../component/Grid";
@@ -6,9 +6,13 @@ import { Grid } from "../component/Grid";
 export const ContextMenu = ({
   name,
   actionMap,
+  style = {},
+  itemStyle = {},
 }: {
   actionMap: Record<string, () => void>;
   name: string;
+  style?: CSSProperties;
+  itemStyle?: CSSProperties;
 }) => {
   const [backgroundColors, setBackgroundColors] = useState(
     {} as Record<string, string>
@@ -25,6 +29,7 @@ export const ContextMenu = ({
             width: "min-content",
             whiteSpace: "nowrap",
             backgroundColor: backgroundColors[String(index)] || "black",
+            ...itemStyle,
           }}
           onPointerEnter={() => {
             setBackgroundColors({ [index]: "grey" });
@@ -62,6 +67,7 @@ export const ContextMenu = ({
           border: "1px solid grey",
           borderRadius: "0.2em",
           padding: "0.2em",
+          ...style,
         }}
       >
         {items}

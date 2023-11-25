@@ -1,5 +1,6 @@
 export * from "./object/type/TypeGuard";
 export * from "./object/type/Producer";
+export * from "./object/type/Nullable";
 export * from "./object/brand/type/Brand";
 
 export * from "./object/Objects";
@@ -48,4 +49,6 @@ export const {
   toPromise,
   all,
   isFunction,
+  isEmpty,
+  isNotEmpty,
 } = Objects;

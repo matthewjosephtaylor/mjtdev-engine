@@ -5,8 +5,10 @@ export const ButtonGroup = ({
   actions,
   count = 5,
   style = {},
+  buttonStyle = {},
 }: {
   style?: CSSProperties;
+  buttonStyle?: CSSProperties;
   actions: Record<string, () => void>;
   count?: number;
 }) => {
@@ -14,7 +16,11 @@ export const ButtonGroup = ({
     const [key, value] = entry;
     return (
       <input
-        style={{ width: "min-content", textTransform: "capitalize" }}
+        style={{
+          width: "min-content",
+          textTransform: "capitalize",
+          ...buttonStyle,
+        }}
         onClick={value}
         key={key}
         type="button"

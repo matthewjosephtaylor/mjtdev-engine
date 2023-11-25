@@ -16,6 +16,8 @@ import { iffTyped } from "./iffTyped";
 import { includesUndefined } from "./includesUndefined";
 import { isBrowser } from "./isBrowser";
 import { isDefined } from "./isDefined";
+import { isEmpty } from "./isEmpty";
+import { isNotEmpty } from "./isNotEmpty";
 import { isUndefined } from "./isUndefined";
 import { keys } from "./keys";
 import { last } from "./last";
@@ -44,6 +46,8 @@ import { valueOf } from "./valueOf";
 import { values } from "./values";
 
 export const Objects = {
+  isEmpty,
+  isNotEmpty,
   isIterator,
   isArrayLike,
   times,
@@ -96,7 +100,7 @@ export const Objects = {
   mapOf,
   toPromise,
   all: Promise.all,
-  isFunction
+  isFunction,
 };
 
 export * from "./tuples";

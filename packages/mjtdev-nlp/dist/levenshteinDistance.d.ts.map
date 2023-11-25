@@ -1,1 +1,1 @@
-{"version":3,"file":"levenshteinDistance.d.ts","sourceRoot":"","sources":["../src/levenshteinDistance.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,mBAAmB,UAAW,MAAM,SAAS,MAAM,WAiC/D,CAAC"}
+{"version":3,"file":"levenshteinDistance.d.ts","sourceRoot":"","sources":["../src/levenshteinDistance.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,mBAAmB,UACvB,MAAM,GAAG,MAAM,EAAE,SACjB,MAAM,GAAG,MAAM,EAAE,KACvB,CAAC,MAAM,EAAE,MAAM,CAmCjB,CAAC"}

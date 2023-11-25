@@ -1,0 +1,1 @@
+{"version":3,"file":"OpenAiUsage.d.ts","sourceRoot":"","sources":["../../src/type/OpenAiUsage.ts"],"names":[],"mappings":"AACA,MAAM,WAAW,WAAW;IAC1B,aAAa,EAAE,MAAM,CAAC;IACtB,iBAAiB,EAAE,MAAM,CAAC;IAC1B,YAAY,EAAE,MAAM,CAAC;CACtB"}

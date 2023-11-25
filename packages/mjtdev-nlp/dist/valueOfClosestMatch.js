@@ -4,7 +4,7 @@ export const valueOfClosestMatch = (from, possibles, options = { minConfidence: 
     const needles = Object.entries(possibles)
         .map((possible) => {
         const [possibleKey = "", possibleValue = ""] = possible;
-        const matchConfidence = Nlps.levenshteinConfidence(from, possibleKey);
+        const [distance, matchConfidence] = Nlps.levenshteinDistance(from, possibleKey);
         return [possibleValue, matchConfidence];
     })
         .filter((mp) => mp[1] >= minConfidence)

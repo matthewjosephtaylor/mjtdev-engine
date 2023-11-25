@@ -42,6 +42,7 @@ export {
   Tuple5,
   TypeGuard,
   ValueProducer,
+  Nullable,
 } from "@mjtdev/object";
 export * from "@mjtdev/babs";
 

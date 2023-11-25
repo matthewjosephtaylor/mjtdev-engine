@@ -9,7 +9,10 @@ export const valueOfClosestMatch = <K extends string, V>(
   const needles = Object.entries(possibles)
     .map((possible) => {
       const [possibleKey = "", possibleValue = ""] = possible;
-      const matchConfidence = Nlps.levenshteinConfidence(from, possibleKey);
+      const [distance, matchConfidence] = Nlps.levenshteinDistance(
+        from,
+        possibleKey
+      );
       return [possibleValue, matchConfidence] as [V, number];
     })
     .filter((mp) => mp[1] >= minConfidence)

@@ -1,5 +1,5 @@
 import { loadModel } from "./loadModel";
-import { modelInfo } from "./modelInfo";
+import { getModelInfo } from "./getModelInfo";
 import { textToTokens } from "./textToTokens";
 import { textgen } from "./textgen";
 import { useTextGenState } from "./useTextGenState";
@@ -9,6 +9,6 @@ export const TextGens = {
   textgen,
   useTextGenState,
   textToTokens,
-  modelInfo,
+  modelInfo: getModelInfo,
   loadModel,
 };

@@ -1,5 +1,6 @@
 import { toBase64 } from "./toBase64";
 export declare const Bytes: {
+    typeOfBytes: (bytes: unknown) => "string" | "Blob" | "ArrayBuffer" | "ArrayBufferView" | "Array";
     toDataUrl: (bytes: import(".").ByteLike) => Promise<string>;
     dataUrlToBlob: (dataUrl: string) => Blob;
     lengthOf: (bytes: import(".").ByteLike) => number;

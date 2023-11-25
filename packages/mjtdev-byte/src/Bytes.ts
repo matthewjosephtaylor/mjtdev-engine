@@ -21,8 +21,10 @@ import { immediateToArrayBuffer } from "./immediateToArrayBuffer";
 import { isImmediateByteLike } from "./isImmediateByteLike";
 import { toDataUrl } from "./toDataUrl";
 import { dataUrlToBlob } from "./dataUrlToBlob";
+import { typeOfBytes } from "./typeOfBytes";
 
 export const Bytes = {
+  typeOfBytes,
   toDataUrl,
   dataUrlToBlob,
   lengthOf,

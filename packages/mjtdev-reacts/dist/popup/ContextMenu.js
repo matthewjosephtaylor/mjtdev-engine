@@ -3,7 +3,7 @@ import { useState } from "react";
 import { closePopup } from "./closePopup";
 import { Objects } from "@mjtdev/object";
 import { Grid } from "../component/Grid";
-export const ContextMenu = ({ name, actionMap, }) => {
+export const ContextMenu = ({ name, actionMap, style = {}, itemStyle = {}, }) => {
     const [backgroundColors, setBackgroundColors] = useState({});
     const items = Objects.entries(actionMap)
         .sort((a, b) => a[0].localeCompare(b[0]))
@@ -15,6 +15,7 @@ export const ContextMenu = ({ name, actionMap, }) => {
                 width: "min-content",
                 whiteSpace: "nowrap",
                 backgroundColor: backgroundColors[String(index)] || "black",
+                ...itemStyle,
             }, onPointerEnter: () => {
                 setBackgroundColors({ [index]: "grey" });
             }, onPointerLeave: () => {
@@ -34,6 +35,7 @@ export const ContextMenu = ({ name, actionMap, }) => {
                 border: "1px solid grey",
                 borderRadius: "0.2em",
                 padding: "0.2em",
+                ...style,
             }, children: items }) }));
 };
 //# sourceMappingURL=ContextMenu.js.map

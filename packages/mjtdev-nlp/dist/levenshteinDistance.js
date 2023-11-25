@@ -2,9 +2,9 @@ export const levenshteinDistance = (word1, word2) => {
     const m = word1?.length || 0;
     const n = word2?.length || 0;
     if (m === 0)
-        return n;
+        return [n, 1];
     if (n === 0)
-        return m;
+        return [m, 1];
     const dp = Array.from(Array(m + 1), () => Array(n + 1).fill(0));
     for (let i = 0; i <= m; i++) {
         dp[i][0] = i;
@@ -24,6 +24,8 @@ export const levenshteinDistance = (word1, word2) => {
         }
     }
     const distance = dp[m][n];
-    return distance;
+    const maxLength = Math.max(m, n);
+    const confidence = (maxLength - distance) / maxLength;
+    return [distance, confidence];
 };
 //# sourceMappingURL=levenshteinDistance.js.map

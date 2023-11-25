@@ -1,9 +1,12 @@
-export const levenshteinDistance = (word1: string, word2: string) => {
+export const levenshteinDistance = (
+  word1: string | string[],
+  word2: string | string[]
+): [number, number] => {
   const m = word1?.length || 0;
   const n = word2?.length || 0;
 
-  if (m === 0) return n;
-  if (n === 0) return m;
+  if (m === 0) return [n, 1];
+  if (n === 0) return [m, 1];
 
   const dp: number[][] = Array.from(Array(m + 1), () => Array(n + 1).fill(0));
 
@@ -30,5 +33,7 @@ export const levenshteinDistance = (word1: string, word2: string) => {
   }
 
   const distance = dp[m][n];
-  return distance;
+  const maxLength = Math.max(m, n);
+  const confidence = (maxLength - distance) / maxLength;
+  return [distance, confidence];
 };

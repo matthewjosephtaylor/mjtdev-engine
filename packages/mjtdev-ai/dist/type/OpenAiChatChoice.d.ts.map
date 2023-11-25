@@ -1,0 +1,1 @@
+{"version":3,"file":"OpenAiChatChoice.d.ts","sourceRoot":"","sources":["../../src/type/OpenAiChatChoice.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAGhD,MAAM,WAAW,gBAAgB;IAC/B,OAAO,EAAE,aAAa,CAAC;IACvB,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,EAAE,GAAG,CAAC;IACd,aAAa,EAAE,MAAM,CAAC;CACvB"}
