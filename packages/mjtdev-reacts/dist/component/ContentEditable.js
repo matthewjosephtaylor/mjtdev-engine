@@ -16,12 +16,15 @@ tabIndex, onKeyDown, editable = true, title, theme = "vs-dark", }) => {
         ...style,
         overflow: "visible",
     };
-    const ref = useRef();
-    const statusBarRef = useRef();
+    const ref = useRef(null);
+    const statusBarRef = useRef(null);
     const [editor, setEditor] = useState();
     const [monaco, setMonaco] = useState();
     useEffect(() => {
         if (isUndefined(editor)) {
+            return;
+        }
+        if (!ref.current?.parentElement) {
             return;
         }
         const parent = ref.current.parentElement;

@@ -1,10 +1,8 @@
-import { isUndefined } from "@mjtdev/object";
-import { updatePopup } from "./updatePopup";
 import { calcCenterPopup } from "./calcCenterPopup";
-import { updatePopupState } from "./usePopupState";
+import { updatePopup } from "./updatePopup";
 
 export const centerPopup = (name: string, container: HTMLElement) => {
-  if (isUndefined(container)) {
+  if (!container || !container.parentElement) {
     return;
   }
   const { width, height } = container.parentElement.getBoundingClientRect();

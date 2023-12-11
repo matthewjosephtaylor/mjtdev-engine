@@ -5,6 +5,9 @@ export const useRemoveFromDesk = () => {
   const setDeskCtx = useUpdateDesk();
   const id = useFragId();
   return () => {
+    if (!setDeskCtx) {
+      return;
+    }
     setDeskCtx((ctx) => {
       const updated = ctx.nodes.filter(([key, value]) => {
         return key !== id;

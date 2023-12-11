@@ -13,7 +13,7 @@ export declare const Popups: {
         y: number;
     };
     usePopupState: import("..").State<{
-        popups: Record<string, import("./usePopupState").PopupState>;
+        popups: Record<string, Partial<import("./usePopupState").PopupState>>;
         x: number;
         y: number;
     }>;
@@ -27,7 +27,7 @@ export declare const Popups: {
         escapeCloses: boolean;
     }>) => string;
     centerPopup: (name: string, container: HTMLElement) => void;
-    isPopupVisible: (name: string) => boolean;
+    isPopupVisible: (name: string) => boolean | undefined;
     hidePopup: (name: string) => void;
     showPopup: (name: string) => void;
 };

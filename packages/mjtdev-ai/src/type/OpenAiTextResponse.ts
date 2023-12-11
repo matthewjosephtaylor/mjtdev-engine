@@ -9,3 +9,10 @@ export interface OpenAiTextResponse {
   choices: OpenAiTextChoice[];
   usage?: OpenAiUsage;
 }
+
+export const isOpenAiTextResponse = (
+  maybe: unknown
+): maybe is OpenAiTextResponse => {
+  const straw = maybe as OpenAiTextResponse;
+  return typeof straw === "object" && Array.isArray(straw.choices);
+};

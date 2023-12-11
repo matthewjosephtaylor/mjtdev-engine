@@ -22,12 +22,19 @@ export class ErrorBoundary extends React.Component {
         // logErrorToMyService(error, info.componentStack);
     }
     render() {
+        // @ts-ignore
         if (this.state["hasError"]) {
             // You can render any custom fallback UI
             console.log({ state: this.state });
-            return (_jsx(Center, { style: { width: "100vw", height: "100vh" }, children: _jsxs(Grid, { direction: "row", cellSize: "min-content", children: [_jsx("div", { children: "OOPS! Something unexpected happend" }), _jsx("pre", { children: this.state["message"] }), _jsx("pre", { children: this.state["stack"] })] }) }));
+            return (_jsx(Center, { style: { width: "100vw", height: "100vh" }, children: _jsxs(Grid, { direction: "row", cellSize: "min-content", children: [_jsx("div", { children: "OOPS! Something unexpected happend" }), _jsx("pre", { children: 
+                            //@ts-ignore
+                            this.state["message"] }), _jsx("pre", { children: 
+                            //@ts-ignore
+                            this.state["stack"] })] }) }));
+            //@ts-ignore
             return this.props["fallback"];
         }
+        //@ts-ignore
         return this.props["children"];
     }
 }

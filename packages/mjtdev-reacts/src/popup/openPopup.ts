@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { usePopupState } from "./usePopupState";
+import { updatePopupState, usePopupState } from "./usePopupState";
 
 export const openPopup = (
   content: ReactNode,

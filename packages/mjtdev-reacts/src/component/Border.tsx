@@ -32,13 +32,13 @@ export const Border = ({
 }) => {
   const [disclosed, setDisclosed] = useState(defaultDisclosed);
   const disclosureTriangle = disclosed ? "▼" : "▶";
-  const contentRef = useRef<HTMLDivElement>();
+  const contentRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (isUndefined(contentRef.current)) {
+    if (!contentRef.current) {
       return;
     }
     const observer = new ResizeObserver(() => {
-      if (isUndefined(contentRef.current)) {
+      if (!contentRef.current) {
         return;
       }
       const bbox = contentRef.current.getBoundingClientRect();

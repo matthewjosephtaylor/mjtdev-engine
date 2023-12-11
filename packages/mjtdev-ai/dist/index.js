@@ -3,6 +3,7 @@ export * from "./imagegen/ImageGens";
 export * from "./type/ModelInfo";
 export * from "./type/MonitorFunction";
 export * from "./type/TextGenParams";
+// OpenAI
 export * from "./type/OpenAiChatChoice";
 export * from "./type/OpenAiChatCompletionsRequest";
 export * from "./type/OpenAiCommonRequest";
@@ -17,6 +18,9 @@ export * from "./type/OpenAiMessage";
 export * from "./type/OpenAiMessageResponse";
 export * from "./type/OpenAiTextChoice";
 export * from "./type/OpenAiTextResponse";
+export * from "./type/OpenAiChatCompletionsChunkResponse";
 export * from "./type/OpenAiUrlImage";
 export * from "./type/OpenAiUsage";
+// Cloudflare
+export * from "./type/CloudflareAiResponse";
 //# sourceMappingURL=index.js.map

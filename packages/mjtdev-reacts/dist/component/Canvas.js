@@ -2,7 +2,7 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import { useEffect, useRef } from "react";
 import { isDefined } from "@mjtdev/object";
 export const Canvas = ({ painter, width = 1024, height = 1024, title, style, }) => {
-    const ref = useRef();
+    const ref = useRef(null);
     useEffect(() => {
         const canvas = ref.current;
         if (!canvas) {

@@ -16,6 +16,7 @@ export const omitUnsafe = <
   object: T,
   key: K
 ): Omit<T, K> => {
+  // @ts-ignore
   object[key] = undefined;
   return object;
 };

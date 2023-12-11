@@ -1,2 +1,2 @@
-export declare const useZOrder: () => number;
+export declare const useZOrder: () => number | undefined;
 //# sourceMappingURL=useZOrder.d.ts.map

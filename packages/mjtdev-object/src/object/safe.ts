@@ -9,7 +9,7 @@ export const safe = <R>(
     def: R;
     onError: ValueProducer<string>;
   }> = {}
-): R => {
+): R | undefined => {
   const { quiet = false, def = undefined, onError } = options;
   try {
     return producer();

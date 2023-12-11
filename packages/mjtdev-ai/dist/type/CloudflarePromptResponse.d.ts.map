@@ -1,0 +1,1 @@
+{"version":3,"file":"CloudflarePromptResponse.d.ts","sourceRoot":"","sources":["../../src/type/CloudflarePromptResponse.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,oBAAoB,GAAG;IACjC,QAAQ,EAAE,MAAM,CAAC;CAClB,CAAC;AAEF,eAAO,MAAM,wBAAwB,WAAW,CAAC;AAEjD,MAAM,MAAM,yBAAyB,GACjC,oBAAoB,GACpB,OAAO,wBAAwB,CAAC"}

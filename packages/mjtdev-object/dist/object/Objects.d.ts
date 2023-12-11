@@ -7,14 +7,14 @@ export declare const Objects: {
     isIterator: <T>(maybe: unknown) => maybe is Iterator<T, any, undefined>;
     isArrayLike: <T_1>(maybe: unknown) => maybe is ArrayLike<T_1>;
     times: typeof times;
-    first: <O, T extends O>(obj: O | Iterator<O, T, undefined> | O[], typeGuard?: import("..").TypeGuard<T>) => T;
-    last: <T_1>(obj: T_1[]) => T_1;
-    fix: <T_2>(v: T_2) => Readonly<import("..").FixedBrand<T_2>>;
-    iff: <T_3, R>(value: T_3, mapper: (v: NonNullable<T_3>) => R) => R;
-    iffTyped: <T_4, R_1, G>(typeGuard: (maybe: unknown) => maybe is G, value: T_4, mapper: (v: T_4 & G) => R_1) => R_1;
-    includesUndefined: (...arr: unknown[]) => boolean;
-    isDefined: <T_5>(obj: T_5) => obj is NonNullable<T_5>;
-    isUndefined: <T_6>(obj: T_6) => obj is undefined;
+    first: <O, T extends O>(obj: O | Iterator<O, T, undefined> | O[], typeGuard?: import("..").TypeGuard<T>) => T | undefined;
+    last: <T_1>(obj: T_1[]) => T_1 | undefined;
+    fix: <T_2>(v: T_2) => Readonly<import("..").FixedBrand<T_2>> | undefined;
+    iff: <T_3, R>(value: T_3, mapper: (v: NonNullable<T_3>) => R) => R | undefined;
+    iffTyped: <T_4, R_1, G>(typeGuard: (maybe: unknown) => maybe is G, value: T_4, mapper: (v: T_4 & G) => R_1) => R_1 | undefined;
+    includesUndefined: (...arr: unknown[]) => true | undefined;
+    isDefined: <T_5>(obj: T_5 | null | undefined) => obj is NonNullable<T_5>;
+    isUndefined: <T_6>(obj: T_6 | null | undefined) => obj is undefined;
     omit: <K extends string | number, T_7 extends { [k in K]: unknown; }>(object: T_7, key: K) => Omit<T_7, K>;
     omitUnsafe: <K_1 extends string | number, T_8 extends { [k_1 in K_1]: unknown; }>(object: T_8, key: K_1) => Omit<T_8, K_1>;
     orElse: <T_9>(o: T_9, e: T_9) => T_9;
@@ -22,7 +22,7 @@ export declare const Objects: {
     toMany: <T_11>(obj: T_11 | Iterable<T_11> | T_11[]) => T_11[];
     set: <O_1 extends object, K_2 extends keyof O_1 = keyof O_1, V extends O_1[K_2] = O_1[K_2]>(obj: O_1, key: K_2, value: V) => O_1 & { [k_2 in K_2]: V; };
     setUnsafe: <O_2 extends object, K_3 extends keyof O_2 = keyof O_2, V_1 extends O_2[K_3] = O_2[K_3]>(obj: O_2, key: K_3, value: V_1) => O_2 & { [k_3 in K_3]: V_1; };
-    get: <O_3 extends object, K_4 extends keyof O_3 = keyof O_3>(obj: O_3, key: K_4, defaultValue?: O_3[K_4]) => O_3[K_4];
+    get: <O_3 extends object, K_4 extends keyof O_3 = keyof O_3>(obj: O_3, key: K_4, defaultValue?: O_3[K_4] | undefined) => O_3[K_4] | undefined;
     update: <O_4 extends object, K_5 extends keyof O_4>(obj: O_4, key: K_5, mapper: (value: O_4[K_5]) => O_4[K_5]) => O_4;
     updateUnsafe: <O_5 extends object, K_6 extends keyof O_5>(obj: O_5, key: K_6, mapper: (value: O_5[K_6]) => O_5[K_6]) => O_5;
     entries: <O_6 extends object, K_7 extends keyof O_6, V_2 = O_6[K_7]>(obj: O_6) => [K_7, V_2][];
@@ -33,8 +33,8 @@ export declare const Objects: {
     chain: <T_12>(initial: T_12, mappers: ((v: T_12) => T_12)[]) => T_12;
     fromEntries: <K_11 extends string | number | symbol, V_5>(entries: readonly (readonly [K_11, V_5])[]) => Record<K_11, V_5>;
     fromEntriesToMultimap: <K_12 extends string | number | symbol, V_6>(entries: [K_12, V_6][]) => Record<K_12, V_6[]>;
-    freeze: <T_13>(v: T_13) => Readonly<T_13>;
-    hasKey: (obj: object, key: string | string[]) => boolean;
+    freeze: <T_13>(v: T_13) => Readonly<T_13 | undefined>;
+    hasKey: (obj: Record<string, any>, key: string | string[]) => boolean;
     tuple0: () => [];
     tuple1: <A>(a: A) => import("./tuples").Tuple1<A>;
     tuple2: <A_1, B>(a: A_1, b: B) => import("./tuples").Tuple2<A_1, B>;
@@ -45,24 +45,24 @@ export declare const Objects: {
         quiet: boolean;
         def: R_2;
         onError: import("..").ValueProducer<string>;
-    }>) => R_2;
+    }>) => R_2 | undefined;
     safeAsync: <R_3>(producer: () => R_3 | Promise<R_3>, options?: Partial<{
         quiet: boolean;
         def: R_3;
         onError: import("..").ValueProducer<string>;
-    }>) => Promise<R_3>;
+    }>) => Promise<R_3 | undefined>;
     valueOf: <T_14>(valueProducer: import("..").ValueProducer<T_14>) => T_14;
     mapValue: <T_15, R_4>(value: T_15, mapper: (value: T_15) => R_4) => R_4;
-    headOf: <O, T extends O>(obj: O | Iterator<O, T, undefined> | O[], typeGuard?: import("..").TypeGuard<T>) => T;
-    tailOf: <O_11>(obj: O_11[]) => O_11[];
-    restOf: <O_11>(obj: O_11[]) => O_11[];
+    headOf: <O, T extends O>(obj: O | Iterator<O, T, undefined> | O[], typeGuard?: import("..").TypeGuard<T>) => T | undefined;
+    tailOf: <O_11>(obj: O_11[]) => O_11[] | undefined;
+    restOf: <O_11>(obj: O_11[]) => O_11[] | undefined;
     toMultiMap: <K_13 extends string | number, T_16>(maps: Record<K_13, T_16>[], options?: Partial<{
         compact: boolean;
     }>) => Record<K_13, T_16[]>;
     timesGen: typeof timesGen;
     isIterable: typeof isIterable;
     isBrowser: () => boolean;
-    iffBrowser: <T_17>(producer: () => T_17) => T_17;
+    iffBrowser: <T_17>(producer: () => T_17) => T_17 | undefined;
     mapOf: <K_14 extends string | number | symbol, V_7, R_5>(obj: Record<K_14, V_7>, mapper: (key: K_14, value: V_7) => R_5) => R_5[];
     toPromise: <T_18>(producer: (callback: () => void) => T_18) => Promise<T_18>;
     all: {

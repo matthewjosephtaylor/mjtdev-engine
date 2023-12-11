@@ -9,15 +9,15 @@ export const PopupDisplay = () => {
     const { x, y, popups } = usePopupState();
     Reacts.useEventListener("pointermove", (evt) => {
         const [name, popupState] = findMovingPopup() || [];
-        if (!isDefined(name)) {
+        if (!name || !popupState) {
             return;
         }
         const { x, y, offsetX, offsetY, moveEnabled } = popupState;
         if (!moveEnabled) {
             return;
         }
-        const updatedX = evt.x - (offsetX | 0);
-        const updatedY = evt.y - (offsetY | 0);
+        const updatedX = evt.x - (offsetX || 0);
+        const updatedY = evt.y - (offsetY || 0);
         updatePopup(name, { ...popupState, x: updatedX, y: updatedY });
     });
     Reacts.useEventListener("pointerup", (evt) => {
@@ -35,7 +35,7 @@ export const PopupDisplay = () => {
                 top: y,
                 position: "absolute",
                 zIndex: 1000 + index,
-            }, children: _jsx(PopupContentDisplay, { showFrame: showFrame, content: content, x: x, y: y, name: name, moveEnabled: moveEnabled }) }, index));
+            }, children: _jsx(PopupContentDisplay, { showFrame: showFrame ?? true, content: content, x: x ?? 0, y: y ?? 0, name: name, moveEnabled: moveEnabled ?? true }) }, index));
     });
     return _jsx(_Fragment, { children: items });
 };

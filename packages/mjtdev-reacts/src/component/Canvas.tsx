@@ -15,7 +15,7 @@ export const Canvas = ({
   height?: number;
   painter: CanvasPainter;
 }) => {
-  const ref = useRef<HTMLCanvasElement>();
+  const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = ref.current;

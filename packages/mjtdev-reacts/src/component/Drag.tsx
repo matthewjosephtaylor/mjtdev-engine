@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 
-
 export const Drag = (props: {
   dataType?: string;
   data?: string;
@@ -9,13 +8,20 @@ export const Drag = (props: {
   dropped?: (event: React.DragEvent<HTMLDivElement>) => void;
 }) => {
   const {
-    className, dataType = "text/plain", data, children, dropped = () => { },
+    className,
+    dataType = "text/plain",
+    data,
+    children,
+    dropped = () => {},
   } = props;
   return (
     <div
       className={className}
       draggable={true}
       onDragStart={(event) => {
+        if (!data) {
+          return;
+        }
         event.dataTransfer.setData(dataType, data);
       }}
       onDrop={(event) => {

@@ -2,12 +2,13 @@ import { isUndefined } from "./../isUndefined";
 import { Fixed } from "./type/Fixed";
 import { fix } from "./fix";
 
-
 export const fixObject = <T extends object>(
   obj: T
-): Fixed<T> & {
-  [k in string]: Fixed;
-} => {
+):
+  | (Fixed<T> & {
+      [k in string]: Fixed;
+    })
+  | undefined => {
   if (isUndefined(obj)) {
     return undefined;
   }

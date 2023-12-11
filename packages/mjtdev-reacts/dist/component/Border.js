@@ -1,17 +1,17 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffect, useRef, useState, } from "react";
 import { Grid } from "./Grid";
-import { isDefined, isUndefined } from "@mjtdev/object";
+import { isDefined } from "@mjtdev/object";
 export const Border = ({ title, children, style = {}, defaultDisclosed = true, collapsable = false, onDiscloserChange = () => { }, alwaysShowChildren = false, resizable = true, onResize = () => { }, }) => {
     const [disclosed, setDisclosed] = useState(defaultDisclosed);
     const disclosureTriangle = disclosed ? "▼" : "▶";
-    const contentRef = useRef();
+    const contentRef = useRef(null);
     useEffect(() => {
-        if (isUndefined(contentRef.current)) {
+        if (!contentRef.current) {
             return;
         }
         const observer = new ResizeObserver(() => {
-            if (isUndefined(contentRef.current)) {
+            if (!contentRef.current) {
                 return;
             }
             const bbox = contentRef.current.getBoundingClientRect();

@@ -1,6 +1,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { isDefined } from "@mjtdev/object";
-import { useEffect, useRef, useState, } from "react";
+import { useEffect, useRef, useState } from "react";
 import { bestVisiblePosition } from "./bestVisiblePosition";
 export const Hover = ({ setShow, children, className = "hover", }) => {
     const parentRect = useRef();
@@ -8,7 +8,13 @@ export const Hover = ({ setShow, children, className = "hover", }) => {
     // NOTE calculates bounding rect on this initial position!
     const [position, setPosition] = useState({ x: 0, y: 0 });
     useEffect(() => {
+        if (!rect.current || !parentRect.current) {
+            return;
+        }
         const position = bestVisiblePosition(rect.current, parentRect.current);
+        if (!position) {
+            return;
+        }
         setPosition(position);
     }, [parentRect, rect]);
     const mouseLeave = () => {

@@ -13,7 +13,7 @@ export const CenteredPopup = ({
   onClose: () => void;
   options?: Partial<{ escapeCloses: boolean }>;
 }) => {
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
   const { escapeCloses = true } = options;
   if (escapeCloses) {
     useKeyboardListener(
@@ -22,14 +22,20 @@ export const CenteredPopup = ({
           onClose();
         },
       },
-      {
-        parent: ref.current,
-      }
+      // {
+      //   parent: ref.current,
+      // }
     );
   }
 
   useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
     const center = () => {
+      if (!ref.current) {
+        return;
+      }
       centerPopup(name, ref.current);
     };
     center();

@@ -5,7 +5,7 @@ import { TypeGuard } from "./type/TypeGuard";
 export const first = <O, T extends O>(
   obj: O[] | O | Iterator<O, T>,
   typeGuard: TypeGuard<T> = (v): v is T => true
-): T => {
+): T | undefined => {
   if (isUndefined(obj)) {
     return undefined;
   }

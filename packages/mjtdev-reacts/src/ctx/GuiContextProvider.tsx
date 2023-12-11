@@ -6,8 +6,10 @@ export type GuiCtx = {
 };
 
 export type UpdateGuiCtx = React.Dispatch<React.SetStateAction<GuiCtx>>;
-export const GUI_CTX = createContext<GuiCtx>(undefined);
-export const UPDATE_GUI_CTX = createContext<UpdateGuiCtx>(undefined);
+export const GUI_CTX = createContext<GuiCtx | undefined>(undefined);
+export const UPDATE_GUI_CTX = createContext<UpdateGuiCtx | undefined>(
+  undefined
+);
 
 export const useGuiCtx = () => {
   return useContext(GUI_CTX);

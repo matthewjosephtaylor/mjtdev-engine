@@ -21,9 +21,10 @@ export const useUpdateDesk = () => {
   return useContext(UPDATE_DESK_CTX);
 };
 
-const DESK_CTX = createContext<DeskCtx>(undefined);
-const UPDATE_DESK_CTX =
-  createContext<React.Dispatch<React.SetStateAction<DeskCtx>>>(undefined);
+const DESK_CTX = createContext<DeskCtx | undefined>(undefined);
+const UPDATE_DESK_CTX = createContext<
+  React.Dispatch<React.SetStateAction<DeskCtx>> | undefined
+>(undefined);
 
 export const Desk = ({
   children,

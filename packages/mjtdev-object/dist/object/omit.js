@@ -3,6 +3,7 @@ export const omit = (object, key) => {
     return rest;
 };
 export const omitUnsafe = (object, key) => {
+    // @ts-ignore
     object[key] = undefined;
     return object;
 };

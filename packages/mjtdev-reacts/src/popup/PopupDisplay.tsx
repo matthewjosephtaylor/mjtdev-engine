@@ -10,15 +10,15 @@ export const PopupDisplay = () => {
 
   Reacts.useEventListener("pointermove", (evt) => {
     const [name, popupState] = findMovingPopup() || [];
-    if (!isDefined(name)) {
+    if (!name || !popupState) {
       return;
     }
     const { x, y, offsetX, offsetY, moveEnabled } = popupState;
     if (!moveEnabled) {
       return;
     }
-    const updatedX = evt.x - (offsetX | 0);
-    const updatedY = evt.y - (offsetY | 0);
+    const updatedX = evt.x - (offsetX || 0);
+    const updatedY = evt.y - (offsetY || 0);
 
     updatePopup(name, { ...popupState, x: updatedX, y: updatedY });
   });
@@ -44,12 +44,12 @@ export const PopupDisplay = () => {
         }}
       >
         <PopupContentDisplay
-          showFrame={showFrame}
+          showFrame={showFrame ?? true}
           content={content}
-          x={x}
-          y={y}
+          x={x ?? 0}
+          y={y ?? 0}
           name={name}
-          moveEnabled={moveEnabled}
+          moveEnabled={moveEnabled ?? true}
         />
       </div>
     );

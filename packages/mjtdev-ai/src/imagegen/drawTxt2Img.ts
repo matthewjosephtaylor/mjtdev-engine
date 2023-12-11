@@ -13,6 +13,9 @@ export const drawTxt2Img = async (
   }> = {}
 ) => {
   const response = await txt2img(txt2imgOptions);
+  if (!response?.images) {
+    return;
+  }
   const img = await rawImageStringToImg(response.images[0]);
   const canvas =
     canvasOrContext instanceof HTMLCanvasElement
@@ -29,5 +32,8 @@ export const drawTxt2Img = async (
     width = canvas.width,
     height = canvas.height,
   } = canvasOptions;
+  if (!ctx) {
+    return;
+  }
   ctx.drawImage(img, x, y, width, height);
 };

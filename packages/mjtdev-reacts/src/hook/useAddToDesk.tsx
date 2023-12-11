@@ -37,7 +37,7 @@ export const useAddToDesk = () => {
 export const useWindowById = () => {
   const desk = useDesk();
   return (id: string) => {
-    return desk.nodes.find((entry) => {
+    return desk?.nodes.find((entry) => {
       return id === entry[0];
     })?.[1];
   };

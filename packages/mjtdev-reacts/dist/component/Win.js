@@ -17,7 +17,7 @@ export const useWinCtx = () => {
 export const useUpdateWinCtx = () => {
     return useContext(UPDATE_WIN_CTX);
 };
-export const Win = ({ children, style, title, controls = [], className, clickBringsToFont = true, resizeable = false, }) => {
+export const Win = ({ children, style = {}, title, controls = [], className, clickBringsToFont = true, resizeable = false, }) => {
     const [mouseX, setMouseX] = useState(0);
     const [mouseY, setMouseY] = useState(0);
     const shouldShowControlBar = isDefined(title) || controls.length > 0;
@@ -28,7 +28,9 @@ export const Win = ({ children, style, title, controls = [], className, clickBri
     });
     const [offsetX, setOffsetX] = useState(0);
     const [offsetY, setOffsetY] = useState(0);
+    //@ts-ignore
     const [left, setLeft] = useState(style?.left);
+    //@ts-ignore
     const [top, setTop] = useState(style?.top);
     const [moveEnabled, setMoveEnabled] = useState(false);
     const [pointer, setPointer] = useState("auto");
@@ -74,16 +76,22 @@ export const Win = ({ children, style, title, controls = [], className, clickBri
             .filter(isDefined)
             .join(" "));
     }, [focused]);
-    const ref = useRef();
+    const ref = useRef(null);
     const [currentWidth, setCurrentWidth] = useState();
     const [currentHeight, setCurrentHeight] = useState();
     useEffect(() => {
         const observer = new ResizeObserver((entries) => {
             const parent = first(entries);
+            if (!parent) {
+                return;
+            }
             const { width, height } = parent.contentRect;
             setCurrentWidth(px(width));
             setCurrentHeight(px(height));
         });
+        if (!ref.current) {
+            return;
+        }
         observer.observe(ref.current);
     }, [ref]);
     const [width, setWidth] = useState();
@@ -104,8 +112,8 @@ export const Win = ({ children, style, title, controls = [], className, clickBri
                         // parentWidth={width}
                         // parentHeight={height}
                         parentContent: children, onDiff: (x, y) => {
-                            const updatedWidth = unPx(currentWidth) + x;
-                            const updatedHeight = unPx(currentHeight) + y;
+                            const updatedWidth = unPx(currentWidth) ?? 0 + x;
+                            const updatedHeight = unPx(currentHeight) ?? 0 + y;
                             setWidth(px(updatedWidth));
                             setHeight(px(updatedHeight));
                             setCurrentWidth(px(updatedWidth));

@@ -10,7 +10,7 @@ export const safeAsync = async <R>(
     def: R;
     onError: ValueProducer<string>;
   }> = {}
-): Promise<R> => {
+): Promise<R | undefined> => {
   const { quiet = false, def = undefined, onError } = options;
 
   return safe(async () => {

@@ -35,7 +35,7 @@ export const ContentEditable = ({
   autoFocus?: boolean;
   value?: string;
   style?: React.CSSProperties;
-  onChange?: (value: string) => void;
+  onChange?: (value: string | undefined) => void;
   onMouseUp?: MouseEventHandler<HTMLElement>;
   onKeyDown?: KeyboardEventHandler<HTMLElement>;
   onClick?: MouseEventHandler<HTMLElement>;
@@ -50,8 +50,8 @@ export const ContentEditable = ({
     ...style,
     overflow: "visible",
   };
-  const ref = useRef<HTMLDivElement>();
-  const statusBarRef = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
+  const statusBarRef = useRef<HTMLDivElement>(null);
 
   type OnMountParams = Parameters<OnMount>;
   const [editor, setEditor] = useState<OnMountParams[0]>();
@@ -59,6 +59,9 @@ export const ContentEditable = ({
 
   useEffect(() => {
     if (isUndefined(editor)) {
+      return;
+    }
+    if (!ref.current?.parentElement) {
       return;
     }
     const parent = ref.current.parentElement;

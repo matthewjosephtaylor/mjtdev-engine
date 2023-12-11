@@ -1,13 +1,17 @@
-export declare const lock: <T>(fn: () => T | Promise<T>, options?: Partial<{
-    maxCycles: number;
+export type LockFn<T = unknown> = () => Promise<T> | T;
+export type LockEntry = {
+    fn: LockFn;
+    id: string;
+};
+export declare const useLockState: import("..").State<{
+    locks: Record<string, LockEntry[]>;
+}>, updateLockState: import("..").StateUpdater<{
+    locks: Record<string, LockEntry[]>;
+}>, getLockState: import("..").StateGetter<{
+    locks: Record<string, LockEntry[]>;
+}>;
+export declare const lock: <T>(fn: LockFn<T>, options?: Partial<{
     cycleMs: number;
     name: string;
 }>) => T | Promise<T>;
-export declare const useLockState: import("..").State<{
-    locks: Record<string, number>;
-}>, updateLockState: import("..").StateUpdater<{
-    locks: Record<string, number>;
-}>, getLockState: import("..").StateGetter<{
-    locks: Record<string, number>;
-}>;
 //# sourceMappingURL=lock.d.ts.map

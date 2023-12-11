@@ -7,6 +7,7 @@ type MouseLayerEvent = {
 };
 export const isMouseLayerEvent = (maybe: unknown): maybe is MouseLayerEvent => {
   return (
+    // @ts-ignore
     typeof maybe["layerX"] === "number" && typeof maybe["layerY"] === "number"
   );
 };

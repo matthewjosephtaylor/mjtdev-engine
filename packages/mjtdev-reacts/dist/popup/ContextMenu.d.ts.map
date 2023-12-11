@@ -1,1 +1,1 @@
-{"version":3,"file":"ContextMenu.d.ts","sourceRoot":"","sources":["../../src/popup/ContextMenu.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAY,MAAM,OAAO,CAAC;AAKhD,eAAO,MAAM,WAAW;eAMX,OAAO,MAAM,EAAE,MAAM,IAAI,CAAC;UAC/B,MAAM;YACJ,aAAa;gBACT,aAAa;6CA8D1B,CAAC"}
+{"version":3,"file":"ContextMenu.d.ts","sourceRoot":"","sources":["../../src/popup/ContextMenu.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAY,MAAM,OAAO,CAAC;AAKhD,eAAO,MAAM,WAAW;eAMX,OAAO,MAAM,EAAE,MAAM,IAAI,CAAC;UAC/B,MAAM;;;6CAgEb,CAAC"}

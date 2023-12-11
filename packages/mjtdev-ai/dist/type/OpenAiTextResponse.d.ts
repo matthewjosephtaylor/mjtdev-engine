@@ -8,4 +8,5 @@ export interface OpenAiTextResponse {
     choices: OpenAiTextChoice[];
     usage?: OpenAiUsage;
 }
+export declare const isOpenAiTextResponse: (maybe: unknown) => maybe is OpenAiTextResponse;
 //# sourceMappingURL=OpenAiTextResponse.d.ts.map

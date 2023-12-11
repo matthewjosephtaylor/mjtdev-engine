@@ -3,5 +3,5 @@ export declare const img2img: (src: HTMLCanvasElement, mask: HTMLCanvasElement, 
     signal: AbortSignal;
     outpainting_fill: 0 | 1 | 2 | 3;
     inpainting_fill: 0 | 1 | 2 | 3;
-}>) => Promise<import("./api/AutomaticApi").ImageToImageResponse>;
+}>) => Promise<import("./api/AutomaticApi").ImageToImageResponse | undefined>;
 //# sourceMappingURL=img2img.d.ts.map

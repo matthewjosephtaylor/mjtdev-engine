@@ -9,7 +9,7 @@ export const Anchor = ({ style = {}, onDiff = () => { }, parentContent, }) => {
     const [mouseY, setMouseY] = useState(0);
     const [pageX, setPageX] = useState(0);
     const [pageY, setPageY] = useState(0);
-    const ref = useRef();
+    const ref = useRef(null);
     useEffect(() => {
         move();
     });
@@ -18,6 +18,9 @@ export const Anchor = ({ style = {}, onDiff = () => { }, parentContent, }) => {
     useEffect(() => {
         const observer = new ResizeObserver((entries) => {
             const parent = first(entries);
+            if (!parent) {
+                return;
+            }
             const { width, height } = parent.contentRect;
             if (parentWidth !== width || parentHeight !== height) {
                 setParentWidth(width);
@@ -25,11 +28,20 @@ export const Anchor = ({ style = {}, onDiff = () => { }, parentContent, }) => {
                 reset();
             }
         });
+        if (!ref.current?.parentElement) {
+            return;
+        }
         observer.observe(ref.current.parentElement);
     }, [ref]);
     const reset = () => {
+        if (!ref.current?.parentElement) {
+            return;
+        }
         const parentBB = ref.current.parentElement.getBoundingClientRect();
         const bb = ref.current.getBoundingClientRect();
+        if (!parentBB || !bb) {
+            return;
+        }
         setLeft(px(parentBB.width - bb.width / 2));
         setTop(px(parentBB.height - bb.height / 2));
     };
@@ -52,6 +64,9 @@ export const Anchor = ({ style = {}, onDiff = () => { }, parentContent, }) => {
         }
     };
     useEventListener("mousemove", (e) => {
+        if (!ref.current?.parentElement) {
+            return;
+        }
         const parent = ref.current.parentElement;
         const bb = parent.getBoundingClientRect();
         const { x, y } = bb;

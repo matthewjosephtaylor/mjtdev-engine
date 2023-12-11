@@ -9,12 +9,12 @@ export declare const TextGens: {
         monitor: import("..").MonitorFunction;
     }>>;
     textToTokens: (text: string) => string[];
-    modelInfo: () => Promise<import("../type/ModelInfo").ModelInfo>;
+    modelInfo: () => Promise<import("../type/ModelInfo").ModelInfo> | undefined;
     loadModel: (modelName: string, options?: Partial<{
         loader: "AutoGPTQ" | "ExLlama" | "ExLlama_HF";
         auto_devices: boolean;
         max_seq_len: number;
         compress_pos_emb: number;
-    }>) => Promise<import("../type/ModelInfo").ModelInfo>;
+    }>) => Promise<import("../type/ModelInfo").ModelInfo> | undefined;
 };
 //# sourceMappingURL=TextGens.d.ts.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"pasteTextAtCurrentCursorPosition.d.ts","sourceRoot":"","sources":["../../src/util/pasteTextAtCurrentCursorPosition.ts"],"names":[],"mappings":"AACA,eAAO,MAAM,gCAAgC,SAAU,MAAM,SAU5D,CAAC"}
+{"version":3,"file":"pasteTextAtCurrentCursorPosition.d.ts","sourceRoot":"","sources":["../../src/util/pasteTextAtCurrentCursorPosition.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,gCAAgC,SAAU,MAAM,SAgB5D,CAAC"}

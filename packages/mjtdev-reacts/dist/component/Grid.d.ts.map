@@ -1,1 +1,1 @@
-{"version":3,"file":"Grid.d.ts","sourceRoot":"","sources":["../../src/component/Grid.tsx"],"names":[],"mappings":"AACA,OAAO,KAAmB,MAAM,OAAO,CAAC;AACxC,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,eAAO,MAAM,IAAI;UAST,MAAM;eACD,MAAM,GAAG,MAAM,EAAE;gBAChB,MAAM;YACV,MAAM;YACN,MAAM,aAAa;gBACf,KAAK,GAAG,QAAQ;eACjB,SAAS;6CA0BrB,CAAC"}
+{"version":3,"file":"Grid.d.ts","sourceRoot":"","sources":["../../src/component/Grid.tsx"],"names":[],"mappings":"AACA,OAAO,KAAmB,MAAM,OAAO,CAAC;AACxC,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,eAAO,MAAM,IAAI;;;;;;;eAeJ,SAAS;6CA0BrB,CAAC"}

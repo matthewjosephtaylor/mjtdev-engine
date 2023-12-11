@@ -5,7 +5,7 @@ export const txt2img = async (options) => {
     const { debug, monitor } = useImageGenState.getState();
     const traceId = nextTraceId();
     return safeApi(async (api) => {
-        monitor(options?.prompt, "CALL", traceId);
+        monitor(options?.prompt ?? "", "CALL", traceId);
         const response = await api.sdapi.text2ImgapiSdapiV1Txt2ImgPost({
             steps: 5,
             ...options,

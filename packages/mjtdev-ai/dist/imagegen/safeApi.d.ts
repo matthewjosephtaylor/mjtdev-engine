@@ -1,3 +1,3 @@
 import { Api } from "./api/AutomaticApi";
-export declare const safeApi: <T>(f: (api: Api<unknown>) => T) => T;
+export declare const safeApi: <T>(f: (api: Api<unknown>) => T) => T | undefined;
 //# sourceMappingURL=safeApi.d.ts.map

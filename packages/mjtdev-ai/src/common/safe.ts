@@ -4,7 +4,7 @@ export const safe = <T>(
     console.log(e);
     return undefined;
   }
-): T => {
+): T | undefined => {
   try {
     return f();
   } catch (error) {

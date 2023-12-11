@@ -1,0 +1,1 @@
+{"version":3,"file":"CloudflareAiResponse.js","sourceRoot":"","sources":["../../src/type/CloudflareAiResponse.ts"],"names":[],"mappings":"AAIA,MAAM,CAAC,MAAM,wBAAwB,GAAG,QAAQ,CAAC;AAkBjD,MAAM,CAAC,MAAM,sBAAsB,GAAG,CACpC,KAAc,EACiB,EAAE;IACjC,MAAM,KAAK,GAAG,KAA6B,CAAC;IAC5C,OAAO,OAAO,KAAK,KAAK,QAAQ,IAAI,OAAO,KAAK,CAAC,QAAQ,KAAK,QAAQ,CAAC;AACzE,CAAC,CAAC"}

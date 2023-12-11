@@ -1,1 +1,1 @@
-{"version":3,"file":"OpenAiTextResponse.js","sourceRoot":"","sources":["../../src/type/OpenAiTextResponse.ts"],"names":[],"mappings":""}
+{"version":3,"file":"OpenAiTextResponse.js","sourceRoot":"","sources":["../../src/type/OpenAiTextResponse.ts"],"names":[],"mappings":"AAYA,MAAM,CAAC,MAAM,oBAAoB,GAAG,CAClC,KAAc,EACe,EAAE;IAC/B,MAAM,KAAK,GAAG,KAA2B,CAAC;IAC1C,OAAO,OAAO,KAAK,KAAK,QAAQ,IAAI,KAAK,CAAC,OAAO,CAAC,KAAK,CAAC,OAAO,CAAC,CAAC;AACnE,CAAC,CAAC"}

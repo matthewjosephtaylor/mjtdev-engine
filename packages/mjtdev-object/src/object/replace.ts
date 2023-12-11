@@ -5,7 +5,7 @@ export const replace = <T, A, R>(
   typeGuard: TypeGuard<T>,
   arr: A[],
   mapper: (v: T) => R
-): (R | A)[] => {
+): (R | A)[] | undefined => {
   if (isUndefined(arr)) {
     return undefined;
   }

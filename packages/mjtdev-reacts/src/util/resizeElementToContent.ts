@@ -29,20 +29,27 @@ export const resizeElementToContent = (
   fake.innerText = content;
   const { width, height } = fake.getBoundingClientRect();
   fake.innerText = "";
+  //@ts-ignore
   fake.style.minWidth = toString(maxWidth);
+  //@ts-ignore
   fake.style.minHeight = toString(maxHeight);
   const { width: maxWidthPx, height: maxHeightPx } =
     fake.getBoundingClientRect();
+  //@ts-ignore
   fake.style.minWidth = toString(minWidth);
+  //@ts-ignore
   fake.style.minHeight = toString(minHeight);
   const { width: minWidthPx, height: minHeightPx } =
     fake.getBoundingClientRect();
+  //@ts-ignore
   fake.style.minWidth = null;
   fake.remove();
   const widthPx = Maths.clamp(width, minWidthPx, maxWidthPx);
   const heightPx = Maths.clamp(height, minHeightPx, maxHeightPx);
 
+  //@ts-ignore
   element.style.width = toString(widthPx);
+  //@ts-ignore
   element.style.height = toString(heightPx);
   return [widthPx, heightPx] as const;
 };

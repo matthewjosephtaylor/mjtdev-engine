@@ -6,7 +6,9 @@ type CombinedEventMap = HTMLElementEventMap & WindowEventMap & DocumentEventMap;
 export function useEventListener<K extends keyof CombinedEventMap>(
   eventType: K,
   action: (e: CombinedEventMap[K]) => void,
-  element: HTMLElement | Document | Window = iffBrowser(() => document.body)
+  element: HTMLElement | Document | Window | undefined = iffBrowser(
+    () => document.body
+  )
 ) {
   const actionRef = useRef(action);
 

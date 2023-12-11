@@ -5,7 +5,7 @@ import { Grid } from "./Grid";
 // @see https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
 
 export class ErrorBoundary extends React.Component {
-  constructor(props: unknown) {
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = { hasError: false };
   }
@@ -26,6 +26,7 @@ export class ErrorBoundary extends React.Component {
   }
 
   render() {
+    // @ts-ignore
     if (this.state["hasError"]) {
       // You can render any custom fallback UI
       console.log({ state: this.state });
@@ -33,14 +34,26 @@ export class ErrorBoundary extends React.Component {
         <Center style={{ width: "100vw", height: "100vh" }}>
           <Grid direction="row" cellSize={"min-content"}>
             <div>OOPS! Something unexpected happend</div>
-            <pre>{this.state["message"]}</pre>
-            <pre>{this.state["stack"]}</pre>
+            <pre>
+              {
+                //@ts-ignore
+                this.state["message"]
+              }
+            </pre>
+            <pre>
+              {
+                //@ts-ignore
+                this.state["stack"]
+              }
+            </pre>
           </Grid>
         </Center>
       );
+      //@ts-ignore
       return this.props["fallback"];
     }
 
+    //@ts-ignore
     return this.props["children"];
   }
 }

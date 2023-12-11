@@ -1,0 +1,1 @@
+{"version":3,"file":"createSseParser.d.ts","sourceRoot":"","sources":["../src/createSseParser.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,eAAe;oBAMX,IAAI;YACX,4BAA4B,MAAM,CAAC;uBACxB,MAAM;2CACc,OAAO,KAAK,OAAO,GAAG,SAAS,GAAG,IAAI;MAC3E,QAAQ,IAAI,CA+Cf,CAAC"}

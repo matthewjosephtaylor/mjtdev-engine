@@ -5,6 +5,9 @@ export const useBringToFront = () => {
     const setDesk = useUpdateDesk();
     const currentId = useFragId();
     return (id = currentId) => {
+        if (!setDesk) {
+            return;
+        }
         setDesk((desk) => {
             const idNode = desk.nodes.find(([key, value]) => {
                 return key === id;

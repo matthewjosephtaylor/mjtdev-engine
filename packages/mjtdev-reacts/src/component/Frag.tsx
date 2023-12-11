@@ -15,7 +15,7 @@ export const Frag = ({
   );
 };
 
-const FRAG_ID_CTX = createContext<string>(undefined);
+const FRAG_ID_CTX = createContext<string | undefined>(undefined);
 
 export const useFragId = () => {
   return useContext(FRAG_ID_CTX);

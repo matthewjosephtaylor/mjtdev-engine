@@ -10,15 +10,15 @@ export type PopupState = {
     showFrame: boolean;
 };
 export declare const usePopupState: import("..").State<{
-    popups: Record<string, PopupState>;
+    popups: Record<string, Partial<PopupState>>;
     x: number;
     y: number;
 }>, updatePopupState: import("..").StateUpdater<{
-    popups: Record<string, PopupState>;
+    popups: Record<string, Partial<PopupState>>;
     x: number;
     y: number;
 }>, getPopupState: import("..").StateGetter<{
-    popups: Record<string, PopupState>;
+    popups: Record<string, Partial<PopupState>>;
     x: number;
     y: number;
 }>;

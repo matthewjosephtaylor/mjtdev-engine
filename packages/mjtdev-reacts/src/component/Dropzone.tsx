@@ -18,7 +18,7 @@ export function Dropzone({
   activeText?: string;
   inactiveText?: string;
 }) {
-  const onDrop = useCallback((acceptedFiles) => {
+  const onDrop = useCallback((acceptedFiles: File[]) => {
     action(acceptedFiles);
   }, []);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });

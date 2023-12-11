@@ -13,7 +13,7 @@ export type PopupState = {
 };
 
 export const [usePopupState, updatePopupState, getPopupState] = createState({
-  popups: {} as Record<string, PopupState>,
+  popups: {} as Record<string, Partial<PopupState>>,
   x: 0,
   y: 0,
 });

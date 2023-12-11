@@ -17,6 +17,8 @@ export * from "./type/OpenAiMessage";
 export * from "./type/OpenAiMessageResponse";
 export * from "./type/OpenAiTextChoice";
 export * from "./type/OpenAiTextResponse";
+export * from "./type/OpenAiChatCompletionsChunkResponse";
 export * from "./type/OpenAiUrlImage";
 export * from "./type/OpenAiUsage";
+export * from "./type/CloudflareAiResponse";
 //# sourceMappingURL=index.d.ts.map

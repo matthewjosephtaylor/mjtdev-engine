@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
 export declare const Drag: (props: {
-    dataType?: string;
-    data?: string;
+    dataType?: string | undefined;
+    data?: string | undefined;
     children: ReactNode;
-    className?: string;
-    dropped?: (event: React.DragEvent<HTMLDivElement>) => void;
+    className?: string | undefined;
+    dropped?: ((event: React.DragEvent<HTMLDivElement>) => void) | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Drag.d.ts.map

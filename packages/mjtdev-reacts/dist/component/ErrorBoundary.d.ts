@@ -1,10 +1,10 @@
 import React from "react";
 export declare class ErrorBoundary extends React.Component {
-    constructor(props: unknown);
+    constructor(props: {} | Readonly<{}>);
     static getDerivedStateFromError(error: Error): {
         hasError: boolean;
         message: string;
-        stack: string;
+        stack: string | undefined;
     };
     componentDidCatch(error: unknown, info: unknown): void;
     render(): any;

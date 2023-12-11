@@ -3,19 +3,23 @@ import { useEffect, useRef } from "react";
 import { centerPopup } from "../popup/centerPopup";
 import { useKeyboardListener } from "../hook/useKeyboardListener";
 export const CenteredPopup = ({ name, onClose, children, options = {}, }) => {
-    const ref = useRef();
+    const ref = useRef(null);
     const { escapeCloses = true } = options;
     if (escapeCloses) {
         useKeyboardListener({
             ESCAPE: () => {
                 onClose();
             },
-        }, {
-            parent: ref.current,
         });
     }
     useEffect(() => {
+        if (!ref.current) {
+            return;
+        }
         const center = () => {
+            if (!ref.current) {
+                return;
+            }
             centerPopup(name, ref.current);
         };
         center();

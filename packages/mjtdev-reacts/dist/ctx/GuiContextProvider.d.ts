@@ -4,10 +4,10 @@ export type GuiCtx = {
     windows: WinCtx[];
 };
 export type UpdateGuiCtx = React.Dispatch<React.SetStateAction<GuiCtx>>;
-export declare const GUI_CTX: React.Context<GuiCtx>;
-export declare const UPDATE_GUI_CTX: React.Context<UpdateGuiCtx>;
-export declare const useGuiCtx: () => GuiCtx;
-export declare const useUpdateGuiCtx: () => UpdateGuiCtx;
+export declare const GUI_CTX: React.Context<GuiCtx | undefined>;
+export declare const UPDATE_GUI_CTX: React.Context<UpdateGuiCtx | undefined>;
+export declare const useGuiCtx: () => GuiCtx | undefined;
+export declare const useUpdateGuiCtx: () => UpdateGuiCtx | undefined;
 export declare const GuiContextProvider: ({ children, value, }: {
     value: GuiCtx;
     children?: ReactNode;

@@ -4,5 +4,5 @@ export declare const loadModel: (modelName: string, options?: Partial<{
     auto_devices: boolean;
     max_seq_len: number;
     compress_pos_emb: number;
-}>) => Promise<ModelInfo>;
+}>) => Promise<ModelInfo> | undefined;
 //# sourceMappingURL=loadModel.d.ts.map

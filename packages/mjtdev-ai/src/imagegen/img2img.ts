@@ -20,7 +20,7 @@ export const img2img = async (
     const maskImg = mask.toDataURL("image/png");
 
     const { monitor } = useImageGenState.getState();
-    monitor(options?.prompt, "CALL", traceId);
+    monitor(options?.prompt ?? "", "CALL", traceId);
 
     const response = await api.sdapi.img2ImgapiSdapiV1Img2ImgPost(
       {

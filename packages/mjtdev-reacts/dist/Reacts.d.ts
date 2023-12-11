@@ -10,16 +10,16 @@ export declare const Reacts: {
     render: (node: import("react").ReactNode[] | import("react").ReactChild, parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
     useDropzone: typeof useDropzone;
     toRoutes: (routes: import("./component/type/RouteTable").RouteTable) => import("react").ReactNode[];
-    createReactContext: <T extends object>(initial?: T) => import("./createReactContext").ReactContextContainer<T>;
+    createReactContext: <T extends object>(initial?: T | undefined) => import("./createReactContext").ReactContextContainer<T>;
     dispatchCustomEvent: <T_1>(eventType: string, payload: T_1, element?: HTMLElement | Document | Window) => void;
     addCustomEventListener: <E extends string = string, T_2 = unknown>(eventType: E, handler: import("./hook/addCustomEventListener").CustomEventHandler<T_2>, options?: Partial<{
         element: HTMLElement | Document | Window;
         once: boolean;
     }>) => () => void;
-    px: (value: number) => string;
-    unPx: (value: string) => number;
-    useGuiCtx: () => import("./ctx/GuiContextProvider").GuiCtx;
-    useUpdateGuiCtx: () => import("./ctx/GuiContextProvider").UpdateGuiCtx;
+    px: (value: number) => string | undefined;
+    unPx: (value: string | undefined) => number | undefined;
+    useGuiCtx: () => import("./ctx/GuiContextProvider").GuiCtx | undefined;
+    useUpdateGuiCtx: () => import("./ctx/GuiContextProvider").UpdateGuiCtx | undefined;
     useClickOutside: typeof useClickOutside;
     useEventListener: typeof useEventListener;
     useRenderCount: typeof useRenderCount;
@@ -27,10 +27,10 @@ export declare const Reacts: {
     useRemoveFromDesk: () => () => void;
     useNav: () => (path: string) => void;
     usePreviousPath: () => any;
-    useBringToFront: () => (id?: string) => void;
+    useBringToFront: () => (id?: string | undefined) => void;
     useCustomEventListener: typeof useCustomEventListener;
-    useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>;
-    useIsFocused: () => boolean;
+    useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>;
+    useIsFocused: () => boolean | undefined;
     useKeyboardListener: (keyActions: import("@mjtdev/input").KeyActions, options?: Partial<{
         ratePerSecond: number;
         parent: HTMLElement;
@@ -45,6 +45,6 @@ export declare const Reacts: {
                 preventDefault: boolean;
             };
         }>;
-    }>) => void;
+    }> | undefined) => void;
 };
 //# sourceMappingURL=Reacts.d.ts.map

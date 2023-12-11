@@ -10,7 +10,7 @@ export const loadModel = (
     max_seq_len: number;
     compress_pos_emb: number;
   }> = {}
-): Promise<ModelInfo> => {
+): Promise<ModelInfo> | undefined => {
   const { baseUrl } = useTextGenState.getState();
   const {
     auto_devices = true,

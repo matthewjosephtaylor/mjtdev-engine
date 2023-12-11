@@ -2,11 +2,11 @@ import { isUndefined } from "./../isUndefined";
 import { Fixed } from "./type/Fixed";
 import { fix } from "./fix";
 
-export const fixArray = <T>(arr: T[]): FixedArray<T> => {
+export const fixArray = <T>(arr: T[]): FixedArray<T> | undefined => {
   if (isUndefined(arr)) {
     return undefined;
   }
-  return fix(arr.map(fix));
+  return fix(arr.map(fix)) as FixedArray<T>;
 };
 
 //Fixed<T>[]>' is not assignable to type 'Fixed<Fixed<T[]>>'.

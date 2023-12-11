@@ -2,7 +2,7 @@ import { safe } from "../common/safe";
 import { ModelInfo } from "../type/ModelInfo";
 import { useTextGenState } from "./useTextGenState";
 
-export const getModelInfo = (): Promise<ModelInfo> => {
+export const getModelInfo = (): Promise<ModelInfo> | undefined => {
   const { baseUrl } = useTextGenState.getState();
 
   return safe(
@@ -12,7 +12,7 @@ export const getModelInfo = (): Promise<ModelInfo> => {
         body: JSON.stringify({ action: "info" }),
       });
       const json = await response.json();
-      return json["result"];
+      return json["result"] as ModelInfo;
     },
 
     (error) => {
@@ -21,5 +21,3 @@ export const getModelInfo = (): Promise<ModelInfo> => {
     }
   );
 };
-
-

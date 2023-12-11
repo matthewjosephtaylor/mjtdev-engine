@@ -24,7 +24,7 @@ export const ControlBar = ({
 
   const icons = controls.map(([name, action], index) => {
     return (
-      <Icon key={index} onClick={() => action(winCtx)}>
+      <Icon key={index} onClick={() => action(winCtx!)}>
         {name}
       </Icon>
     );

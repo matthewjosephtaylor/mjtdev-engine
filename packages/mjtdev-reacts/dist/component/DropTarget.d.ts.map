@@ -1,1 +1,1 @@
-{"version":3,"file":"DropTarget.d.ts","sourceRoot":"","sources":["../../src/component/DropTarget.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAEzC,eAAO,MAAM,UAAU;cACX,SAAS;oBACH,MAAM,KAAK,IAAI;eACpB,MAAM;iBACJ,MAAM,GAAG,MAAM,GAAG,MAAM,GAAG,MAAM;6CAuB/C,CAAC"}
+{"version":3,"file":"DropTarget.d.ts","sourceRoot":"","sources":["../../src/component/DropTarget.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAEzC,eAAO,MAAM,UAAU;cACX,SAAS;qBACH,MAAM,KAAK,IAAI;;;6CAyBhC,CAAC"}

@@ -1,6 +1,7 @@
 import { first, iffBrowser, isDefined } from "@mjtdev/object";
 import React, {
   createContext,
+  CSSProperties,
   MouseEventHandler,
   ReactNode,
   useContext,
@@ -24,8 +25,10 @@ import { unPx } from "../util/unPx";
 import { px } from "../util/px";
 import { useIsFocused } from "../hook/useIsFocused";
 
-export const WIN_CTX = createContext<WinCtx>(undefined);
-export const UPDATE_WIN_CTX = createContext<UpdateWinCtx>(undefined);
+export const WIN_CTX = createContext<WinCtx | undefined>(undefined);
+export const UPDATE_WIN_CTX = createContext<UpdateWinCtx | undefined>(
+  undefined
+);
 
 export const useWinCtx = () => {
   return useContext(WIN_CTX);
@@ -36,7 +39,7 @@ export const useUpdateWinCtx = () => {
 
 export const Win = ({
   children,
-  style,
+  style = {},
   title,
   controls = [],
   className,
@@ -47,7 +50,7 @@ export const Win = ({
   clickBringsToFont?: boolean;
   className?: string;
   children?: ReactNode;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   title?: string;
   controls?: FrameControls;
 }) => {
@@ -65,7 +68,9 @@ export const Win = ({
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
 
+  //@ts-ignore
   const [left, setLeft] = useState<string | number>(style?.left);
+  //@ts-ignore
   const [top, setTop] = useState<string | number>(style?.top);
 
   const [moveEnabled, setMoveEnabled] = useState(false);
@@ -133,7 +138,7 @@ export const Win = ({
     );
   }, [focused]);
 
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
 
   const [currentWidth, setCurrentWidth] = useState<string>();
   const [currentHeight, setCurrentHeight] = useState<string>();
@@ -141,11 +146,17 @@ export const Win = ({
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
       const parent = first(entries);
+      if (!parent) {
+        return;
+      }
       const { width, height } = parent.contentRect;
       setCurrentWidth(px(width));
       setCurrentHeight(px(height));
     });
 
+    if (!ref.current) {
+      return;
+    }
     observer.observe(ref.current);
   }, [ref]);
 
@@ -182,8 +193,8 @@ export const Win = ({
               // parentHeight={height}
               parentContent={children}
               onDiff={(x, y) => {
-                const updatedWidth = unPx(currentWidth) + x;
-                const updatedHeight = unPx(currentHeight) + y;
+                const updatedWidth = unPx(currentWidth) ?? 0 + x;
+                const updatedHeight = unPx(currentHeight) ?? 0 + y;
                 setWidth(px(updatedWidth));
                 setHeight(px(updatedHeight));
                 setCurrentWidth(px(updatedWidth));

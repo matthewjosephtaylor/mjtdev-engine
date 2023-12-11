@@ -5,17 +5,18 @@ import { useFragId } from "./../component/Frag";
 export const useZOrder = () => {
   const desk = useDesk();
   const id = useFragId();
-  if (isUndefined(id)) {
+  if (!id) {
     return undefined;
   }
-  if (isUndefined(desk?.nodes)) {
+  if (!desk?.nodes) {
     return undefined;
   }
 
   const idNode = desk.nodes.find(([key, value]) => {
     return key === id;
   });
+  if (!idNode) {
+    return undefined;
+  }
   return desk.nodes.indexOf(idNode);
 };
-
-

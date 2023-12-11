@@ -10,15 +10,15 @@ import React, {
 export const createReactContext = <T extends object>(
   initial?: T
 ): ReactContextContainer<T> => {
-  const CTX = createContext<T>(initial);
+  const CTX = createContext<T | undefined>(initial);
   const useCtx = () => {
     return useContext(CTX);
   };
 
   const STATE = {
-    updateCtx: undefined as React.Context<
-      React.Dispatch<React.SetStateAction<T>>
-    >,
+    updateCtx: undefined as
+      | React.Context<React.Dispatch<React.SetStateAction<T>>>
+      | undefined,
   };
 
   const ContextProvider = ({ children }: { children?: ReactNode }) => {
@@ -28,12 +28,14 @@ export const createReactContext = <T extends object>(
 
     useEffect(() => {
       const UPDATE_CTX =
+        //@ts-ignore TODO bad voodoo in react context
         createContext<React.Dispatch<React.SetStateAction<T>>>(setValue);
       setUctx(UPDATE_CTX);
       STATE.updateCtx = UPDATE_CTX;
     }, []);
     return (
       isDefined(uctx) && (
+        //@ts-ignore TODO bad voodoo in react context
         <uctx.Provider value={setValue}>
           <CTX.Provider value={value}>{children}</CTX.Provider>
         </uctx.Provider>
@@ -42,10 +44,13 @@ export const createReactContext = <T extends object>(
   };
   const useUpdateCtx = () => {
     // return useContext(UPDATE_CTX);
+    //@ts-ignore TODO bad voodoo in react context
     return useContext(STATE.updateCtx);
   };
   return {
+    //@ts-ignore TODO bad voodoo in react context
     ContextProvider,
+    //@ts-ignore TODO bad voodoo in react context
     useCtx,
     useUpdateCtx,
   };

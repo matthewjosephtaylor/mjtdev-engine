@@ -1,2 +1,2 @@
-export declare const getPopupState: (name: string) => import("./usePopupState").PopupState;
+export declare const getPopupState: (name: string) => Partial<import("./usePopupState").PopupState>;
 //# sourceMappingURL=getPopupState.d.ts.map
