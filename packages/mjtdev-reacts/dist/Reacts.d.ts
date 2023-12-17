@@ -7,7 +7,7 @@ import { useCustomEventListener } from "./hook/useCustomEventListener";
 export * from "./type/ReactTypes";
 export * from "./type/MaterialIconCodes";
 export declare const Reacts: {
-    render: (node: import("react").ReactNode[] | import("react").ReactChild, parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
+    render: (node: import("react").ReactChild | import("react").ReactNode[], parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
     useDropzone: typeof useDropzone;
     toRoutes: (routes: import("./component/type/RouteTable").RouteTable) => import("react").ReactNode[];
     createReactContext: <T extends object>(initial?: T | undefined) => import("./createReactContext").ReactContextContainer<T>;

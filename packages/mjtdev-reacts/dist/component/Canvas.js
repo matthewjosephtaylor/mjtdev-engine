@@ -10,10 +10,15 @@ export const Canvas = ({ painter, width = 1024, height = 1024, title, style, }) 
         }
         canvas.width = width;
         canvas.height = height;
-        const disposerPromise = painter(canvas);
+        const disposer = painter ? painter(canvas) : undefined;
         return () => {
-            if (isDefined(disposerPromise)) {
-                disposerPromise.then((d) => d?.());
+            if (isDefined(disposer)) {
+                if (disposer instanceof Promise) {
+                    disposer.then((d) => d?.());
+                }
+                if (typeof disposer === "function") {
+                    disposer();
+                }
             }
         };
     }, [ref]);

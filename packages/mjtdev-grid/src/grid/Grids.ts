@@ -40,7 +40,15 @@ export const columnCount = (grid: GridConfig) => {
   return typeof grid === "number" ? grid : grid.colCount;
 };
 
-const indexOf = ({ x, y, grid }: { x: number; y: number; grid: GridConfig }) => {
+const indexOf = ({
+  x,
+  y,
+  grid,
+}: {
+  x: number;
+  y: number;
+  grid: GridConfig;
+}) => {
   const col = colOf({ x, grid: grid });
   if (typeof col === "undefined") {
     return undefined;
@@ -77,7 +85,13 @@ const colOf = ({ x, grid }: { x: number; grid: GridConfig }) => {
   return Math.floor((x / tilesetWidth) * colCount);
 };
 
-const rowCountOf = ({ grid, cellCount }: { cellCount: number; grid: GridConfig }) => {
+const rowCountOf = ({
+  grid,
+  cellCount,
+}: {
+  cellCount: number;
+  grid: GridConfig;
+}) => {
   const { colCount = 0 } = gridToGridObject(grid);
   return Math.ceil(cellCount / colCount);
 };
@@ -93,11 +107,17 @@ const rowOf = ({ y, grid }: { y: number; grid: GridConfig }) => {
 };
 
 const widthOf = ({ grid }: { grid: GridConfig }) => {
-  const { cellWidth, colCount } = gridToGridObject(grid);
+  const { cellWidth = 0, colCount } = gridToGridObject(grid);
   return cellWidth * colCount;
 };
 
-const heightOf = ({ grid, cellCount }: { cellCount: number; grid: GridConfig }) => {
+const heightOf = ({
+  grid,
+  cellCount,
+}: {
+  cellCount: number;
+  grid: GridConfig;
+}) => {
   const rowCount = rowCountOf({ grid, cellCount });
   const gridObject = gridToGridObject(grid);
   const { cellHeight = 0 } = gridObject;
@@ -119,7 +139,13 @@ const valueAt = <T>({
   return cells[idx];
 };
 
-const cellOf = ({ grid, index }: { index?: number; grid: GridConfig }): Cell => {
+const cellOf = ({
+  grid,
+  index,
+}: {
+  index?: number;
+  grid: GridConfig;
+}): Cell => {
   Asserts.assert(index >= 0, `Index: ${index} MUST be >= 0`);
   const {
     spacing = 0,

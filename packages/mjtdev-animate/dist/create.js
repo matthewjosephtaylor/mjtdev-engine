@@ -1,4 +1,4 @@
-export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = true, errorHandler = (error) => {
+export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = true, signal, errorHandler = (error) => {
     throw error;
 }, request = requestAnimationFrame, }) => {
     // convert parameters
@@ -6,6 +6,7 @@ export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = t
     ticksPerSecond = rateLimit ? ticksPerSecond : 60; // TODO SHOULD CALC
     const tickStepMs = (1 / ticksPerSecond) * 1000;
     const tickers = Array.isArray(tickable) ? tickable : [tickable];
+    const abortController = new AbortController();
     const state = {
         lastTickMs: Date.now(),
         nextTickMs: Date.now(),
@@ -19,6 +20,7 @@ export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = t
         abort: false,
         deltaMs: 0,
         lastDeltaMs: 0,
+        abortController,
         destroy: () => {
             state.abort = true;
         },
@@ -53,7 +55,9 @@ export const create = ({ ticksPerSecond = 60, ticker: tickable = [], running = t
         // adjust the next tick cost
         state.nextTickMs = state.nextTickMs - state.costMs;
         state.frameCount++;
-        if (state.abort) {
+        if (state.abort ||
+            state.abortController.signal.aborted ||
+            signal?.aborted) {
             return;
         }
         request(animate);

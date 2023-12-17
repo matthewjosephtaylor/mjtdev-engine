@@ -15,8 +15,10 @@ export const [useLockState, updateLockState, getLockState] = createState({
 const drainLocksDownTo = <T>(
   lockName: string,
   lockEntryId: string,
-  cycleMs = 100
+  cycleMs = 100,
+  maxCycles = 300
 ): Promise<T> => {
+  let cycleCount = 0;
   return new Promise((resolve, reject) => {
     const check = async () => {
       const queue = getLockState().locks[lockName];
@@ -27,8 +29,15 @@ const drainLocksDownTo = <T>(
       if (!topEntry) {
         throw new Error(`No top entry for queue for lock: ${lockName}`);
       }
+
+      cycleCount += 1;
       if (topEntry.id === lockEntryId) {
         try {
+          if (cycleCount > maxCycles) {
+            return reject(
+              `max cycles reacted: ${lockName}/${lockEntryId} cyclesMs: ${cycleMs} maxCycles: ${maxCycles}`
+            );
+          }
           const value = await topEntry.fn();
           return resolve(value as T);
         } catch (err) {
@@ -48,9 +57,13 @@ const drainLocksDownTo = <T>(
 
 export const lock = <T>(
   fn: LockFn<T>,
-  options: Partial<{ cycleMs: number; name: string }> = {}
+  options: Partial<{ maxCycles: number; cycleMs: number; name: string }> = {}
 ): Promise<T> | T => {
-  const { cycleMs = 100, name = "" } = options;
+  const {
+    cycleMs = 100,
+    name = `anon-${crypto.randomUUID()}`,
+    maxCycles,
+  } = options;
   // const { locks } = getLockState();
   const lockId = `lock-${Date.now()}-${crypto.randomUUID()}`;
   updateLockState((state) => {
@@ -61,7 +74,7 @@ export const lock = <T>(
     });
     state.locks[name] = locks;
   });
-  return drainLocksDownTo(name, lockId, cycleMs);
+  return drainLocksDownTo(name, lockId, cycleMs, maxCycles);
 
   // const available = isUndefined(locks[name]);
   // if (available) {

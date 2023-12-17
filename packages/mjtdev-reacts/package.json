@@ -36,6 +36,7 @@
     "@mjtdev/random": "^1.0.6",
     "@monaco-editor/react": "^4.5.2",
     "immer": "^10.0.2",
+    "zustand": "^4.4.6",
     "react-ace": "^10.1.0",
     "react-dropzone": "^11.5.1"
   }

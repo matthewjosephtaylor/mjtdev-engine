@@ -5,6 +5,6 @@ export declare const Canvas: ({ painter, width, height, title, style, }: {
     style?: import("react").CSSProperties | undefined;
     width?: number | undefined;
     height?: number | undefined;
-    painter: CanvasPainter;
+    painter?: CanvasPainter | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Canvas.d.ts.map

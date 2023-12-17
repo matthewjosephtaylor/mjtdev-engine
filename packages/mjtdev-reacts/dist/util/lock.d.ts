@@ -11,6 +11,7 @@ export declare const useLockState: import("..").State<{
     locks: Record<string, LockEntry[]>;
 }>;
 export declare const lock: <T>(fn: LockFn<T>, options?: Partial<{
+    maxCycles: number;
     cycleMs: number;
     name: string;
 }>) => T | Promise<T>;
