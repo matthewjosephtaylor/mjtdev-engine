@@ -11,7 +11,7 @@ export const toDataUrl = async (bytes) => {
             return reject("Unable to convert to data URL");
         };
         reader.onload = function (e) {
-            callback(e.target.result);
+            callback(e.target?.result);
         };
         reader.readAsDataURL(blob);
     });

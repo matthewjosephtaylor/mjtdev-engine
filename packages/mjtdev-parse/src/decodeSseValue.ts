@@ -3,24 +3,26 @@
 import { isDefined, safe } from "@mjtdev/object";
 
 export const decodeSseValue = (
-  value: string
+  value: string | undefined
 ): { field: SseField; value: string }[] | undefined => {
-  const fields = ["event", "data", "id", "retry"];
-
-  if (value.startsWith(":")) {
-    // console.log(`COMMENT?: ${value}`);
-    return undefined;
+  const fields = [":", "event:", "data:", "id:", "retry:"];
+  if (!value) {
+    return [];
   }
-  const regex = new RegExp(`(${fields.join("|")}):(.*$)`, "igm");
+
+  const regex = new RegExp(
+    `(${fields.map((f) => `^${f}`).join("|")})(.*$)`,
+    "igm"
+  );
   const matches = Array.from(value.trim().matchAll(regex));
   return matches
     .map((match) => {
       return safe(() => ({
-        field: match[1] as SseField,
-        value: match[2].trim(),
+        field: match[1].replace(":", "") as SseField,
+        value: match[2]?.trim(),
       }));
     })
     .filter(isDefined);
 };
 
-export type SseField = "event" | "data" | "id" | "retry";
+export type SseField = "event" | "data" | "id" | "retry" | "";

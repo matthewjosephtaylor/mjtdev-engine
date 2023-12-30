@@ -1,0 +1,9 @@
+import { SseConsumer } from "./SseConsumer";
+export declare const processSsePartial: <T>({ input, dataParser, consumer, reader, done, }: {
+    done: boolean;
+    input: string;
+    reader: ReadableStreamDefaultReader<string>;
+    dataParser?: ((data: string) => T | undefined) | undefined;
+    consumer: SseConsumer<T>;
+}) => Promise<string>;
+//# sourceMappingURL=processSsePartial.d.ts.map

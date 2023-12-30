@@ -1,20 +1,20 @@
 import { toBase64 } from "./toBase64";
 export declare const Bytes: {
-    typeOfBytes: (bytes: unknown) => "string" | "Blob" | "ArrayBuffer" | "ArrayBufferView" | "Array";
+    typeOfBytes: (bytes: unknown) => "string" | "Blob" | "ArrayBuffer" | "ArrayBufferView" | "Array" | undefined;
     toDataUrl: (bytes: import(".").ByteLike) => Promise<string>;
-    dataUrlToBlob: (dataUrl: string) => Blob;
-    lengthOf: (bytes: import(".").ByteLike) => number;
+    dataUrlToBlob: (dataUrl: string) => Blob | undefined;
+    lengthOf: (bytes: import(".").ByteLike) => number | undefined;
     isByteLike: (maybe: unknown) => maybe is import(".").ByteLike;
     isImmediateByteLike: (maybe: unknown) => maybe is import(".").ImmediateByteLike;
     hashOf: ({ bytes, algorithm, }: {
-        algorithm?: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM;
+        algorithm?: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM | undefined;
         bytes: import(".").ByteLike;
     }) => Promise<ArrayBuffer>;
-    immediateHashOf: (bytes: import(".").ImmediateByteLike, algorithm?: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM) => Promise<ArrayBuffer>;
+    immediateHashOf: (bytes: import(".").ImmediateByteLike, algorithm: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM) => Promise<ArrayBuffer>;
     addressStringOf: ({ bytes, algorithm, radix, }: {
-        algorithm?: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM;
+        algorithm?: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM | undefined;
         bytes: import(".").ByteLike;
-        radix?: number;
+        radix?: number | undefined;
     }) => Promise<string>;
     toArrayBuffer: (bytes: import(".").ByteLike) => Promise<ArrayBuffer>;
     immediateToArrayBuffer: (bytes: import(".").ImmediateByteLike) => ArrayBuffer;

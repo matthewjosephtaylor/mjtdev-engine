@@ -1,1 +1,1 @@
-{"version":3,"file":"decodeSseValue.d.ts","sourceRoot":"","sources":["../src/decodeSseValue.ts"],"names":[],"mappings":"AAAA,wGAAwG;AAIxG,eAAO,MAAM,cAAc,UAClB,MAAM;WACH,QAAQ;WAAS,MAAM;eAiBlC,CAAC;AAEF,MAAM,MAAM,QAAQ,GAAG,OAAO,GAAG,MAAM,GAAG,IAAI,GAAG,OAAO,CAAC"}
+{"version":3,"file":"decodeSseValue.d.ts","sourceRoot":"","sources":["../src/decodeSseValue.ts"],"names":[],"mappings":"AAAA,wGAAwG;AAIxG,eAAO,MAAM,cAAc,UAClB,MAAM,GAAG,SAAS;WACf,QAAQ;WAAS,MAAM;eAmBlC,CAAC;AAEF,MAAM,MAAM,QAAQ,GAAG,OAAO,GAAG,MAAM,GAAG,IAAI,GAAG,OAAO,GAAG,EAAE,CAAC"}
