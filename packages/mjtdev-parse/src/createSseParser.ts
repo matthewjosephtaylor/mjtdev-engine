@@ -1,5 +1,4 @@
 import { SseConsumer } from "./SseConsumer";
-import { processSsePartial } from "./processSsePartial";
 import { processSsePartialUntilNoMoreStops } from "./processSsePartialUntilNoMoreStops";
 
 export const createSseParser = <T>({
@@ -56,6 +55,7 @@ export const createSseParser = <T>({
     } finally {
       reader.cancel();
       consumer(undefined, true);
+      onDone();
       resolve();
     }
   });

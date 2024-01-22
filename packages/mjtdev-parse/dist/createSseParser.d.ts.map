@@ -1,1 +1,1 @@
-{"version":3,"file":"createSseParser.d.ts","sourceRoot":"","sources":["../src/createSseParser.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAI5C,eAAO,MAAM,eAAe;;oBAQX,IAAI;YACX,4BAA4B,MAAM,CAAC;yBACvB,MAAM;;MAExB,QAAQ,IAAI,CA6Cf,CAAC"}
+{"version":3,"file":"createSseParser.d.ts","sourceRoot":"","sources":["../src/createSseParser.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAG5C,eAAO,MAAM,eAAe;;oBAQX,IAAI;YACX,4BAA4B,MAAM,CAAC;yBACvB,MAAM;;MAExB,QAAQ,IAAI,CA8Cf,CAAC"}
