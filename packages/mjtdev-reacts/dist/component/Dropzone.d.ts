@@ -1,5 +1,7 @@
+import { CSSProperties } from "react";
 import { MaterialIconCodes } from "../type/MaterialIconCodes";
-export declare function Dropzone({ action, iconCode, iconSize, highlightedIconCode, activeText, inactiveText, }: {
+export declare function Dropzone({ action, iconCode, iconSize, highlightedIconCode, activeText, inactiveText, style, }: {
+    style?: CSSProperties;
     action: (files: File[]) => void;
     iconCode?: keyof MaterialIconCodes;
     highlightedIconCode?: keyof MaterialIconCodes;

@@ -33,8 +33,10 @@ import { set, setUnsafe } from "./set";
 import { tailOf } from "./tailOf";
 import { times } from "./times";
 import { timesGen } from "./timesGen";
+import { toBoolean } from "./toBoolean";
 import { toMany } from "./toMany";
 import { toMultiMap } from "./toMultiMap";
+import { toNumber } from "./toNumber";
 import { toPromise } from "./toPromise";
 import { tuple0, tuple1, tuple2, tuple3, tuple4, tuple5 } from "./tuples";
 import { isArrayLike } from "./type/isArrayLike";
@@ -101,6 +103,8 @@ export const Objects = {
   toPromise,
   all: Promise.all,
   isFunction,
+  toNumber,
+  toBoolean,
 };
 
 export * from "./tuples";

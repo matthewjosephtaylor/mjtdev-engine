@@ -55,6 +55,7 @@ export const createSseParser = <T>({
       reject(error);
     } finally {
       reader.cancel();
+      consumer(undefined, true);
       resolve();
     }
   });

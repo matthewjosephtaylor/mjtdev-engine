@@ -5,6 +5,6 @@ export type OpenAiCommonRequest = {
   top_p: number;
   seed: number;
   presence_penalty: number;
-  stop: string | string[];
+  // stop: string | string[]; not part of openAI, only oobabooga supports
   stream: boolean;
 };

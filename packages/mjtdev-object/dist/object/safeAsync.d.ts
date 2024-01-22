@@ -3,5 +3,5 @@ export declare const safeAsync: <R>(producer: () => R | Promise<R>, options?: Pa
     quiet: boolean;
     def: R;
     onError: ValueProducer<string>;
-}>) => Promise<R>;
+}>) => Promise<R | undefined>;
 //# sourceMappingURL=safeAsync.d.ts.map

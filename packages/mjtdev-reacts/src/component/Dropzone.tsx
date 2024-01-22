@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback } from "react";
+import React, { CSSProperties, ReactNode, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { MaterialIconCodes } from "../type/MaterialIconCodes";
 import { HighlightableIcon } from "./HighlightableIcon";
@@ -10,7 +10,9 @@ export function Dropzone({
   highlightedIconCode,
   activeText = "Drop Here...",
   inactiveText = "Drag or Click",
+  style = {},
 }: {
+  style?: CSSProperties;
   action: (files: File[]) => void;
   iconCode?: keyof MaterialIconCodes;
   highlightedIconCode?: keyof MaterialIconCodes;
@@ -24,7 +26,7 @@ export function Dropzone({
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div {...getRootProps()}>
+    <div {...getRootProps()} style={{ userSelect: "none", ...style }}>
       <input {...getInputProps()} />
       {isDragActive ? (
         <HighlightableIcon

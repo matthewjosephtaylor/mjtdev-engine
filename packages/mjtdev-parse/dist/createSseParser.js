@@ -39,6 +39,7 @@ export const createSseParser = ({ consumer, reader, onDone = () => { }, dataPars
         }
         finally {
             reader.cancel();
+            consumer(undefined, true);
             resolve();
         }
     });

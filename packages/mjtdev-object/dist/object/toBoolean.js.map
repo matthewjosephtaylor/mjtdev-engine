@@ -1,0 +1,1 @@
+{"version":3,"file":"toBoolean.js","sourceRoot":"","sources":["../../src/object/toBoolean.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAE5C,MAAM,CAAC,MAAM,SAAS,GAAG,CAAC,KAAa,EAAE,EAAE;IACzC,IAAI,WAAW,CAAC,KAAK,CAAC,EAAE,CAAC;QACvB,OAAO,SAAS,CAAC;IACnB,CAAC;IACD,OAAO,OAAO,CAAC,KAAK,CAAC,CAAC;AACxB,CAAC,CAAC"}

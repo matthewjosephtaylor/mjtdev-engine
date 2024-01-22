@@ -70,6 +70,8 @@ export declare const Objects: {
         <T_20 extends [] | readonly unknown[]>(values: T_20): Promise<{ -readonly [P in keyof T_20]: Awaited<T_20[P]>; }>;
     };
     isFunction: (maybe: unknown) => maybe is Function;
+    toNumber: (value: string) => number | undefined;
+    toBoolean: (value: string) => boolean | undefined;
 };
 export * from "./tuples";
 //# sourceMappingURL=Objects.d.ts.map
