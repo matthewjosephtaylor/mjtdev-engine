@@ -5,15 +5,17 @@ export function useCustomEventListener<E extends string = string, T = unknown>(
   eventType: E,
   action: (e: CustomEvent<T>) => void,
 
-  options: {
+  options: Partial<{
     element: HTMLElement | Document | Window;
-    once: boolean;
-  } = {
-    once: false,
-    element: document.body,
-  }
+    // once: boolean;
+    deps: React.DependencyList;
+  }> = {}
 ) {
-  const { element } = options;
+  const {
+    // once = false,
+    element = document.body,
+    deps = [],
+  } = options;
   const actionRef = useRef(action);
 
   useEffect(() => {
@@ -29,5 +31,5 @@ export function useCustomEventListener<E extends string = string, T = unknown>(
       (e) => actionRef.current(e),
       options
     );
-  }, [eventType, element]);
+  }, [eventType, element, ...deps]);
 }

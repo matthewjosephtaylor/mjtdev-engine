@@ -1,10 +1,9 @@
 import { useEffect, useRef } from "react";
 import { addCustomEventListener } from "./addCustomEventListener";
-export function useCustomEventListener(eventType, action, options = {
-    once: false,
-    element: document.body,
-}) {
-    const { element } = options;
+export function useCustomEventListener(eventType, action, options = {}) {
+    const { 
+    // once = false,
+    element = document.body, deps = [], } = options;
     const actionRef = useRef(action);
     useEffect(() => {
         actionRef.current = action;
@@ -14,6 +13,6 @@ export function useCustomEventListener(eventType, action, options = {
             return;
         }
         return addCustomEventListener(eventType, (e) => actionRef.current(e), options);
-    }, [eventType, element]);
+    }, [eventType, element, ...deps]);
 }
 //# sourceMappingURL=useCustomEventListener.js.map

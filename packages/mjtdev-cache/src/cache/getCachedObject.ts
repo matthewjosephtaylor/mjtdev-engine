@@ -1,12 +1,14 @@
-import { isDefined } from "@mjtdev/object";
-import { Cache } from "./type/Cache";
+import { isDefined, isUndefined } from "@mjtdev/object";
 import { Key } from "./type/Key";
 
 export const getCachedObject = <T>(
-  key: string | number,
-  map: Map<Key,T>,
+  key: string | number | undefined,
+  map: Map<Key, T>,
   producer?: () => T
 ) => {
+  if (isUndefined(key)) {
+    return undefined;
+  }
   const value = map.get(key);
   if (isDefined(value)) {
     return value;

@@ -1,1 +1,1 @@
-{"version":3,"file":"getCachedObject.d.ts","sourceRoot":"","sources":["../../src/cache/getCachedObject.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,GAAG,EAAE,MAAM,YAAY,CAAC;AAEjC,eAAO,MAAM,eAAe,WACrB,MAAM,GAAG,MAAM,4CAcrB,CAAC"}
+{"version":3,"file":"getCachedObject.d.ts","sourceRoot":"","sources":["../../src/cache/getCachedObject.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,GAAG,EAAE,MAAM,YAAY,CAAC;AAEjC,eAAO,MAAM,eAAe,WACrB,MAAM,GAAG,MAAM,GAAG,SAAS,sEAiBjC,CAAC"}

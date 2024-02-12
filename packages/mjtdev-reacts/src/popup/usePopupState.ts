@@ -10,6 +10,7 @@ export type PopupState = {
   offsetX: number;
   offsetY: number;
   showFrame: boolean;
+  right: string;
 };
 
 export const [usePopupState, updatePopupState, getPopupState] = createState({

@@ -7,6 +7,7 @@ export const openPopup = (
     name: string;
     x: number;
     y: number;
+    right: string;
     visible: boolean;
     showFrame: boolean;
   }> = {}
@@ -15,6 +16,7 @@ export const openPopup = (
     name = crypto.randomUUID(),
     x,
     y,
+    right,
     showFrame = true,
     visible = true,
   } = options;
@@ -26,6 +28,7 @@ export const openPopup = (
         content,
         x,
         y,
+        right,
         visible,
         moveEnabled: false,
         offsetX: 0,

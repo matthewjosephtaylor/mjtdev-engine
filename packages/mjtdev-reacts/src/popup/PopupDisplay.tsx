@@ -31,7 +31,7 @@ export const PopupDisplay = () => {
 
   const items = Objects.entries(popups).map((entry, index) => {
     const [name, state] = entry;
-    const { x, y, content, moveEnabled, visible, showFrame } = state;
+    const { x, y, content, right, moveEnabled, visible, showFrame } = state;
     return (
       <div
         key={index}
@@ -39,6 +39,7 @@ export const PopupDisplay = () => {
           visibility: visible ? "visible" : "hidden",
           left: x,
           top: y,
+          right,
           position: "absolute",
           zIndex: 1000 + index,
         }}

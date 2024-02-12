@@ -8,6 +8,7 @@ export type PopupState = {
     offsetX: number;
     offsetY: number;
     showFrame: boolean;
+    right: string;
 };
 export declare const usePopupState: import("..").State<{
     popups: Record<string, Partial<PopupState>>;

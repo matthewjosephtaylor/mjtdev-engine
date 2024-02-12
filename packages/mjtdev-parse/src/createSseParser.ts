@@ -5,11 +5,13 @@ export const createSseParser = <T>({
   consumer,
   reader,
   onDone = () => {},
+  onError = () => {},
   dataParser = (data) => data as T,
   signal,
 }: {
   signal?: AbortSignal;
   onDone?: () => void;
+  onError?: (err: unknown) => void;
   reader: ReadableStreamDefaultReader<string>;
   dataParser?: (data: string) => T | undefined;
   consumer: SseConsumer<T>;
@@ -22,9 +24,11 @@ export const createSseParser = <T>({
         const { value: readValue = "", done } = await reader.read();
 
         if (!readValue && !done) {
-          throw new Error(
-            "Error reading from reader. undefined value but not done?"
-          );
+          continue;
+
+          // throw new Error(
+          //   "Error reading from reader. undefined value but not done?"
+          // );
         }
         if (done) {
           if (partial.length > 0) {
@@ -51,11 +55,11 @@ export const createSseParser = <T>({
         });
       }
     } catch (error) {
+      onError(error);
       reject(error);
     } finally {
       reader.cancel();
       consumer(undefined, true);
-      onDone();
       resolve();
     }
   });

@@ -1,8 +1,9 @@
 import { escapeRegExp } from "./escapeRegExp";
 export declare const Parsers: {
-    createSseParser: <T>({ consumer, reader, onDone, dataParser, signal, }: {
+    createSseParser: <T>({ consumer, reader, onDone, onError, dataParser, signal, }: {
         signal?: AbortSignal | undefined;
         onDone?: (() => void) | undefined;
+        onError?: ((err: unknown) => void) | undefined;
         reader: ReadableStreamDefaultReader<string>;
         dataParser?: ((data: string) => T | undefined) | undefined;
         consumer: import("./SseConsumer").SseConsumer<T>;

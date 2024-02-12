@@ -4,6 +4,7 @@ export declare const Popups: {
         name: string;
         x: number;
         y: number;
+        right: string;
         visible: boolean;
         showFrame: boolean;
     }>) => string;

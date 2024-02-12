@@ -28,11 +28,12 @@ export const PopupDisplay = () => {
     });
     const items = Objects.entries(popups).map((entry, index) => {
         const [name, state] = entry;
-        const { x, y, content, moveEnabled, visible, showFrame } = state;
+        const { x, y, content, right, moveEnabled, visible, showFrame } = state;
         return (_jsx("div", { style: {
                 visibility: visible ? "visible" : "hidden",
                 left: x,
                 top: y,
+                right,
                 position: "absolute",
                 zIndex: 1000 + index,
             }, children: _jsx(PopupContentDisplay, { showFrame: showFrame ?? true, content: content, x: x ?? 0, y: y ?? 0, name: name, moveEnabled: moveEnabled ?? true }) }, index));
