@@ -1,2 +1,1 @@
-
-export type ActionMap = Record<string, () => void>;
+export type ActionMap = Record<string, () => void | undefined>;

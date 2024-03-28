@@ -1,0 +1,1 @@
+{"version":3,"file":"createStreamParser.d.ts","sourceRoot":"","sources":["../src/createStreamParser.ts"],"names":[],"mappings":"AAEA,MAAM,MAAM,eAAe,GAAG;IAC5B,GAAG,EAAE,MAAM,CAAC;IACZ,GAAG,EAAE,MAAM,CAAC;IACZ,IAAI,EAAE,MAAM,CAAC;IACb,IAAI,EAAE,MAAM,CAAC;CACd,CAAC;AAqEF,eAAO,MAAM,kBAAkB;eAIlB,eAAe,EAAE;wBACT,MAAM,YAAY,eAAe,KAAK,IAAI;;;kBAgC7C,MAAM;;CAOvB,CAAC"}

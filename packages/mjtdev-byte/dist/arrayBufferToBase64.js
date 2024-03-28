@@ -1,7 +1,9 @@
-export const arrayBufferToBase64 = (input) => {
-    // if (typeof window === "undefined") {
-    //   return Buffer.from(input).toString("base64");
-    // }
-    return btoa(new Uint8Array(input).reduce((data, byte) => data + String.fromCharCode(byte), ""));
-};
+export function arrayBufferToBase64(arrayBuffer) {
+    const uint8Array = new Uint8Array(arrayBuffer);
+    let binaryString = "";
+    for (let i = 0; i < uint8Array.length; i++) {
+        binaryString += String.fromCharCode(uint8Array[i]);
+    }
+    return btoa(binaryString);
+}
 //# sourceMappingURL=arrayBufferToBase64.js.map

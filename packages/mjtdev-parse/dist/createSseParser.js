@@ -1,16 +1,13 @@
 import { processSsePartialUntilNoMoreStops } from "./processSsePartialUntilNoMoreStops";
 export const createSseParser = ({ consumer, reader, onDone = () => { }, onError = () => { }, dataParser = (data) => data, signal, }) => {
     return new Promise(async (resolve, reject) => {
+        let finished = false;
         try {
             let partial = "";
-            let finished = false;
             while (!signal?.aborted && !finished) {
                 const { value: readValue = "", done } = await reader.read();
                 if (!readValue && !done) {
                     continue;
-                    // throw new Error(
-                    //   "Error reading from reader. undefined value but not done?"
-                    // );
                 }
                 if (done) {
                     if (partial.length > 0) {
@@ -43,6 +40,9 @@ export const createSseParser = ({ consumer, reader, onDone = () => { }, onError 
         }
         finally {
             reader.cancel();
+            if (!finished) {
+                onDone(); // make sure onDone is always called
+            }
             consumer(undefined, true);
             resolve();
         }

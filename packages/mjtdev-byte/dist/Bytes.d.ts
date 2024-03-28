@@ -1,6 +1,7 @@
 import { toBase64 } from "./toBase64";
+import { arrayBufferToBase64 } from "./arrayBufferToBase64";
 export declare const Bytes: {
-    typeOfBytes: (bytes: unknown) => "string" | "Blob" | "ArrayBuffer" | "ArrayBufferView" | "Array" | undefined;
+    typeOfBytes: (bytes: unknown) => "Blob" | "ArrayBuffer" | "string" | "ArrayBufferView" | "Array" | undefined;
     toDataUrl: (bytes: import(".").ByteLike) => Promise<string>;
     dataUrlToBlob: (dataUrl: string) => Blob | undefined;
     lengthOf: (bytes: import(".").ByteLike) => number | undefined;
@@ -30,7 +31,7 @@ export declare const Bytes: {
     base64ToArrayBuffer: (input: string) => ArrayBuffer;
     arrayBufferToHex: (input: ArrayBuffer) => string;
     arrayBufferToUtf8: (input: ArrayBuffer) => string;
-    arrayBufferToBase64: (input: ArrayBuffer) => string;
+    arrayBufferToBase64: typeof arrayBufferToBase64;
     ALL_ALGORITHMS: import("./ADDRESS_ALGORITHM").ADDRESS_ALGORITHM[];
     ALGORITHM_BYTE_LENGTHS: {
         "SHA-512": number;

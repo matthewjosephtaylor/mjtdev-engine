@@ -8,6 +8,14 @@ export declare const Parsers: {
         dataParser?: ((data: string) => T | undefined) | undefined;
         consumer: import("./SseConsumer").SseConsumer<T>;
     }) => Promise<void>;
+    createStreamParser: ({ onConsume, stopWords, }: {
+        stopWords: import("./createStreamParser").ComplexStopWord[];
+        onConsume?: ((text: string, stopWord: import("./createStreamParser").ComplexStopWord) => void) | undefined;
+    }) => {
+        reader: ReadableStreamDefaultReader<string>;
+        write: (text: string) => void;
+        close: () => void;
+    };
     detectStop: (text: string | undefined, stopArrayOrString?: string | string[]) => [string | undefined, boolean];
     detectSimpleStop: (text: string | undefined, stops: string[]) => [string | undefined, boolean, number];
     detectStopAfter: (text: string | undefined, stopArrayOrString?: string | string[]) => [string | undefined, boolean];
