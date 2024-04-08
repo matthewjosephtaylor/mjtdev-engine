@@ -1,5 +1,5 @@
-import { ByteLike } from "./type/ByteLike";
-import { ADDRESS_ALGORITHM } from "./ADDRESS_ALGORITHM";
+import type { ByteLike } from "./type/ByteLike";
+import type { ADDRESS_ALGORITHM } from "./ADDRESS_ALGORITHM";
 import { hashOf } from "./hashOf";
 import { encodeAsString } from "./encodeAsString";
 

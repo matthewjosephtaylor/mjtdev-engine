@@ -1,1 +1,1 @@
-{"version":3,"file":"toBlob.d.ts","sourceRoot":"","sources":["../src/toBlob.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAG3C,eAAO,MAAM,MAAM,UACV,QAAQ,yBAEd,IAiBF,CAAC"}
+{"version":3,"file":"toBlob.d.ts","sourceRoot":"","sources":["../src/toBlob.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAGhD,eAAO,MAAM,MAAM,UACV,QAAQ,yBAEd,IAiBF,CAAC"}

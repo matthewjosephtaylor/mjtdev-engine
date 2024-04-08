@@ -1,4 +1,4 @@
-import { ImmediateByteLike } from "./type/ImmediateByteLike";
+import type { ImmediateByteLike } from "./type/ImmediateByteLike";
 import { arrayToFloat64Array } from "./arrayToFloat64Array";
 
 

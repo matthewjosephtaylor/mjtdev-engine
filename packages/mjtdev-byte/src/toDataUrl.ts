@@ -1,5 +1,5 @@
 import { toBlob } from "./toBlob";
-import { ByteLike } from "./type/ByteLike";
+import type { ByteLike } from "./type/ByteLike";
 
 export const toDataUrl = async (bytes: ByteLike): Promise<string> => {
   const blob = toBlob(bytes);

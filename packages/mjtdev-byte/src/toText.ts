@@ -1,4 +1,4 @@
-import { ByteLike } from "./type/ByteLike";
+import type { ByteLike } from "./type/ByteLike";
 import { toArrayBuffer } from "./toArrayBuffer";
 
 export const toText = async (bytes: ByteLike): Promise<string> => {

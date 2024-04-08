@@ -1,1 +1,1 @@
-{"version":3,"file":"ByteLike.d.ts","sourceRoot":"","sources":["../../src/type/ByteLike.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,oBAAoB,CAAC;AACtD,OAAO,EAAE,iBAAiB,EAAE,MAAM,qBAAqB,CAAC;AAExD,MAAM,MAAM,QAAQ,GAAG,gBAAgB,GAAG,iBAAiB,CAAC"}
+{"version":3,"file":"ByteLike.d.ts","sourceRoot":"","sources":["../../src/type/ByteLike.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,gBAAgB,EAAE,MAAM,oBAAoB,CAAC;AAC3D,OAAO,KAAK,EAAE,iBAAiB,EAAE,MAAM,qBAAqB,CAAC;AAE7D,MAAM,MAAM,QAAQ,GAAG,gBAAgB,GAAG,iBAAiB,CAAC"}

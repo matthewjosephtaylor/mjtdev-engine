@@ -1,1 +1,1 @@
-{"version":3,"file":"toText.d.ts","sourceRoot":"","sources":["../src/toText.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAG3C,eAAO,MAAM,MAAM,UAAiB,QAAQ,KAAG,QAAQ,MAAM,CAO5D,CAAC"}
+{"version":3,"file":"toText.d.ts","sourceRoot":"","sources":["../src/toText.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAGhD,eAAO,MAAM,MAAM,UAAiB,QAAQ,KAAG,QAAQ,MAAM,CAO5D,CAAC"}

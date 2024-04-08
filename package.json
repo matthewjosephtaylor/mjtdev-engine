@@ -41,7 +41,12 @@
     "typescript": "^5.3.2",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1",
-    "webpack-node-externals": "^3.0.0"
+    "webpack-node-externals": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "workspaces": [
     "./packages/*"

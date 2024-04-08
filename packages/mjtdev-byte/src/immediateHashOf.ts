@@ -1,5 +1,5 @@
-import { ADDRESS_ALGORITHM } from "./ADDRESS_ALGORITHM";
-import { ImmediateByteLike } from "./type/ImmediateByteLike";
+import type { ADDRESS_ALGORITHM } from "./ADDRESS_ALGORITHM";
+import type { ImmediateByteLike } from "./type/ImmediateByteLike";
 import { immediateToArrayBuffer } from "./immediateToArrayBuffer";
 
 export const immediateHashOf = async (

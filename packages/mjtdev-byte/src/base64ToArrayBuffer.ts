@@ -1,14 +1,15 @@
 export const base64ToArrayBuffer = (input: string): ArrayBuffer => {
-  // if (typeof window === "undefined") {
-  //   return Buffer.from(input, "base64");
-  // }
-  const binaryString = atob(input);
-  const result = new Uint8Array(binaryString.length);
-  binaryString
-    .split("")
-    .map((s) => s.charCodeAt(0))
-    .forEach((b, i) => {
-      result[i] = b;
-    });
-  return result;
+  // Decode base64 string to a binary string.
+  const binaryString = globalThis.atob(input);
+  // Create a new ArrayBuffer with the same length as the binary string.
+  const length = binaryString.length;
+  const bytes = new Uint8Array(length);
+
+  // Iterate over each character in the binary string and fill the Uint8Array.
+  for (let i = 0; i < length; i++) {
+    bytes[i] = binaryString.charCodeAt(i);
+  }
+
+  // The Uint8Array is backed by the ArrayBuffer, which we return.
+  return bytes.buffer;
 };

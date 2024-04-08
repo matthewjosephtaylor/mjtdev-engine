@@ -1,4 +1,4 @@
-import { ByteLike } from "./type/ByteLike";
+import type { ByteLike } from "./type/ByteLike";
 import { arrayToFloat64Array } from "./arrayToFloat64Array";
 
 export const toArrayBuffer = async (bytes: ByteLike): Promise<ArrayBuffer> => {

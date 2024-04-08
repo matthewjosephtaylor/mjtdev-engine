@@ -1,1 +1,1 @@
-{"version":3,"file":"toArrayBuffer.d.ts","sourceRoot":"","sources":["../src/toArrayBuffer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAG3C,eAAO,MAAM,aAAa,UAAiB,QAAQ,KAAG,QAAQ,WAAW,CAkBxE,CAAC"}
+{"version":3,"file":"toArrayBuffer.d.ts","sourceRoot":"","sources":["../src/toArrayBuffer.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAGhD,eAAO,MAAM,aAAa,UAAiB,QAAQ,KAAG,QAAQ,WAAW,CAkBxE,CAAC"}

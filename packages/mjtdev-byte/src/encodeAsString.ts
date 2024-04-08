@@ -1,4 +1,4 @@
-import { ByteLike } from "./type/ByteLike";
+import type { ByteLike } from "./type/ByteLike";
 import { toArrayBuffer } from "./toArrayBuffer";
 
 // @see https://stackoverflow.com/questions/40031688/javascript-arraybuffer-to-hex
