@@ -1,4 +1,4 @@
-import type { escapeRegExp } from "./escapeRegExp";
+import { escapeRegExp } from "./escapeRegExp";
 export declare const Parsers: {
     createSseParser: <T>({ consumer, reader, onDone, onError, dataParser, signal, }: {
         signal?: AbortSignal | undefined;

@@ -12,7 +12,7 @@ export const createSseParser = ({ consumer, reader, onDone = () => { }, onError 
                 if (done) {
                     if (partial.length > 0) {
                         const foo = await processSsePartialUntilNoMoreStops({
-                            input: partial + readValue ?? "",
+                            input: partial + readValue,
                             consumer,
                             done,
                             reader,
@@ -26,7 +26,7 @@ export const createSseParser = ({ consumer, reader, onDone = () => { }, onError 
                     break;
                 }
                 partial = await processSsePartialUntilNoMoreStops({
-                    input: partial + readValue ?? "",
+                    input: partial + readValue,
                     consumer,
                     done,
                     reader,

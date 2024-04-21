@@ -1,1 +1,1 @@
-{"version":3,"file":"SseConsumer.d.ts","sourceRoot":"","sources":["../src/SseConsumer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,SAAS,CAAC;AAGlC,MAAM,MAAM,WAAW,CAAC,CAAC,IAAI,CAC3B,KAAK,EAAE,CAAC,GAAG,SAAS,EACpB,IAAI,EAAE,OAAO,KACV,OAAO,GAAG,OAAO,CAAC,OAAO,CAAC,CAAC"}
+{"version":3,"file":"SseConsumer.d.ts","sourceRoot":"","sources":["../src/SseConsumer.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,SAAS,CAAC;AAGvC,MAAM,MAAM,WAAW,CAAC,CAAC,IAAI,CAC3B,KAAK,EAAE,CAAC,GAAG,SAAS,EACpB,IAAI,EAAE,OAAO,KACV,OAAO,GAAG,OAAO,CAAC,OAAO,CAAC,CAAC"}
