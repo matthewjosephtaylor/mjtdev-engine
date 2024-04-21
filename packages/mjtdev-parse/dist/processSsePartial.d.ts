@@ -1,4 +1,4 @@
-import { SseConsumer } from "./SseConsumer";
+import type { SseConsumer } from "./SseConsumer";
 export declare const processSsePartial: <T>({ input, dataParser, consumer, reader, done, }: {
     done: boolean;
     input: string;

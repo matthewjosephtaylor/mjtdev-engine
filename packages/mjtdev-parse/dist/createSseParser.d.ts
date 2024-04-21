@@ -1,4 +1,4 @@
-import { SseConsumer } from "./SseConsumer";
+import type { SseConsumer } from "./SseConsumer";
 export declare const createSseParser: <T>({ consumer, reader, onDone, onError, dataParser, signal, }: {
     signal?: AbortSignal | undefined;
     onDone?: (() => void) | undefined;

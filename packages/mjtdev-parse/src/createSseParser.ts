@@ -1,4 +1,4 @@
-import { SseConsumer } from "./SseConsumer";
+import type { SseConsumer } from "./SseConsumer";
 import { processSsePartialUntilNoMoreStops } from "./processSsePartialUntilNoMoreStops";
 
 export const createSseParser = <T>({

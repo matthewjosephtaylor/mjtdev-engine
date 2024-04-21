@@ -1,4 +1,4 @@
-import { Boolish } from "Boolish";
+import type { Boolish } from "Boolish";
 
 
 export type SseConsumer<T> = (

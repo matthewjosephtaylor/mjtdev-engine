@@ -1,5 +1,5 @@
 import { isDefined, safe } from "@mjtdev/object";
-import { SseConsumer } from "./SseConsumer";
+import type { SseConsumer } from "./SseConsumer";
 import { decodeSseValue } from "./decodeSseValue";
 import { detectSimpleStop } from "./detectSimpleStop";
 

@@ -1,4 +1,4 @@
-import { SseConsumer } from "./SseConsumer";
+import type { SseConsumer } from "./SseConsumer";
 import { processSsePartial } from "./processSsePartial";
 
 export const processSsePartialUntilNoMoreStops = async <T>(params: {
