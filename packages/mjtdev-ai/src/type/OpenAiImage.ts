@@ -1,4 +1,4 @@
-import { OpenAiUrlImage } from "./OpenAiUrlImage";
-import { OpenAib64JsonImage } from "./OpenAib64JsonImage";
+import type { OpenAiUrlImage } from "./OpenAiUrlImage";
+import type { OpenAib64JsonImage } from "./OpenAib64JsonImage";
 
 export type OpenAiImage = OpenAiUrlImage | OpenAib64JsonImage;

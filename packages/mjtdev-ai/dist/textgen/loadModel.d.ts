@@ -1,4 +1,4 @@
-import { ModelInfo } from "../type/ModelInfo";
+import type { ModelInfo } from "../type/ModelInfo";
 export declare const loadModel: (modelName: string, options?: Partial<{
     loader: "AutoGPTQ" | "ExLlama" | "ExLlama_HF";
     auto_devices: boolean;

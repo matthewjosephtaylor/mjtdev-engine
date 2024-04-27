@@ -1,6 +1,6 @@
 import { nextTraceId } from "../common/nextTraceId";
 import { safe } from "../common/safe";
-import { TextGenParams } from "../type/TextGenParams";
+import type { TextGenParams } from "../type/TextGenParams";
 import { useTextGenState } from "./useTextGenState";
 
 export const textgen = async (

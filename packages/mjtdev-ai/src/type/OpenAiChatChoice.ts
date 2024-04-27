@@ -1,4 +1,4 @@
-import { OpenAiMessage } from "./OpenAiMessage";
+import type { OpenAiMessage } from "./OpenAiMessage";
 
 
 export interface OpenAiChatChoice {

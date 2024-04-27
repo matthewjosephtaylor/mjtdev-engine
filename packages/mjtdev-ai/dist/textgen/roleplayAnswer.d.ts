@@ -1,5 +1,5 @@
-import { ChatHistory } from "../type/ChatHistory";
-import { TextGenParams } from "../type/TextGenParams";
+import type { ChatHistory } from "../type/ChatHistory";
+import type { TextGenParams } from "../type/TextGenParams";
 export type RoleplayParams = {
     prompt: string;
     character: string;

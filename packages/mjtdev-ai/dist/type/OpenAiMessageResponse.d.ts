@@ -1,5 +1,5 @@
-import { OpenAiChatChoice } from "./OpenAiChatChoice";
-import { OpenAiUsage } from "./OpenAiUsage";
+import type { OpenAiChatChoice } from "./OpenAiChatChoice";
+import type { OpenAiUsage } from "./OpenAiUsage";
 export interface OpenAiMessageResponse {
     id: string;
     object: string;

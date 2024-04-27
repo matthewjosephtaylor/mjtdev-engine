@@ -1,4 +1,4 @@
-import { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
+import type { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
 import { rawImageStringToImg } from "./rawImageStringToImg";
 import { txt2img } from "./txt2img";
 

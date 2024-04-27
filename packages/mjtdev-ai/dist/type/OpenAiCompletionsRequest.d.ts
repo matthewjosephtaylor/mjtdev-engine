@@ -1,4 +1,4 @@
-import { OpenAiCommonRequest } from "./OpenAiCommonRequest";
+import type { OpenAiCommonRequest } from "./OpenAiCommonRequest";
 export type OpenAiCompletionsRequest = OpenAiCommonRequest & {
     prompt: string;
 };

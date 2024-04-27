@@ -1,4 +1,4 @@
-import { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
+import type { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
 export declare const img2img: (src: HTMLCanvasElement, mask: HTMLCanvasElement, options: StableDiffusionProcessingTxt2Img & Partial<{
     signal: AbortSignal;
     outpainting_fill: 0 | 1 | 2 | 3;

@@ -1,4 +1,4 @@
-import { ChatHistory } from "../type/ChatHistory";
+import type { ChatHistory } from "../type/ChatHistory";
 export type RoleplayParams = {
     prompt: string;
     character: string;

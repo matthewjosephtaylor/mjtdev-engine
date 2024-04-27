@@ -1,5 +1,5 @@
 import { safe } from "../common/safe";
-import { ModelInfo } from "../type/ModelInfo";
+import type { ModelInfo } from "../type/ModelInfo";
 import { useTextGenState } from "./useTextGenState";
 
 export const loadModel = (

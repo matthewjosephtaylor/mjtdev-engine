@@ -46,6 +46,7 @@ import { isIterator } from "./type/isIterator";
 import { update, updateUnsafe } from "./update";
 import { valueOf } from "./valueOf";
 import { values } from "./values";
+import { waitTimeout } from "./waitTimeout";
 export const Objects = {
     isEmpty,
     isNotEmpty,
@@ -104,6 +105,7 @@ export const Objects = {
     isFunction,
     toNumber,
     toBoolean,
+    waitTimeout,
 };
 export * from "./tuples";
 //# sourceMappingURL=Objects.js.map

@@ -1,4 +1,4 @@
-import { MonitorFunction } from "../type/MonitorFunction";
+import type { MonitorFunction } from "../type/MonitorFunction";
 export declare const useImageGenState: import("zustand").UseBoundStore<import("zustand").StoreApi<{
     automaticBaseUrl: string;
     debug: boolean;

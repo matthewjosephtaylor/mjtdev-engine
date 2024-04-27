@@ -1,5 +1,5 @@
 import { nextTraceId } from "../common/nextTraceId";
-import { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
+import type { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
 import { safeApi } from "./safeApi";
 import { useImageGenState } from "./useImageGenState";
 

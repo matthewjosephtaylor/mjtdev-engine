@@ -23,5 +23,5 @@ export { Objects, Arrays, Fixes, } from "@mjtdev/object";
 export * from "@mjtdev/babs";
 import { Objects } from "@mjtdev/object";
 // general convenience functions
-export const { chain, entries, filter, first, last, forEach, iff, orElse, removeUndefinedValues, iffTyped, isDefined, isUndefined, omit, omitUnsafe, toMany, fromEntries, safe, safeAsync, mapValue, headOf, tailOf, restOf, times, isIterator, toMultiMap, timesGen, isIterable, isArrayLike, iffBrowser, isBrowser, toPromise, all, isFunction, isEmpty, isNotEmpty, } = Objects;
+export const { chain, entries, filter, first, last, forEach, iff, orElse, removeUndefinedValues, iffTyped, isDefined, isUndefined, omit, omitUnsafe, toMany, fromEntries, safe, safeAsync, mapValue, headOf, tailOf, restOf, times, isIterator, toMultiMap, timesGen, isIterable, isArrayLike, iffBrowser, isBrowser, toPromise, all, isFunction, isEmpty, isNotEmpty, waitTimeout, } = Objects;
 //# sourceMappingURL=index.js.map

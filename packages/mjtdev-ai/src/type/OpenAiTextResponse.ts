@@ -1,5 +1,5 @@
-import { OpenAiTextChoice } from "./OpenAiTextChoice";
-import { OpenAiUsage } from "./OpenAiUsage";
+import type { OpenAiTextChoice } from "./OpenAiTextChoice";
+import type { OpenAiUsage } from "./OpenAiUsage";
 
 export interface OpenAiTextResponse {
   id: string;

@@ -46,6 +46,7 @@ import { isIterator } from "./type/isIterator";
 import { update, updateUnsafe } from "./update";
 import { valueOf } from "./valueOf";
 import { values } from "./values";
+import { waitTimeout } from "./waitTimeout";
 
 export const Objects = {
   isEmpty,
@@ -105,6 +106,7 @@ export const Objects = {
   isFunction,
   toNumber,
   toBoolean,
+  waitTimeout,
 };
 
 export * from "./tuples";

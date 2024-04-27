@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { DEFAULT_PROMPT_TEMPLATE } from "./DEFAULT_PROMPT_TEMPLATE";
-import { TextGenParams } from "../type/TextGenParams";
-import { MonitorFunction } from "../type/MonitorFunction";
+import type { TextGenParams } from "../type/TextGenParams";
+import type { MonitorFunction } from "../type/MonitorFunction";
 
 export const useTextGenState = create(() => ({
   debug: false,

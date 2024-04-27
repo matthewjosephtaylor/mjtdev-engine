@@ -1,3 +1,3 @@
-import { RoleplayParams } from "./RoleplayParams";
+import type { RoleplayParams } from "./RoleplayParams";
 export declare const expandRoleplayPrompt: (params: Partial<RoleplayParams>) => string;
 //# sourceMappingURL=expandRoleplayPrompt.d.ts.map

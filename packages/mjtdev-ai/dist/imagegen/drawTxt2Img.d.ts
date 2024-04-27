@@ -1,4 +1,4 @@
-import { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
+import type { StableDiffusionProcessingTxt2Img } from "./api/AutomaticApi";
 export declare const drawTxt2Img: (canvasOrContext: HTMLCanvasElement | CanvasRenderingContext2D, txt2imgOptions?: StableDiffusionProcessingTxt2Img, canvasOptions?: Partial<{
     x: number;
     y: number;

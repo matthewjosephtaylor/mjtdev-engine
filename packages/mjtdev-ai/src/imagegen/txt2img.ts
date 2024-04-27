@@ -1,5 +1,5 @@
 import { nextTraceId } from "../common/nextTraceId";
-import {
+import type {
   StableDiffusionProcessingTxt2Img,
   TextToImageResponse,
 } from "./api/AutomaticApi";

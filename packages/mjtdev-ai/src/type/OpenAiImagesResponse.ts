@@ -1,4 +1,4 @@
-import { OpenAiImage } from "./OpenAiImage";
+import type { OpenAiImage } from "./OpenAiImage";
 
 
 export type OpenAiImagesResponse = {

@@ -86,4 +86,5 @@ export const {
   isFunction,
   isEmpty,
   isNotEmpty,
+  waitTimeout,
 } = Objects;
