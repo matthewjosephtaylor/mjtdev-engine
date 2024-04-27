@@ -1,1 +1,1 @@
-{"version":3,"file":"OpenAiImagesResponse.d.ts","sourceRoot":"","sources":["../../src/type/OpenAiImagesResponse.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAG5C,MAAM,MAAM,oBAAoB,GAAG;IACjC,OAAO,EAAE,MAAM,CAAC;IAChB,IAAI,EAAE,WAAW,EAAE,CAAC;CACrB,CAAC"}
+{"version":3,"file":"OpenAiImagesResponse.d.ts","sourceRoot":"","sources":["../../src/type/OpenAiImagesResponse.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,eAAe,CAAC;AAGjD,MAAM,MAAM,oBAAoB,GAAG;IACjC,OAAO,EAAE,MAAM,CAAC;IAChB,IAAI,EAAE,WAAW,EAAE,CAAC;CACrB,CAAC"}

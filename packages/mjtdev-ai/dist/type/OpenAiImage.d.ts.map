@@ -1,1 +1,1 @@
-{"version":3,"file":"OpenAiImage.d.ts","sourceRoot":"","sources":["../../src/type/OpenAiImage.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAClD,OAAO,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAC;AAE1D,MAAM,MAAM,WAAW,GAAG,cAAc,GAAG,kBAAkB,CAAC"}
+{"version":3,"file":"OpenAiImage.d.ts","sourceRoot":"","sources":["../../src/type/OpenAiImage.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AACvD,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,sBAAsB,CAAC;AAE/D,MAAM,MAAM,WAAW,GAAG,cAAc,GAAG,kBAAkB,CAAC"}

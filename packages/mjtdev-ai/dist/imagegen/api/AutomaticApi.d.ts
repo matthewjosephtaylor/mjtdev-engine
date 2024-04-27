@@ -3586,7 +3586,7 @@ export interface HttpResponse<D extends unknown, E extends unknown = unknown> ex
     data: D;
     error: E;
 }
-type CancelToken = symbol | string | number;
+type CancelToken = Symbol | string | number;
 export declare enum ContentType {
     Json = "application/json",
     FormData = "multipart/form-data",
