@@ -1,6 +1,6 @@
 import { Asserts } from "@mjtdev/assert";
 import { getMesh } from "./getMesh";
-export const getMeshInstance = (scene, name, rootName, producer = () => undefined) => {
+export const getMeshInstance = (scene, name, rootName, producer) => {
     return getMesh(scene, name, () => {
         const rootMesh = getMesh(scene, rootName, producer);
         Asserts.assertValue(rootMesh, () => {

@@ -1,5 +1,5 @@
-import { Scene } from "babylonjs";
-import { ModelBuilder, ModelPath } from "./ModelBuilder";
+import type { ModelBuilder, ModelPath } from "./ModelBuilder";
+import { Scene } from "@babylonjs/core/scene";
 export declare const builder: (props?: {
     scene?: Scene;
     path?: ModelPath;

@@ -13,6 +13,7 @@ export const drawTextOnTexture = (texture, text, options = {}) => {
     ctx.font = font;
     const textX = 0;
     measure = ctx.measureText(text);
+    /** @ts-ignore */
     const top = measure["fontBoundingBoxAscent"] ?? 0;
     const textY = textureSize - (textureSize - top) / 2;
     ctx.lineWidth = fontSize / 2;

@@ -1,1 +1,1 @@
-{"version":3,"file":"walkMeshes.d.ts","sourceRoot":"","sources":["../../src/model/walkMeshes.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AAGhD,eAAO,MAAM,UAAU,SACf,YAAY,GAAG,KAAK,iBACX,YAAY,KAAK,IAAI,QAOrC,CAAC"}
+{"version":3,"file":"walkMeshes.d.ts","sourceRoot":"","sources":["../../src/model/walkMeshes.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,qCAAqC,CAAC;AACxE,OAAO,EAAE,KAAK,EAAE,MAAM,uBAAuB,CAAC;AAE9C,eAAO,MAAM,UAAU,SACf,YAAY,GAAG,KAAK,UAClB,CAAC,IAAI,EAAE,YAAY,KAAK,IAAI,KACnC,IAMF,CAAC"}

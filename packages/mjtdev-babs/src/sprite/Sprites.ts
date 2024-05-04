@@ -1,7 +1,8 @@
+import { Sprite } from "@babylonjs/core/Sprites/sprite";
+import { SpriteManager } from "@babylonjs/core/Sprites/spriteManager";
+import type { Scene } from "@babylonjs/core/scene";
 import { assertValue } from "@mjtdev/assert/dist/assertValue";
-import { isDefined, isUndefined } from "@mjtdev/object";
-import { Scene, Sprite, SpriteManager } from "babylonjs";
-import { getMesh } from "../mesh/getMesh";
+import { isDefined } from "@mjtdev/object";
 
 export type SpriteManagerOptions = Partial<{
   capacity: number;
@@ -18,7 +19,10 @@ export const getSpriteManager = (
   if (isDefined(managerMaybe)) {
     return managerMaybe;
   }
-  const { capacity, cellSize, imgUrl } = options;
+  const { capacity = 1, cellSize, imgUrl } = options;
+  if (!imgUrl) {
+    throw new Error("imgUrl is required", { cause: options });
+  }
   return new SpriteManager(name, imgUrl, capacity, cellSize, scene);
 };
 

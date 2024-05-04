@@ -1,5 +1,5 @@
-import { AbstractMesh } from "babylonjs";
-export declare const HIDE: any[];
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
+export declare const HIDE: never[];
 export declare const GLOSS: string[];
 export declare const fixEyes: (mesh: AbstractMesh) => void;
 //# sourceMappingURL=fixEyes.d.ts.map

@@ -1,19 +1,19 @@
-import { getTexture } from "./getTexture";
-import { getHtmlElementTexture } from "./getHtmlElementTexture";
+import type { ICanvasRenderingContext } from "@babylonjs/core/Engines/ICanvas";
+import type { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
 import { builder } from "./builder";
+import { clearTexture } from "./clearTexture";
 import { copyToCanvas } from "./copyToCanvas";
 import { debugImage } from "./debugImage";
-import { drawBackgroundOnTexture } from "./drawBackgroundOnTexture";
-import { drawTextOnTexture } from "./drawTextOnTexture";
-import { imageToTexture } from "./imageToTexture";
-import { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
-import { updateTexture } from "./updateTexture";
-import { getDynamicTexture } from "./getDynamicTexture";
-import { drawOnTexture } from "./drawOnTexture";
-import { clearTexture } from "./clearTexture";
 import { destroyTexture } from "./destroyTexture";
+import { drawBackgroundOnTexture } from "./drawBackgroundOnTexture";
+import { drawOnTexture } from "./drawOnTexture";
+import { drawTextOnTexture } from "./drawTextOnTexture";
+import { getDynamicTexture } from "./getDynamicTexture";
+import { getHtmlElementTexture } from "./getHtmlElementTexture";
 import { getPathTexture } from "./getPathTexture";
-import { ICanvasRenderingContext } from "babylonjs";
+import { getTexture } from "./getTexture";
+import { imageToTexture } from "./imageToTexture";
+import { updateTexture } from "./updateTexture";
 
 export type TextureSamplingModeMap = typeof TEXTURE_SAMPLING_MODES;
 

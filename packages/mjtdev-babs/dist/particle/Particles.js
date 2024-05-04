@@ -1,6 +1,6 @@
+import { SolidParticleSystem } from "@babylonjs/core/Particles/solidParticleSystem";
 import { isDefined } from "@mjtdev/object";
-import { SolidParticleSystem } from "babylonjs";
-export const getParticleSystem = (scene, name, producer = () => undefined) => {
+export const getParticleSystem = (scene, name, producer) => {
     const metadata = scene.metadata ?? {};
     const spsMaybe = metadata["solidParticleSystems"]?.[name];
     if (isDefined(spsMaybe)) {

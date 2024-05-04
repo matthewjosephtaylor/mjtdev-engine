@@ -1,4 +1,5 @@
-import { BaseTexture, Scene } from "babylonjs";
+import type { BaseTexture } from "@babylonjs/core/Materials/Textures/baseTexture";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
 
 export const getTexture = <T extends BaseTexture>(

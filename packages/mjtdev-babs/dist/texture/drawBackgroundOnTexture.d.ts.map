@@ -1,1 +1,1 @@
-{"version":3,"file":"drawBackgroundOnTexture.d.ts","sourceRoot":"","sources":["../../src/texture/drawBackgroundOnTexture.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,WAAW,CAAC;AAI3C,eAAO,MAAM,uBAAuB,YACzB,cAAc,YACd,QAAQ;IACf,KAAK,EAAE,MAAM,CAAC;CACf,CAAC,SAQH,CAAC"}
+{"version":3,"file":"drawBackgroundOnTexture.d.ts","sourceRoot":"","sources":["../../src/texture/drawBackgroundOnTexture.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,mDAAmD,CAAC;AAIxF,eAAO,MAAM,uBAAuB,YACzB,cAAc,YACd,QAAQ;IACf,KAAK,EAAE,MAAM,CAAC;CACf,CAAC,SAQH,CAAC"}

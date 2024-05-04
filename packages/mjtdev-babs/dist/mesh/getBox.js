@@ -1,5 +1,5 @@
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { isDefined } from "@mjtdev/object";
-import { MeshBuilder } from "babylonjs";
 import { c4 } from "../bab/c4";
 import { getMesh } from "./getMesh";
 import { updateMesh } from "./updateMesh";

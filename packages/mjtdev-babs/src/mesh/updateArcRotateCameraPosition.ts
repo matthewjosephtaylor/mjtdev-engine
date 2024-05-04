@@ -1,5 +1,5 @@
-import { ArcRotateCamera } from "babylonjs";
-import { Point3 } from "@mjtdev/math";
+import type { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
+import type { Point3 } from "@mjtdev/math";
 import { v3 } from "../bab/v3";
 
 export const updateArcRotateCameraPosition = (

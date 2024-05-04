@@ -1,7 +1,8 @@
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 import { isUndefined } from "@mjtdev/object";
-import { MeshOptions, updateMesh } from "./updateMesh";
 import { voxDataToSps } from "../voxel/voxDataToSps";
+import type { MeshOptions } from "./updateMesh";
+import { updateMesh } from "./updateMesh";
 
 export const getVoxModel = (
   scene: Scene,

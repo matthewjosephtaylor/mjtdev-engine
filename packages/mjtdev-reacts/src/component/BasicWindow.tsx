@@ -1,8 +1,7 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useRemoveFromDesk } from "../hook/useRemoveFromDesk";
-import { ReactCssProperties } from "../type/ReactTypes";
+import type { ReactCssProperties } from "../type/ReactTypes";
 import { Win } from "./Win";
-
 
 export const BasicWindow = ({
   title,

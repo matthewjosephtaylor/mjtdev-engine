@@ -1,6 +1,7 @@
-import { Point3 } from "@mjtdev/math";
-import { LinesMesh, Scene } from "babylonjs";
-import { MeshOptions } from "./updateMesh";
+import type { LinesMesh } from "@babylonjs/core/Meshes/linesMesh";
+import type { Scene } from "@babylonjs/core/scene";
+import type { Point3 } from "@mjtdev/math";
+import type { MeshOptions } from "./updateMesh";
 export declare const getLine: (scene: Scene, name: string, options: MeshOptions & Partial<{
     points: Point3[];
     colors: string[];

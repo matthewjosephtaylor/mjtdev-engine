@@ -1,4 +1,5 @@
-import { Maths, Point2, toVec2 } from "@mjtdev/math";
+import type { Point2} from "@mjtdev/math";
+import { Maths, toVec2 } from "@mjtdev/math";
 
 
 export const lookAt = (from: Point2, to: Point2) => {

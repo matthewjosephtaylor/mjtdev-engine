@@ -1,18 +1,12 @@
-import { Engine } from "babylonjs";
+import { Engine } from "@babylonjs/core/Engines/engine";
 import { createCanvas } from "./createCanvas";
-export const createEngine = (options = {
-    // preserveDrawingBuffer: true,
-    // stencil: true,
-    // antialias: true,
-    width: 320,
-    height: 320,
-}) => {
-    const { width, height, antialias, canvas = createCanvas({ width, height }), } = options;
+export const createEngine = (options = {}) => {
+    const { width = 320, height = 320, antialias, canvas = createCanvas({ width, height }), } = options;
     const engine = new Engine(canvas, antialias, {
         powerPreference: "high-performance",
         ...options,
     });
-    engine.loadingScreen = undefined;
+    // engine.loadingScreen = undefined!;
     engine.hideLoadingUI();
     return engine;
 };

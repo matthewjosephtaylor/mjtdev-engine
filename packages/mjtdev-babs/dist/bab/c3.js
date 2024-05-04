@@ -1,4 +1,4 @@
-import { Color3 } from 'babylonjs';
+import { Color3 } from "@babylonjs/core/Maths/math.color";
 import { Colors } from "@mjtdev/color";
 export const c3 = (color) => {
     const hex = Colors.builder({ color }).hex();

@@ -1,7 +1,10 @@
+import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
+import type { Camera } from "@babylonjs/core/Cameras/camera";
+import { TargetCamera } from "@babylonjs/core/Cameras/targetCamera";
 import { iff } from "@mjtdev/object";
-import { ArcRotateCamera, Camera, TargetCamera } from "babylonjs";
 import { v3 } from "../bab/v3";
-import { AllCameraOptions, CAMERA_MODES } from "./Cameras";
+import type { AllCameraOptions } from "./Cameras";
+import { CAMERA_MODES } from "./Cameras";
 
 export const updateCamera = (camera: Camera, options: AllCameraOptions) => {
   const {

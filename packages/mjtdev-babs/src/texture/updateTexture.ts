@@ -1,6 +1,7 @@
+import type { BaseTexture } from "@babylonjs/core/Materials/Textures/baseTexture";
+import { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
 import { iff } from "@mjtdev/object";
-import { BaseTexture, DynamicTexture } from "babylonjs";
-import { AllTextureOptions } from "./Textures";
+import type { AllTextureOptions } from "./Textures";
 
 export const updateTexture = (
   texture: BaseTexture,

@@ -1,1 +1,1 @@
-{"version":3,"file":"groupMeshesByMaterial.d.ts","sourceRoot":"","sources":["../../src/voxel/groupMeshesByMaterial.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,WAAW,CAAC;AAEjC,eAAO,MAAM,qBAAqB,WAAY,IAAI,EAAE,2BAUnD,CAAC"}
+{"version":3,"file":"groupMeshesByMaterial.d.ts","sourceRoot":"","sources":["../../src/voxel/groupMeshesByMaterial.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,IAAI,EAAE,MAAM,6BAA6B,CAAC;AAExD,eAAO,MAAM,qBAAqB,WAAY,IAAI,EAAE,2BAanD,CAAC"}

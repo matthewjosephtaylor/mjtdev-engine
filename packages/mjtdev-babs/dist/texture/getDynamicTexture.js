@@ -1,6 +1,6 @@
-import { DynamicTexture } from "babylonjs";
-import { getTexture } from "./getTexture";
+import { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
 import { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
+import { getTexture } from "./getTexture";
 import { updateTexture } from "./updateTexture";
 export const getDynamicTexture = (scene, name, options = {}) => {
     const texture = getTexture(scene, name, () => {

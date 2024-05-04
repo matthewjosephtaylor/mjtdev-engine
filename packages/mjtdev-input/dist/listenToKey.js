@@ -12,7 +12,7 @@ export const listenToKey = (keyAction, options = {}) => {
             }
             const action = ignoreCaseKeyActions[k];
             if (isDefined(action)) {
-                action();
+                action(k);
             }
         });
     });

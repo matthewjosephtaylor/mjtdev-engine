@@ -1,4 +1,4 @@
-import { Color3 } from "babylonjs";
+import { Color3 } from "@babylonjs/core/Maths/math.color";
 export const fixEyelashes = (scene) => {
     scene.meshes.forEach((mesh) => {
         // console.log(m.name);
@@ -6,7 +6,10 @@ export const fixEyelashes = (scene) => {
             // mesh.setEnabled(false); // TODO re-enable eyelashes when morphs fixed
             if (mesh.name.includes("primitive1")) {
                 const material = mesh.material;
-                const texture = mesh.material.getActiveTextures()[0];
+                if (!material) {
+                    throw new Error("Mesh has no material", { cause: mesh });
+                }
+                const texture = material.getActiveTextures()[0];
                 texture.hasAlpha = true;
                 material.transparencyMode = 1;
                 material.opacityTexture = texture;

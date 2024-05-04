@@ -1,1 +1,1 @@
-{"version":3,"file":"updateCamera.d.ts","sourceRoot":"","sources":["../../src/camera/updateCamera.ts"],"names":[],"mappings":"AACA,OAAO,EAAmB,MAAM,EAAgB,MAAM,WAAW,CAAC;AAElE,OAAO,EAAE,gBAAgB,EAAgB,MAAM,WAAW,CAAC;AAE3D,eAAO,MAAM,YAAY,WAAY,MAAM,WAAW,gBAAgB,SAsErE,CAAC"}
+{"version":3,"file":"updateCamera.d.ts","sourceRoot":"","sources":["../../src/camera/updateCamera.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,gCAAgC,CAAC;AAI7D,OAAO,KAAK,EAAE,gBAAgB,EAAE,MAAM,WAAW,CAAC;AAGlD,eAAO,MAAM,YAAY,WAAY,MAAM,WAAW,gBAAgB,SAsErE,CAAC"}

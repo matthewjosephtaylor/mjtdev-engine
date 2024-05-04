@@ -1,1 +1,1 @@
-{"version":3,"file":"lookAt.d.ts","sourceRoot":"","sources":["../../src/mesh/lookAt.ts"],"names":[],"mappings":"AAAA,OAAO,EAAS,MAAM,EAAU,MAAM,cAAc,CAAC;AAGrD,eAAO,MAAM,MAAM,SAAU,MAAM,MAAM,MAAM,WAG9C,CAAC"}
+{"version":3,"file":"lookAt.d.ts","sourceRoot":"","sources":["../../src/mesh/lookAt.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,MAAM,EAAC,MAAM,cAAc,CAAC;AAI1C,eAAO,MAAM,MAAM,SAAU,MAAM,MAAM,MAAM,WAG9C,CAAC"}

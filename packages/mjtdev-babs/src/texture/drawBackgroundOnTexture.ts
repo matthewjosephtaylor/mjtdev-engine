@@ -1,4 +1,4 @@
-import { DynamicTexture } from "babylonjs";
+import type { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
 import { Colors } from "@mjtdev/color";
 import { drawOnTexture } from "./drawOnTexture";
 
@@ -15,5 +15,3 @@ export const drawBackgroundOnTexture = (
     ctx.fillRect(0, 0, width, height);
   });
 };
-
-

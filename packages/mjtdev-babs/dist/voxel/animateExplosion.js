@@ -1,15 +1,19 @@
-import { Curve3 } from "babylonjs";
+import { Curve3 } from "@babylonjs/core/Maths/math.path";
 import { Maths, toVec3 } from "@mjtdev/math";
 import { isDefined } from "@mjtdev/object";
+import { Randoms } from "@mjtdev/random";
 import { v3 } from "../bab/v3";
 export const animateExplosion = (particle, options = {}) => {
-    const { random, radius = 1, maxBounce = 0, groundZ = 0, speed = 20, decay = 0.01, dispose = () => (particle.isVisible = false), } = options;
+    const { random = Randoms.globalRandom, radius = 1, maxBounce = 0, groundZ = 0, speed = 20, decay = 0.01, dispose = () => (particle.isVisible = false), } = options;
     // const random = Noises.noiseStream(seed);
     // use path
     {
         const path = particle.props?.["path"];
         if (isDefined(path) && path.length > 0) {
             const next = path.pop();
+            if (!next) {
+                throw new Error("No next value from path", { cause: path });
+            }
             // console.log(`next: ${next.x} ${next.y} ${next.z}`);
             particle.position = next;
             return;

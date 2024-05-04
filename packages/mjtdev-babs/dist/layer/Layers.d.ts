@@ -1,6 +1,5 @@
-/// <reference types="babylonjs" />
 export declare const Layers: {
-    getGlowLayer: (scene: import("babylonjs/scene").Scene, name: string, options?: import("babylonjs/Layers/glowLayer").IGlowLayerOptions) => import("babylonjs/Layers/glowLayer").GlowLayer;
-    getHighlightLayer: <T extends import("babylonjs/Layers/highlightLayer").HighlightLayer>(scene: import("babylonjs/scene").Scene, name: string, options?: import("babylonjs/Layers/highlightLayer").IHighlightLayerOptions) => import("babylonjs/Layers/highlightLayer").HighlightLayer;
+    getGlowLayer: (scene: import("@babylonjs/core").Scene, name: string, options?: import("@babylonjs/core").IGlowLayerOptions | undefined) => import("@babylonjs/core").GlowLayer;
+    getHighlightLayer: <T extends import("@babylonjs/core").HighlightLayer>(scene: import("@babylonjs/core").Scene, name: string, options?: import("@babylonjs/core").IHighlightLayerOptions | undefined) => import("@babylonjs/core").HighlightLayer;
 };
 //# sourceMappingURL=Layers.d.ts.map

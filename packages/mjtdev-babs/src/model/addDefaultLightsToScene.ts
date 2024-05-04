@@ -1,4 +1,6 @@
-import { HemisphericLight, PointLight, Scene } from "babylonjs";
+import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
+import { PointLight } from "@babylonjs/core/Lights/pointLight";
+import type { Scene } from "@babylonjs/core/scene";
 import { Colors } from "@mjtdev/color";
 import { c3 } from "../bab/c3";
 import { v3 } from "../bab/v3";

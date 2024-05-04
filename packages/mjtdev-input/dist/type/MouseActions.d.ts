@@ -1,5 +1,5 @@
-import { MouseActionEvent } from "./MouseActionEvent";
-import { PointerEventType } from "./PointerEventType";
+import type { MouseActionEvent } from "./MouseActionEvent";
+import type { PointerEventType } from "./PointerEventType";
 export type MouseActions = {
     [k in PointerEventType]: (event: MouseActionEvent) => void;
 };

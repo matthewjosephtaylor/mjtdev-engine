@@ -1,19 +1,20 @@
+import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
+import { PointLight } from "@babylonjs/core/Lights/pointLight";
 import { iff } from "@mjtdev/object";
-import { HemisphericLight, PointLight } from "babylonjs";
 import { v3 } from "../bab/v3";
 export const updateLight = (light, options) => {
     const { intensity, direction, position } = options;
-    iff(intensity, () => {
-        light.intensity = intensity;
+    iff(intensity, (value) => {
+        light.intensity = value;
     });
     if (light instanceof HemisphericLight) {
-        iff(direction, () => {
-            light.direction = v3(direction);
+        iff(direction, (value) => {
+            light.direction = v3(value);
         });
     }
     if (light instanceof PointLight) {
-        iff(position, () => {
-            light.position = v3(position);
+        iff(position, (value) => {
+            light.position = v3(value);
         });
     }
 };

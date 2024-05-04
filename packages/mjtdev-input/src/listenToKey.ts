@@ -1,7 +1,7 @@
 import { Animates } from "@mjtdev/animate";
 import { isDefined, Objects } from "@mjtdev/object";
-import { InputListenOptions } from "./type/InputListenOptions";
-import { KeyActions } from "./type/KeyActions";
+import type { InputListenOptions } from "./type/InputListenOptions";
+import type { KeyActions } from "./type/KeyActions";
 
 export const listenToKey = (
   keyAction: KeyActions,
@@ -29,7 +29,7 @@ export const listenToKey = (
         }
         const action = ignoreCaseKeyActions[k];
         if (isDefined(action)) {
-          action();
+          action(k);
         }
       });
   });

@@ -1,10 +1,12 @@
+import type { InstancedMesh } from "@babylonjs/core/Meshes/instancedMesh";
+import type { Mesh } from "@babylonjs/core/Meshes/mesh";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { InstancedMesh, Mesh, Scene } from "babylonjs";
 
 export const getMesh = <T extends Mesh | InstancedMesh>(
   scene: Scene,
   name: string,
-  producer: (instance?: T) => T = () => undefined,
+  producer: (instance?: T) => T,
   updatable: boolean = false
 ): T => {
   const meshMaybe = scene.getMeshByName(name);

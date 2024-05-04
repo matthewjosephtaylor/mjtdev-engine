@@ -1,4 +1,4 @@
-import { TextureLayer } from "./TextureLayer";
+import type { TextureLayer } from "./TextureLayer";
 export declare const builder: ({ size }?: {
     size: number;
 }) => TextureBuilder;

@@ -1,5 +1,5 @@
+import { GlowLayer, } from "@babylonjs/core/Layers/glowLayer";
 import { isDefined } from "@mjtdev/object";
-import { GlowLayer } from "babylonjs";
 export const getGlowLayer = (scene, name, options) => {
     // workaround Bug in getGlowlayerbyName
     const layerMaybe = scene?.effectLayers?.length

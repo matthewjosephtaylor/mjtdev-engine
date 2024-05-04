@@ -1,11 +1,13 @@
-import { InstancedMesh, Mesh, Scene, StandardMaterial } from "babylonjs";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import type { InstancedMesh } from "@babylonjs/core/Meshes/instancedMesh";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
+import type { Scene } from "@babylonjs/core/scene";
 import { Colors } from "@mjtdev/color";
-import { Point2, Point3 } from "@mjtdev/math";
+import type { Point2, Point3 } from "@mjtdev/math";
 import { iff, isDefined } from "@mjtdev/object";
 import { c3 } from "../bab/c3";
 import { v3 } from "../bab/v3";
 import { getMaterial } from "../material/getMaterial";
-import { getTexture } from "../texture/getTexture";
 
 export type MeshOptions = Partial<{
   position: Point3 | Point2;

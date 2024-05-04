@@ -1,4 +1,4 @@
-import { UniversalCamera } from "babylonjs";
+import type { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
 export declare const attachUniversalCameraControls: (camera: UniversalCamera, options?: Partial<{
     keySensitivity: number;
     mouseSensitivity: number;

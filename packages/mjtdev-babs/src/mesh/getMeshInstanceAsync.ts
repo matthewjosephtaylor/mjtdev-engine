@@ -1,12 +1,13 @@
+import type { Mesh } from "@babylonjs/core/Meshes/mesh";
+import type { Scene } from "@babylonjs/core/scene";
 import { Asserts } from "@mjtdev/assert";
-import { Mesh, Scene } from "babylonjs";
 import { getMeshAsync } from "./getMeshAsync";
 
 export const getMeshInstanceAsync = async <T extends Mesh>(
   scene: Scene,
   name: string,
   rootName: string,
-  producer: () => Promise<T> = () => undefined
+  producer: () => Promise<T>
 ) => {
   return getMeshAsync(scene, name, async () => {
     const rootMesh = await getMeshAsync(scene, rootName, producer);

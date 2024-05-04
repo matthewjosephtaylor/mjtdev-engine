@@ -1,7 +1,7 @@
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined, isUndefined } from "@mjtdev/object";
+import type { MorphRemaps } from "./ModelBuilder";
 import { findInfluenceValue } from "./findInfluenceValue";
-import { MorphRemaps } from "./ModelBuilder";
 
 export const performMorph = (
   scene: Scene,

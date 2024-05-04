@@ -1,6 +1,8 @@
-import { Mesh, Scene, Tags } from "babylonjs";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
+import { Tags } from "@babylonjs/core/Misc/tags";
+import type { Scene } from "@babylonjs/core/scene";
 import { Colors } from "@mjtdev/color";
-import { VoxData } from "@mjtdev/magica-voxels";
+import type { VoxData } from "@mjtdev/magica-voxels";
 import { v3 } from "../bab/v3";
 import { getBoxInstance } from "../mesh/getBoxInstance";
 

@@ -1,4 +1,4 @@
-import { Mesh } from "babylonjs";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
 
 export const mergeMeshes = (
   meshes: Mesh[],

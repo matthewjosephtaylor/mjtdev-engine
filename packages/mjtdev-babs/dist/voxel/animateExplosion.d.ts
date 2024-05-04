@@ -1,5 +1,5 @@
-import { SolidParticle } from "babylonjs";
-import { NextRandom } from "@mjtdev/random";
+import type { SolidParticle } from "@babylonjs/core/Particles/solidParticle";
+import { type NextRandom } from "@mjtdev/random";
 export declare const animateExplosion: (particle: SolidParticle, options?: Partial<{
     random: NextRandom;
     radius: number;

@@ -1,10 +1,9 @@
-import { UniversalCamera } from "babylonjs";
-
 import { Inputs } from "@mjtdev/input";
 import { isDefined, isUndefined } from "@mjtdev/object";
 import { v3 } from "../bab/v3";
 import { pickMesh } from "../model/pickMesh";
 import { walkMeshes } from "../model/walkMeshes";
+import type { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
 
 export const attachUniversalCameraControls = (
   camera: UniversalCamera,
@@ -78,9 +77,13 @@ export const attachUniversalCameraControls = (
               if (isUndefined(m.material)) {
                 return;
               }
-              m.material.wireframe = false;
+              if (m.material) {
+                m.material.wireframe = false;
+              }
             });
-            mesh.material.wireframe = true;
+            if (mesh.material) {
+              mesh.material.wireframe = true;
+            }
           }
         }
       },

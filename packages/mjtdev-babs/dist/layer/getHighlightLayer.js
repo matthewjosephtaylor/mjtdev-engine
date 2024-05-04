@@ -1,5 +1,5 @@
+import { HighlightLayer } from "@babylonjs/core/Layers/highlightLayer";
 import { isDefined } from "@mjtdev/object";
-import { HighlightLayer } from "babylonjs";
 export const getHighlightLayer = (scene, name, options) => {
     const layerMaybe = scene.getHighlightLayerByName(name);
     if (isDefined(layerMaybe)) {

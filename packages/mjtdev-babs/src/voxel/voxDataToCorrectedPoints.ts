@@ -1,5 +1,6 @@
-import { VoxData } from "@mjtdev/magica-voxels";
-import { Point3, toVec3 } from "@mjtdev/math";
+import type { VoxData } from "@mjtdev/magica-voxels";
+import type { Point3} from "@mjtdev/math";
+import { toVec3 } from "@mjtdev/math";
 import { tuple2, tuple3 } from "@mjtdev/object";
 
 export type Point3ColorIndex = [Point3, number];

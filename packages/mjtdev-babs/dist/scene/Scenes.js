@@ -1,4 +1,4 @@
-import { Scene } from "babylonjs";
+import { Scene } from "@babylonjs/core/scene";
 import { toggleInspector } from "./toggleInspector";
 export const createScene = (engine) => {
     return new Scene(engine);

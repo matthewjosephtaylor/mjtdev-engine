@@ -1,6 +1,6 @@
-import { DynamicTexture } from "babylonjs";
+import type { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
 import { Colors } from "@mjtdev/color";
-import { Point3 } from "@mjtdev/math";
+import type { Point3 } from "@mjtdev/math";
 import { isDefined } from "@mjtdev/object";
 
 export const drawTextOnTexture = (
@@ -41,6 +41,7 @@ export const drawTextOnTexture = (
   ctx.font = font;
   const textX = 0;
   measure = ctx.measureText(text);
+  /** @ts-ignore */
   const top = measure["fontBoundingBoxAscent"] ?? 0;
   const textY = textureSize - (textureSize - top) / 2;
   ctx.lineWidth = fontSize / 2;

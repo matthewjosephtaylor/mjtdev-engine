@@ -1,3 +1,3 @@
-import { PickingInfo } from "babylonjs";
-export declare const findClosestPick: (picks: PickingInfo[]) => PickingInfo;
+import type { PickingInfo } from "@babylonjs/core/Collisions/pickingInfo";
+export declare const findClosestPick: (picks: PickingInfo[]) => PickingInfo | undefined;
 //# sourceMappingURL=findClosestPick.d.ts.map

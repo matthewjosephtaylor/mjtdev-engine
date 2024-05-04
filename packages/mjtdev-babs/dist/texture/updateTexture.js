@@ -1,5 +1,5 @@
+import { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
 import { iff } from "@mjtdev/object";
-import { DynamicTexture } from "babylonjs";
 export const updateTexture = (texture, options) => {
     const { hasAlpha } = options;
     iff(hasAlpha, (value) => {

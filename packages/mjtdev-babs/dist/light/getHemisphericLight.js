@@ -1,4 +1,4 @@
-import { HemisphericLight } from "babylonjs";
+import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
 import { v3 } from "../bab/v3";
 import { getLight } from "./getLight";
 import { updateLight } from "./updateLight";

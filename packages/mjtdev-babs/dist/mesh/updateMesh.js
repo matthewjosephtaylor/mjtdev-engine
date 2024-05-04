@@ -1,4 +1,5 @@
-import { Mesh, StandardMaterial } from "babylonjs";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
 import { Colors } from "@mjtdev/color";
 import { iff, isDefined } from "@mjtdev/object";
 import { c3 } from "../bab/c3";

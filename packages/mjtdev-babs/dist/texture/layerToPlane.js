@@ -1,8 +1,9 @@
-import { MeshBuilder, StandardMaterial } from "babylonjs";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { isDefined } from "@mjtdev/object";
+import { Randoms } from "@mjtdev/random";
 import { c3 } from "../bab/c3";
 import { imageToTexture } from "./imageToTexture";
-import { Randoms } from "@mjtdev/random";
 export const hasValidId = (obj) => {
     if (typeof obj === "string") {
         return true;

@@ -1,4 +1,4 @@
-import { AnimateState } from "@mjtdev/animate";
+import type { AnimateState } from "@mjtdev/animate";
 
 export type InputListenOptions = Partial<{
   ratePerSecond: number;

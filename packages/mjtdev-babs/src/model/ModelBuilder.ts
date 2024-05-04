@@ -1,13 +1,10 @@
-import {
-  AbstractMesh,
-  BoundingBox,
-  Color3,
-  Color4,
-  Mesh,
-  Node,
-  PBRMaterial,
-  Texture,
-} from "babylonjs";
+import type { BoundingBox } from "@babylonjs/core/Culling/boundingBox";
+import type { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
+import type { Texture } from "@babylonjs/core/Materials/Textures/texture";
+import type { Color3, Color4 } from "@babylonjs/core/Maths/math.color";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
+import type { Mesh } from "@babylonjs/core/Meshes/mesh";
+import type { Nullable } from "@babylonjs/core/types";
 
 export type ModelPath = string | File | string[] | File[];
 
@@ -54,7 +51,7 @@ export type ModelBuilder = {
     x: number,
     y: number,
     predicate?: (mesh: ModelMesh) => boolean
-  ) => ModelMesh;
+  ) => Nullable<ModelMesh> | undefined;
   highlight: (mesh: ModelMesh, color: string) => ModelBuilder;
   unHighlight: (mesh?: ModelMesh) => ModelBuilder;
   addTestCube: () => ModelBuilder;

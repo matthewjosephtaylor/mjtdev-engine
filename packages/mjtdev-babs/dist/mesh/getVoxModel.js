@@ -1,6 +1,6 @@
 import { isUndefined } from "@mjtdev/object";
-import { updateMesh } from "./updateMesh";
 import { voxDataToSps } from "../voxel/voxDataToSps";
+import { updateMesh } from "./updateMesh";
 export const getVoxModel = (scene, name, src, options = {}) => {
     // return getMesh(scene, name, () => {
     const metadata = scene.metadata ?? {};

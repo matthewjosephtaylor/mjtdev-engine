@@ -1,1 +1,1 @@
-{"version":3,"file":"updateLight.d.ts","sourceRoot":"","sources":["../../src/light/updateLight.ts"],"names":[],"mappings":"AACA,OAAO,EAAoB,KAAK,EAAqB,MAAM,WAAW,CAAC;AAEvE,OAAO,EAAE,eAAe,EAAE,MAAM,UAAU,CAAC;AAE3C,eAAO,MAAM,WAAW,UAAW,KAAK,WAAW,eAAe,SAiBjE,CAAC"}
+{"version":3,"file":"updateLight.d.ts","sourceRoot":"","sources":["../../src/light/updateLight.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,8BAA8B,CAAC;AAI1D,OAAO,KAAK,EAAE,eAAe,EAAE,MAAM,UAAU,CAAC;AAEhD,eAAO,MAAM,WAAW,UAAW,KAAK,WAAW,eAAe,SAiBjE,CAAC"}

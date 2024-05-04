@@ -1,5 +1,7 @@
+import type { IHighlightLayerOptions } from "@babylonjs/core/Layers/highlightLayer";
+import { HighlightLayer } from "@babylonjs/core/Layers/highlightLayer";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { HighlightLayer, IHighlightLayerOptions, Scene } from "babylonjs";
 
 export const getHighlightLayer = <T extends HighlightLayer>(
   scene: Scene,

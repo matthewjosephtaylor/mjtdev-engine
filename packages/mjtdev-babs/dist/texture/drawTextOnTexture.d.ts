@@ -1,5 +1,5 @@
-import { DynamicTexture } from "babylonjs";
-import { Point3 } from "@mjtdev/math";
+import type { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
+import type { Point3 } from "@mjtdev/math";
 export declare const drawTextOnTexture: (texture: DynamicTexture, text: string, options?: Partial<{
     color: string;
     outline: boolean;

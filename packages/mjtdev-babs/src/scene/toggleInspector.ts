@@ -1,5 +1,4 @@
-import { Scene } from "babylonjs";
-
+import type { Scene } from "@babylonjs/core";
 
 export const toggleInspector = (scene: Scene) => {
   if (scene.debugLayer.isVisible()) {

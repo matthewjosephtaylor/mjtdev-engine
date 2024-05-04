@@ -1,1 +1,1 @@
-{"version":3,"file":"createDebugCamera.d.ts","sourceRoot":"","sources":["../../src/camera/createDebugCamera.ts"],"names":[],"mappings":"AAAA,OAAO,EAA2B,KAAK,EAAE,MAAM,WAAW,CAAC;AAG3D,eAAO,MAAM,iBAAiB,UACrB,KAAK,QACN,MAAM,OACR,QAAQ,EAAE,CAAC,SAShB,CAAC"}
+{"version":3,"file":"createDebugCamera.d.ts","sourceRoot":"","sources":["../../src/camera/createDebugCamera.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,uBAAuB,CAAC;AAGnD,eAAO,MAAM,iBAAiB,UAAW,KAAK,QAAQ,MAAM,SAQ3D,CAAC"}

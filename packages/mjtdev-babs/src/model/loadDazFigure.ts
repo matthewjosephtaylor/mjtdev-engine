@@ -1,6 +1,7 @@
-import { AbstractMesh, Scene, SceneLoader } from "babylonjs";
-import { GLTF2 } from "babylonjs-loaders";
-// import { GLTFLoader } from "babylonjs-loaders";
+import { SceneLoader } from "@babylonjs/core/Loading/sceneLoader";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
+import type { Scene } from "@babylonjs/core/scene";
+import { GLTF2 } from "@babylonjs/loaders/glTF";
 import { fixDazFigure } from "./fix/fixDazFigure";
 
 export const loadDazFigure = (props: {
@@ -23,6 +24,9 @@ export const loadDazFigure = (props: {
         scene,
         (loadedScene) => {
           const rootMesh = loadedScene.getMeshByName("__root__");
+          if (!rootMesh) {
+            throw new Error("No root mesh found", { cause: loadedScene });
+          }
           rootMesh.name = name;
           if (loadedScene.cameras.length > 0) {
             loadedScene.activeCamera = loadedScene.cameras[0];

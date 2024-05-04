@@ -1,13 +1,15 @@
-import { isUndefined } from "@mjtdev/object";
 export const destroyMesh = (scene, name, options = {}) => {
     const { recurse = true, disposeMaterials = false, disposeTextures = false, } = options;
     const mesh = scene.getMeshByName(name);
-    if (isUndefined(mesh)) {
+    if (!mesh) {
         return;
     }
     mesh.dispose(!recurse, false);
     if (disposeMaterials) {
         const material = mesh.material;
+        if (!material) {
+            return;
+        }
         material.name = `DISPOSED-${material.name}`;
         material?.dispose(true, disposeTextures);
         scene.removeMaterial(material);

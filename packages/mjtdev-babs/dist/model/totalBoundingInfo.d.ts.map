@@ -1,1 +1,1 @@
-{"version":3,"file":"totalBoundingInfo.d.ts","sourceRoot":"","sources":["../../src/model/totalBoundingInfo.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,YAAY,EAAW,MAAM,WAAW,CAAC;AAEhE,eAAO,MAAM,iBAAiB,WAAqB,YAAY,EAAE,iBAYhE,CAAC"}
+{"version":3,"file":"totalBoundingInfo.d.ts","sourceRoot":"","sources":["../../src/model/totalBoundingInfo.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,sCAAsC,CAAC;AAEpE,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,qCAAqC,CAAC;AAExE,eAAO,MAAM,iBAAiB,WAAqB,YAAY,EAAE,iBAYhE,CAAC"}

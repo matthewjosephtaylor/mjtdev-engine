@@ -1,1 +1,1 @@
-{"version":3,"file":"listenToKey.d.ts","sourceRoot":"","sources":["../src/listenToKey.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,kBAAkB,EAAE,MAAM,2BAA2B,CAAC;AAC/D,OAAO,EAAE,UAAU,EAAE,MAAM,mBAAmB,CAAC;AAE/C,eAAO,MAAM,WAAW,cACX,UAAU,YACZ,kBAAkB,2CA0H5B,CAAC"}
+{"version":3,"file":"listenToKey.d.ts","sourceRoot":"","sources":["../src/listenToKey.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,2BAA2B,CAAC;AACpE,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,mBAAmB,CAAC;AAEpD,eAAO,MAAM,WAAW,cACX,UAAU,YACZ,kBAAkB,2CA0H5B,CAAC"}

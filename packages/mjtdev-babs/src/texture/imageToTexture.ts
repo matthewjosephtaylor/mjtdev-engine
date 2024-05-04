@@ -1,4 +1,6 @@
-import { DynamicTexture, Scene, Texture } from "babylonjs";
+import { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
+import { Texture } from "@babylonjs/core/Materials/Textures/texture";
+import type { Scene } from "@babylonjs/core/scene";
 import { imageSrcToUrl } from "../util/imageSrcToUrl";
 
 export const imageToTexture = async (
@@ -7,7 +9,7 @@ export const imageToTexture = async (
   image: string | HTMLImageElement | HTMLCanvasElement | OffscreenCanvas
 ): Promise<Texture> => {
   if (image instanceof HTMLCanvasElement) {
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
       try {
         const texture = new DynamicTexture(name, image, scene);
         texture.update();

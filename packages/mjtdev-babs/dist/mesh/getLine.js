@@ -1,4 +1,4 @@
-import { MeshBuilder } from "babylonjs";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { c4 } from "../bab/c4";
 import { v3 } from "../bab/v3";
 import { getMesh } from "./getMesh";

@@ -1,6 +1,8 @@
-import { MeshBuilder, Scene } from "babylonjs";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import type { Scene } from "@babylonjs/core/scene";
 import { getMesh } from "./getMesh";
-import { MeshOptions, updateMesh } from "./updateMesh";
+import type { MeshOptions } from "./updateMesh";
+import { updateMesh } from "./updateMesh";
 
 export const getTorusKnot = (
   scene: Scene,

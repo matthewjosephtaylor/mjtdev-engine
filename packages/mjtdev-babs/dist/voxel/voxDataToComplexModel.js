@@ -1,4 +1,5 @@
-import { Mesh, Tags } from "babylonjs";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
+import { Tags } from "@babylonjs/core/Misc/tags";
 import { Colors } from "@mjtdev/color";
 import { v3 } from "../bab/v3";
 import { getBoxInstance } from "../mesh/getBoxInstance";

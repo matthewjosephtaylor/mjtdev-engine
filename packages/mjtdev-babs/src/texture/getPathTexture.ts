@@ -1,15 +1,26 @@
-import { Scene, Texture } from 'babylonjs';
-import { getTexture } from './getTexture';
-import { samplingModeNumber } from './samplingModeNumber';
-import { PathTextureOptions } from './Textures';
-import { updateTexture } from './updateTexture';
+import { Texture } from "@babylonjs/core/Materials/Textures/texture";
+import type { Scene } from "@babylonjs/core/scene";
+import type { PathTextureOptions } from "./Textures";
+import { getTexture } from "./getTexture";
+import { samplingModeNumber } from "./samplingModeNumber";
+import { updateTexture } from "./updateTexture";
 
-
-export const getPathTexture = (scene: Scene, name: string, options: PathTextureOptions) => {
+export const getPathTexture = (
+  scene: Scene,
+  name: string,
+  options: PathTextureOptions
+) => {
   const texture = getTexture(scene, name, () => {
-    const { src, generateMipMaps = true, samplingMode = 'linearNearest' } = options;
+    const {
+      src,
+      generateMipMaps = true,
+      samplingMode = "linearNearest",
+    } = options;
+    if (!src) {
+      throw new Error("src is required", { cause: options });
+    }
     const texture = new Texture(src, scene, {
-      samplingMode: samplingModeNumber(samplingMode)
+      samplingMode: samplingModeNumber(samplingMode),
     });
     texture.name = name;
     return texture;

@@ -1,4 +1,4 @@
-import { Scene } from "babylonjs";
-import { MeshOptions } from "./updateMesh";
-export declare const getModelInstance: (scene: Scene, name: string, src: string, options?: MeshOptions) => import("babylonjs").InstancedMesh;
+import type { Scene } from "@babylonjs/core/scene";
+import type { MeshOptions } from "./updateMesh";
+export declare const getModelInstance: (scene: Scene, name: string, src: string, options?: MeshOptions) => import("@babylonjs/core").InstancedMesh;
 //# sourceMappingURL=getModelInstance.d.ts.map

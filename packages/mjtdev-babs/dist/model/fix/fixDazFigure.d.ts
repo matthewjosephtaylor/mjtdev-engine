@@ -1,3 +1,3 @@
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 export declare const fixDazFigure: (scene: Scene) => void;
 //# sourceMappingURL=fixDazFigure.d.ts.map

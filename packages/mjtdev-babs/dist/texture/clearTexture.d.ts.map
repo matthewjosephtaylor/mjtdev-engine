@@ -1,1 +1,1 @@
-{"version":3,"file":"clearTexture.d.ts","sourceRoot":"","sources":["../../src/texture/clearTexture.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,WAAW,CAAC;AAI3C,eAAO,MAAM,YAAY,YAAa,cAAc,SAKnD,CAAC"}
+{"version":3,"file":"clearTexture.d.ts","sourceRoot":"","sources":["../../src/texture/clearTexture.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,mDAAmD,CAAC;AAGxF,eAAO,MAAM,YAAY,YAAa,cAAc,SAKnD,CAAC"}

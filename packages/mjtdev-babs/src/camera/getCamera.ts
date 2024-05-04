@@ -1,6 +1,6 @@
+import type { Camera } from "@babylonjs/core/Cameras/camera";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { Camera, Scene } from "babylonjs";
-
 
 export const getCamera = <T extends Camera>(
   scene: Scene,

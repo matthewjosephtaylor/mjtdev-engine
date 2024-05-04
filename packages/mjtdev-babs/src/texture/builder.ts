@@ -1,11 +1,12 @@
-import { Camera, UniversalCamera } from "babylonjs";
+import { Camera } from "@babylonjs/core/Cameras/camera";
+import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
 import { createEngine } from "../bab/createEngine";
 import { renderOnce } from "../bab/renderOnce";
 import { v3 } from "../bab/v3";
 import { timeP } from "../util/Timers";
+import type { TextureLayer } from "./TextureLayer";
 import { copyToCanvas } from "./copyToCanvas";
 import { imageLayersToScene } from "./imageLayersToScene";
-import { TextureLayer } from "./TextureLayer";
 
 export const builder = ({ size } = { size: 4096 }): TextureBuilder => {
   const engine = createEngine({ width: size, height: size });
@@ -30,6 +31,9 @@ export const builder = ({ size } = { size: 4096 }): TextureBuilder => {
 
         await renderOnce(scene);
         b.clear();
+        if (!canvas) {
+          throw new Error("No canvas found", { cause: engine });
+        }
         return copyToCanvas(canvas);
       }, "Texture render");
     },

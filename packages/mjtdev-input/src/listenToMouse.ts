@@ -1,8 +1,8 @@
 import { Animates } from "@mjtdev/animate";
-import { iff } from "@mjtdev/object";
-import { InputListenOptions } from "./type/InputListenOptions";
-import { MouseActions } from "./type/MouseActions";
-import { PointerEventType } from "./type/PointerEventType";
+import { Objects, iff } from "@mjtdev/object";
+import type { InputListenOptions } from "./type/InputListenOptions";
+import type { MouseActions } from "./type/MouseActions";
+import type { PointerEventType } from "./type/PointerEventType";
 
 export const listenToMouse = (
   mouseActions: Partial<MouseActions>,
@@ -34,7 +34,7 @@ export const listenToMouse = (
     wheel: [],
   };
 
-  Object.keys(mouseActions).map((eventType) => {
+  Objects.keys(mouseActions).map((eventType) => {
     if (debug) {
       console.log(`attaching to ${eventType}`, parent);
     }
@@ -63,7 +63,7 @@ export const listenToMouse = (
   });
 
   animateState.tickers.push(() => {
-    Object.entries(events).map(([eventType, events]) => {
+    Objects.entries(events).map(([eventType, events]) => {
       iff(events.shift(), (mouseEvent) => {
         iff(mouseActions[eventType], (action) => {
           if (debug) {

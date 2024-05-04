@@ -1,4 +1,4 @@
-import { BaseTexture } from "babylonjs";
-import { AllTextureOptions } from "./Textures";
+import type { BaseTexture } from "@babylonjs/core/Materials/Textures/baseTexture";
+import type { AllTextureOptions } from "./Textures";
 export declare const updateTexture: (texture: BaseTexture, options: AllTextureOptions) => void;
 //# sourceMappingURL=updateTexture.d.ts.map

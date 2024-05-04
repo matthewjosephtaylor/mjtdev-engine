@@ -21,7 +21,7 @@ export const Canvas = ({ painter, width = 1024, height = 1024, title, style, }) 
                 }
             }
         };
-    }, [ref]);
+    }, [height, painter, ref, width, style]);
     return _jsx("canvas", { title: title, style: { ...style }, ref: ref });
 };
 //# sourceMappingURL=Canvas.js.map

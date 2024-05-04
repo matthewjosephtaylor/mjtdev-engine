@@ -1,7 +1,9 @@
-import { Mesh, Scene } from "babylonjs";
+import type { Mesh } from "@babylonjs/core/Meshes/mesh";
+import type { Scene } from "@babylonjs/core/scene";
 import { isUndefined } from "@mjtdev/object";
 import { getMesh } from "./getMesh";
-import { MeshOptions, updateMesh } from "./updateMesh";
+import type { MeshOptions } from "./updateMesh";
+import { updateMesh } from "./updateMesh";
 
 export const getModelInstance = (
   scene: Scene,

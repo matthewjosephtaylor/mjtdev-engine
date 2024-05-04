@@ -1,7 +1,9 @@
-import { Mesh, MeshBuilder, Scene } from "babylonjs";
-import { toMany } from "@mjtdev/object";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import type { Scene } from "@babylonjs/core/scene";
 import { getMesh } from "./getMesh";
-import { MeshOptions, updateMesh } from "./updateMesh";
+import type { MeshOptions } from "./updateMesh";
+import { updateMesh } from "./updateMesh";
 
 export const getPlane = (
   scene: Scene,

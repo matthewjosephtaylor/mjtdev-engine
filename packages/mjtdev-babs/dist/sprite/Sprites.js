@@ -1,12 +1,16 @@
+import { Sprite } from "@babylonjs/core/Sprites/sprite";
+import { SpriteManager } from "@babylonjs/core/Sprites/spriteManager";
 import { assertValue } from "@mjtdev/assert/dist/assertValue";
 import { isDefined } from "@mjtdev/object";
-import { Sprite, SpriteManager } from "babylonjs";
 export const getSpriteManager = (scene, name, options = {}) => {
     const managerMaybe = scene?.spriteManagers?.find((sm) => sm.name === name);
     if (isDefined(managerMaybe)) {
         return managerMaybe;
     }
-    const { capacity, cellSize, imgUrl } = options;
+    const { capacity = 1, cellSize, imgUrl } = options;
+    if (!imgUrl) {
+        throw new Error("imgUrl is required", { cause: options });
+    }
     return new SpriteManager(name, imgUrl, capacity, cellSize, scene);
 };
 export const getSprite = (scene, name, spriteManagerName) => {

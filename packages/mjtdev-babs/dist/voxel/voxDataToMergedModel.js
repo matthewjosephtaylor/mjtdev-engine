@@ -1,12 +1,13 @@
-import { Mesh, Tags } from "babylonjs";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
+import { Tags } from "@babylonjs/core/Misc/tags";
 import { Colors } from "@mjtdev/color";
-import { Arrays } from "@mjtdev/object";
 import { toVec3 } from "@mjtdev/math";
-import { groupMeshesByMaterial } from "./groupMeshesByMaterial";
-import { getBox } from "../mesh/getBox";
+import { Arrays, isDefined } from "@mjtdev/object";
 import { getMaterial } from "../material/getMaterial";
+import { getBox } from "../mesh/getBox";
 import { mergeMeshes } from "../mesh/mergeMeshes";
 import { toOrderedString } from "../util/toOrderedString";
+import { groupMeshesByMaterial } from "./groupMeshesByMaterial";
 export const voxDataToMergedModel = (scene, voxData, name) => {
     const { XYZI, RGBA } = voxData;
     const colors = RGBA.map((rgba) => {
@@ -32,9 +33,9 @@ export const voxDataToMergedModel = (scene, voxData, name) => {
     const grouped = groupMeshesByMaterial(voxels);
     const subMerged = Object.values(grouped).map((group) => mergeMeshes(group));
     const merged = new Mesh(`merged-${name}`, scene);
-    subMerged.forEach((m) => (m.parent = merged));
+    subMerged.filter(isDefined).forEach((m) => (m.parent = merged));
     const material = getMaterial(scene, "voxel-material", "standard");
-    subMerged.forEach((m) => (m.material = material));
+    subMerged.filter(isDefined).forEach((m) => (m.material = material));
     // voxels.forEach((v) => v.setParent(merged));
     merged.metadata = {
         voxels: voxels,

@@ -1,5 +1,5 @@
-import { SceneLoader, } from "babylonjs";
-import { GLTF2 } from "babylonjs-loaders";
+import { SceneLoader, } from "@babylonjs/core/Loading/sceneLoader";
+import { GLTF2 } from "@babylonjs/loaders/glTF";
 export const loadAssetContainer = (scene, path, options = {}) => {
     const { onProgress = () => { } } = options;
     const engine = scene.getEngine();

@@ -1,4 +1,5 @@
-import { AbstractMesh, Color3, PBRMaterial } from "babylonjs";
+import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
 import { isDefined } from "@mjtdev/object";
 import { c3 } from "../bab/c3";
 export const HIDE = [

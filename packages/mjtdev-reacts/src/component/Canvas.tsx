@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { CanvasPainter } from "./type/CanvasPainter";
+import type { CanvasPainter } from "./type/CanvasPainter";
 import { isDefined } from "@mjtdev/object";
 
 export const Canvas = ({
@@ -35,7 +35,7 @@ export const Canvas = ({
         }
       }
     };
-  }, [ref]);
+  }, [height, painter, ref, width, style]);
 
-  return <canvas title={title} style={{ ...style }} ref={ref}></canvas>;
+  return <canvas title={title} style={{ ...style }} ref={ref} />;
 };

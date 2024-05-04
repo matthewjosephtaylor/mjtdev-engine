@@ -1,5 +1,4 @@
-/// <reference types="babylonjs" />
-import { MaterialTypeMap } from "./MaterialTypeMap";
+import type { MaterialTypeMap } from "./MaterialTypeMap";
 export type MaterialOptions = Partial<{
     type: keyof MaterialTypeMap;
 }>;
@@ -17,8 +16,8 @@ export type StandardMaterialOptions = Partial<MaterialOptions & {
 export type PbrMaterialOptions = Partial<{}>;
 export type AllMaterialOptions = StandardMaterialOptions & PbrMaterialOptions;
 export declare const Materials: {
-    getMaterial: <T extends keyof MaterialTypeMap = keyof MaterialTypeMap>(scene: import("babylonjs/scene").Scene, name: string, options?: AllMaterialOptions | T) => MaterialTypeMap[T];
-    updateMaterial: (scene: import("babylonjs/scene").Scene, material: import("babylonjs/Materials/material").Material, options: AllMaterialOptions) => void;
-    updateStandardMaterial: (scene: import("babylonjs/scene").Scene, material: import("babylonjs/Materials/standardMaterial").StandardMaterial, options: AllMaterialOptions) => void;
+    getMaterial: <T extends keyof MaterialTypeMap = keyof MaterialTypeMap>(scene: import("@babylonjs/core").Scene, name: string, options?: AllMaterialOptions | T) => MaterialTypeMap[T];
+    updateMaterial: (scene: import("@babylonjs/core").Scene, material: import("@babylonjs/core").Material, options: AllMaterialOptions) => void;
+    updateStandardMaterial: (scene: import("@babylonjs/core").Scene, material: import("@babylonjs/core").StandardMaterial, options: AllMaterialOptions) => void;
 };
 //# sourceMappingURL=Materials.d.ts.map

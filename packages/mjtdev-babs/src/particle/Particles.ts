@@ -1,6 +1,7 @@
-import { Asserts } from "@mjtdev/assert";
+import type { IParticleSystem } from "@babylonjs/core/Particles/IParticleSystem";
+import { SolidParticleSystem } from "@babylonjs/core/Particles/solidParticleSystem";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { IParticleSystem, Scene, SolidParticleSystem } from "babylonjs";
 
 export type SpsOptions = Partial<{ useModelMaterial: boolean }>;
 
@@ -9,7 +10,7 @@ export const getParticleSystem = <
 >(
   scene: Scene,
   name: string,
-  producer: () => T = () => undefined
+  producer: () => T
 ) => {
   const metadata = scene.metadata ?? {};
   const spsMaybe = metadata["solidParticleSystems"]?.[name];

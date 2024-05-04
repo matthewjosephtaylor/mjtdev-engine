@@ -1,4 +1,6 @@
-import { InstancedMesh, Mesh, ShadowGenerator } from "babylonjs";
+import type { ShadowGenerator } from "@babylonjs/core/Lights/Shadows/shadowGenerator";
+import type { InstancedMesh } from "@babylonjs/core/Meshes/instancedMesh";
+import type { Mesh } from "@babylonjs/core/Meshes/mesh";
 import { removeShadowFromMesh } from "../mesh/removeShadowFromMesh";
 
 export const addShadowToMesh = (mesh: Mesh | InstancedMesh) => {
@@ -14,5 +16,3 @@ export const addShadowToMesh = (mesh: Mesh | InstancedMesh) => {
     removeShadowFromMesh(mesh);
   };
 };
-
-

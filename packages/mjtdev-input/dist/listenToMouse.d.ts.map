@@ -1,1 +1,1 @@
-{"version":3,"file":"listenToMouse.d.ts","sourceRoot":"","sources":["../src/listenToMouse.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,kBAAkB,EAAE,MAAM,2BAA2B,CAAC;AAC/D,OAAO,EAAE,YAAY,EAAE,MAAM,qBAAqB,CAAC;AAGnD,eAAO,MAAM,aAAa,iBACV,QAAQ,YAAY,CAAC,YAC1B,kBAAkB,2CA2E5B,CAAC"}
+{"version":3,"file":"listenToMouse.d.ts","sourceRoot":"","sources":["../src/listenToMouse.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,kBAAkB,EAAE,MAAM,2BAA2B,CAAC;AACpE,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,qBAAqB,CAAC;AAGxD,eAAO,MAAM,aAAa,iBACV,QAAQ,YAAY,CAAC,YAC1B,kBAAkB,2CA2E5B,CAAC"}

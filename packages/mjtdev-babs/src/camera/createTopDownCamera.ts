@@ -1,5 +1,7 @@
-import { Camera, Scene, UniversalCamera } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 import { v3 } from "../bab/v3";
+import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
+import { Camera } from "@babylonjs/core/Cameras/camera";
 
 export const createTopDownCamera = (
   scene: Scene,

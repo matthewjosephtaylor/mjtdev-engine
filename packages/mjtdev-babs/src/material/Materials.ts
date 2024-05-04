@@ -1,5 +1,5 @@
 import { getMaterial } from "./getMaterial";
-import { MaterialTypeMap } from "./MaterialTypeMap";
+import type { MaterialTypeMap } from "./MaterialTypeMap";
 import { updateMaterial } from "./updateMaterial";
 import { updateStandardMaterial } from "./updateStandardMaterial";
 
@@ -20,6 +20,7 @@ export type StandardMaterialOptions = Partial<
     emissiveColor: string;
   }
 >;
+// eslint-disable-next-line @typescript-eslint/ban-types
 export type PbrMaterialOptions = Partial<{}>;
 export type AllMaterialOptions = StandardMaterialOptions & PbrMaterialOptions;
 

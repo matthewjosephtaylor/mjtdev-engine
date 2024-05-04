@@ -1,4 +1,4 @@
-import { Scene } from "babylonjs";
+import { Scene } from "@babylonjs/core/scene";
 export const walkMeshes = (mesh, walker) => {
     if (mesh instanceof Scene) {
         return mesh.meshes.forEach((m) => walkMeshes(m, walker));

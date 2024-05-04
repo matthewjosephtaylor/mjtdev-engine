@@ -1,1 +1,1 @@
-{"version":3,"file":"calcClientRectForMesh.d.ts","sourceRoot":"","sources":["../../src/mesh/calcClientRectForMesh.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAW,MAAM,WAAW,CAAC;AAGlD,gHAAgH;AAChH,eAAO,MAAM,qBAAqB,SAAU,YAAY;;;;;;;CAmCvD,CAAC"}
+{"version":3,"file":"calcClientRectForMesh.d.ts","sourceRoot":"","sources":["../../src/mesh/calcClientRectForMesh.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,qCAAqC,CAAC;AAGxE,gHAAgH;AAChH,eAAO,MAAM,qBAAqB,SAAU,YAAY;;;;;;;CAsCvD,CAAC"}

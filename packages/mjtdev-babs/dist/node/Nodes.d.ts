@@ -1,5 +1,4 @@
-/// <reference types="babylonjs" />
 export declare const Nodes: {
-    getTransformNode: (scene: import("babylonjs/scene").Scene, name: string) => import("babylonjs/Meshes/transformNode").TransformNode;
+    getTransformNode: (scene: import("@babylonjs/core").Scene, name: string) => import("@babylonjs/core").TransformNode;
 };
 //# sourceMappingURL=Nodes.d.ts.map

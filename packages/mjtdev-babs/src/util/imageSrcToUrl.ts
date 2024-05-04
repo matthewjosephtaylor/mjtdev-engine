@@ -1,5 +1,5 @@
 import { Images } from "@mjtdev/image";
-import { TextureImageSrc } from "../texture/TextureImageSrc";
+import type { TextureImageSrc } from "../texture/TextureImageSrc";
 import { stopwatch } from "./Timers";
 
 export const imageSrcToUrl = async (src: TextureImageSrc): Promise<string> => {
@@ -15,7 +15,7 @@ export const imageSrcToUrl = async (src: TextureImageSrc): Promise<string> => {
   const cvs = document.createElement("canvas");
   cvs.width = src.width;
   cvs.height = src.height;
-  cvs.getContext("2d").drawImage(src, 0, 0);
+  cvs.getContext("2d")!.drawImage(src, 0, 0);
   const result = await Images.toSrcString(cvs);
   sw();
   return result;

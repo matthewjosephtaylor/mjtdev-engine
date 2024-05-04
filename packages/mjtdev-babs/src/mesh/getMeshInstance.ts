@@ -1,12 +1,13 @@
+import type { Mesh } from "@babylonjs/core/Meshes/mesh";
+import type { Scene } from "@babylonjs/core/scene";
 import { Asserts } from "@mjtdev/assert";
-import { Mesh, Scene } from "babylonjs";
 import { getMesh } from "./getMesh";
 
 export const getMeshInstance = <T extends Mesh>(
   scene: Scene,
   name: string,
   rootName: string,
-  producer: () => T = () => undefined
+  producer: () => T
 ) => {
   return getMesh(scene, name, () => {
     const rootMesh = getMesh(scene, rootName, producer);

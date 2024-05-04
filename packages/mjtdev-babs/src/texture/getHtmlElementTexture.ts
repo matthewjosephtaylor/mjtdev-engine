@@ -1,7 +1,8 @@
-import { HtmlElementTexture, Scene } from "babylonjs";
+import { HtmlElementTexture } from "@babylonjs/core/Materials/Textures/htmlElementTexture";
+import type { Scene } from "@babylonjs/core/scene";
+import type { HtmlElementTextureOptions } from "./Textures";
 import { getTexture } from "./getTexture";
 import { samplingModeNumber } from "./samplingModeNumber";
-import { HtmlElementTextureOptions } from "./Textures";
 import { updateTexture } from "./updateTexture";
 
 export const getHtmlElementTexture = (
@@ -15,6 +16,11 @@ export const getHtmlElementTexture = (
       generateMipMaps = true,
       samplingMode = "linearNearest",
     } = options;
+    if (!element) {
+      throw new Error("HTML element is required to create texture", {
+        cause: options,
+      });
+    }
     const texture = new HtmlElementTexture(name, element, {
       generateMipMaps,
       samplingMode: samplingModeNumber(samplingMode),

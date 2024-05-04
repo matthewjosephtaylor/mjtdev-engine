@@ -1,11 +1,12 @@
-import { Engine, Scene } from "babylonjs";
+import type { Engine } from "@babylonjs/core/Engines/engine";
 import { Cameras } from "../camera/Cameras";
 import { Lights } from "../light/Lights";
 import { Meshes } from "../mesh/Meshes";
 import { createEngine } from "./createEngine";
+import { Scene } from "@babylonjs/core/scene";
 
 export const helloWorld = (engine: Engine = createEngine()) => {
-  var scene = new Scene(engine);
+  const scene = new Scene(engine);
   const canvas = engine.getRenderingCanvas();
 
   const camera = Cameras.getArcRotateCamera(scene, "Camera", {});
@@ -17,8 +18,8 @@ export const helloWorld = (engine: Engine = createEngine()) => {
     radius: 0.5,
   });
   // hide/show the Inspector
-  let STATE = { debug: false };
-  canvas.onkeyup = (ev) => {
+  const STATE = { debug: false };
+  canvas!.onkeyup = (ev) => {
     // ctrl+I
     if (ev.ctrlKey && ev.keyCode === 73) {
       STATE.debug = !STATE.debug;

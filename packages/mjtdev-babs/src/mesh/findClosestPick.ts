@@ -1,5 +1,5 @@
+import type { PickingInfo } from "@babylonjs/core/Collisions/pickingInfo";
 import { isUndefined } from "@mjtdev/object";
-import { PickingInfo } from "babylonjs";
 
 export const findClosestPick = (picks: PickingInfo[]) => {
   if (isUndefined(picks)) {

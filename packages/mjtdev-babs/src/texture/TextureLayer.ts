@@ -1,6 +1,6 @@
-import { StandardMaterial } from "babylonjs";
-import { ModelMesh, ModelTexture } from "../model/ModelBuilder";
-import { TextureImageSrc } from "./TextureImageSrc";
+import type { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import type { ModelMesh, ModelTexture } from "../model/ModelBuilder";
+import type { TextureImageSrc } from "./TextureImageSrc";
 
 export type TextureLayer = Partial<{
   image: TextureImageSrc;

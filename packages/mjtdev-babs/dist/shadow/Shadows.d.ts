@@ -1,5 +1,4 @@
-/// <reference types="babylonjs" />
 export declare const Shadows: {
-    addShadowToMesh: (mesh: import("babylonjs/Meshes/mesh").Mesh | import("babylonjs/Meshes/instancedMesh").InstancedMesh) => () => void;
+    addShadowToMesh: (mesh: import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh) => () => void;
 };
 //# sourceMappingURL=Shadows.d.ts.map

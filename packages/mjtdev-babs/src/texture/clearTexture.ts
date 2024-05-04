@@ -1,6 +1,5 @@
-import { DynamicTexture } from "babylonjs";
+import type { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
 import { drawOnTexture } from "./drawOnTexture";
-
 
 export const clearTexture = (texture: DynamicTexture) => {
   drawOnTexture(texture, (ctx, size) => {

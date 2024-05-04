@@ -1,4 +1,4 @@
-import { PBRMaterial } from "babylonjs";
+import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
 import { isDefined } from "@mjtdev/object";
 import { c3 } from "../bab/c3";
 export const HIDE = [

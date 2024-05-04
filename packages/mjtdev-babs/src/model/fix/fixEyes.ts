@@ -1,6 +1,6 @@
-import { AbstractMesh, Color3, PBRMaterial } from "babylonjs";
+import type { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
 import { isDefined } from "@mjtdev/object";
-import { c3 } from "../../bab/c3";
 export const HIDE = [
   // "Irises",
   // "Pupils",
@@ -68,7 +68,9 @@ export const fixEyes = (mesh: AbstractMesh) => {
     // material.emissiveColor = c3("white");
     // material.emissiveTexture = material.albedoTexture;
     // material.roughness = 0;
-    material.albedoTexture.hasAlpha = true;
+    if (material.albedoTexture) {
+      material.albedoTexture.hasAlpha = true;
+    }
     material.clearCoat.isEnabled = true;
     material.clearCoat.intensity = 0.2;
     material.subSurface.isTranslucencyEnabled = true;

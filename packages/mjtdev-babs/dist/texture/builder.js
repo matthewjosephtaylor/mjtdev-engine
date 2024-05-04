@@ -1,4 +1,5 @@
-import { Camera, UniversalCamera } from "babylonjs";
+import { Camera } from "@babylonjs/core/Cameras/camera";
+import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
 import { createEngine } from "../bab/createEngine";
 import { renderOnce } from "../bab/renderOnce";
 import { v3 } from "../bab/v3";
@@ -27,6 +28,9 @@ export const builder = ({ size } = { size: 4096 }) => {
                 camera.maxZ = 100000;
                 await renderOnce(scene);
                 b.clear();
+                if (!canvas) {
+                    throw new Error("No canvas found", { cause: engine });
+                }
                 return copyToCanvas(canvas);
             }, "Texture render");
         },

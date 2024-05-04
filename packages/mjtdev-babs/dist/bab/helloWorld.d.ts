@@ -1,3 +1,4 @@
-import { Engine, Scene } from "babylonjs";
+import type { Engine } from "@babylonjs/core/Engines/engine";
+import { Scene } from "@babylonjs/core/scene";
 export declare const helloWorld: (engine?: Engine) => Scene;
 //# sourceMappingURL=helloWorld.d.ts.map

@@ -1,5 +1,7 @@
-import { Material, Scene, StandardMaterial } from "babylonjs";
-import { AllMaterialOptions } from "./Materials";
+import type { Material } from "@babylonjs/core/Materials/material";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import type { Scene } from "@babylonjs/core/scene";
+import type { AllMaterialOptions } from "./Materials";
 import { updateStandardMaterial } from "./updateStandardMaterial";
 
 export const updateMaterial = (

@@ -1,23 +1,22 @@
-/// <reference types="babylonjs" />
 import { v3 } from "./v3";
 export declare const Babs: {
-    createEngine: (options?: import("babylonjs/Engines/thinEngine").EngineOptions & {
-        antialias?: boolean;
-        width?: number;
-        height?: number;
-        canvas?: HTMLCanvasElement | OffscreenCanvas;
-    }) => import("babylonjs/Engines/engine").Engine;
+    createEngine: (options?: import("@babylonjs/core").EngineOptions & {
+        antialias?: boolean | undefined;
+        width?: number | undefined;
+        height?: number | undefined;
+        canvas?: HTMLCanvasElement | OffscreenCanvas | undefined;
+    }) => import("@babylonjs/core").Engine;
     createCanvas: ({ width, height, }: {
         width: number;
         height: number;
     }) => HTMLCanvasElement;
-    renderOnce: (scene: import("babylonjs/scene").Scene) => Promise<void>;
+    renderOnce: (scene: import("@babylonjs/core").Scene) => Promise<void>;
     v3: typeof v3;
-    c3: (color: string) => import("babylonjs/Maths/math.color").Color3;
-    c4: (color: string) => import("babylonjs/Maths/math.color").Color4;
-    describeMesh: (mesh: import("babylonjs/Meshes/abstractMesh").AbstractMesh, search?: RegExp, depth?: number) => void;
-    helloWorld: (engine?: import("babylonjs/Engines/engine").Engine) => import("babylonjs/scene").Scene;
-    attachEditorControls: (camera: import("babylonjs/Cameras/arcRotateCamera").ArcRotateCamera, options?: Partial<{
+    c3: (color: string) => import("@babylonjs/core").Color3;
+    c4: (color: string) => import("@babylonjs/core").Color4;
+    describeMesh: (mesh: import("@babylonjs/core").AbstractMesh, search?: RegExp, depth?: number) => void;
+    helloWorld: (engine?: import("@babylonjs/core").Engine) => import("@babylonjs/core").Scene;
+    attachEditorControls: (camera: import("@babylonjs/core").ArcRotateCamera, options?: Partial<{
         keySensitivity: number;
         mouseSensitivity: number;
         parent: HTMLElement;

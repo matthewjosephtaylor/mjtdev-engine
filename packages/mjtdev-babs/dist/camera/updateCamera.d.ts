@@ -1,4 +1,4 @@
-import { Camera } from "babylonjs";
-import { AllCameraOptions } from "./Cameras";
+import type { Camera } from "@babylonjs/core/Cameras/camera";
+import type { AllCameraOptions } from "./Cameras";
 export declare const updateCamera: (camera: Camera, options: AllCameraOptions) => void;
 //# sourceMappingURL=updateCamera.d.ts.map

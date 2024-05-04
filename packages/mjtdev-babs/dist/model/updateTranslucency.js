@@ -1,4 +1,4 @@
-import { PBRMaterial } from "babylonjs";
+import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
 import { isDefined } from "@mjtdev/object";
 export const updateTranslucency = (props) => {
     const { mesh, value, textureMatcher = /.*/, meshMatcher = /.*/ } = props;

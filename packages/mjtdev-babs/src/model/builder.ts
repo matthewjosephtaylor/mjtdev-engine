@@ -1,19 +1,5 @@
 import { isDefined, isUndefined } from "@mjtdev/object";
 import { Randoms } from "@mjtdev/random";
-import {
-  AbstractMesh,
-  ArcRotateCamera,
-  FreeCamera,
-  HighlightLayer,
-  ImageProcessingConfiguration,
-  Mesh,
-  MeshBuilder,
-  PBRMaterial,
-  Scene,
-  StandardMaterial,
-  Texture,
-  UniversalCamera,
-} from "babylonjs";
 import { c3 } from "../bab/c3";
 import { c4 } from "../bab/c4";
 import { createEngine } from "../bab/createEngine";
@@ -23,15 +9,26 @@ import { attachArcRotateCameraControls } from "../camera/attachArcRotateCameraCo
 import { attachUniversalCameraControls } from "../camera/attachUniversalCameraControls";
 import { describeMesh } from "../mesh/describeMesh";
 import { imageToTexture } from "../texture/imageToTexture";
+import type { ModelBuilder, ModelPath, MorphRemaps } from "./ModelBuilder";
 import { addDefaultLightsToScene } from "./addDefaultLightsToScene";
 import { loadDazFigure } from "./loadDazFigure";
 import { meshFixer } from "./meshFixer";
-import { ModelBuilder, ModelPath, MorphRemaps } from "./ModelBuilder";
 import { performMorph } from "./performMorph";
 import { pickMesh } from "./pickMesh";
 import { totalBoundingInfo } from "./totalBoundingInfo";
 import { updateColor } from "./updateColor";
 import { updateTranslucency } from "./updateTranslucency";
+import { Scene } from "@babylonjs/core/scene";
+import { ImageProcessingConfiguration } from "@babylonjs/core/Materials/imageProcessingConfiguration";
+import { HighlightLayer } from "@babylonjs/core/Layers/highlightLayer";
+import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import type { FreeCamera } from "@babylonjs/core/Cameras/freeCamera";
+import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
+import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
+import type { Texture } from "@babylonjs/core/Materials/Textures/texture";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
 
 export const builder = async (
   props: {
@@ -74,7 +71,7 @@ export const builder = async (
   }
   camera.minZ = 0;
   const STATE = {
-    lock: undefined as string,
+    lock: undefined as string | undefined,
     remaps: {} as MorphRemaps,
   };
 
@@ -110,6 +107,9 @@ export const builder = async (
       return b;
     },
     camera: (x, y, z) => {
+      if (!scene.activeCamera) {
+        throw new Error("no activeCamera in scene", { cause: scene });
+      }
       scene.activeCamera.position = v3(x, y, z);
       return b;
     },
@@ -135,17 +135,20 @@ export const builder = async (
     },
     takeCanvas: async (
       // const engine = scene.getEngine()
-      width = scene.getEngine().getRenderingCanvas().width,
-      height = scene.getEngine().getRenderingCanvas().height
+      width = scene?.getEngine()?.getRenderingCanvas()?.width ?? 256,
+      height = scene?.getEngine()?.getRenderingCanvas()?.height ?? 256
     ) => {
       const canvas = scene.getEngine().getRenderingCanvas();
+      if (!canvas) {
+        throw new Error("No canvas for engine", { cause: scene });
+      }
       canvas.width = width;
       canvas.height = height;
       await renderOnce(scene);
       const result = document.createElement("canvas");
       result.width = canvas.width;
       result.height = canvas.height;
-      result.getContext("2d").drawImage(canvas, 0, 0);
+      result.getContext("2d")!.drawImage(canvas, 0, 0);
       return result;
     },
     reset: () => {
@@ -196,13 +199,13 @@ export const builder = async (
       }
       return b;
     },
-    updateColor: (color, textureMatcher, meshMatcher) => {
+    updateColor: (color, textureMatcher = /.*/, meshMatcher = /.*/) => {
       scene.meshes.forEach((mesh) =>
         updateColor({ color, mesh, meshMatcher, textureMatcher })
       );
       return b;
     },
-    updateTranslucency: (value, textureMatcher, meshMatcher) => {
+    updateTranslucency: (value, textureMatcher = /.*/, meshMatcher = /.*/) => {
       // scene.enableSubSurfaceForPrePass().metersPerUnit = 0.4;
       // scene.prePassRenderer.samples = 2;
       scene.meshes.forEach((mesh) =>
@@ -213,6 +216,9 @@ export const builder = async (
     gotoFrame: (frame) => {
       return new Promise((resolve, reject) => {
         const anim = scene.getAnimationGroupByName("Animation");
+        if (!anim) {
+          throw new Error("No animation group", { cause: scene });
+        }
         anim.stop();
         anim.start(false, 0.1, frame / 30, frame / 30);
         anim.onAnimationEndObservable.addOnce(() => {
@@ -296,12 +302,18 @@ export const builder = async (
     },
     getBBox: (model) => {
       const mesh = scene.getMeshByName(model);
+      if (!mesh) {
+        throw new Error(`no mesh in scene by name: ${model}`, { cause: scene });
+      }
       return totalBoundingInfo(mesh.getChildMeshes()).boundingBox;
     },
     wireframe: () => {
       scene.meshes.forEach((mesh) => {
         if (isUndefined(mesh.material)) {
           mesh.material = new StandardMaterial(`mat-${mesh.name}`, scene);
+        }
+        if (!mesh.material) {
+          throw new Error("no material on mesh", { cause: mesh });
         }
         mesh.material.wireframe = true;
       });

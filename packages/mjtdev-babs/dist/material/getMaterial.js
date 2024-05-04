@@ -1,6 +1,7 @@
-import { PBRMaterial, StandardMaterial } from "babylonjs";
 import { isDefined } from "@mjtdev/object";
 import { updateMaterial } from "./updateMaterial";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
 export const getMaterial = (scene, name, options = "standard") => {
     const material = scene.getMaterialByName(name);
     if (isDefined(material)) {

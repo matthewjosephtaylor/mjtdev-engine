@@ -1,11 +1,13 @@
-import { MeshBuilder, Scene, SolidParticleSystem } from "babylonjs";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import { SolidParticleSystem } from "@babylonjs/core/Particles/solidParticleSystem";
+import type { Scene } from "@babylonjs/core/scene";
 import { Colors } from "@mjtdev/color";
-import { VoxData } from "@mjtdev/magica-voxels";
-import { voxDataToCorrectedPoints } from "./voxDataToCorrectedPoints";
+import type { VoxData } from "@mjtdev/magica-voxels";
 import { c3 } from "../bab/c3";
 import { c4 } from "../bab/c4";
 import { v3 } from "../bab/v3";
 import { getMaterial } from "../material/getMaterial";
+import { voxDataToCorrectedPoints } from "./voxDataToCorrectedPoints";
 
 export const voxDataToSps = (scene: Scene, voxData: VoxData, name: string) => {
   const { XYZI, RGBA, SIZE } = voxData;

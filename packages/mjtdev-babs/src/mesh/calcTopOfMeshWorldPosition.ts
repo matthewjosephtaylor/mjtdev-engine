@@ -1,5 +1,6 @@
-import { AbstractMesh } from "babylonjs";
-import { Point3, toVec3 } from "@mjtdev/math";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
+import type { Point3 } from "@mjtdev/math";
+import { toVec3 } from "@mjtdev/math";
 
 export const calcTopOfMeshWorldPosition = (mesh: AbstractMesh) => {
   mesh.computeWorldMatrix(true);

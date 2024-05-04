@@ -1,5 +1,9 @@
-import { AbstractMesh, Ray, Scene, TrianglePickingPredicate } from "babylonjs";
-
+import type {
+  Ray,
+  TrianglePickingPredicate,
+} from "@babylonjs/core/Culling/ray";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
+import type { Scene } from "@babylonjs/core/scene";
 
 export const pickWithRay = (
   scene: Scene,
@@ -11,7 +15,9 @@ export const pickWithRay = (
   }> = {}
 ) => {
   const {
-    trianglePredicate, fastCheck, predicate = (mesh: AbstractMesh) => mesh.isPickable,
+    trianglePredicate,
+    fastCheck,
+    predicate = (mesh: AbstractMesh) => mesh.isPickable,
   } = options;
   return scene.pickWithRay(ray, predicate, fastCheck, trianglePredicate);
 };

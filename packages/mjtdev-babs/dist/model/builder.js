@@ -1,6 +1,5 @@
 import { isDefined, isUndefined } from "@mjtdev/object";
 import { Randoms } from "@mjtdev/random";
-import { ArcRotateCamera, HighlightLayer, ImageProcessingConfiguration, Mesh, MeshBuilder, PBRMaterial, Scene, StandardMaterial, UniversalCamera, } from "babylonjs";
 import { c3 } from "../bab/c3";
 import { c4 } from "../bab/c4";
 import { createEngine } from "../bab/createEngine";
@@ -18,6 +17,15 @@ import { pickMesh } from "./pickMesh";
 import { totalBoundingInfo } from "./totalBoundingInfo";
 import { updateColor } from "./updateColor";
 import { updateTranslucency } from "./updateTranslucency";
+import { Scene } from "@babylonjs/core/scene";
+import { ImageProcessingConfiguration } from "@babylonjs/core/Materials/imageProcessingConfiguration";
+import { HighlightLayer } from "@babylonjs/core/Layers/highlightLayer";
+import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
+import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
 export const builder = async (props = {}) => {
     const { path = [], exposure = 1.6, toneMappingEnabled = true, addDefaultLights = true, clearColor = "grey", scene = new Scene(createEngine()), } = props;
     const paths = Array.isArray(path) ? path : [path];
@@ -73,6 +81,9 @@ export const builder = async (props = {}) => {
             return b;
         },
         camera: (x, y, z) => {
+            if (!scene.activeCamera) {
+                throw new Error("no activeCamera in scene", { cause: scene });
+            }
             scene.activeCamera.position = v3(x, y, z);
             return b;
         },
@@ -98,8 +109,11 @@ export const builder = async (props = {}) => {
         },
         takeCanvas: async (
         // const engine = scene.getEngine()
-        width = scene.getEngine().getRenderingCanvas().width, height = scene.getEngine().getRenderingCanvas().height) => {
+        width = scene?.getEngine()?.getRenderingCanvas()?.width ?? 256, height = scene?.getEngine()?.getRenderingCanvas()?.height ?? 256) => {
             const canvas = scene.getEngine().getRenderingCanvas();
+            if (!canvas) {
+                throw new Error("No canvas for engine", { cause: scene });
+            }
             canvas.width = width;
             canvas.height = height;
             await renderOnce(scene);
@@ -154,11 +168,11 @@ export const builder = async (props = {}) => {
             }
             return b;
         },
-        updateColor: (color, textureMatcher, meshMatcher) => {
+        updateColor: (color, textureMatcher = /.*/, meshMatcher = /.*/) => {
             scene.meshes.forEach((mesh) => updateColor({ color, mesh, meshMatcher, textureMatcher }));
             return b;
         },
-        updateTranslucency: (value, textureMatcher, meshMatcher) => {
+        updateTranslucency: (value, textureMatcher = /.*/, meshMatcher = /.*/) => {
             // scene.enableSubSurfaceForPrePass().metersPerUnit = 0.4;
             // scene.prePassRenderer.samples = 2;
             scene.meshes.forEach((mesh) => updateTranslucency({ value, mesh, meshMatcher, textureMatcher }));
@@ -167,6 +181,9 @@ export const builder = async (props = {}) => {
         gotoFrame: (frame) => {
             return new Promise((resolve, reject) => {
                 const anim = scene.getAnimationGroupByName("Animation");
+                if (!anim) {
+                    throw new Error("No animation group", { cause: scene });
+                }
                 anim.stop();
                 anim.start(false, 0.1, frame / 30, frame / 30);
                 anim.onAnimationEndObservable.addOnce(() => {
@@ -247,12 +264,18 @@ export const builder = async (props = {}) => {
         },
         getBBox: (model) => {
             const mesh = scene.getMeshByName(model);
+            if (!mesh) {
+                throw new Error(`no mesh in scene by name: ${model}`, { cause: scene });
+            }
             return totalBoundingInfo(mesh.getChildMeshes()).boundingBox;
         },
         wireframe: () => {
             scene.meshes.forEach((mesh) => {
                 if (isUndefined(mesh.material)) {
                     mesh.material = new StandardMaterial(`mat-${mesh.name}`, scene);
+                }
+                if (!mesh.material) {
+                    throw new Error("no material on mesh", { cause: mesh });
                 }
                 mesh.material.wireframe = true;
             });

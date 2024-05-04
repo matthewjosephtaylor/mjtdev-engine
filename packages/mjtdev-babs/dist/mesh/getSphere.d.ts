@@ -1,6 +1,6 @@
-import { Scene } from "babylonjs";
-import { MeshOptions } from "./updateMesh";
+import type { Scene } from "@babylonjs/core/scene";
+import type { MeshOptions } from "./updateMesh";
 export declare const getSphere: (scene: Scene, name: string, options: MeshOptions & Partial<{
     radius: number;
-}>) => import("babylonjs").Mesh;
+}>) => import("@babylonjs/core").Mesh;
 //# sourceMappingURL=getSphere.d.ts.map

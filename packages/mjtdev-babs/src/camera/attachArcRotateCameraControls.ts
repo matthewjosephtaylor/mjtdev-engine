@@ -1,9 +1,12 @@
-import { ArcRotateCamera, Scene } from "babylonjs";
-import { AnimateState } from "@mjtdev/animate";
+// import type { ArcRotateCamera } from "babylonjs";
+// import { Scene } from "babylonjs";
+import type { AnimateState } from "@mjtdev/animate";
 import { Inputs } from "@mjtdev/input";
-import { Maths, Point2, toVec2 } from "@mjtdev/math";
+import type { Point2 } from "@mjtdev/math";
+import { Maths, toVec2 } from "@mjtdev/math";
 import { updateArcRotateCameraPosition } from "../mesh/updateArcRotateCameraPosition";
 import { v3 } from "../bab/v3";
+import type { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
 
 export const attachArcRotateCameraControls = (
   camera: ArcRotateCamera,
@@ -89,7 +92,7 @@ export const attachArcRotateCameraControls = (
     }
   );
   const MOUSE_STATE = {
-    lastPosition: undefined as Point2,
+    lastPosition: undefined as Point2 | undefined,
   };
   parent.addEventListener("pointerdown", (event) => {
     if (event.buttons === 4) {

@@ -1,5 +1,5 @@
-import { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
-import { ICanvasRenderingContext } from "babylonjs";
+import type { ICanvasRenderingContext } from "@babylonjs/core/Engines/ICanvas";
+import type { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
 export type TextureSamplingModeMap = typeof TEXTURE_SAMPLING_MODES;
 export type TextureOptions = Partial<{
     hasAlpha: boolean;
@@ -24,15 +24,15 @@ export declare const Textures: {
     }) => import("./builder").TextureBuilder;
     copyToCanvas: (image: HTMLCanvasElement | OffscreenCanvas | HTMLImageElement, width?: number, height?: number) => HTMLCanvasElement;
     debugImage: (image: HTMLCanvasElement | HTMLImageElement, label?: string) => Promise<unknown>;
-    getTexture: <T extends import("babylonjs").BaseTexture>(scene: import("babylonjs").Scene, name: string, producer: () => T) => T;
-    getHtmlElementTexture: (scene: import("babylonjs").Scene, name: string, options: Partial<Partial<{
+    getTexture: <T extends import("@babylonjs/core").BaseTexture>(scene: import("@babylonjs/core").Scene, name: string, producer: () => T) => T;
+    getHtmlElementTexture: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<Partial<{
         hasAlpha: boolean;
         generateMipMaps: boolean;
         samplingMode: keyof TextureSamplingModeMap;
     }> & {
         element: HTMLCanvasElement | HTMLVideoElement;
-    }>) => import("babylonjs").HtmlElementTexture;
-    getDynamicTexture: (scene: import("babylonjs").Scene, name: string, options?: Partial<Partial<{
+    }>) => import("@babylonjs/core").HtmlElementTexture;
+    getDynamicTexture: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<Partial<{
         hasAlpha: boolean;
         generateMipMaps: boolean;
         samplingMode: keyof TextureSamplingModeMap;
@@ -40,17 +40,17 @@ export declare const Textures: {
         width: number;
         height: number;
         init: (ctx: ICanvasRenderingContext) => void;
-    }>) => import("babylonjs").DynamicTexture;
-    getPathTexture: (scene: import("babylonjs").Scene, name: string, options: Partial<Partial<{
+    }>) => import("@babylonjs/core").DynamicTexture;
+    getPathTexture: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<Partial<{
         hasAlpha: boolean;
         generateMipMaps: boolean;
         samplingMode: keyof TextureSamplingModeMap;
     }> & {
         src: string;
-    }>) => import("babylonjs").Texture;
-    updateTexture: (texture: import("babylonjs").BaseTexture, options: AllTextureOptions) => void;
-    imageToTexture: (scene: import("babylonjs").Scene, name: string, image: string | HTMLCanvasElement | OffscreenCanvas | HTMLImageElement) => Promise<import("babylonjs").Texture>;
-    drawTextOnTexture: (texture: import("babylonjs").DynamicTexture, text: string, options?: Partial<{
+    }>) => import("@babylonjs/core").Texture;
+    updateTexture: (texture: import("@babylonjs/core").BaseTexture, options: AllTextureOptions) => void;
+    imageToTexture: (scene: import("@babylonjs/core").Scene, name: string, image: string | HTMLCanvasElement | OffscreenCanvas | HTMLImageElement) => Promise<import("@babylonjs/core").Texture>;
+    drawTextOnTexture: (texture: import("@babylonjs/core").DynamicTexture, text: string, options?: Partial<{
         color: string;
         outline: boolean;
         outlineColor: string;
@@ -67,14 +67,14 @@ export declare const Textures: {
         width: number;
         height: number;
     };
-    drawOnTexture: (texture: import("babylonjs").DynamicTexture, render: (ctx: ICanvasRenderingContext, size: {
+    drawOnTexture: (texture: import("@babylonjs/core").DynamicTexture, render: (ctx: ICanvasRenderingContext, size: {
         width: number;
         height: number;
     }) => void) => void;
-    drawBackgroundOnTexture: (texture: import("babylonjs").DynamicTexture, options?: Partial<{
+    drawBackgroundOnTexture: (texture: import("@babylonjs/core").DynamicTexture, options?: Partial<{
         color: string;
     }>) => void;
-    clearTexture: (texture: import("babylonjs").DynamicTexture) => void;
-    destroyTexture: (scene: import("babylonjs").Scene, name: string) => void;
+    clearTexture: (texture: import("@babylonjs/core").DynamicTexture) => void;
+    destroyTexture: (scene: import("@babylonjs/core").Scene, name: string) => void;
 };
 //# sourceMappingURL=Textures.d.ts.map

@@ -1,6 +1,7 @@
-import { ArcRotateCamera, Camera } from "babylonjs";
+import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
+import { Camera } from "@babylonjs/core/Cameras/camera";
 import { v3 } from "../bab/v3";
-export const createDebugCamera = (scene, name, {} = {}) => {
+export const createDebugCamera = (scene, name) => {
     scene?.activeCamera?.dispose();
     const canvas = scene.getEngine().getRenderingCanvas();
     const alpha = -Math.PI / 2;

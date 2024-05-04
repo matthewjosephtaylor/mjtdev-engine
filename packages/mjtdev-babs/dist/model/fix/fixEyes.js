@@ -54,7 +54,9 @@ export const fixEyes = (mesh) => {
         // material.emissiveColor = c3("white");
         // material.emissiveTexture = material.albedoTexture;
         // material.roughness = 0;
-        material.albedoTexture.hasAlpha = true;
+        if (material.albedoTexture) {
+            material.albedoTexture.hasAlpha = true;
+        }
         material.clearCoat.isEnabled = true;
         material.clearCoat.intensity = 0.2;
         material.subSurface.isTranslucencyEnabled = true;

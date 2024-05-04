@@ -1,6 +1,5 @@
-/// <reference types="babylonjs" />
 export declare const Voxels: {
-    animateExplosion: (particle: import("babylonjs/Particles/solidParticle").SolidParticle, options?: Partial<{
+    animateExplosion: (particle: import("@babylonjs/core").SolidParticle, options?: Partial<{
         random: import("@mjtdev/random").NextRandom;
         radius: number;
         maxBounce: number;
@@ -9,8 +8,8 @@ export declare const Voxels: {
         decay: number;
         dispose: () => void;
     }>) => void;
-    voxDataToSps: (scene: import("babylonjs/scene").Scene, voxData: import("@mjtdev/magica-voxels").VoxData, name: string) => import("babylonjs/Particles/solidParticleSystem").SolidParticleSystem;
-    voxDataToMergedModel: (scene: import("babylonjs/scene").Scene, voxData: import("@mjtdev/magica-voxels").VoxData, name: string) => import("babylonjs/Meshes/mesh").Mesh;
-    voxDataToComplexModel: (scene: import("babylonjs/scene").Scene, voxData: import("@mjtdev/magica-voxels").VoxData, name: string) => import("babylonjs/Meshes/mesh").Mesh;
+    voxDataToSps: (scene: import("@babylonjs/core").Scene, voxData: import("@mjtdev/magica-voxels").VoxData, name: string) => import("@babylonjs/core").SolidParticleSystem;
+    voxDataToMergedModel: (scene: import("@babylonjs/core").Scene, voxData: import("@mjtdev/magica-voxels").VoxData, name: string) => import("@babylonjs/core").Mesh;
+    voxDataToComplexModel: (scene: import("@babylonjs/core").Scene, voxData: import("@mjtdev/magica-voxels").VoxData, name: string) => import("@babylonjs/core").Mesh;
 };
 //# sourceMappingURL=Voxels.d.ts.map

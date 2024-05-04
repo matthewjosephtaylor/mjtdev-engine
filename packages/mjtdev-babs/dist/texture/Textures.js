@@ -1,17 +1,17 @@
-import { getTexture } from "./getTexture";
-import { getHtmlElementTexture } from "./getHtmlElementTexture";
 import { builder } from "./builder";
+import { clearTexture } from "./clearTexture";
 import { copyToCanvas } from "./copyToCanvas";
 import { debugImage } from "./debugImage";
+import { destroyTexture } from "./destroyTexture";
 import { drawBackgroundOnTexture } from "./drawBackgroundOnTexture";
+import { drawOnTexture } from "./drawOnTexture";
 import { drawTextOnTexture } from "./drawTextOnTexture";
+import { getDynamicTexture } from "./getDynamicTexture";
+import { getHtmlElementTexture } from "./getHtmlElementTexture";
+import { getPathTexture } from "./getPathTexture";
+import { getTexture } from "./getTexture";
 import { imageToTexture } from "./imageToTexture";
 import { updateTexture } from "./updateTexture";
-import { getDynamicTexture } from "./getDynamicTexture";
-import { drawOnTexture } from "./drawOnTexture";
-import { clearTexture } from "./clearTexture";
-import { destroyTexture } from "./destroyTexture";
-import { getPathTexture } from "./getPathTexture";
 export const Textures = {
     builder,
     copyToCanvas,

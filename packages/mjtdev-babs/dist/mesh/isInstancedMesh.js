@@ -1,4 +1,4 @@
-import { InstancedMesh } from "babylonjs";
+import { InstancedMesh } from "@babylonjs/core/Meshes/instancedMesh";
 export const isInstancedMesh = (mesh) => {
     return mesh instanceof InstancedMesh;
 };

@@ -1,4 +1,4 @@
-import { Texture } from "babylonjs";
+import { Texture } from "@babylonjs/core/Materials/Textures/texture";
 import { isDefined } from "@mjtdev/object";
 export const describeMesh = (mesh, search = /.*/, depth = 0) => {
     const padding = "".padStart(depth * 2);

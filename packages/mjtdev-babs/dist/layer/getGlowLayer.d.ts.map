@@ -1,1 +1,1 @@
-{"version":3,"file":"getGlowLayer.d.ts","sourceRoot":"","sources":["../../src/layer/getGlowLayer.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,SAAS,EAAE,iBAAiB,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AAEhE,eAAO,MAAM,YAAY,UAChB,KAAK,QACN,MAAM,YACF,iBAAiB,cAU5B,CAAC"}
+{"version":3,"file":"getGlowLayer.d.ts","sourceRoot":"","sources":["../../src/layer/getGlowLayer.ts"],"names":[],"mappings":"AAAA,OAAO,EACL,SAAS,EACT,KAAK,iBAAiB,EACvB,MAAM,kCAAkC,CAAC;AAC1C,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,uBAAuB,CAAC;AAGnD,eAAO,MAAM,YAAY,UAChB,KAAK,QACN,MAAM,YACF,iBAAiB,cAU5B,CAAC"}

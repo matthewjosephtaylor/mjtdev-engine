@@ -1,4 +1,4 @@
-import { ArcRotateCamera } from "babylonjs";
+import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
 import { v3 } from "../bab/v3";
 import { getCamera } from "./getCamera";
 import { updateCamera } from "./updateCamera";

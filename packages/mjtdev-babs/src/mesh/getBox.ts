@@ -1,8 +1,10 @@
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { MeshBuilder, Scene } from "babylonjs";
 import { c4 } from "../bab/c4";
 import { getMesh } from "./getMesh";
-import { MeshOptions, updateMesh } from "./updateMesh";
+import type { MeshOptions } from "./updateMesh";
+import { updateMesh } from "./updateMesh";
 
 export type BoxOptions = Partial<{
   width: number;

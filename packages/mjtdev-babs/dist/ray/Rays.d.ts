@@ -1,10 +1,9 @@
-/// <reference types="babylonjs" />
 export declare const Rays: {
-    createRay: (origin: import("@mjtdev/math").Point3, direction: import("@mjtdev/math").Point3, length?: number) => import("babylonjs/Culling/ray").Ray;
-    pickWithRay: (scene: import("babylonjs/scene").Scene, ray: import("babylonjs/Culling/ray").Ray, options?: Partial<{
-        predicate: (mesh: import("babylonjs/Meshes/abstractMesh").AbstractMesh) => boolean;
+    createRay: (origin: import("@mjtdev/math").Point3, direction: import("@mjtdev/math").Point3, length?: number | undefined) => import("@babylonjs/core").Ray;
+    pickWithRay: (scene: import("@babylonjs/core").Scene, ray: import("@babylonjs/core").Ray, options?: Partial<{
+        predicate: (mesh: import("@babylonjs/core").AbstractMesh) => boolean;
         fastCheck: boolean;
-        trianglePredicate: import("babylonjs/Culling/ray").TrianglePickingPredicate;
-    }>) => import("babylonjs/Collisions/pickingInfo").PickingInfo;
+        trianglePredicate: import("@babylonjs/core").TrianglePickingPredicate;
+    }>) => import("@babylonjs/core").Nullable<import("@babylonjs/core").PickingInfo>;
 };
 //# sourceMappingURL=Rays.d.ts.map

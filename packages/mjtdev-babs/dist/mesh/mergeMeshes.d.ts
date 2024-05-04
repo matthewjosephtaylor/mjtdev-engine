@@ -1,9 +1,9 @@
-import { Mesh } from "babylonjs";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
 export declare const mergeMeshes: (meshes: Mesh[], options?: Partial<{
     disposeSource: boolean;
     allow32BitsIndices: boolean;
     meshSubclass: Mesh;
     subdivideWithSubMeshes: boolean;
     multiMultiMaterials: boolean;
-}>) => Mesh;
+}>) => import("@babylonjs/core").Nullable<Mesh>;
 //# sourceMappingURL=mergeMeshes.d.ts.map

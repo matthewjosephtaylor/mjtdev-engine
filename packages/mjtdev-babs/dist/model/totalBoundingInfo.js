@@ -1,4 +1,5 @@
-import { BoundingInfo, Vector3 } from "babylonjs";
+import { BoundingInfo } from "@babylonjs/core/Culling/boundingInfo";
+import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 export const totalBoundingInfo = function (meshes) {
     let boundingInfo = meshes[0].getBoundingInfo();
     let min = boundingInfo.minimum.add(meshes[0].position);

@@ -1,3 +1,3 @@
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 export declare const renderOnce: (scene: Scene) => Promise<void>;
 //# sourceMappingURL=renderOnce.d.ts.map

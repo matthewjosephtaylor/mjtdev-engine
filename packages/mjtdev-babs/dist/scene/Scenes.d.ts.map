@@ -1,1 +1,1 @@
-{"version":3,"file":"Scenes.d.ts","sourceRoot":"","sources":["../../src/scene/Scenes.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AAG1C,eAAO,MAAM,WAAW,WAAY,MAAM,UAEzC,CAAC;AAEF,eAAO,MAAM,MAAM;0BAJiB,MAAM;;CAOzC,CAAC"}
+{"version":3,"file":"Scenes.d.ts","sourceRoot":"","sources":["../../src/scene/Scenes.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,gCAAgC,CAAC;AAC7D,OAAO,EAAE,KAAK,EAAE,MAAM,uBAAuB,CAAC;AAG9C,eAAO,MAAM,WAAW,WAAY,MAAM,UAEzC,CAAC;AAEF,eAAO,MAAM,MAAM;0BAJiB,MAAM;;CAOzC,CAAC"}

@@ -1,4 +1,4 @@
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 import { stopwatch } from "../util/Timers";
 
 export const renderOnce = (scene: Scene): Promise<void> => {

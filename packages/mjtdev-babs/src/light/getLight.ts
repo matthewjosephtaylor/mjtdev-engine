@@ -1,6 +1,6 @@
+import type { Light } from "@babylonjs/core/Lights/light";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { Light, Scene } from "babylonjs";
-
 
 export const getLight = <T extends Light>(
   scene: Scene,

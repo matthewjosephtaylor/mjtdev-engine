@@ -1,10 +1,12 @@
-import { MeshBuilder, Scene, StandardMaterial } from "babylonjs";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { c3 } from "../bab/c3";
-import { imageToTexture } from "./imageToTexture";
-import { TextureImageSrc } from "./TextureImageSrc";
-import { TextureLayer } from "./TextureLayer";
 import { Randoms } from "@mjtdev/random";
+import { c3 } from "../bab/c3";
+import type { TextureImageSrc } from "./TextureImageSrc";
+import type { TextureLayer } from "./TextureLayer";
+import { imageToTexture } from "./imageToTexture";
 
 export const hasValidId = (obj: { id: string | number } | string) => {
   if (typeof obj === "string") {

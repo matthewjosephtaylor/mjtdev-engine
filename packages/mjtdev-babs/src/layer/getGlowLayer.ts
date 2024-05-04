@@ -1,5 +1,9 @@
+import {
+  GlowLayer,
+  type IGlowLayerOptions,
+} from "@babylonjs/core/Layers/glowLayer";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { GlowLayer, IGlowLayerOptions, Scene } from "babylonjs";
 
 export const getGlowLayer = (
   scene: Scene,

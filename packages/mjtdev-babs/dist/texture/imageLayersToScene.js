@@ -1,4 +1,4 @@
-import { Scene } from "babylonjs";
+import { Scene } from "@babylonjs/core/scene";
 import { layerToPlane } from "./layerToPlane";
 export const imageLayersToScene = async (layers, engine) => {
     const scene = new Scene(engine);

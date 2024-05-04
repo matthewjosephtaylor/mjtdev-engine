@@ -1,4 +1,4 @@
-import { Vector3 } from "babylonjs";
+import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 import { extent } from "d3-array";
 /** @see https://forum.babylonjs.com/t/get-mesh-bounding-box-position-and-size-in-2d-screen-coordinates/1058  */
 export const calcClientRectForMesh = (mesh) => {
@@ -6,6 +6,9 @@ export const calcClientRectForMesh = (mesh) => {
     const meshVectors = mesh.getBoundingInfo().boundingBox.vectors;
     const scene = mesh.getScene();
     const canvas = scene.getEngine().getRenderingCanvas();
+    if (!canvas) {
+        throw new Error("No canvas for scene", { cause: scene });
+    }
     // get the matrix and viewport needed to project the vectors onto the screen
     const worldMatrix = mesh.getWorldMatrix();
     const transformMatrix = scene.getTransformMatrix();

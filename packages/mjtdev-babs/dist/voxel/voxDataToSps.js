@@ -1,10 +1,11 @@
-import { MeshBuilder, SolidParticleSystem } from "babylonjs";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import { SolidParticleSystem } from "@babylonjs/core/Particles/solidParticleSystem";
 import { Colors } from "@mjtdev/color";
-import { voxDataToCorrectedPoints } from "./voxDataToCorrectedPoints";
 import { c3 } from "../bab/c3";
 import { c4 } from "../bab/c4";
 import { v3 } from "../bab/v3";
 import { getMaterial } from "../material/getMaterial";
+import { voxDataToCorrectedPoints } from "./voxDataToCorrectedPoints";
 export const voxDataToSps = (scene, voxData, name) => {
     const { XYZI, RGBA, SIZE } = voxData;
     const colors = RGBA.map((rgba) => {

@@ -1,4 +1,4 @@
-import { MeshBuilder } from "babylonjs";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { getMesh } from "./getMesh";
 import { updateMesh } from "./updateMesh";
 export const BabPolyMap = {

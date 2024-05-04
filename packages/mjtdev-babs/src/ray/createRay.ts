@@ -1,7 +1,6 @@
-import { Point3 } from "@mjtdev/math";
-import { Ray } from "babylonjs";
+import { Ray } from "@babylonjs/core/Culling/ray";
+import type { Point3 } from "@mjtdev/math";
 import { v3 } from "../bab/v3";
-
 
 export const createRay = (
   origin: Point3,

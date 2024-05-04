@@ -1,1 +1,1 @@
-{"version":3,"file":"getMeshInstance.d.ts","sourceRoot":"","sources":["../../src/mesh/getMeshInstance.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,KAAK,EAAE,MAAM,WAAW,CAAC;AAGxC,eAAO,MAAM,eAAe,0BACnB,KAAK,QACN,MAAM,YACF,MAAM,0DAWjB,CAAC"}
+{"version":3,"file":"getMeshInstance.d.ts","sourceRoot":"","sources":["../../src/mesh/getMeshInstance.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,IAAI,EAAE,MAAM,6BAA6B,CAAC;AACxD,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,uBAAuB,CAAC;AAInD,eAAO,MAAM,eAAe,0BACnB,KAAK,QACN,MAAM,YACF,MAAM,YACN,MAAM,CAAC,4CAUlB,CAAC"}

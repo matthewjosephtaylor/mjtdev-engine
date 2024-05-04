@@ -1,6 +1,4 @@
-import { ModelMesh, ModelMeshMapper } from "./ModelBuilder";
-
-
+import type { ModelMesh, ModelMeshMapper } from "./ModelBuilder";
 
 export const meshFixer = (mesh: ModelMesh, mapper: ModelMeshMapper) => {
   mesh = mapper(mesh);

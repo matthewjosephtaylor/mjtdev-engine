@@ -1,9 +1,12 @@
-import { Point3 } from "@mjtdev/math";
-import { LinesMesh, MeshBuilder, Scene } from "babylonjs";
+import type { LinesMesh } from "@babylonjs/core/Meshes/linesMesh";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import type { Scene } from "@babylonjs/core/scene";
+import type { Point3 } from "@mjtdev/math";
 import { c4 } from "../bab/c4";
 import { v3 } from "../bab/v3";
 import { getMesh } from "./getMesh";
-import { MeshOptions, updateMesh } from "./updateMesh";
+import type { MeshOptions } from "./updateMesh";
+import { updateMesh } from "./updateMesh";
 
 export const getLine = (
   scene: Scene,
@@ -21,7 +24,7 @@ export const getLine = (
   return getMesh(
     scene,
     name,
-    (instance: LinesMesh) => {
+    (instance: LinesMesh | undefined) => {
       return buildLineMesh(scene, name, {
         ...options,
         instance,

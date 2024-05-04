@@ -1,4 +1,5 @@
-import { Engine, EngineOptions } from "babylonjs";
+import { Engine } from "@babylonjs/core/Engines/engine";
+import type { EngineOptions } from "@babylonjs/core/Engines/thinEngine";
 import { createCanvas } from "./createCanvas";
 
 export const createEngine = (
@@ -7,17 +8,11 @@ export const createEngine = (
     width?: number;
     height?: number;
     canvas?: HTMLCanvasElement | OffscreenCanvas;
-  } = {
-    // preserveDrawingBuffer: true,
-    // stencil: true,
-    // antialias: true,
-    width: 320,
-    height: 320,
-  }
+  } = {}
 ) => {
   const {
-    width,
-    height,
+    width = 320,
+    height = 320,
     antialias,
     canvas = createCanvas({ width, height }),
   } = options;
@@ -25,7 +20,7 @@ export const createEngine = (
     powerPreference: "high-performance",
     ...options,
   });
-  engine.loadingScreen = undefined;
+  // engine.loadingScreen = undefined!;
   engine.hideLoadingUI();
   return engine;
 };

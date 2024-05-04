@@ -1,9 +1,8 @@
-import { isUndefined } from "@mjtdev/object";
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 
 export const destroyTexture = (scene: Scene, name: string) => {
   const tex = scene.getTextureByName(name);
-  if (isUndefined(tex)) {
+  if (!tex) {
     return;
   }
   tex.dispose();

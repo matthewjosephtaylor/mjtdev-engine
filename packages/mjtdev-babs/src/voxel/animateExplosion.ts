@@ -1,7 +1,9 @@
-import { Curve3, SolidParticle, Vector3 } from "babylonjs";
+import { Curve3 } from "@babylonjs/core/Maths/math.path";
+import type { Vector3 } from "@babylonjs/core/Maths/math.vector";
+import type { SolidParticle } from "@babylonjs/core/Particles/solidParticle";
 import { Maths, toVec3 } from "@mjtdev/math";
 import { isDefined } from "@mjtdev/object";
-import { NextRandom } from "@mjtdev/random";
+import { Randoms, type NextRandom } from "@mjtdev/random";
 import { v3 } from "../bab/v3";
 
 export const animateExplosion = (
@@ -18,7 +20,7 @@ export const animateExplosion = (
   }> = {}
 ) => {
   const {
-    random,
+    random = Randoms.globalRandom,
     radius = 1,
     maxBounce = 0,
     groundZ = 0,
@@ -33,6 +35,9 @@ export const animateExplosion = (
     const path = particle.props?.["path"] as Vector3[];
     if (isDefined(path) && path.length > 0) {
       const next = path.pop();
+      if (!next) {
+        throw new Error("No next value from path", { cause: path });
+      }
       // console.log(`next: ${next.x} ${next.y} ${next.z}`);
       particle.position = next;
       return;

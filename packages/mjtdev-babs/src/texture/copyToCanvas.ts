@@ -7,7 +7,7 @@ export const copyToCanvas = (
   copy.width = width;
   copy.height = height;
   copy
-    .getContext("2d")
+    .getContext("2d")!
     .drawImage(
       image as HTMLCanvasElement,
       0,

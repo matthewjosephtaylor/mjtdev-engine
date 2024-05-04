@@ -1,5 +1,5 @@
 import { isDefined } from "@mjtdev/object";
-export const getMesh = (scene, name, producer = () => undefined, updatable = false) => {
+export const getMesh = (scene, name, producer, updatable = false) => {
     const meshMaybe = scene.getMeshByName(name);
     if (isDefined(meshMaybe) && !updatable) {
         return meshMaybe;

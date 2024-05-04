@@ -1,9 +1,9 @@
-import { Scene } from "babylonjs";
-import { TextureImageSrc } from "./TextureImageSrc";
-import { TextureLayer } from "./TextureLayer";
+import type { Scene } from "@babylonjs/core/scene";
+import type { TextureImageSrc } from "./TextureImageSrc";
+import type { TextureLayer } from "./TextureLayer";
 export declare const hasValidId: (obj: {
     id: string | number;
 } | string) => boolean;
-export declare const idOfImageSrc: (src: TextureImageSrc) => string;
-export declare const layerToPlane: (layer: TextureLayer, scene: Scene) => Promise<import("babylonjs").Mesh>;
+export declare const idOfImageSrc: (src: TextureImageSrc) => string | undefined;
+export declare const layerToPlane: (layer: TextureLayer, scene: Scene) => Promise<import("@babylonjs/core").Mesh>;
 //# sourceMappingURL=layerToPlane.d.ts.map

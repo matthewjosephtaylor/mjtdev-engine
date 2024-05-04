@@ -1,4 +1,7 @@
-import { AbstractMesh, Camera, Matrix, Scene } from "babylonjs";
+import type { Camera } from "@babylonjs/core/Cameras/camera";
+import { Matrix } from "@babylonjs/core/Maths/math.vector";
+import type { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
+import type { Scene } from "@babylonjs/core/scene";
 
 export const pickMesh = (
   scene: Scene,
@@ -15,5 +18,5 @@ export const pickMesh = (
   } = options;
   const ray = scene.createPickingRay(x, y, Matrix.Identity(), camera);
   const hit = scene.pickWithRay(ray, predicate);
-  return hit.pickedMesh;
+  return hit?.pickedMesh;
 };

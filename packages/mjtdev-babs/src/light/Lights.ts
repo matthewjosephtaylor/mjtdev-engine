@@ -1,4 +1,4 @@
-import { Vec3 } from "@mjtdev/math";
+import type { Vec3 } from "@mjtdev/math";
 import { getHemisphericLight } from "./getHemisphericLight";
 import { getLight } from "./getLight";
 import { getPointLight } from "./getPointLight";

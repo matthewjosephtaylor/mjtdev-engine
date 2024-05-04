@@ -1,5 +1,5 @@
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 import { isUndefined } from "@mjtdev/object";
-import { MeshBuilder } from "babylonjs";
 import { getMaterial } from "../material/getMaterial";
 import { updateMesh } from "./updateMesh";
 export const getBoxInstance = (scene, name, options) => {
@@ -17,6 +17,9 @@ export const getBoxInstance = (scene, name, options) => {
         rootMesh = MeshBuilder.CreateBox(rootName, { width, height, depth }, scene);
         rootMesh.receiveShadows = receiveShadows;
         rootMesh.isVisible = false;
+        if (!material) {
+            throw new Error("No material", { cause: options });
+        }
         rootMesh.material = getMaterial(scene, material, "standard");
     }
     const mesh = rootMesh.createInstance(name);

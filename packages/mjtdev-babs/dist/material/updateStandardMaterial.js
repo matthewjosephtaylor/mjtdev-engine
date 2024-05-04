@@ -1,23 +1,22 @@
-import { iff } from "@mjtdev/object";
-import { getTexture } from "../texture/getTexture";
-import { c3 } from "../bab/c3";
 import { Colors } from "@mjtdev/color";
+import { iff } from "@mjtdev/object";
+import { c3 } from "../bab/c3";
 export const updateStandardMaterial = (scene, material, options) => {
     const { alpha, diffuseTexture, emissiveTexture, ambientTexture, opacityTexture, diffuseColor, specularColor, ambientColor, emissiveColor, } = options;
     iff(diffuseTexture, (value) => {
-        const texture = getTexture(scene, value, () => undefined);
+        const texture = scene.getTextureByName(value);
         material.diffuseTexture = texture;
     });
     iff(emissiveTexture, (value) => {
-        const texture = getTexture(scene, value, () => undefined);
+        const texture = scene.getTextureByName(value);
         material.emissiveTexture = texture;
     });
     iff(ambientTexture, (value) => {
-        const texture = getTexture(scene, value, () => undefined);
+        const texture = scene.getTextureByName(value);
         material.ambientTexture = texture;
     });
     iff(opacityTexture, (value) => {
-        const texture = getTexture(scene, value, () => undefined);
+        const texture = scene.getTextureByName(value);
         material.opacityTexture = texture;
     });
     iff(diffuseColor, (value) => {

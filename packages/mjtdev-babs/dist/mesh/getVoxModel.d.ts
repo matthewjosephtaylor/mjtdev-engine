@@ -1,6 +1,6 @@
-import { Scene } from "babylonjs";
-import { MeshOptions } from "./updateMesh";
+import type { Scene } from "@babylonjs/core/scene";
+import type { MeshOptions } from "./updateMesh";
 export declare const getVoxModel: (scene: Scene, name: string, src: string, options?: MeshOptions & Partial<{
     merged: boolean;
-}>) => import("babylonjs").SolidParticleSystem;
+}>) => import("@babylonjs/core").SolidParticleSystem;
 //# sourceMappingURL=getVoxModel.d.ts.map

@@ -1,7 +1,6 @@
-import { isUndefined } from "@mjtdev/object";
 export const destroyTexture = (scene, name) => {
     const tex = scene.getTextureByName(name);
-    if (isUndefined(tex)) {
+    if (!tex) {
         return;
     }
     tex.dispose();

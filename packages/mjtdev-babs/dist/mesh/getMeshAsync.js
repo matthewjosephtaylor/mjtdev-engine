@@ -1,5 +1,5 @@
 import { isDefined } from "@mjtdev/object";
-export const getMeshAsync = (scene, name, producer = () => undefined) => {
+export const getMeshAsync = (scene, name, producer) => {
     const meshMaybe = scene.getMeshByName(name);
     if (isDefined(meshMaybe)) {
         return Promise.resolve(meshMaybe);

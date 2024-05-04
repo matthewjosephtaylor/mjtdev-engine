@@ -1,1 +1,1 @@
-{"version":3,"file":"describeMesh.d.ts","sourceRoot":"","sources":["../../src/mesh/describeMesh.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAwB,MAAM,WAAW,CAAC;AAG/D,eAAO,MAAM,YAAY,SAAU,YAAY,0CAmB9C,CAAC"}
+{"version":3,"file":"describeMesh.d.ts","sourceRoot":"","sources":["../../src/mesh/describeMesh.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,qCAAqC,CAAC;AAGxE,eAAO,MAAM,YAAY,SAAU,YAAY,0CAmB9C,CAAC"}

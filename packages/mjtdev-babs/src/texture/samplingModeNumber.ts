@@ -1,5 +1,5 @@
 import { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
-import { TextureSamplingModeMap } from "./Textures";
+import type { TextureSamplingModeMap } from "./Textures";
 
 
 export const samplingModeNumber = (

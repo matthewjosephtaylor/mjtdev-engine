@@ -1,7 +1,7 @@
 import { isUndefined } from "@mjtdev/object";
 let depth = 0;
 const STYLE = "background: #222; color: #bada55";
-export let enabled = false;
+export const enabled = false;
 export const stopwatch = (label) => {
     const padding = "".padStart(depth * 2);
     depth += 1;

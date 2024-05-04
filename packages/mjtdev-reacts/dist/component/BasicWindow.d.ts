@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
-import { ReactCssProperties } from "../type/ReactTypes";
+import type { ReactNode } from "react";
+import type { ReactCssProperties } from "../type/ReactTypes";
 export declare const BasicWindow: ({ title, children, left, top, resizeable, style, }: {
-    style?: React.CSSProperties | undefined;
+    style?: import("react").CSSProperties | undefined;
     left?: string | undefined;
     top?: string | undefined;
     title?: string | undefined;

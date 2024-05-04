@@ -1,5 +1,6 @@
+import { TransformNode } from "@babylonjs/core/Meshes/transformNode";
+import type { Scene } from "@babylonjs/core/scene";
 import { isDefined } from "@mjtdev/object";
-import { Scene, TransformNode } from "babylonjs";
 
 export const getTransformNode = (scene: Scene, name: string): TransformNode => {
   const node = scene.getTransformNodeByName(name);

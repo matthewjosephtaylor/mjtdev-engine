@@ -57,9 +57,13 @@ export const attachUniversalCameraControls = (camera, options = {}) => {
                         if (isUndefined(m.material)) {
                             return;
                         }
-                        m.material.wireframe = false;
+                        if (m.material) {
+                            m.material.wireframe = false;
+                        }
                     });
-                    mesh.material.wireframe = true;
+                    if (mesh.material) {
+                        mesh.material.wireframe = true;
+                    }
                 }
             }
         },

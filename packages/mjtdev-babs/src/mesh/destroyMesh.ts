@@ -1,5 +1,4 @@
-import { isUndefined } from "@mjtdev/object";
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 
 export const destroyMesh = (
   scene: Scene,
@@ -16,12 +15,15 @@ export const destroyMesh = (
     disposeTextures = false,
   } = options;
   const mesh = scene.getMeshByName(name);
-  if (isUndefined(mesh)) {
+  if (!mesh) {
     return;
   }
   mesh.dispose(!recurse, false);
   if (disposeMaterials) {
     const material = mesh.material;
+    if (!material) {
+      return;
+    }
     material.name = `DISPOSED-${material.name}`;
     material?.dispose(true, disposeTextures);
     scene.removeMaterial(material);

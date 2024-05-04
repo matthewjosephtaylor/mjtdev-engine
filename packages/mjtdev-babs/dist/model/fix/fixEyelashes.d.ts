@@ -1,3 +1,3 @@
-import { Scene } from "babylonjs";
+import type { Scene } from "@babylonjs/core/scene";
 export declare const fixEyelashes: (scene: Scene) => void;
 //# sourceMappingURL=fixEyelashes.d.ts.map

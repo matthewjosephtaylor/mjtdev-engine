@@ -1,6 +1,6 @@
 import { Asserts } from "@mjtdev/assert";
 import { getMeshAsync } from "./getMeshAsync";
-export const getMeshInstanceAsync = async (scene, name, rootName, producer = () => undefined) => {
+export const getMeshInstanceAsync = async (scene, name, rootName, producer) => {
     return getMeshAsync(scene, name, async () => {
         const rootMesh = await getMeshAsync(scene, rootName, producer);
         Asserts.assertValue(rootMesh, () => {

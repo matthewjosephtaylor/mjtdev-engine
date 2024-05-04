@@ -1,7 +1,8 @@
-import { DynamicTexture, Scene } from "babylonjs";
-import { getTexture } from "./getTexture";
-import { DynamicTextureOptions } from "./Textures";
+import { DynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
+import type { Scene } from "@babylonjs/core/scene";
 import { TEXTURE_SAMPLING_MODES } from "./TEXTURE_SAMPLING_MODES";
+import type { DynamicTextureOptions } from "./Textures";
+import { getTexture } from "./getTexture";
 import { updateTexture } from "./updateTexture";
 
 export const getDynamicTexture = (
@@ -29,7 +30,7 @@ export const getDynamicTexture = (
     );
     if (init) {
       init(result.getContext());
-      result.update()
+      result.update();
     }
     return result;
   });

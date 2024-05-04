@@ -1,5 +1,4 @@
-import { Vec3 } from "@mjtdev/math";
-import { Camera } from "babylonjs";
+import type { Vec3 } from "@mjtdev/math";
 import { attachArcRotateCameraControls } from "./attachArcRotateCameraControls";
 import { attachUniversalCameraControls } from "./attachUniversalCameraControls";
 import { createTopDownCamera } from "./createTopDownCamera";
@@ -8,6 +7,7 @@ import { getCamera } from "./getCamera";
 import { getUniversalCamera } from "./getUniversalCamera";
 import { updateCamera } from "./updateCamera";
 
+import { Camera } from "@babylonjs/core/Cameras/camera";
 import { createDebugCamera } from "./createDebugCamera";
 
 export const CAMERA_MODES = {

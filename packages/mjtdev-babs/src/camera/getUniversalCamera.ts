@@ -1,6 +1,7 @@
-import { Scene, UniversalCamera } from "babylonjs";
+import { UniversalCamera } from "@babylonjs/core/Cameras/universalCamera";
+import type { Scene } from "@babylonjs/core/scene";
 import { v3 } from "../bab/v3";
-import { ArcRotateCameraOptions, UniversalCameraOptions } from "./Cameras";
+import type { UniversalCameraOptions } from "./Cameras";
 import { getCamera } from "./getCamera";
 import { updateCamera } from "./updateCamera";
 

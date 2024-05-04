@@ -1,9 +1,9 @@
-import { Scene, StandardMaterial } from "babylonjs";
-import { iff } from "@mjtdev/object";
-import { getTexture } from "../texture/getTexture";
-import { c3 } from "../bab/c3";
+import type { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import type { Scene } from "@babylonjs/core/scene";
 import { Colors } from "@mjtdev/color";
-import { AllMaterialOptions } from "./Materials";
+import { iff } from "@mjtdev/object";
+import { c3 } from "../bab/c3";
+import type { AllMaterialOptions } from "./Materials";
 
 export const updateStandardMaterial = (
   scene: Scene,
@@ -23,19 +23,19 @@ export const updateStandardMaterial = (
   } = options;
 
   iff(diffuseTexture, (value) => {
-    const texture = getTexture(scene, value, () => undefined);
+    const texture = scene.getTextureByName(value);
     material.diffuseTexture = texture;
   });
   iff(emissiveTexture, (value) => {
-    const texture = getTexture(scene, value, () => undefined);
+    const texture = scene.getTextureByName(value);
     material.emissiveTexture = texture;
   });
   iff(ambientTexture, (value) => {
-    const texture = getTexture(scene, value, () => undefined);
+    const texture = scene.getTextureByName(value);
     material.ambientTexture = texture;
   });
   iff(opacityTexture, (value) => {
-    const texture = getTexture(scene, value, () => undefined);
+    const texture = scene.getTextureByName(value);
     material.opacityTexture = texture;
   });
   iff(diffuseColor, (value) => {
