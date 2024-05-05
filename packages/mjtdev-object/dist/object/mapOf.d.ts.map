@@ -1,1 +1,1 @@
-{"version":3,"file":"mapOf.d.ts","sourceRoot":"","sources":["../../src/object/mapOf.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,KAAK,uGAQjB,CAAC"}
+{"version":3,"file":"mapOf.d.ts","sourceRoot":"","sources":["../../src/object/mapOf.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,KAAK,kDACX,OAAO,CAAC,EAAE,CAAC,CAAC,UACT,CAAC,GAAG,EAAE,CAAC,EAAE,KAAK,EAAE,CAAC,KAAK,CAAC,QAMhC,CAAC"}

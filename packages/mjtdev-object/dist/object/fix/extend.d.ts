@@ -1,3 +1,3 @@
 import { Fixed } from "./type/Fixed";
-export declare const extend: <T>(arr: T[], value: T) => Readonly<import("./type/Fixed").FixedBrand<T[]>> | undefined;
+export declare const extend: <T>(arr: T[], value: T) => Fixed<T[]> | undefined;
 //# sourceMappingURL=extend.d.ts.map

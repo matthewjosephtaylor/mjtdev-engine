@@ -1,1 +1,1 @@
-{"version":3,"file":"fix.d.ts","sourceRoot":"","sources":["../../../src/object/fix/fix.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,cAAc,CAAC;AAErC,eAAO,MAAM,GAAG,yEAKf,CAAC"}
+{"version":3,"file":"fix.d.ts","sourceRoot":"","sources":["../../../src/object/fix/fix.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,cAAc,CAAC;AAErC,eAAO,MAAM,GAAG,SAAU,CAAC,KAAG,MAAM,CAAC,CAAC,GAAG,SAKxC,CAAC"}

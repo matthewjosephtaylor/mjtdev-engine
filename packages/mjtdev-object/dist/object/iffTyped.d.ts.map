@@ -1,1 +1,1 @@
-{"version":3,"file":"iffTyped.d.ts","sourceRoot":"","sources":["../../src/object/iffTyped.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,QAAQ,+BACA,OAAO,oEAQ3B,CAAC"}
+{"version":3,"file":"iffTyped.d.ts","sourceRoot":"","sources":["../../src/object/iffTyped.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,QAAQ,uBACR,CAAC,KAAK,EAAE,OAAO,KAAK,KAAK,IAAI,CAAC,SAClC,CAAC,UACA,CAAC,CAAC,EAAE,CAAC,GAAG,CAAC,KAAK,CAAC,KACtB,CAAC,GAAG,SAKN,CAAC"}

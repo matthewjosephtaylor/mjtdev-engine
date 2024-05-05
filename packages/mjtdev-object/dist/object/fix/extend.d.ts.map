@@ -1,1 +1,1 @@
-{"version":3,"file":"extend.d.ts","sourceRoot":"","sources":["../../../src/object/fix/extend.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,cAAc,CAAC;AAErC,eAAO,MAAM,MAAM,yFAGlB,CAAC"}
+{"version":3,"file":"extend.d.ts","sourceRoot":"","sources":["../../../src/object/fix/extend.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,cAAc,CAAC;AAErC,eAAO,MAAM,MAAM,WAAY,CAAC,EAAE,SAAS,CAAC,KAAG,MAAM,CAAC,EAAE,CAAC,GAAG,SAG3D,CAAC"}

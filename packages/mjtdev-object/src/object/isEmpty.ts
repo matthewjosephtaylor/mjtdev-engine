@@ -1,6 +1,6 @@
 import { isUndefined } from "./isUndefined";
 
-export const isEmpty = (value: string | boolean | number) => {
+export const isEmpty = (value?: string | boolean | number) => {
   if (isUndefined(value)) {
     return true;
   }

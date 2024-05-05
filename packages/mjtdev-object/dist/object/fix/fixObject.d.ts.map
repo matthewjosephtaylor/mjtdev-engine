@@ -1,1 +1,1 @@
-{"version":3,"file":"fixObject.d.ts","sourceRoot":"","sources":["../../../src/object/fix/fixObject.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,cAAc,CAAC;AAGrC,eAAO,MAAM,SAAS;;;;cAYrB,CAAC"}
+{"version":3,"file":"fixObject.d.ts","sourceRoot":"","sources":["../../../src/object/fix/fixObject.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,cAAc,CAAC;AAGrC,eAAO,MAAM,SAAS,0BACf,CAAC;;;;cAWP,CAAC"}
