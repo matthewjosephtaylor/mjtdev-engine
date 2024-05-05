@@ -3,7 +3,7 @@ import { timesGen } from "./timesGen";
 import { isIterable } from "./type/isIterable";
 export declare const Objects: {
     isEmpty: (value?: string | number | boolean | undefined) => boolean;
-    isNotEmpty: (value?: string | undefined) => boolean;
+    isNotEmpty: (value?: string | number | boolean | undefined) => boolean;
     isIterator: <T>(maybe: unknown) => maybe is Iterator<T, any, undefined>;
     isArrayLike: <T_1>(maybe: unknown) => maybe is ArrayLike<T_1>;
     times: typeof times;

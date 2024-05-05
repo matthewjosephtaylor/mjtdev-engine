@@ -34,5 +34,5 @@ export declare const chain: <T_14>(initial: T_14, mappers: ((v: T_14) => T_14)[]
 }> | undefined) => Record<K_13, T_18[]>, timesGen: typeof import("@mjtdev/object/dist/object/timesGen").timesGen, isIterable: typeof import("@mjtdev/object/dist/object/type/isIterable").isIterable, isArrayLike: <T_1>(maybe: unknown) => maybe is ArrayLike<T_1>, iffBrowser: <T_19>(producer: () => T_19) => T_19 | undefined, isBrowser: () => boolean, toPromise: <T_20>(producer: (callback: () => void) => T_20) => Promise<T_20>, all: {
     <T_21>(values: Iterable<T_21 | PromiseLike<T_21>>): Promise<Awaited<T_21>[]>;
     <T_22 extends [] | readonly unknown[]>(values: T_22): Promise<{ -readonly [P in keyof T_22]: Awaited<T_22[P]>; }>;
-}, isFunction: (maybe: unknown) => maybe is Function, isEmpty: (value: string | number | boolean) => boolean, isNotEmpty: (value: string) => boolean, waitTimeout: (ms: number) => Promise<unknown>;
+}, isFunction: (maybe: unknown) => maybe is Function, isEmpty: (value?: string | number | boolean | undefined) => boolean, isNotEmpty: (value?: string | number | boolean | undefined) => boolean, waitTimeout: (ms: number) => Promise<unknown>;
 //# sourceMappingURL=index.d.ts.map
