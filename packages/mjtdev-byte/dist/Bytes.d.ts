@@ -3,7 +3,7 @@ import { toBase64 } from "./toBase64";
 export declare const Bytes: {
     toMsgPack: <T>(obj: T) => Uint8Array;
     msgPackToObject: <T_1>(bytes: ArrayLike<number>) => T_1;
-    typeOfBytes: (bytes: unknown) => "string" | "Blob" | "ArrayBuffer" | "ArrayBufferView" | "Array" | undefined;
+    typeOfBytes: (bytes: unknown) => "Blob" | "ArrayBuffer" | "string" | "ArrayBufferView" | "Array" | undefined;
     toDataUrl: (bytes: import(".").ByteLike) => Promise<string>;
     dataUrlToBlob: (dataUrl: string) => Blob | undefined;
     lengthOf: (bytes: import(".").ByteLike) => number | undefined;

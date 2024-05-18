@@ -1,5 +1,6 @@
-import { decode } from "@msgpack/msgpack";
+import { Packr } from "msgpackr";
 
 export const msgPackToObject = <T>(bytes: ArrayLike<number>) => {
-  return decode(bytes) as T;
+  const packr = new Packr({ structuredClone: true });
+  return packr.unpack(new Uint8Array(bytes)) as T;
 };
