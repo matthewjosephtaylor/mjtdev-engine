@@ -51,6 +51,9 @@ import { Objects } from "@mjtdev/object";
 
 // general convenience functions
 export const {
+  isErrorType,
+  tryValue,
+  orError,
   chain,
   entries,
   filter,
