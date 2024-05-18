@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 export declare const DropTarget: (props: {
     children: ReactNode;
-    action?: ((data: string) => void) | undefined;
-    dataType?: string | undefined;
-    dropEffect?: "link" | "none" | "copy" | "move" | undefined;
+    action?: (data: string) => void;
+    dataType?: string;
+    dropEffect?: "copy" | "link" | "move" | "none";
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=DropTarget.d.ts.map

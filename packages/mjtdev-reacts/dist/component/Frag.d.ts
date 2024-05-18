@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 export declare const Frag: ({ children, id, }: {
-    id?: string | undefined;
+    id?: string;
     children?: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const useFragId: () => string | undefined;

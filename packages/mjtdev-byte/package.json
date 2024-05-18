@@ -19,6 +19,7 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "@mjtdev/assert": "^1.0.0"
+    "@mjtdev/assert": "^1.0.0",
+    "@msgpack/msgpack": "^3.0.0-beta2"
   }
 }

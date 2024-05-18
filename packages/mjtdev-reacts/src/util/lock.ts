@@ -58,7 +58,7 @@ const drainLocksDownTo = <T>(
 export const lock = <T>(
   fn: LockFn<T>,
   options: Partial<{ maxCycles: number; cycleMs: number; name: string }> = {}
-): Promise<T> | T => {
+): Promise<T> => {
   const {
     cycleMs = 100,
     name = `anon-${crypto.randomUUID()}`,

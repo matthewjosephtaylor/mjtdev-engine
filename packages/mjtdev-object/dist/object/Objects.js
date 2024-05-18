@@ -25,6 +25,7 @@ import { mapValue } from "./map";
 import { mapOf } from "./mapOf";
 import { omit, omitUnsafe } from "./omit";
 import { orElse } from "./orElse";
+import { orError } from "./orError";
 import { removeUndefinedValues } from "./removeUndefinedValues";
 import { restOf } from "./restOf";
 import { safe } from "./safe";
@@ -38,8 +39,10 @@ import { toMany } from "./toMany";
 import { toMultiMap } from "./toMultiMap";
 import { toNumber } from "./toNumber";
 import { toPromise } from "./toPromise";
+import { tryValue } from "./tryValue";
 import { tuple0, tuple1, tuple2, tuple3, tuple4, tuple5 } from "./tuples";
 import { isArrayLike } from "./type/isArrayLike";
+import { isErrorType } from "./type/isErrorType";
 import { isFunction } from "./type/isFunction";
 import { isIterable } from "./type/isIterable";
 import { isIterator } from "./type/isIterator";
@@ -48,6 +51,9 @@ import { valueOf } from "./valueOf";
 import { values } from "./values";
 import { waitTimeout } from "./waitTimeout";
 export const Objects = {
+    orError,
+    tryValue,
+    isErrorType,
     isEmpty,
     isNotEmpty,
     isIterator,

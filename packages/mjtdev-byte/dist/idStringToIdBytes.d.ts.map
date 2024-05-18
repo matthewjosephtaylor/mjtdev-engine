@@ -1,1 +1,1 @@
-{"version":3,"file":"idStringToIdBytes.d.ts","sourceRoot":"","sources":["../src/idStringToIdBytes.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,iBAAiB;QAAkB,MAAM;gBAgBrD,CAAC"}
+{"version":3,"file":"idStringToIdBytes.d.ts","sourceRoot":"","sources":["../src/idStringToIdBytes.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,iBAAiB,WAAY;IAAE,EAAE,EAAE,MAAM,CAAC;CAAE,eAgBxD,CAAC"}

@@ -8,9 +8,9 @@ export type IdNode = [string, ReactNode];
 export declare const useDesk: () => DeskCtx | undefined;
 export declare const useUpdateDesk: () => React.Dispatch<React.SetStateAction<DeskCtx>> | undefined;
 export declare const Desk: ({ children, routeTable, initialPath, index, }: {
-    initialPath?: string | undefined;
+    initialPath?: string;
     children?: ReactNode;
-    routeTable?: RouteTable | undefined;
+    routeTable?: RouteTable;
     index?: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Desk.d.ts.map

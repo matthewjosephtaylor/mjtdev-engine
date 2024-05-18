@@ -1,1 +1,1 @@
-{"version":3,"file":"RecordToGrid.d.ts","sourceRoot":"","sources":["../../src/component/RecordToGrid.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAoB,MAAM,OAAO,CAAC;AAGzC,eAAO,MAAM,YAAY;;6CAuBxB,CAAC"}
+{"version":3,"file":"RecordToGrid.d.ts","sourceRoot":"","sources":["../../src/component/RecordToGrid.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAoB,MAAM,OAAO,CAAC;AAGzC,eAAO,MAAM,YAAY,0CAEtB;IACD,KAAK,EAAE,OAAO,MAAM,EAAE,CAAC,CAAC,CAAC;CAC1B,4CAmBA,CAAC"}

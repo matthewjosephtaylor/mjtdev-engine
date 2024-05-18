@@ -1,1 +1,1 @@
-{"version":3,"file":"assignMediaTypeToBlob.d.ts","sourceRoot":"","sources":["../src/assignMediaTypeToBlob.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,qBAAqB,4BAC1B,IAAI;;CAIX,CAAC"}
+{"version":3,"file":"assignMediaTypeToBlob.d.ts","sourceRoot":"","sources":["../src/assignMediaTypeToBlob.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,qBAAqB,4BAC1B,IAAI,aACC,EAAE,KACZ,IAAI,GAAG;IAAE,IAAI,EAAE,EAAE,CAAA;CAEnB,CAAC"}

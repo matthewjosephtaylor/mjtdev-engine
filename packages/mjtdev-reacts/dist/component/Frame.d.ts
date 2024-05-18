@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 export declare const Frame: ({ children, routes, type, initialPath, index, }: {
     index?: ReactNode;
-    initialPath?: string | undefined;
+    initialPath?: string;
     children: ReactNode;
     routes?: ReactNode;
-    type?: "memory" | "hash" | undefined;
+    type?: "hash" | "memory";
 }) => JSX.Element;
 //# sourceMappingURL=Frame.d.ts.map

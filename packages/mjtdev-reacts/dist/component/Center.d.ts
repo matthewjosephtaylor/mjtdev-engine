@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 export declare const Center: ({ children, className, style, }: {
-    className?: string | undefined;
+    className?: string;
     children?: ReactNode;
-    style?: React.CSSProperties | undefined;
+    style?: React.CSSProperties;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Center.d.ts.map

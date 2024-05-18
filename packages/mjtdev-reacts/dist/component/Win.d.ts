@@ -7,12 +7,12 @@ export declare const UPDATE_WIN_CTX: React.Context<UpdateWinCtx | undefined>;
 export declare const useWinCtx: () => WinCtx | undefined;
 export declare const useUpdateWinCtx: () => UpdateWinCtx | undefined;
 export declare const Win: ({ children, style, title, controls, className, clickBringsToFont, resizeable, }: {
-    resizeable?: boolean | undefined;
-    clickBringsToFont?: boolean | undefined;
-    className?: string | undefined;
+    resizeable?: boolean;
+    clickBringsToFont?: boolean;
+    className?: string;
     children?: ReactNode;
-    style?: React.CSSProperties | undefined;
-    title?: string | undefined;
-    controls?: FrameControls | undefined;
+    style?: CSSProperties;
+    title?: string;
+    controls?: FrameControls;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Win.d.ts.map

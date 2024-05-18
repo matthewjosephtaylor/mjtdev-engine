@@ -1,8 +1,8 @@
 import type { ByteLike } from "./type/ByteLike";
 import type { ADDRESS_ALGORITHM } from "./ADDRESS_ALGORITHM";
 export declare const addressStringOf: ({ bytes, algorithm, radix, }: {
-    algorithm?: ADDRESS_ALGORITHM | undefined;
+    algorithm?: ADDRESS_ALGORITHM;
     bytes: ByteLike;
-    radix?: number | undefined;
+    radix?: number;
 }) => Promise<string>;
 //# sourceMappingURL=addressStringOf.d.ts.map

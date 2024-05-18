@@ -23,5 +23,8 @@ export declare const chain: <T>(initial: T, mappers: ((v: T) => T)[]) => T, entr
 }>) => Record<K, T[]>, timesGen: typeof import("./object/timesGen").timesGen, isIterable: typeof import("./object/type/isIterable").isIterable, isArrayLike: <T>(maybe: unknown) => maybe is ArrayLike<T>, iffBrowser: <T>(producer: () => T) => T | undefined, isBrowser: () => boolean, toPromise: <T>(producer: (callback: () => void) => T) => Promise<T>, all: {
     <T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>;
     <T_1 extends [] | readonly unknown[]>(values: T_1): Promise<{ -readonly [P in keyof T_1]: Awaited<T_1[P]>; }>;
-}, isFunction: (maybe: unknown) => maybe is Function, isEmpty: (value?: string | number | boolean | undefined) => boolean, isNotEmpty: (value?: string | number | boolean | undefined) => boolean;
+}, isFunction: (maybe: unknown) => maybe is Function, isEmpty: (value?: string | number | boolean | undefined) => boolean, isNotEmpty: (value?: string | number | boolean | undefined) => boolean, tryValue: <T>(value: Error | T, message?: string | undefined) => T, orError: <T>(f: () => T, options?: Partial<{
+    message?: string | undefined;
+    cause?: unknown;
+}>) => Error | T, isErrorType: (value: unknown) => value is Error;
 //# sourceMappingURL=index.d.ts.map

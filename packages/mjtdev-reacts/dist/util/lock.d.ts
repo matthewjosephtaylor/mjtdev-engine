@@ -14,5 +14,5 @@ export declare const lock: <T>(fn: LockFn<T>, options?: Partial<{
     maxCycles: number;
     cycleMs: number;
     name: string;
-}>) => T | Promise<T>;
+}>) => Promise<T>;
 //# sourceMappingURL=lock.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"msgPackToObject.js","sourceRoot":"","sources":["../src/msgPackToObject.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,kBAAkB,CAAC;AAE1C,MAAM,CAAC,MAAM,eAAe,GAAG,CAAI,KAAwB,EAAE,EAAE;IAC7D,OAAO,MAAM,CAAC,KAAK,CAAM,CAAC;AAC5B,CAAC,CAAC"}

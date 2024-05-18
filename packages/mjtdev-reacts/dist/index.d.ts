@@ -72,5 +72,5 @@ export declare const useClickOutside: typeof import("./hook/useClickOutside").us
             preventDefault: boolean;
         };
     }>;
-}> | undefined) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof import("./hook/useCustomEventListener").useCustomEventListener, useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
+}> | undefined) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof import("./hook/useCustomEventListener").useCustomEventListener, useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: Document | HTMLElement | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
 //# sourceMappingURL=index.d.ts.map

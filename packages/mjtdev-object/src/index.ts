@@ -51,4 +51,7 @@ export const {
   isFunction,
   isEmpty,
   isNotEmpty,
+  tryValue,
+  orError,
+  isErrorType,
 } = Objects;
