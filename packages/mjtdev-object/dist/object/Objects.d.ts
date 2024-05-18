@@ -2,6 +2,7 @@ import { times } from "./times";
 import { timesGen } from "./timesGen";
 import { isIterable } from "./type/isIterable";
 export declare const Objects: {
+    isErrorLike: (maybe: unknown) => maybe is import("..").ErrorLike;
     orError: <T>(f: () => T, options?: Partial<{
         message?: string | undefined;
         cause?: unknown;

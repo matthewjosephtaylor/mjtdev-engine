@@ -42,6 +42,7 @@ import { toPromise } from "./toPromise";
 import { tryValue } from "./tryValue";
 import { tuple0, tuple1, tuple2, tuple3, tuple4, tuple5 } from "./tuples";
 import { isArrayLike } from "./type/isArrayLike";
+import { isErrorLike } from "./type/isErrorLike";
 import { isErrorType } from "./type/isErrorType";
 import { isFunction } from "./type/isFunction";
 import { isIterable } from "./type/isIterable";
@@ -51,6 +52,7 @@ import { valueOf } from "./valueOf";
 import { values } from "./values";
 import { waitTimeout } from "./waitTimeout";
 export const Objects = {
+    isErrorLike,
     orError,
     tryValue,
     isErrorType,

@@ -1,21 +1,23 @@
-export * from "./object/type/TypeGuard";
-export * from "./object/type/Producer";
-export * from "./object/type/Nullable";
 export * from "./object/brand/type/Brand";
+export * from "./object/type/ErrorLike";
+export * from "./object/type/Nullable";
+export * from "./object/type/Producer";
+export * from "./object/type/TypeGuard";
 
-export * from "./object/Objects";
 export * from "./object/Arrays";
+export * from "./object/Objects";
 
 export * from "./object/fix/Fixes";
-export * from "./object/fix/type/Fixed";
-export * from "./object/fix/fix";
-export * from "./object/fix/fixObject";
-export * from "./object/fix/fixArray";
 export * from "./object/fix/extend";
+export * from "./object/fix/fix";
+export * from "./object/fix/fixArray";
+export * from "./object/fix/fixObject";
+export * from "./object/fix/type/Fixed";
 
 import { Objects } from "./object/Objects";
 
 export const {
+  isErrorLike,
   chain,
   entries,
   filter,
