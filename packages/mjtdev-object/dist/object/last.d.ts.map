@@ -1,1 +1,1 @@
-{"version":3,"file":"last.d.ts","sourceRoot":"","sources":["../../src/object/last.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,IAAI,WAAY,CAAC,EAAE,KAAG,CAAC,GAAG,SAKtC,CAAC"}
+{"version":3,"file":"last.d.ts","sourceRoot":"","sources":["../../src/object/last.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,IAAI,WAAY,SAAS,CAAC,EAAE,CAAC,KAAG,CAAC,GAAG,SAKhD,CAAC"}

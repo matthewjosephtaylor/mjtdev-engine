@@ -1,2 +1,2 @@
-export declare const last: <T>(obj: T[]) => T | undefined;
+export declare const last: <T>(obj: Readonly<T[]>) => T | undefined;
 //# sourceMappingURL=last.d.ts.map

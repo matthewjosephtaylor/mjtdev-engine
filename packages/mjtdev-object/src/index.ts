@@ -16,6 +16,8 @@ export * from "./object/fix/type/Fixed";
 
 import { Objects } from "./object/Objects";
 
+export * from "./key/Keys";
+
 export const {
   isErrorLike,
   chain,

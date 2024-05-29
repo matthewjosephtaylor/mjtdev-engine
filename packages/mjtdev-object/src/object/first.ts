@@ -1,9 +1,9 @@
 import { isUndefined } from "./isUndefined";
 import { isIterator } from "./type/isIterator";
-import { TypeGuard } from "./type/TypeGuard";
+import type { TypeGuard } from "./type/TypeGuard";
 
 export const first = <O, T extends O>(
-  obj: O[] | O | Iterator<O, T>,
+  obj: Readonly<O[] | O | Iterator<O, T>>,
   typeGuard: TypeGuard<T> = (v): v is T => true
 ): T | undefined => {
   if (isUndefined(obj)) {

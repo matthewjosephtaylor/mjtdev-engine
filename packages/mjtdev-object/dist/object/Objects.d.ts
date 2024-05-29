@@ -14,8 +14,8 @@ export declare const Objects: {
     isIterator: <T_2>(maybe: unknown) => maybe is Iterator<T_2, any, undefined>;
     isArrayLike: <T_3>(maybe: unknown) => maybe is ArrayLike<T_3>;
     times: typeof times;
-    first: <O, T_4 extends O>(obj: O | Iterator<O, T_4, undefined> | O[], typeGuard?: import("..").TypeGuard<T_4>) => T_4 | undefined;
-    last: <T_5>(obj: T_5[]) => T_5 | undefined;
+    first: <O, T_4 extends O>(obj: Readonly<O | Iterator<O, T_4, undefined> | O[]>, typeGuard?: import("..").TypeGuard<T_4>) => T_4 | undefined;
+    last: <T_5>(obj: readonly T_5[]) => T_5 | undefined;
     fix: <T_6>(v: T_6) => Readonly<import("..").FixedBrand<T_6>> | undefined;
     iff: <T_7, R>(value: T_7, mapper: (v: NonNullable<T_7>) => R) => R | undefined;
     iffTyped: <T_8, R_1, G>(typeGuard: (maybe: unknown) => maybe is G, value: T_8, mapper: (v: T_8 & G) => R_1) => R_1 | undefined;
@@ -60,7 +60,7 @@ export declare const Objects: {
     }>) => Promise<R_3 | undefined>;
     valueOf: <T_18>(valueProducer: import("..").ValueProducer<T_18>) => T_18;
     mapValue: <T_19, R_4>(value: T_19, mapper: (value: T_19) => R_4) => R_4;
-    headOf: <O, T_4 extends O>(obj: O | Iterator<O, T_4, undefined> | O[], typeGuard?: import("..").TypeGuard<T_4>) => T_4 | undefined;
+    headOf: <O, T_4 extends O>(obj: Readonly<O | Iterator<O, T_4, undefined> | O[]>, typeGuard?: import("..").TypeGuard<T_4>) => T_4 | undefined;
     tailOf: <O_11>(obj: O_11[]) => O_11[] | undefined;
     restOf: <O_11>(obj: O_11[]) => O_11[] | undefined;
     toMultiMap: <K_13 extends string | number, T_20>(maps: Record<K_13, T_20>[], options?: Partial<{

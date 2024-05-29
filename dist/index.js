@@ -14,7 +14,7 @@ export { Inputs, } from "@mjtdev/input";
 export * from "@mjtdev/math";
 export * from "@mjtdev/nlp";
 export * from "@mjtdev/noise";
-export { Arrays, Fixes, Objects, } from "@mjtdev/object";
+export { Arrays, Keys, Fixes, Objects, } from "@mjtdev/object";
 export * from "@mjtdev/parse";
 export * from "@mjtdev/physics";
 export * from "@mjtdev/random";

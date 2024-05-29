@@ -23,6 +23,7 @@ export * from "@mjtdev/nlp";
 export * from "@mjtdev/noise";
 export {
   Arrays,
+  Keys,
   Brand,
   Fixed,
   FixedArray,
