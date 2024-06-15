@@ -1,5 +1,5 @@
 import { toMessage } from "./toMessage";
-import { AssertionMessage } from "./type/AssertionMessage";
+import type { AssertionMessage } from "./type/AssertionMessage";
 
 export function assertType<T>(
   value: unknown,

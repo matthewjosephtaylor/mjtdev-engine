@@ -1,11 +1,11 @@
 import { assert } from "./assert";
-import { AssertionMessage } from "./type/AssertionMessage";
 import { isValue } from "./isValue";
+import type { AssertionMessage } from "./type/AssertionMessage";
 
 export function assertValue<T>(
   maybe: T,
   message: AssertionMessage = "Assertion failed: Required value not defined"
 ): NonNullable<T> {
   assert(isValue(maybe), message);
-  return maybe;
+  return maybe as NonNullable<T>;
 }

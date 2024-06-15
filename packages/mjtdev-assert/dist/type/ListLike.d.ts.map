@@ -1,1 +1,1 @@
-{"version":3,"file":"ListLike.d.ts","sourceRoot":"","sources":["../../src/type/ListLike.ts"],"names":[],"mappings":"AACA,MAAM,MAAM,QAAQ,GAAG,SAAS,CAAC,OAAO,CAAC,GAAG,eAAe,GAAG,eAAe,CAAC"}
+{"version":3,"file":"ListLike.d.ts","sourceRoot":"","sources":["../../src/type/ListLike.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,QAAQ,GAChB,SAAS,CAAC,OAAO,CAAC,GAClB,eAAe,GACf,eAAe,GACf;IAAE,MAAM,EAAE,MAAM,CAAC;IAAC,CAAC,KAAK,EAAE,MAAM,GAAG,OAAO,CAAA;CAAE,CAAC"}

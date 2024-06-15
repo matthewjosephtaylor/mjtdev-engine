@@ -8,7 +8,7 @@ export declare const Asserts: {
     assertValue: typeof assertValue;
     assertEqual: <T>(a: T, b: T, message?: import("./type/AssertionMessage").AssertionMessage) => void;
     assertNotEqual: <T_1>(a: T_1, b: T_1, message?: import("./type/AssertionMessage").AssertionMessage) => void;
-    assertEqualElements: (a: import("./type/ListLike").ListLike, b: import("./type/ListLike").ListLike, message?: import("./type/AssertionMessage").AssertionMessage) => void;
+    assertEqualElements: (a: import("./type/ListLike").ListLike, b: import("./type/ListLike").ListLike, message?: import("./type/AssertionMessage").AssertionMessage) => never;
     assertType: typeof assertType;
 };
 //# sourceMappingURL=Asserts.d.ts.map
