@@ -14,6 +14,7 @@ export { InputListenOptions, Inputs, KeyActions, MouseActionEvent, MouseActions,
 export * from "@mjtdev/math";
 export * from "@mjtdev/nlp";
 export * from "@mjtdev/noise";
+export * from "@mjtdev/message";
 export { Arrays, Keys, Brand, Fixed, FixedArray, FixedBrand, Fixes, Nullable, Objects, Producer, Tuple0, Tuple1, Tuple2, Tuple3, Tuple4, Tuple5, TypeGuard, ValueProducer, ErrorLike, } from "@mjtdev/object";
 export * from "@mjtdev/parse";
 export * from "@mjtdev/physics";

@@ -12,13 +12,14 @@
     "build-ts": "tsc -b",
     "build-esbuild": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
     "build-types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
-    "watch": "watch ./src 'npm run build'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm pack && mv mjtdev-engine-*.tgz ~/CCSM/code/nonverbal-realtime/vendor/"
+    "watch": "watch ./src 'npm run build'"
   },
   "keywords": [],
   "author": "Matt Taylor @mjtdev",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "peerDependencies": {
+    "nats.ws": "^1.27.0"
+  },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.36.0",
     "@rollup/plugin-babel": "^6.0.3",
@@ -42,7 +43,7 @@
     "ts-loader": "^9.4.2",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "types-webpack-bundler": "^1.0.2",
-    "typescript": "^5.3.2",
+    "typescript": "^5.5.2",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1",
     "webpack-node-externals": "^3.0.0"
@@ -70,6 +71,7 @@
     "@mjtdev/cache",
     "@mjtdev/stat",
     "@mjtdev/html",
-    "@mjtdev/parse"
+    "@mjtdev/parse",
+    "@mjtdev/message"
   ]
 }

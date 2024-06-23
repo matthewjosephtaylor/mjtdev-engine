@@ -5,6 +5,7 @@ const sharedConfig = {
   entryPoints: ["src/index.ts"],
   bundle: true,
   minify: false,
+  external: ['crypto']
   // external: Object.keys(dependencies).concat(Object.keys(peerDependencies)),
 };
 
