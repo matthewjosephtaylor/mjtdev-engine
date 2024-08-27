@@ -1,1 +1,1 @@
-{"version":3,"file":"iffBrowser.d.ts","sourceRoot":"","sources":["../../src/object/iffBrowser.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,UAAU,gBAAiB,MAAM,CAAC,kBAE9C,CAAC"}
+{"version":3,"file":"iffBrowser.d.ts","sourceRoot":"","sources":["../../src/object/iffBrowser.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,UAAU,GAAI,CAAC,YAAY,MAAM,CAAC,kBAE9C,CAAC"}

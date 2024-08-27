@@ -1,1 +1,1 @@
-{"version":3,"file":"toPromise.d.ts","sourceRoot":"","sources":["../../src/object/toPromise.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,SAAS,gBAAiB,CAAC,QAAQ,EAAE,MAAM,IAAI,KAAK,CAAC,KAAG,QAAQ,CAAC,CAS7E,CAAC"}
+{"version":3,"file":"toPromise.d.ts","sourceRoot":"","sources":["../../src/object/toPromise.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,SAAS,GAAI,CAAC,YAAY,CAAC,QAAQ,EAAE,MAAM,IAAI,KAAK,CAAC,KAAG,OAAO,CAAC,CAAC,CAS7E,CAAC"}

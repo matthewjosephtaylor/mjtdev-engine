@@ -18,6 +18,8 @@ import { Objects } from "./object/Objects";
 
 export * from "./key/Keys";
 
+export * from "./object/typebox/TypeBoxes";
+
 export const {
   isErrorLike,
   chain,
@@ -58,4 +60,5 @@ export const {
   tryValue,
   orError,
   isErrorType,
+  createSettler,
 } = Objects;

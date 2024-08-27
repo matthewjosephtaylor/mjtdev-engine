@@ -3,10 +3,12 @@ export type ConnectionMap<Req = unknown, Resp = unknown, Header extends string =
     response: Resp;
     headers?: Record<Header, string>;
 }>;
+export type ConnectionSpecialHeader = "abort-subject";
 export type ConnectionListener<CM extends ConnectionMap, S extends keyof CM, E extends Record<string, string> = Record<string, string>> = (props: {
     env: Readonly<Partial<E>>;
     detail: CM[S]["request"];
     headers?: CM[S]["headers"];
+    signal: AbortSignal;
     send: (response?: CM[S]["response"], options?: Partial<{
         code: number;
         codeDescription: string;

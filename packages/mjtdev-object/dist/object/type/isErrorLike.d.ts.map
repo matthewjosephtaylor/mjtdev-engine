@@ -1,1 +1,1 @@
-{"version":3,"file":"isErrorLike.d.ts","sourceRoot":"","sources":["../../../src/object/type/isErrorLike.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAE7C,eAAO,MAAM,WAAW,UAAW,OAAO,uBAQzC,CAAC"}
+{"version":3,"file":"isErrorLike.d.ts","sourceRoot":"","sources":["../../../src/object/type/isErrorLike.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAE7C,eAAO,MAAM,WAAW,UAAW,OAAO,KAAG,KAAK,IAAI,SAQrD,CAAC"}

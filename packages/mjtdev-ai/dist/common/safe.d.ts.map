@@ -1,1 +1,1 @@
-{"version":3,"file":"safe.d.ts","sourceRoot":"","sources":["../../src/common/safe.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,IAAI,oCAEE,OAAO,oCAUzB,CAAC"}
+{"version":3,"file":"safe.d.ts","sourceRoot":"","sources":["../../src/common/safe.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,IAAI,GAAI,CAAC,KACjB,MAAM,CAAC,YACD,CAAC,KAAK,EAAE,OAAO,KAAK,CAAC,GAAG,SAAS,KAIzC,CAAC,GAAG,SAMN,CAAC"}

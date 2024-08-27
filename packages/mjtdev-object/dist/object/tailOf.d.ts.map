@@ -1,1 +1,1 @@
-{"version":3,"file":"tailOf.d.ts","sourceRoot":"","sources":["../../src/object/tailOf.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,MAAM,WAAY,CAAC,EAAE,oBAKjC,CAAC"}
+{"version":3,"file":"tailOf.d.ts","sourceRoot":"","sources":["../../src/object/tailOf.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,MAAM,GAAI,CAAC,OAAO,CAAC,EAAE,oBAKjC,CAAC"}

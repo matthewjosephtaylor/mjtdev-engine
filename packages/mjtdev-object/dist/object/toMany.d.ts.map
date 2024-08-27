@@ -1,1 +1,1 @@
-{"version":3,"file":"toMany.d.ts","sourceRoot":"","sources":["../../src/object/toMany.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,MAAM,WAAY,CAAC,GAAG,CAAC,EAAE,GAAG,SAAS,CAAC,CAAC,KAAG,CAAC,EAQvD,CAAC"}
+{"version":3,"file":"toMany.d.ts","sourceRoot":"","sources":["../../src/object/toMany.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,MAAM,GAAI,CAAC,OAAO,CAAC,GAAG,CAAC,EAAE,GAAG,QAAQ,CAAC,CAAC,CAAC,KAAG,CAAC,EAQvD,CAAC"}

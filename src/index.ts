@@ -21,7 +21,7 @@ export {
 export * from "@mjtdev/math";
 export * from "@mjtdev/nlp";
 export * from "@mjtdev/noise";
-export * from "@mjtdev/message";
+// export * from "@mjtdev/message";
 export {
   Arrays,
   Keys,
@@ -51,6 +51,7 @@ export * from "@mjtdev/stat";
 export * from "@mjtdev/string";
 
 import { Objects } from "@mjtdev/object";
+export { TypeBoxes, TypeInfo } from "@mjtdev/object";
 
 // general convenience functions
 export const {
@@ -94,4 +95,5 @@ export const {
   isEmpty,
   isNotEmpty,
   waitTimeout,
+  toBoolean,
 } = Objects;

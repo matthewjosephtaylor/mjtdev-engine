@@ -7,6 +7,8 @@ export type ConnectionMap<
   { request: Req; response: Resp; headers?: Record<Header, string> }
 >;
 
+export type ConnectionSpecialHeader = "abort-subject";
+
 export type ConnectionListener<
   CM extends ConnectionMap,
   S extends keyof CM,
@@ -15,8 +17,7 @@ export type ConnectionListener<
   env: Readonly<Partial<E>>;
   detail: CM[S]["request"];
   headers?: CM[S]["headers"];
-  // setHeader: (key: keyof CM[S]["headers"], value: string) => void;
-  // setCode: (code: number, description: string) => void;
+  signal: AbortSignal;
   send: (
     response?: CM[S]["response"],
     options?: Partial<{

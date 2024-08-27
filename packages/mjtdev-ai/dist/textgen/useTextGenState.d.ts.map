@@ -1,1 +1,1 @@
-{"version":3,"file":"useTextGenState.d.ts","sourceRoot":"","sources":["../../src/textgen/useTextGenState.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,aAAa,EAAE,MAAM,uBAAuB,CAAC;AAC3D,OAAO,KAAK,EAAE,eAAe,EAAE,MAAM,yBAAyB,CAAC;AAE/D,eAAO,MAAM,eAAe;;;;;;GASzB,CAAC"}
+{"version":3,"file":"useTextGenState.d.ts","sourceRoot":"","sources":["../../src/textgen/useTextGenState.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,aAAa,EAAE,MAAM,uBAAuB,CAAC;AAC3D,OAAO,KAAK,EAAE,eAAe,EAAE,MAAM,yBAAyB,CAAC;AAE/D,eAAO,MAAM,eAAe;;;;mBAML,OAAO,CAAC,aAAa,CAAC;aAEpB,eAAe;GACrC,CAAC"}

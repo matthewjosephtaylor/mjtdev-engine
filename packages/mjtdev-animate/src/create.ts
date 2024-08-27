@@ -1,7 +1,7 @@
-import { AnimateState } from "./type/AnimateState";
-import { AnimationLoopConfig } from "./type/AnimationLoopConfig";
-import { Tick } from "./type/Tick";
-import { Ticker } from "./type/Ticker";
+import type { AnimateState } from "./type/AnimateState";
+import type { AnimationLoopConfig } from "./type/AnimationLoopConfig";
+import type { Tick } from "./type/Tick";
+import type { Ticker } from "./type/Ticker";
 
 export const create = ({
   ticksPerSecond = 60,

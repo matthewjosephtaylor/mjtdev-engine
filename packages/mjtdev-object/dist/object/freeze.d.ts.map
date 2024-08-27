@@ -1,1 +1,1 @@
-{"version":3,"file":"freeze.d.ts","sourceRoot":"","sources":["../../src/object/freeze.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,MAAM,SAAU,CAAC,KAAG,SAAS,CAAC,GAAG,SAAS,CAKtD,CAAC"}
+{"version":3,"file":"freeze.d.ts","sourceRoot":"","sources":["../../src/object/freeze.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,MAAM,GAAI,CAAC,KAAK,CAAC,KAAG,QAAQ,CAAC,CAAC,GAAG,SAAS,CAKtD,CAAC"}

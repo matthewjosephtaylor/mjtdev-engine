@@ -1,4 +1,4 @@
-import { isUndefined, toMany } from "@mjtdev/object";
+import { isDefined, isUndefined, toMany } from "@mjtdev/object";
 import * as msgpack from "@msgpack/msgpack";
 import { RequestStrategy, connect } from "nats.ws";
 import { connectListenerToSubscription } from "./connectListenerToSubscription";
@@ -34,6 +34,13 @@ export const createConnection = async ({ server, subscribers = {}, options = {},
             const requestMsg = msgpack.encode(request);
             const { timeoutMs = 60 * 1000 } = options;
             const hs = recordToNatsHeaders(headers);
+            if (isDefined(signal)) {
+                const abortSubject = `abort.${Date.now()}.${crypto.randomUUID()}`;
+                hs?.set("abort-subject", abortSubject);
+                signal.addEventListener("abort", () => {
+                    connection.publish(abortSubject);
+                });
+            }
             const iterable = await connection.requestMany(subject, requestMsg, {
                 maxWait: timeoutMs,
                 headers: hs,

@@ -1,7 +1,6 @@
 import { isUndefined } from "@mjtdev/object";
 import type { Msg } from "nats.ws";
 
-
 export const natsHeadersToRecord = (headers?: Msg["headers"]) => {
   if (isUndefined(headers)) {
     return undefined;

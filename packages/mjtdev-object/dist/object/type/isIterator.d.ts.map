@@ -1,1 +1,1 @@
-{"version":3,"file":"isIterator.d.ts","sourceRoot":"","sources":["../../../src/object/type/isIterator.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,UAAU,aAAc,OAAO,yCAG3C,CAAC"}
+{"version":3,"file":"isIterator.d.ts","sourceRoot":"","sources":["../../../src/object/type/isIterator.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,UAAU,GAAI,CAAC,SAAS,OAAO,KAAG,KAAK,IAAI,QAAQ,CAAC,CAAC,CAGjE,CAAC"}

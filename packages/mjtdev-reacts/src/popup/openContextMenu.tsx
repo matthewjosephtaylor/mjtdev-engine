@@ -1,5 +1,5 @@
-import { CSSProperties } from "react";
-import { ActionMap } from "./ActionMap";
+import type { CSSProperties } from "react";
+import type { ActionMap } from "./ActionMap";
 import { ContextMenu } from "./ContextMenu";
 import { openPopup } from "./openPopup";
 

@@ -1,1 +1,1 @@
-{"version":3,"file":"textgen.d.ts","sourceRoot":"","sources":["../../src/textgen/textgen.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,aAAa,EAAE,MAAM,uBAAuB,CAAC;AAG3D,eAAO,MAAM,OAAO,WACV,MAAM,mBACE,QAAQ,aAAa,CAAC,KACrC,QAAQ,MAAM,CAyChB,CAAC"}
+{"version":3,"file":"textgen.d.ts","sourceRoot":"","sources":["../../src/textgen/textgen.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,aAAa,EAAE,MAAM,uBAAuB,CAAC;AAG3D,eAAO,MAAM,OAAO,WACV,MAAM,mBACE,OAAO,CAAC,aAAa,CAAC,KACrC,OAAO,CAAC,MAAM,CAyChB,CAAC"}

@@ -34,7 +34,22 @@ export const connectListenerToSubscription = async <
       const detail = msgpack.decode(
         new Uint8Array(message.data)
       ) as CM[S]["request"];
-      const headers = natsHeadersToRecord(message.headers) as CM[S]["headers"];
+      const requestHeaders = natsHeadersToRecord(
+        message.headers
+      ) as CM[S]["headers"];
+      const abortController = new AbortController();
+      if (isDefined(requestHeaders?.["abort-subject"])) {
+        const abortSubject = requestHeaders["abort-subject"];
+        const abortSubscription = connection.subscribe(abortSubject, {
+          max: 1,
+          callback: () => {
+            console.log("aborting!!!!");
+            abortController.abort();
+            abortSubscription.unsubscribe();
+            message.respond(); // Acknowledge the abort
+          },
+        });
+      }
       const send = (
         response?: CM[S]["response"],
         options: Partial<{
@@ -43,23 +58,22 @@ export const connectListenerToSubscription = async <
           headers: Record<string, string>;
         }> = {}
       ) => {
-        const hs = natsHeaders(options.code, options.codeDescription);
+        const responseHeaders = natsHeaders(
+          options.code,
+          options.codeDescription
+        );
         if (isDefined(options.headers)) {
           for (const [key, value] of Object.entries(options.headers)) {
-            hs.set(key, value);
+            responseHeaders.set(key, value);
           }
         }
         if (isUndefined(response)) {
           connection.publish(message.reply!);
-
-          // message.respond(new Uint8Array(new ArrayBuffer(0)), {
-          //   headers: hs,
-          // });
           return;
         }
         const responseMsg = msgpack.encode(response);
         message.respond(responseMsg, {
-          headers: hs,
+          headers: responseHeaders,
         });
       };
       const sendError = async (
@@ -76,32 +90,26 @@ export const connectListenerToSubscription = async <
           error,
           extra: [message.subject],
         });
-        const hs = natsHeaders(
+        const responseHeaders = natsHeaders(
           options.code ?? 500,
           options.codeDescription ?? "Error"
         );
         if (isDefined(options.headers)) {
           for (const [key, value] of Object.entries(options.headers)) {
-            hs.set(key, value);
+            responseHeaders.set(key, value);
           }
         }
         message.respond(msgpack.encode(errorDetail), {
-          headers: hs,
+          headers: responseHeaders,
         });
       };
       const result = await listener({
         detail,
-        headers,
+        headers: requestHeaders,
         env,
+        signal: abortController.signal,
         send,
         sendError,
-        // setHeader: (key, value) => {
-        //   hs.set(key as string, value);
-        // },
-        // setCode: (code, description) => {
-        //   responseHeaders.code = code;
-        //   responseHeaders.description = description;
-        // },
       });
       const reply = message.reply;
       if (isUndefined(reply)) {

@@ -1,1 +1,1 @@
-{"version":3,"file":"map.d.ts","sourceRoot":"","sources":["../../src/object/map.ts"],"names":[],"mappings":"AACA,eAAO,MAAM,QAAQ,gBAAiB,CAAC,UAAU,CAAC,KAAK,EAAE,CAAC,KAAK,CAAC,MAE/D,CAAC"}
+{"version":3,"file":"map.d.ts","sourceRoot":"","sources":["../../src/object/map.ts"],"names":[],"mappings":"AACA,eAAO,MAAM,QAAQ,GAAI,CAAC,EAAE,CAAC,SAAS,CAAC,UAAU,CAAC,KAAK,EAAE,CAAC,KAAK,CAAC,MAE/D,CAAC"}

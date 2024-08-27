@@ -4,6 +4,7 @@ import { RequestStrategy, connect } from "nats.ws";
 import type {
   ConnectionListener,
   ConnectionMap,
+  ConnectionSpecialHeader,
 } from "./ConnectionMessageTypes";
 import { connectListenerToSubscription } from "./connectListenerToSubscription";
 import { recordToNatsHeaders } from "./recordToNatsHeaders";
@@ -68,6 +69,13 @@ export const createConnection = async <
       const { timeoutMs = 60 * 1000 } = options;
 
       const hs = recordToNatsHeaders(headers);
+      if (isDefined(signal)) {
+        const abortSubject = `abort.${Date.now()}.${crypto.randomUUID()}`;
+        hs?.set("abort-subject" satisfies ConnectionSpecialHeader, abortSubject);
+        signal.addEventListener("abort", () => {
+          connection.publish(abortSubject);
+        });
+      }
 
       const iterable = await connection.requestMany(
         subject as string,

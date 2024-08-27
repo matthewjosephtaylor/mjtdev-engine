@@ -1,1 +1,1 @@
-{"version":3,"file":"natsHeadersToRecord.d.ts","sourceRoot":"","sources":["../src/natsHeadersToRecord.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,GAAG,EAAE,MAAM,SAAS,CAAC;AAGnC,eAAO,MAAM,mBAAmB,aAAc,GAAG,CAAC,SAAS,CAAC,uCAU3D,CAAC"}
+{"version":3,"file":"natsHeadersToRecord.d.ts","sourceRoot":"","sources":["../src/natsHeadersToRecord.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,GAAG,EAAE,MAAM,SAAS,CAAC;AAEnC,eAAO,MAAM,mBAAmB,aAAc,GAAG,CAAC,SAAS,CAAC,uCAU3D,CAAC"}

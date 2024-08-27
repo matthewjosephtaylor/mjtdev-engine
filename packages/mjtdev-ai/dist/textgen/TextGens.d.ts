@@ -16,5 +16,6 @@ export declare const TextGens: {
         max_seq_len: number;
         compress_pos_emb: number;
     }>) => Promise<import("../type/ModelInfo").ModelInfo> | undefined;
+    extractMarkdownText: (markdown: string, type?: string) => string;
 };
 //# sourceMappingURL=TextGens.d.ts.map

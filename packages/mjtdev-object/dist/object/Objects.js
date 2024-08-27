@@ -51,6 +51,8 @@ import { update, updateUnsafe } from "./update";
 import { valueOf } from "./valueOf";
 import { values } from "./values";
 import { waitTimeout } from "./waitTimeout";
+import { createSettler } from "./createSettler";
+import { parseIncompleteJson } from "./parseIncompleteJson";
 export const Objects = {
     isErrorLike,
     orError,
@@ -114,6 +116,8 @@ export const Objects = {
     toNumber,
     toBoolean,
     waitTimeout,
+    createSettler,
+    parseIncompleteJson,
 };
 export * from "./tuples";
 //# sourceMappingURL=Objects.js.map

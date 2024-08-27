@@ -1,1 +1,1 @@
-{"version":3,"file":"getModelInfo.d.ts","sourceRoot":"","sources":["../../src/textgen/getModelInfo.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,mBAAmB,CAAC;AAGnD,eAAO,MAAM,YAAY,QAAO,QAAQ,SAAS,CAAC,GAAG,SAkBpD,CAAC"}
+{"version":3,"file":"getModelInfo.d.ts","sourceRoot":"","sources":["../../src/textgen/getModelInfo.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,mBAAmB,CAAC;AAGnD,eAAO,MAAM,YAAY,QAAO,OAAO,CAAC,SAAS,CAAC,GAAG,SAkBpD,CAAC"}

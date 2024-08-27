@@ -1,4 +1,5 @@
-import { CSSProperties, useState } from "react";
+import type { CSSProperties } from "react";
+import { useState } from "react";
 import { closePopup } from "./closePopup";
 import { Objects } from "@mjtdev/object";
 import { Grid } from "../component/Grid";
