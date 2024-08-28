@@ -4,6 +4,7 @@
   "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist/*",
     "build": "clear && npx tsc -b && (tput setaf 2; echo 'build successful :)'; tput sgr0)",

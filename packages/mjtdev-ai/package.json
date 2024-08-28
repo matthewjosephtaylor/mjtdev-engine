@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "AI package",
   "sideEffects": false,
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc -b",
     "build-api": "npx swagger-typescript-api -p ./src/imagegen/swagger/automatic1111.json -o ./src/imagegen/api/ -n AutomaticApi.ts",

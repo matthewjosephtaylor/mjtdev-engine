@@ -4,6 +4,7 @@
   "sideEffects": false,
   "description": "mjt math",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "clean": "rm -rf lib/*",

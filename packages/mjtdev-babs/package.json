@@ -4,6 +4,7 @@
   "sideEffects": false,
   "description": "@mjtdev",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist/*",
     "start": "webpack serve",

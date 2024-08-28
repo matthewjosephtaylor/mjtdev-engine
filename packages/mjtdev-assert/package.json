@@ -4,6 +4,7 @@
   "sideEffects": false,
   "description": "@mjtdev assertions",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "webpack serve",
     "build": "tsc -b",

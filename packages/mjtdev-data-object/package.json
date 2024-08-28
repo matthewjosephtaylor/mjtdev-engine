@@ -4,6 +4,7 @@
   "sideEffects": false,
   "description": "- Objects and trees of objects are all that is needed for any data model - An object with a simple _id_ field is the simplist record format possible - The combination of object with id is all that is needed for a data model of arbitrary complexity",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf lib/*",
     "test": "echo \"Error: no test specified\" && exit 1",
