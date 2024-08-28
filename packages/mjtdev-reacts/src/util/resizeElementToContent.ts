@@ -1,7 +1,7 @@
 import { Htmls } from "@mjtdev/html";
 import { Maths } from "@mjtdev/math";
 import { isUndefined } from "@mjtdev/object";
-import { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 
 export const resizeElementToContent = (
   element: HTMLElement,

@@ -2422,7 +2422,7 @@ export type PhysicsBody = Body;
 export type PhysicsEngine = ReturnType<typeof createEngine>;
 export type PhysicsWorld = World;
 export declare const update: (engine: Engine, deltaMs: number, lastDeltaMs?: number) => void;
-export declare const ArrayToGrid: <T extends string | number | object>({ arr, columns, mapper, }: {
+export declare const ArrayToGrid: <T extends string | object | number>({ arr, columns, mapper, }: {
 	mapper?: (value: T) => ReactNode;
 	arr: T[];
 	columns?: number;
@@ -4653,10 +4653,10 @@ export declare const Reacts: {
 	render: (node: import("react").ReactChild | import("react").ReactNode[], parent?: HTMLElement, container?: HTMLDivElement) => RenderControl;
 	useDropzone: typeof useDropzone;
 	toRoutes: (routes: RouteTable) => import("react").ReactNode[];
-	createReactContext: <T extends object>(initial?: T | undefined) => ReactContextContainer<T>;
-	dispatchCustomEvent: <T_1>(eventType: string, payload: T_1, element?: Document | HTMLElement | Window) => void;
-	addCustomEventListener: <E extends string = string, T_2 = unknown>(eventType: E, handler: CustomEventHandler<T_2>, options?: Partial<{
-		element: Document | HTMLElement | Window;
+	createReactContext: <T extends object>(initial?: T) => ReactContextContainer<T>;
+	dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void;
+	addCustomEventListener: <E extends string = string, T = unknown>(eventType: E, handler: CustomEventHandler<T>, options?: Partial<{
+		element: HTMLElement | Document | Window;
 		once: boolean;
 	}>) => () => void;
 	px: (value: number) => string | undefined;
@@ -4672,23 +4672,9 @@ export declare const Reacts: {
 	usePreviousPath: () => any;
 	useBringToFront: () => (id?: string | undefined) => void;
 	useCustomEventListener: typeof useCustomEventListener;
-	useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>;
+	useAsyncEffect: (func: () => void | (() => void) | Promise<void | (() => void)>, deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>;
 	useIsFocused: () => boolean | undefined;
-	useKeyboardListener: (keyActions: KeyActions, options?: Partial<{
-		ratePerSecond: number;
-		parent: HTMLElement;
-		debug: boolean;
-		autoUp: boolean;
-		propagate: boolean;
-		passive: boolean;
-		dropMultiple: boolean;
-		animateState: AnimateState;
-		keyOptions: Partial<{
-			[x: string]: {
-				preventDefault: boolean;
-			};
-		}>;
-	}> | undefined) => void;
+	useKeyboardListener: (keyActions: KeyActions, options?: InputListenOptions) => void;
 };
 export declare const Border: ({ title, children, style, defaultDisclosed, collapsable, onDiscloserChange, alwaysShowChildren, resizable, onResize, }: {
 	onResize?: (bbox: DOMRect) => void;
@@ -4809,7 +4795,7 @@ export declare const Menu: ({ items, direction, className, }: {
 	items: MenuItems;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const OpenImageWindow: () => import("react/jsx-runtime").JSX.Element;
-export declare const RecordToGrid: <T extends React.ReactNode>({ value, }: {
+export declare const RecordToGrid: <T extends ReactNode>({ value, }: {
 	value: Record<string, T>;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const TextScreen: ({ text, actions, style, }: {
@@ -4842,8 +4828,8 @@ export type StateAndUpdater<T> = readonly [
 ];
 export declare const States: {
 	createState: <T>(init: T | (() => T)) => StateAndUpdater<T>;
-	createStateUpdater: <T_1>(store: import("zustand").UseBoundStore<import("zustand").StoreApi<T_1>>) => StateUpdater<T_1>;
-	updateState: <T_2>(doc: StateUpdaterParam<T_2>, store: import("zustand").UseBoundStore<import("zustand").StoreApi<T_2>>) => void;
+	createStateUpdater: <T>(store: import("zustand").UseBoundStore<import("zustand").StoreApi<T>>) => StateUpdater<T>;
+	updateState: <T>(doc: StateUpdaterParam<T>, store: import("zustand").UseBoundStore<import("zustand").StoreApi<T>>) => void;
 };
 export declare const createState: <T>(init: T | (() => T)) => StateAndUpdater<T>;
 export declare const createStateUpdater: <T>(store: UseBoundStore<StoreApi<T>>) => StateUpdater<T>;
@@ -4975,21 +4961,7 @@ export declare const resizeElementToContent: (element: HTMLElement, content: str
 	number
 ] | undefined;
 export declare const toString: (value: unknown) => string | undefined;
-export declare const useClickOutside: typeof useClickOutside, useEventListener: typeof useEventListener, useGuiCtx: () => GuiCtx | undefined, useRenderCount: typeof default, useUpdateGuiCtx: () => UpdateGuiCtx | undefined, useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element, useRemoveFromDesk: () => () => void, useNav: () => (path: string) => void, usePreviousPath: () => any, useBringToFront: () => (id?: string | undefined) => void, useDropzone: typeof import("react-dropzone").useDropzone, useKeyboardListener: (keyActions: KeyActions, options?: Partial<{
-	ratePerSecond: number;
-	parent: HTMLElement;
-	debug: boolean;
-	autoUp: boolean;
-	propagate: boolean;
-	passive: boolean;
-	dropMultiple: boolean;
-	animateState: AnimateState;
-	keyOptions: Partial<{
-		[x: string]: {
-			preventDefault: boolean;
-		};
-	}>;
-}> | undefined) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof useCustomEventListener, useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: Document | HTMLElement | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
+export declare const useClickOutside: typeof useClickOutside, useEventListener: typeof useEventListener, useGuiCtx: () => GuiCtx | undefined, useRenderCount: typeof default, useUpdateGuiCtx: () => UpdateGuiCtx | undefined, useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element, useRemoveFromDesk: () => () => void, useNav: () => (path: string) => void, usePreviousPath: () => any, useBringToFront: () => (id?: string | undefined) => void, useDropzone: typeof import("react-dropzone").useDropzone, useKeyboardListener: (keyActions: KeyActions, options?: InputListenOptions) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof useCustomEventListener, useAsyncEffect: (func: () => void | (() => void) | Promise<void | (() => void)>, deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
 export type ClearWhen = "tick" | "never";
 export type Sample = {
 	name: string;

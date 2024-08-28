@@ -1,50 +1,28 @@
-// rollup.config.js
-// import typescript from "rollup-plugin-typescript2";
-// import { nodeResolve } from "@rollup/plugin-node-resolve";
-// import commonjs from "@rollup/plugin-commonjs";
-import esbuild from "rollup-plugin-esbuild";
-// import json from "@rollup/plugin-json";
-// import nodePolyfills from "rollup-plugin-polyfill-node";
-// import { nodeResolve } from "@rollup/plugin-node-resolve";
-
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+// import { terser } from 'rollup-plugin-terser';
 import typescript from "@rollup/plugin-typescript";
-import { babel } from "@rollup/plugin-babel";
+import json from "@rollup/plugin-json";
 
 export default {
-  input: "src/index.ts",
+  input: "src/index.ts", // Entry file for your TypeScript source
   output: {
-    dir: "dist",
-    format: "esm",
+    file: "dist/index.js", // Output file
+    format: "esm", // ES module format
+    sourcemap: true, // Optional: include sourcemaps for easier debugging
   },
   plugins: [
-    typescript(),
-    esbuild({
-      // All options are optional
-      include: /\.[jt]sx?$/, // default, inferred from `loaders` option
-      // exclude: /node_modules/, // default
-      sourceMap: true, // default
-      minify: process.env.NODE_ENV === "production",
-      target: "es2017", // default, or 'es20XX', 'esnext'
-      jsx: "transform", // default, or 'preserve'
-      jsxFactory: "React.createElement",
-      jsxFragment: "React.Fragment",
-      // Like @rollup/plugin-replace
-      define: {
-        __VERSION__: '"x.y.z"',
-      },
-      tsconfig: "tsconfig.json", // default
-      // Add extra loaders
-      loaders: {
-        // Add .json files support
-        // require @rollup/plugin-commonjs
-        // ".json": "json",
-        // Enable JSX in .js files too
-        // ".js": "jsx",
-      },
-    }),
-    // commonjs(),
-    // babel({ helpers: "bundled" }),
-    // nodeResolve(), commonjs(), json(), nodePolyfills()
+    resolve(), // Helps Rollup find and bundle node_modules
+    commonjs(), // Converts CommonJS modules to ES6
+    typescript(), // Transpiles TypeScript to JavaScript
+    json(),
+    // terser(),               // Optional: minify the output
   ],
-  // plugins: [typescript(), nodeResolve(), commonjs(), json(), nodePolyfills()],
+  external: [
+    "crypto",
+    "react",
+    "react-dom",
+    "react-router-dom",
+    "styled-components",
+  ], // List any dependencies you want to exclude from the bundle
 };

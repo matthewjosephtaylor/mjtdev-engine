@@ -1,4 +1,4 @@
-import { CSSProperties, KeyboardEventHandler, MouseEventHandler } from "react";
+import { KeyboardEventHandler, MouseEventHandler } from "react";
 export declare const ContentEditable: ({ id, onChange, onClick, onContextMenu, style, value, autoFocus, onMouseUp, tabIndex, onKeyDown, editable, title, theme, }: {
     theme?: string;
     id?: string;

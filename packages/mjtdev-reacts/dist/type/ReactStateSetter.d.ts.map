@@ -1,1 +1,1 @@
-{"version":3,"file":"ReactStateSetter.d.ts","sourceRoot":"","sources":["../../src/type/ReactStateSetter.ts"],"names":[],"mappings":";AAAA,MAAM,MAAM,gBAAgB,CAAC,CAAC,GAAG,OAAO,IAAI,KAAK,CAAC,QAAQ,CACxD,KAAK,CAAC,cAAc,CAAC,CAAC,CAAC,CACxB,CAAC"}
+{"version":3,"file":"ReactStateSetter.d.ts","sourceRoot":"","sources":["../../src/type/ReactStateSetter.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,gBAAgB,CAAC,CAAC,GAAG,OAAO,IAAI,KAAK,CAAC,QAAQ,CACxD,KAAK,CAAC,cAAc,CAAC,CAAC,CAAC,CACxB,CAAC"}

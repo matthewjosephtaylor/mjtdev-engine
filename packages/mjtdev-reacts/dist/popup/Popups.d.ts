@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export declare const Popups: {
     openPopup: (content: import("react").ReactNode, options?: Partial<{
         name: string;

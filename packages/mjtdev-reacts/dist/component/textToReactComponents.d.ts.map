@@ -1,1 +1,1 @@
-{"version":3,"file":"textToReactComponents.d.ts","sourceRoot":"","sources":["../../src/component/textToReactComponents.tsx"],"names":[],"mappings":"AAEA,eAAO,MAAM,qBAAqB,SAC1B,MAAM,YACH,OAAO,MAAM,EAAE,MAAM,IAAI,CAAC,8CAKpC,CAAC"}
+{"version":3,"file":"textToReactComponents.d.ts","sourceRoot":"","sources":["../../src/component/textToReactComponents.tsx"],"names":[],"mappings":"AAEA,eAAO,MAAM,qBAAqB,SAC1B,MAAM,YACH,MAAM,CAAC,MAAM,EAAE,MAAM,IAAI,CAAC,8CAKpC,CAAC"}

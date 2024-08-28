@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 export declare const ContextMenu: ({ name, actionMap, style, itemStyle, }: {
     actionMap: Record<string, () => void>;
     name: string;

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-export declare const ArrayToGrid: <T extends string | number | object>({ arr, columns, mapper, }: {
+export declare const ArrayToGrid: <T extends string | object | number>({ arr, columns, mapper, }: {
     mapper?: (value: T) => ReactNode;
     arr: T[];
     columns?: number;

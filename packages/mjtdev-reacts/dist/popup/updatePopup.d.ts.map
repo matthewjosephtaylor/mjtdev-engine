@@ -1,1 +1,1 @@
-{"version":3,"file":"updatePopup.d.ts","sourceRoot":"","sources":["../../src/popup/updatePopup.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAoB,MAAM,iBAAiB,CAAC;AAE/D,eAAO,MAAM,WAAW,SAChB,MAAM,gBACE,QAAQ,UAAU,CAAC,SASlC,CAAC"}
+{"version":3,"file":"updatePopup.d.ts","sourceRoot":"","sources":["../../src/popup/updatePopup.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAoB,MAAM,iBAAiB,CAAC;AAE/D,eAAO,MAAM,WAAW,SAChB,MAAM,gBACE,OAAO,CAAC,UAAU,CAAC,SASlC,CAAC"}

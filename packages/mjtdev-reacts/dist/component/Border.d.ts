@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode } from "react";
+import React, { ReactNode } from "react";
 export declare const Border: ({ title, children, style, defaultDisclosed, collapsable, onDiscloserChange, alwaysShowChildren, resizable, onResize, }: {
     onResize?: (bbox: DOMRect) => void;
     resizable?: boolean;
