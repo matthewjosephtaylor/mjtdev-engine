@@ -1,72 +1,32 @@
 export declare const Meshes: {
     lookAt: (from: import("@mjtdev/math").Point2, to: import("@mjtdev/math").Point2) => number;
-    getBox: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
-        width: number;
-        height: number;
-        depth: number;
-        colors: string[];
-    }>) => import("@babylonjs/core").Mesh;
-    getPlane: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getBox: (scene: import("@babylonjs/core").Scene, name: string, options?: import("./updateMesh").MeshOptions & import("./getBox").BoxOptions) => import("@babylonjs/core").Mesh;
+    getPlane: (scene: import("@babylonjs/core").Scene, name: string, options?: import("./updateMesh").MeshOptions & Partial<{
         width: number;
         height: number;
         tag: string | string[];
         billboard: boolean;
     }>) => import("@babylonjs/core").Mesh;
-    getBoxInstance: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getBoxInstance: (scene: import("@babylonjs/core").Scene, name: string, options: import("./updateMesh").MeshOptions & Partial<{
         width: number;
         height: number;
         depth: number;
         receiveShadows: boolean;
     }>) => import("@babylonjs/core").InstancedMesh;
-    getSphere: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getSphere: (scene: import("@babylonjs/core").Scene, name: string, options: import("./updateMesh").MeshOptions & Partial<{
         radius: number;
     }>) => import("@babylonjs/core").Mesh;
-    getCylinder: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getCylinder: (scene: import("@babylonjs/core").Scene, name: string, options?: import("./updateMesh").MeshOptions & Partial<{
         height: number;
         arc: number;
         radius: number;
         tag: string | string[];
     }>) => import("@babylonjs/core").Mesh;
-    getTorusKnot: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getTorusKnot: (scene: import("@babylonjs/core").Scene, name: string, options?: import("./updateMesh").MeshOptions & Partial<{
         radius: number;
         material: string;
     }>) => import("@babylonjs/core").Mesh;
-    getLine: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getLine: (scene: import("@babylonjs/core").Scene, name: string, options: import("./updateMesh").MeshOptions & Partial<{
         points: import("@mjtdev/math").Point3[];
         colors: string[];
         updatable: boolean;
@@ -77,8 +37,8 @@ export declare const Meshes: {
         camera: import("@babylonjs/core").Camera;
         predicate: (mesh: import("@babylonjs/core").AbstractMesh) => boolean;
     }>) => import("@babylonjs/core").Nullable<import("@babylonjs/core").AbstractMesh> | undefined;
-    getMesh: <T extends import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh>(scene: import("@babylonjs/core").Scene, name: string, producer: (instance?: T | undefined) => T, updatable?: boolean) => T;
-    getMeshAsync: <T_1 extends import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh>(scene: import("@babylonjs/core").Scene, name: string, producer: () => Promise<T_1>) => Promise<T_1>;
+    getMesh: <T extends import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh>(scene: import("@babylonjs/core").Scene, name: string, producer: (instance?: T) => T, updatable?: boolean) => T;
+    getMeshAsync: <T extends import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh>(scene: import("@babylonjs/core").Scene, name: string, producer: () => Promise<T>) => Promise<T>;
     calcTopOfMeshWorldPosition: (mesh: import("@babylonjs/core").AbstractMesh) => import("@mjtdev/math").Point3;
     mergeMeshes: (meshes: import("@babylonjs/core").Mesh[], options?: Partial<{
         disposeSource: boolean;
@@ -87,12 +47,7 @@ export declare const Meshes: {
         subdivideWithSubMeshes: boolean;
         multiMultiMaterials: boolean;
     }>) => import("@babylonjs/core").Nullable<import("@babylonjs/core").Mesh>;
-    getVoxModel: (scene: import("@babylonjs/core").Scene, name: string, src: string, options?: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getVoxModel: (scene: import("@babylonjs/core").Scene, name: string, src: string, options?: import("./updateMesh").MeshOptions & Partial<{
         merged: boolean;
     }>) => import("@babylonjs/core").SolidParticleSystem;
     calcClientRectForMesh: (mesh: import("@babylonjs/core").AbstractMesh) => {
@@ -110,28 +65,18 @@ export declare const Meshes: {
         disposeMaterials: boolean;
         disposeTextures: boolean;
     }>) => void;
-    getMeshInstance: <T_2 extends import("@babylonjs/core").Mesh>(scene: import("@babylonjs/core").Scene, name: string, rootName: string, producer: () => T_2) => import("@babylonjs/core").InstancedMesh;
-    getMeshInstanceAsync: <T_3 extends import("@babylonjs/core").Mesh>(scene: import("@babylonjs/core").Scene, name: string, rootName: string, producer: () => Promise<T_3>) => Promise<import("@babylonjs/core").InstancedMesh>;
+    getMeshInstance: <T extends import("@babylonjs/core").Mesh>(scene: import("@babylonjs/core").Scene, name: string, rootName: string, producer: () => T) => import("@babylonjs/core").InstancedMesh;
+    getMeshInstanceAsync: <T extends import("@babylonjs/core").Mesh>(scene: import("@babylonjs/core").Scene, name: string, rootName: string, producer: () => Promise<T>) => Promise<import("@babylonjs/core").InstancedMesh>;
     isInstancedMesh: (mesh: import("@babylonjs/core").AbstractMesh) => mesh is import("@babylonjs/core").InstancedMesh;
     pickMeshes: (scene: import("@babylonjs/core").Scene, x: number, y: number, options?: Partial<{
         camera: import("@babylonjs/core").Camera;
         predicate: (mesh: import("@babylonjs/core").AbstractMesh) => boolean;
     }>) => import("@babylonjs/core").Nullable<import("@babylonjs/core").PickingInfo[]>;
-    getPolyhedron: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }> & Partial<{
+    getPolyhedron: (scene: import("@babylonjs/core").Scene, name: string, options?: import("./updateMesh").MeshOptions & Partial<{
         size: number;
-        type: "tetrahedron" | "octahedron" | "dodecahedron" | "icosahedron" | "rhombicuboctahadron" | "triangularPrism" | "pentagonalPrism" | "hexagonalPrism" | "squarePyramid" | "pentagonalPyramid" | "triangularDipyramid" | "pentagonalDipryramid" | "elongatedSquareDipyramid" | "elongatedPentagonalDipyramid" | "elongatedPentagonalCupola";
+        type: keyof typeof import("./getPolyhedron").BabPolyMap;
         material: string;
     }>) => import("@babylonjs/core").Mesh;
-    updateMesh: (scene: import("@babylonjs/core").Scene, mesh: import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh, options: Partial<{
-        position: import("@mjtdev/math").PointObject2 | import("@mjtdev/math").PointObject3 | import("@mjtdev/math").PointObject4 | import("@mjtdev/math").Vec4 | import("@mjtdev/math").Vec3 | import("@mjtdev/math").Vec2;
-        color: string;
-        material: string;
-        receiveShadows: boolean;
-    }>) => void;
+    updateMesh: (scene: import("@babylonjs/core").Scene, mesh: import("@babylonjs/core").Mesh | import("@babylonjs/core").InstancedMesh, options: import("./updateMesh").MeshOptions) => void;
 };
 //# sourceMappingURL=Meshes.d.ts.map

@@ -26,36 +26,10 @@ export type UniversalCameraOptions = Partial<CameraOptions & {
 }>;
 export type AllCameraOptions = ArcRotateCameraOptions & UniversalCameraOptions;
 export declare const Cameras: {
-    getArcRotateCamera: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<Partial<{
-        mode: keyof CameraModeMap;
-        position: Vec3;
-        minZ: number;
-        maxZ: number;
-        target: Vec3;
-        orthoTop: number;
-        orthoBottom: number;
-        orthoLeft: number;
-        orthoRight: number;
-    }> & {
-        alpha: number;
-        beta: number;
-        radius: number;
-    }>) => import("@babylonjs/core").ArcRotateCamera;
+    getArcRotateCamera: (scene: import("@babylonjs/core").Scene, name: string, options?: ArcRotateCameraOptions) => import("@babylonjs/core").ArcRotateCamera;
     getCamera: <T extends Camera>(scene: import("@babylonjs/core").Scene, name: string, producer: () => T) => T;
     updateCamera: (camera: Camera, options: AllCameraOptions) => void;
-    getUniversalCamera: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<Partial<{
-        mode: keyof CameraModeMap;
-        position: Vec3;
-        minZ: number;
-        maxZ: number;
-        target: Vec3;
-        orthoTop: number;
-        orthoBottom: number;
-        orthoLeft: number;
-        orthoRight: number;
-    }> & {
-        rotation: Vec3;
-    }>) => import("@babylonjs/core").UniversalCamera;
+    getUniversalCamera: (scene: import("@babylonjs/core").Scene, name: string, options?: UniversalCameraOptions) => import("@babylonjs/core").UniversalCamera;
     attachArcRotateCameraControls: (camera: import("@babylonjs/core").ArcRotateCamera, options?: Partial<{
         keySensitivity: number;
         mouseSensitivity: number;

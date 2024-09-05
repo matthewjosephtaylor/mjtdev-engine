@@ -1,5 +1,5 @@
 export declare const Rays: {
-    createRay: (origin: import("@mjtdev/math").Point3, direction: import("@mjtdev/math").Point3, length?: number | undefined) => import("@babylonjs/core").Ray;
+    createRay: (origin: import("@mjtdev/math").Point3, direction: import("@mjtdev/math").Point3, length?: number) => import("@babylonjs/core").Ray;
     pickWithRay: (scene: import("@babylonjs/core").Scene, ray: import("@babylonjs/core").Ray, options?: Partial<{
         predicate: (mesh: import("@babylonjs/core").AbstractMesh) => boolean;
         fastCheck: boolean;

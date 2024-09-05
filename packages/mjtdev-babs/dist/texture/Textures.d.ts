@@ -25,31 +25,11 @@ export declare const Textures: {
     copyToCanvas: (image: HTMLCanvasElement | OffscreenCanvas | HTMLImageElement, width?: number, height?: number) => HTMLCanvasElement;
     debugImage: (image: HTMLCanvasElement | HTMLImageElement, label?: string) => Promise<unknown>;
     getTexture: <T extends import("@babylonjs/core").BaseTexture>(scene: import("@babylonjs/core").Scene, name: string, producer: () => T) => T;
-    getHtmlElementTexture: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<Partial<{
-        hasAlpha: boolean;
-        generateMipMaps: boolean;
-        samplingMode: keyof TextureSamplingModeMap;
-    }> & {
-        element: HTMLCanvasElement | HTMLVideoElement;
-    }>) => import("@babylonjs/core").HtmlElementTexture;
-    getDynamicTexture: (scene: import("@babylonjs/core").Scene, name: string, options?: Partial<Partial<{
-        hasAlpha: boolean;
-        generateMipMaps: boolean;
-        samplingMode: keyof TextureSamplingModeMap;
-    }> & {
-        width: number;
-        height: number;
-        init: (ctx: ICanvasRenderingContext) => void;
-    }>) => import("@babylonjs/core").DynamicTexture;
-    getPathTexture: (scene: import("@babylonjs/core").Scene, name: string, options: Partial<Partial<{
-        hasAlpha: boolean;
-        generateMipMaps: boolean;
-        samplingMode: keyof TextureSamplingModeMap;
-    }> & {
-        src: string;
-    }>) => import("@babylonjs/core").Texture;
+    getHtmlElementTexture: (scene: import("@babylonjs/core").Scene, name: string, options: HtmlElementTextureOptions) => import("@babylonjs/core").HtmlElementTexture;
+    getDynamicTexture: (scene: import("@babylonjs/core").Scene, name: string, options?: DynamicTextureOptions) => import("@babylonjs/core").DynamicTexture;
+    getPathTexture: (scene: import("@babylonjs/core").Scene, name: string, options: PathTextureOptions) => import("@babylonjs/core").Texture;
     updateTexture: (texture: import("@babylonjs/core").BaseTexture, options: AllTextureOptions) => void;
-    imageToTexture: (scene: import("@babylonjs/core").Scene, name: string, image: string | HTMLCanvasElement | OffscreenCanvas | HTMLImageElement) => Promise<import("@babylonjs/core").Texture>;
+    imageToTexture: (scene: import("@babylonjs/core").Scene, name: string, image: string | HTMLImageElement | HTMLCanvasElement | OffscreenCanvas) => Promise<import("@babylonjs/core").Texture>;
     drawTextOnTexture: (texture: import("@babylonjs/core").DynamicTexture, text: string, options?: Partial<{
         color: string;
         outline: boolean;

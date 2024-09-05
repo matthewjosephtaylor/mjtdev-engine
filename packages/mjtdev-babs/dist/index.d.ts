@@ -18,6 +18,9 @@ export * from "./voxel/Voxels";
 export type { Engine as BabEngine } from "@babylonjs/core/Engines";
 export type { Scene as BabScene } from "@babylonjs/core/scene";
 export type { Mesh as BabMesh } from "@babylonjs/core/Meshes";
+export type { BaseTexture as BabBaseTexture } from "@babylonjs/core/Materials/Textures/baseTexture";
+export type { DynamicTexture as BabDynamicTexture } from "@babylonjs/core/Materials/Textures/dynamicTexture";
+export type { TransformNode as BabTransformNode } from "@babylonjs/core/Meshes/transformNode";
 export type { SolidParticleSystem as BabSolidParticleSystem } from "@babylonjs/core/Particles/solidParticleSystem";
 export type { SolidParticle as BabSolidParticle } from "@babylonjs/core/Particles/solidParticle";
 //# sourceMappingURL=index.d.ts.map
