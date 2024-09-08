@@ -1,6 +1,6 @@
 {
   "name": "@mjtdev/engine",
-  "version": "20240908.1728",
+  "version": "20240908.1745",
   "sideEffects": false,
   "description": "MJT in a box",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
     "build-esbuild": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
     "build-types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
     "watch": "watch ./src 'npm run build'",
-    "version": "20240908.1728"
+    "version": "20240908.1745"
   },
   "keywords": [],
   "author": "Matt Taylor @mjtdev",
