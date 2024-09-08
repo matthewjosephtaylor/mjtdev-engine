@@ -16,7 +16,7 @@
     "build-types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
     "watch": "watch ./src 'npm run build'",
     "version": "20240908.1758",
-    "build-release": "tsc -b && npm run build-types || true && ./scripts/version.sh"
+    "build-release": "npm run build && npm run build-types || true && ./scripts/version.sh"
   },
   "keywords": [],
   "author": "Matt Taylor @mjtdev",
