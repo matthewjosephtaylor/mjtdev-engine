@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Get the current date and time in YYYY.M.D-HHMM format
-VERSION=$(date +"%Y.%m.%d-%H%M")
+# Get the current date and time in YYYY.M.D-HHMM format without leading zeros
+VERSION=$(date +"%Y.%-m.%-d-%H%M")
+
+echo "Updating version to $VERSION"
 
 # Update the version in package.json
 sed -i '' "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" package.json
