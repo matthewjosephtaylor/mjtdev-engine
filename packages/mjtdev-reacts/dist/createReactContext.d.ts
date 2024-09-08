@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-export declare const createReactContext: <T extends object>(initial?: T) => ReactContextContainer<T>;
+export declare const createReactContext: <T extends object>(initial?: T | undefined) => ReactContextContainer<T>;
 export type ReactContextContainer<T> = {
     ContextProvider: ({ children }: {
         children?: ReactNode;

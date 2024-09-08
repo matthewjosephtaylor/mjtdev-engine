@@ -1,4 +1,4 @@
-import { UseBoundStore, StoreApi } from "zustand";
+import type { UseBoundStore, StoreApi } from "zustand";
 export type State<T> = UseBoundStore<StoreApi<T>>;
 export type StateUpdaterParam<T> = Partial<T> | ((state: T) => Partial<T> | void);
 export type StateUpdater<T> = (doc: StateUpdaterParam<T>) => void;

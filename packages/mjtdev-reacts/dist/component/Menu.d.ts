@@ -7,8 +7,8 @@ export type MenuItem = [
     toolTip?: ReactChild
 ];
 export declare const Menu: ({ items, direction, className, }: {
-    className?: string;
-    direction?: "row" | "column";
+    className?: string | undefined;
+    direction?: "row" | "column" | undefined;
     items: MenuItems;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Menu.d.ts.map

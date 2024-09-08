@@ -1,1 +1,1 @@
-{"version":3,"file":"useClickOutside.d.ts","sourceRoot":"","sources":["../../src/hook/useClickOutside.ts"],"names":[],"mappings":"AAIA,wBAAgB,eAAe,CAC7B,GAAG,EAAE,KAAK,CAAC,gBAAgB,CAAC,WAAW,GAAG,QAAQ,CAAC,EACnD,MAAM,EAAE,CAAC,CAAC,EAAE,KAAK,KAAK,IAAI,EAC1B,OAAO;;;CAGN,QAwBF"}
+{"version":3,"file":"useClickOutside.d.ts","sourceRoot":"","sources":["../../src/hook/useClickOutside.ts"],"names":[],"mappings":";AAIA,wBAAgB,eAAe,CAC7B,GAAG,EAAE,KAAK,CAAC,gBAAgB,CAAC,WAAW,GAAG,QAAQ,CAAC,EACnD,MAAM,EAAE,CAAC,CAAC,EAAE,KAAK,KAAK,IAAI,EAC1B,OAAO;;;CAGN,QAwBF"}

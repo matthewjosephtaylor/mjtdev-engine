@@ -1,3 +1,4 @@
+/// <reference types="react" />
 export * from "./component/ArrayToGrid";
 export * from "./component/BasicWindow";
 export * from "./component/Center";
@@ -57,5 +58,21 @@ export * from "./util/pasteTextAtCurrentCursorPosition";
 export * from "./util/px";
 export * from "./util/resizeElementToContent";
 export * from "./util/unPx";
-export declare const useClickOutside: typeof import("./hook/useClickOutside").useClickOutside, useEventListener: typeof import("./hook/useEventListener").useEventListener, useGuiCtx: () => import("./ctx/GuiContextProvider").GuiCtx | undefined, useRenderCount: typeof import("./hook/useRenderCount").default, useUpdateGuiCtx: () => import("./ctx/GuiContextProvider").UpdateGuiCtx | undefined, useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element, useRemoveFromDesk: () => () => void, useNav: () => (path: string) => void, usePreviousPath: () => any, useBringToFront: () => (id?: string | undefined) => void, useDropzone: typeof import("react-dropzone").useDropzone, useKeyboardListener: (keyActions: import("@mjtdev/input").KeyActions, options?: import("@mjtdev/input").InputListenOptions) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof import("./hook/useCustomEventListener").useCustomEventListener, useAsyncEffect: (func: () => void | (() => void) | Promise<void | (() => void)>, deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
+import type { StateAndUpdater, StateGetter, StateUpdater } from "./state/State";
+export type { StateAndUpdater, StateGetter, StateUpdater };
+export declare const useClickOutside: typeof import("./hook/useClickOutside").useClickOutside, useEventListener: typeof import("./hook/useEventListener").useEventListener, useGuiCtx: () => import("./ctx/GuiContextProvider").GuiCtx | undefined, useRenderCount: typeof import("./hook/useRenderCount").default, useUpdateGuiCtx: () => import("./ctx/GuiContextProvider").UpdateGuiCtx | undefined, useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element, useRemoveFromDesk: () => () => void, useNav: () => (path: string) => void, usePreviousPath: () => any, useBringToFront: () => (id?: string | undefined) => void, useDropzone: typeof import("react-dropzone").useDropzone, useKeyboardListener: (keyActions: import("@mjtdev/input").KeyActions, options?: Partial<{
+    ratePerSecond: number;
+    parent: HTMLElement;
+    debug: boolean;
+    autoUp: boolean;
+    propagate: boolean;
+    passive: boolean;
+    dropMultiple: boolean;
+    animateState: import("@mjtdev/animate").AnimateState;
+    keyOptions: Partial<{
+        [x: string]: {
+            preventDefault: boolean;
+        };
+    }>;
+}> | undefined) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof import("./hook/useCustomEventListener").useCustomEventListener, useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
 //# sourceMappingURL=index.d.ts.map

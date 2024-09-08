@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { useClickOutside } from "./hook/useClickOutside";
 import { useEventListener } from "./hook/useEventListener";
 import useRenderCount from "./hook/useRenderCount";
@@ -6,12 +7,12 @@ import { useCustomEventListener } from "./hook/useCustomEventListener";
 export * from "./type/ReactTypes";
 export * from "./type/MaterialIconCodes";
 export declare const Reacts: {
-    render: (node: import("react").ReactChild | import("react").ReactNode[], parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
+    render: (node: import("react").ReactNode[] | import("react").ReactChild, parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
     useDropzone: typeof useDropzone;
     toRoutes: (routes: import("./component/type/RouteTable").RouteTable) => import("react").ReactNode[];
-    createReactContext: <T extends object>(initial?: T) => import("./createReactContext").ReactContextContainer<T>;
-    dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void;
-    addCustomEventListener: <E extends string = string, T = unknown>(eventType: E, handler: import("./hook/addCustomEventListener").CustomEventHandler<T>, options?: Partial<{
+    createReactContext: <T extends object>(initial?: T | undefined) => import("./createReactContext").ReactContextContainer<T>;
+    dispatchCustomEvent: <T_1>(eventType: string, payload: T_1, element?: HTMLElement | Document | Window) => void;
+    addCustomEventListener: <E extends string = string, T_2 = unknown>(eventType: E, handler: import("./hook/addCustomEventListener").CustomEventHandler<T_2>, options?: Partial<{
         element: HTMLElement | Document | Window;
         once: boolean;
     }>) => () => void;
@@ -28,8 +29,22 @@ export declare const Reacts: {
     usePreviousPath: () => any;
     useBringToFront: () => (id?: string | undefined) => void;
     useCustomEventListener: typeof useCustomEventListener;
-    useAsyncEffect: (func: () => void | (() => void) | Promise<void | (() => void)>, deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>;
+    useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>;
     useIsFocused: () => boolean | undefined;
-    useKeyboardListener: (keyActions: import("@mjtdev/input").KeyActions, options?: import("@mjtdev/input").InputListenOptions) => void;
+    useKeyboardListener: (keyActions: import("@mjtdev/input").KeyActions, options?: Partial<{
+        ratePerSecond: number;
+        parent: HTMLElement;
+        debug: boolean;
+        autoUp: boolean;
+        propagate: boolean;
+        passive: boolean;
+        dropMultiple: boolean;
+        animateState: import("@mjtdev/animate").AnimateState;
+        keyOptions: Partial<{
+            [x: string]: {
+                preventDefault: boolean;
+            };
+        }>;
+    }> | undefined) => void;
 };
 //# sourceMappingURL=Reacts.d.ts.map

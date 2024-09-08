@@ -2342,33 +2342,33 @@ export type PhysicsBody = Body;
 export type PhysicsEngine = ReturnType<typeof createEngine>;
 export type PhysicsWorld = World;
 export declare const update: (engine: Engine, deltaMs: number, lastDeltaMs?: number) => void;
-export declare const ArrayToGrid: <T extends string | object | number>({ arr, columns, mapper, }: {
-	mapper?: (value: T) => ReactNode;
+export declare const ArrayToGrid: <T extends string | number | object>({ arr, columns, mapper, }: {
+	mapper?: ((value: T) => ReactNode) | undefined;
 	arr: T[];
-	columns?: number;
+	columns?: number | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export type ReactCssProperties = React.CSSProperties;
 export declare const BasicWindow: ({ title, children, left, top, resizeable, style, }: {
-	style?: ReactCssProperties;
-	left?: string;
-	top?: string;
-	title?: string;
+	style?: import("react").CSSProperties | undefined;
+	left?: string | undefined;
+	top?: string | undefined;
+	title?: string | undefined;
 	children?: ReactNode;
-	resizeable?: boolean;
+	resizeable?: boolean | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const Center: ({ children, className, style, }: {
-	className?: string;
+	className?: string | undefined;
 	children?: ReactNode;
-	style?: React.CSSProperties;
+	style?: React.CSSProperties | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const Click: ({ children, to, open, openId, tooltip, tooltipDelayMills, action, contextMenu, }: {
-	action?: (e: React.MouseEvent) => void;
+	action?: ((e: React.MouseEvent) => void) | undefined;
 	open?: ReactNode;
-	openId?: string;
-	tooltipDelayMills?: number;
-	tooltip?: ReactChild;
-	contextMenu?: ReactChild;
-	to?: string;
+	openId?: string | undefined;
+	tooltipDelayMills?: number | undefined;
+	tooltip?: React.ReactChild | undefined;
+	contextMenu?: React.ReactChild | undefined;
+	to?: string | undefined;
 	children?: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 export type WindowActions = {
@@ -4492,10 +4492,10 @@ export type FrameControls = [
 	FrameControl
 ][];
 export declare const ControlBar: ({ children, controls, actions, className, }: {
-	className?: string;
-	actions?: WindowActions;
+	className?: string | undefined;
+	actions?: WindowActions | undefined;
 	children?: ReactNode;
-	controls?: FrameControls;
+	controls?: FrameControls | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export type RouteTable = [
 	string,
@@ -4511,23 +4511,23 @@ export type IdNode = [
 export declare const useDesk: () => DeskCtx | undefined;
 export declare const useUpdateDesk: () => React.Dispatch<React.SetStateAction<DeskCtx>> | undefined;
 export declare const Desk: ({ children, routeTable, initialPath, index, }: {
-	initialPath?: string;
+	initialPath?: string | undefined;
 	children?: ReactNode;
-	routeTable?: RouteTable;
+	routeTable?: RouteTable | undefined;
 	index?: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const Drag: (props: {
-	dataType?: string;
-	data?: string;
+	dataType?: string | undefined;
+	data?: string | undefined;
 	children: ReactNode;
-	className?: string;
-	dropped?: (event: React.DragEvent<HTMLDivElement>) => void;
+	className?: string | undefined;
+	dropped?: ((event: React.DragEvent<HTMLDivElement>) => void) | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const DropTarget: (props: {
 	children: ReactNode;
-	action?: (data: string) => void;
-	dataType?: string;
-	dropEffect?: "copy" | "link" | "move" | "none";
+	action?: ((data: string) => void) | undefined;
+	dataType?: string | undefined;
+	dropEffect?: "link" | "none" | "copy" | "move" | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare function Dropzone({ action, iconCode, iconSize, highlightedIconCode, activeText, inactiveText, style, }: {
 	style?: CSSProperties;
@@ -4542,7 +4542,7 @@ export declare const Error: ({ children }: {
 	children: string;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const Frag: ({ children, id, }: {
-	id?: string;
+	id?: string | undefined;
 	children?: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const useFragId: () => string | undefined;
@@ -4570,12 +4570,12 @@ export type GuiCtx = {
 };
 export type UpdateGuiCtx = React.Dispatch<React.SetStateAction<GuiCtx>>;
 export declare const Reacts: {
-	render: (node: import("react").ReactChild | import("react").ReactNode[], parent?: HTMLElement, container?: HTMLDivElement) => RenderControl;
+	render: (node: import("react").ReactNode[] | import("react").ReactChild, parent?: HTMLElement, container?: HTMLDivElement) => RenderControl;
 	useDropzone: typeof useDropzone;
 	toRoutes: (routes: RouteTable) => import("react").ReactNode[];
-	createReactContext: <T extends object>(initial?: T) => ReactContextContainer<T>;
-	dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void;
-	addCustomEventListener: <E extends string = string, T = unknown>(eventType: E, handler: CustomEventHandler<T>, options?: Partial<{
+	createReactContext: <T extends object>(initial?: T | undefined) => ReactContextContainer<T>;
+	dispatchCustomEvent: <T_1>(eventType: string, payload: T_1, element?: HTMLElement | Document | Window) => void;
+	addCustomEventListener: <E extends string = string, T_2 = unknown>(eventType: E, handler: CustomEventHandler<T_2>, options?: Partial<{
 		element: HTMLElement | Document | Window;
 		once: boolean;
 	}>) => () => void;
@@ -4592,49 +4592,63 @@ export declare const Reacts: {
 	usePreviousPath: () => any;
 	useBringToFront: () => (id?: string | undefined) => void;
 	useCustomEventListener: typeof useCustomEventListener;
-	useAsyncEffect: (func: () => void | (() => void) | Promise<void | (() => void)>, deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>;
+	useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>;
 	useIsFocused: () => boolean | undefined;
-	useKeyboardListener: (keyActions: KeyActions, options?: InputListenOptions) => void;
+	useKeyboardListener: (keyActions: KeyActions, options?: Partial<{
+		ratePerSecond: number;
+		parent: HTMLElement;
+		debug: boolean;
+		autoUp: boolean;
+		propagate: boolean;
+		passive: boolean;
+		dropMultiple: boolean;
+		animateState: AnimateState;
+		keyOptions: Partial<{
+			[x: string]: {
+				preventDefault: boolean;
+			};
+		}>;
+	}> | undefined) => void;
 };
 export declare const Border: ({ title, children, style, defaultDisclosed, collapsable, onDiscloserChange, alwaysShowChildren, resizable, onResize, }: {
-	onResize?: (bbox: DOMRect) => void;
-	resizable?: boolean;
-	defaultDisclosed?: boolean;
-	collapsable?: boolean;
-	style?: React.CSSProperties;
+	onResize?: ((bbox: DOMRect) => void) | undefined;
+	resizable?: boolean | undefined;
+	defaultDisclosed?: boolean | undefined;
+	collapsable?: boolean | undefined;
+	style?: React.CSSProperties | undefined;
 	title?: ReactNode;
 	children?: ReactNode;
-	alwaysShowChildren?: boolean;
-	onDiscloserChange?: (disclosed: boolean) => void;
+	alwaysShowChildren?: boolean | undefined;
+	onDiscloserChange?: ((disclosed: boolean) => void) | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const ButtonGroup: ({ actions, count, style, buttonStyle, }: {
-	style?: CSSProperties;
-	buttonStyle?: CSSProperties;
+	style?: CSSProperties | undefined;
+	buttonStyle?: CSSProperties | undefined;
 	actions: Record<string, () => void>;
-	count?: number;
+	count?: number | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export type CanvasPainter = (canvas: HTMLCanvasElement) => Promise<() => void> | undefined | (() => void) | void;
 export declare const Canvas: ({ painter, width, height, title, style, }: {
-	title?: string;
-	style?: React.CSSProperties;
-	width?: number;
-	height?: number;
-	painter?: CanvasPainter;
+	title?: string | undefined;
+	style?: import("react").CSSProperties | undefined;
+	width?: number | undefined;
+	height?: number | undefined;
+	painter?: CanvasPainter | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const ContentEditable: ({ id, onChange, onClick, onContextMenu, style, value, autoFocus, onMouseUp, tabIndex, onKeyDown, editable, title, theme, }: {
-	theme?: string;
-	id?: string;
-	title?: string;
-	editable?: boolean;
-	tabIndex?: number;
-	autoFocus?: boolean;
-	value?: string;
-	style?: React.CSSProperties;
-	onChange?: (value: string | undefined) => void;
-	onMouseUp?: MouseEventHandler<HTMLElement>;
-	onKeyDown?: KeyboardEventHandler<HTMLElement>;
-	onClick?: MouseEventHandler<HTMLElement>;
-	onContextMenu?: MouseEventHandler<HTMLElement>;
+	theme?: string | undefined;
+	id?: string | undefined;
+	title?: string | undefined;
+	editable?: boolean | undefined;
+	tabIndex?: number | undefined;
+	autoFocus?: boolean | undefined;
+	value?: string | undefined;
+	style?: CSSProperties | undefined;
+	onChange?: ((value: string | undefined) => void) | undefined;
+	onMouseUp?: MouseEventHandler<HTMLElement> | undefined;
+	onKeyDown?: KeyboardEventHandler<HTMLElement> | undefined;
+	onClick?: MouseEventHandler<HTMLElement> | undefined;
+	onContextMenu?: MouseEventHandler<HTMLElement> | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare class ErrorBoundary extends React.Component {
 	constructor(props: {} | Readonly<{}>);
@@ -4651,37 +4665,37 @@ export declare const INPUT_VALUE_CONTROLS: Record<FormValueType, (key: string, v
 export declare const formEntryToFormLine: (key: string, valueType: FormValueType) => (import("react/jsx-runtime").JSX.Element | ((key: string, value?: string) => JSX.Element))[];
 export declare const Form: <R extends Record<string, FormValueType>>({ format, initial, onChange, onSubmit, submitText, }: {
 	readonly format: R;
-	readonly initial?: Partial<Record<keyof R, string>>;
-	onChange?: (record: Partial<Record<keyof R, string>>) => void;
-	onSubmit?: (record: Partial<Record<keyof R, string>>) => void;
-	submitText?: string;
+	readonly initial?: Partial<Record<keyof R, string>> | undefined;
+	onChange?: ((record: Partial<Record<keyof R, string>>) => void) | undefined;
+	onSubmit?: ((record: Partial<Record<keyof R, string>>) => void) | undefined;
+	submitText?: string | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const Frame: ({ children, routes, type, initialPath, index, }: {
 	index?: ReactNode;
-	initialPath?: string;
+	initialPath?: string | undefined;
 	children: ReactNode;
 	routes?: ReactNode;
-	type?: "hash" | "memory";
+	type?: "memory" | "hash" | undefined;
 }) => JSX.Element;
 export declare const Grid: ({ children, direction, count, style, className, cellSize, gap, }: {
-	gap?: string;
-	cellSize?: string | string[];
-	className?: string;
-	count?: number;
-	style?: React.CSSProperties;
-	direction?: "row" | "column";
+	gap?: string | undefined;
+	cellSize?: string | string[] | undefined;
+	className?: string | undefined;
+	count?: number | undefined;
+	style?: React.CSSProperties | undefined;
+	direction?: "row" | "column" | undefined;
 	children?: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const HighlightableIcon: ({ text, highlighted, iconCode, highlightedIconCode, iconSize, }: {
-	iconSize?: string;
-	iconCode?: keyof MaterialIconCodes;
-	highlightedIconCode?: keyof MaterialIconCodes;
-	highlighted?: boolean;
+	iconSize?: string | undefined;
+	iconCode?: keyof MaterialIconCodes | undefined;
+	highlightedIconCode?: keyof MaterialIconCodes | undefined;
+	highlighted?: boolean | undefined;
 	text: string;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const Hover: ({ setShow, children, className, }: {
-	className?: string;
-	setShow?: React.Dispatch<React.SetStateAction<boolean>>;
+	className?: string | undefined;
+	setShow?: React.Dispatch<React.SetStateAction<boolean>> | undefined;
 	children: ReactNode;
 }) => import("react/jsx-runtime").JSX.Element;
 /** requires material-icon 'google' font
@@ -4689,10 +4703,10 @@ export declare const Hover: ({ setShow, children, className, }: {
  *  @import url(https://fonts.googleapis.com/css2?family=Material+Icons);
  */
 export declare const Icon: ({ children, style, onClick, code, }: {
-	code?: keyof MaterialIconCodes;
-	onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-	children?: keyof MaterialIconCodes;
-	style?: ReactCssProperties;
+	code?: keyof MaterialIconCodes | undefined;
+	onClick?: ((event: React.MouseEvent<HTMLElement, MouseEvent>) => void) | undefined;
+	children?: keyof MaterialIconCodes | undefined;
+	style?: React.CSSProperties | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare function ImageDropzone({ action, activeText, text, }: {
 	text?: string;
@@ -4710,18 +4724,18 @@ export type MenuItem = [
 	toolTip?: ReactChild
 ];
 export declare const Menu: ({ items, direction, className, }: {
-	className?: string;
-	direction?: "row" | "column";
+	className?: string | undefined;
+	direction?: "row" | "column" | undefined;
 	items: MenuItems;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const OpenImageWindow: () => import("react/jsx-runtime").JSX.Element;
-export declare const RecordToGrid: <T extends ReactNode>({ value, }: {
+export declare const RecordToGrid: <T extends React.ReactNode>({ value, }: {
 	value: Record<string, T>;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const TextScreen: ({ text, actions, style, }: {
-	style?: CSSProperties;
+	style?: CSSProperties | undefined;
 	text: string;
-	actions?: Record<string, () => void>;
+	actions?: Record<string, () => void> | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export type UpdateWinCtx = React.Dispatch<React.SetStateAction<WinCtx>>;
 export declare const WIN_CTX: React.Context<WinCtx | undefined>;
@@ -4729,13 +4743,13 @@ export declare const UPDATE_WIN_CTX: React.Context<UpdateWinCtx | undefined>;
 export declare const useWinCtx: () => WinCtx | undefined;
 export declare const useUpdateWinCtx: () => UpdateWinCtx | undefined;
 export declare const Win: ({ children, style, title, controls, className, clickBringsToFont, resizeable, }: {
-	resizeable?: boolean;
-	clickBringsToFont?: boolean;
-	className?: string;
+	resizeable?: boolean | undefined;
+	clickBringsToFont?: boolean | undefined;
+	className?: string | undefined;
 	children?: ReactNode;
-	style?: CSSProperties;
-	title?: string;
-	controls?: FrameControls;
+	style?: React.CSSProperties | undefined;
+	title?: string | undefined;
+	controls?: FrameControls | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export type State<T> = UseBoundStore<StoreApi<T>>;
 export type StateUpdaterParam<T> = Partial<T> | ((state: T) => Partial<T> | void);
@@ -4748,8 +4762,8 @@ export type StateAndUpdater<T> = readonly [
 ];
 export declare const States: {
 	createState: <T>(init: T | (() => T)) => StateAndUpdater<T>;
-	createStateUpdater: <T>(store: import("zustand").UseBoundStore<import("zustand").StoreApi<T>>) => StateUpdater<T>;
-	updateState: <T>(doc: StateUpdaterParam<T>, store: import("zustand").UseBoundStore<import("zustand").StoreApi<T>>) => void;
+	createStateUpdater: <T_1>(store: import("zustand").UseBoundStore<import("zustand").StoreApi<T_1>>) => StateUpdater<T_1>;
+	updateState: <T_2>(doc: StateUpdaterParam<T_2>, store: import("zustand").UseBoundStore<import("zustand").StoreApi<T_2>>) => void;
 };
 export declare const createState: <T>(init: T | (() => T)) => StateAndUpdater<T>;
 export declare const createStateUpdater: <T>(store: UseBoundStore<StoreApi<T>>) => StateUpdater<T>;
@@ -4761,13 +4775,13 @@ export declare const CenteredPopup: ({ name, onClose, children, options, }: {
 	onClose: () => void;
 	options?: Partial<{
 		escapeCloses: boolean;
-	}>;
+	}> | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const ContextMenu: ({ name, actionMap, style, itemStyle, }: {
 	actionMap: Record<string, () => void>;
 	name: string;
-	style?: CSSProperties;
-	itemStyle?: CSSProperties;
+	style?: CSSProperties | undefined;
+	itemStyle?: CSSProperties | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 export declare const PopupContentDisplay: ({ name, moveEnabled, x, y, content, showFrame, }: {
 	showFrame: boolean;
@@ -4881,7 +4895,21 @@ export declare const resizeElementToContent: (element: HTMLElement, content: str
 	number
 ] | undefined;
 export declare const toString: (value: unknown) => string | undefined;
-export declare const useClickOutside: typeof useClickOutside, useEventListener: typeof useEventListener, useGuiCtx: () => GuiCtx | undefined, useRenderCount: typeof default, useUpdateGuiCtx: () => UpdateGuiCtx | undefined, useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element, useRemoveFromDesk: () => () => void, useNav: () => (path: string) => void, usePreviousPath: () => any, useBringToFront: () => (id?: string | undefined) => void, useDropzone: typeof import("react-dropzone").useDropzone, useKeyboardListener: (keyActions: KeyActions, options?: InputListenOptions) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof useCustomEventListener, useAsyncEffect: (func: () => void | (() => void) | Promise<void | (() => void)>, deps?: import("react").DependencyList, destructor?: () => void) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
+export declare const useClickOutside: typeof useClickOutside, useEventListener: typeof useEventListener, useGuiCtx: () => GuiCtx | undefined, useRenderCount: typeof default, useUpdateGuiCtx: () => UpdateGuiCtx | undefined, useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element, useRemoveFromDesk: () => () => void, useNav: () => (path: string) => void, usePreviousPath: () => any, useBringToFront: () => (id?: string | undefined) => void, useDropzone: typeof import("react-dropzone").useDropzone, useKeyboardListener: (keyActions: KeyActions, options?: Partial<{
+	ratePerSecond: number;
+	parent: HTMLElement;
+	debug: boolean;
+	autoUp: boolean;
+	propagate: boolean;
+	passive: boolean;
+	dropMultiple: boolean;
+	animateState: AnimateState;
+	keyOptions: Partial<{
+		[x: string]: {
+			preventDefault: boolean;
+		};
+	}>;
+}> | undefined) => void, useIsFocused: () => boolean | undefined, useCustomEventListener: typeof useCustomEventListener, useAsyncEffect: (func: () => void | Promise<void | (() => void)> | (() => void), deps?: import("react").DependencyList | undefined, destructor?: (() => void) | undefined) => Promise<void>, dispatchCustomEvent: <T>(eventType: string, payload: T, element?: HTMLElement | Document | Window) => void, px: (value: number) => string | undefined, unPx: (value: string | undefined) => number | undefined;
 export type ClearWhen = "tick" | "never";
 export type Sample = {
 	name: string;

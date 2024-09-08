@@ -1,1 +1,1 @@
-{"version":3,"file":"dispatchCustomEvent.d.ts","sourceRoot":"","sources":["../../src/hook/dispatchCustomEvent.ts"],"names":[],"mappings":"AACA,eAAO,MAAM,mBAAmB,GAAI,CAAC,aACxB,MAAM,WACR,CAAC,YACD,WAAW,GAAG,QAAQ,GAAG,MAAM,SAOzC,CAAC"}
+{"version":3,"file":"dispatchCustomEvent.d.ts","sourceRoot":"","sources":["../../src/hook/dispatchCustomEvent.ts"],"names":[],"mappings":"AACA,eAAO,MAAM,mBAAmB,iBACnB,MAAM,wBAER,WAAW,GAAG,QAAQ,GAAG,MAAM,SAOzC,CAAC"}

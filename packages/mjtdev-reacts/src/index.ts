@@ -69,7 +69,9 @@ export * from "./util/resizeElementToContent";
 export * from "./util/unPx";
 
 import { Reacts } from "./Reacts";
+import type { StateAndUpdater, StateGetter, StateUpdater } from "./state/State";
 
+export type { StateAndUpdater, StateGetter, StateUpdater };
 // hooks and utils
 export const {
   useClickOutside,

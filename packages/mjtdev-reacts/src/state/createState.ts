@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { createStateUpdater } from "./createStateUpdater";
-import { StateAndUpdater, StateGetter, StateUpdater } from "./State";
+import type { StateAndUpdater, StateGetter, StateUpdater } from "./State";
 
 // export const createState = <T>(init: T): StateAndUpdater<T> => {
 export const createState = <T>(init: T | (() => T)): StateAndUpdater<T> => {

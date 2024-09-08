@@ -6,9 +6,9 @@ import { ReactCssProperties } from "../type/ReactTypes";
  *  @import url(https://fonts.googleapis.com/css2?family=Material+Icons);
  */
 export declare const Icon: ({ children, style, onClick, code, }: {
-    code?: keyof MaterialIconCodes;
-    onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-    children?: keyof MaterialIconCodes;
-    style?: ReactCssProperties;
+    code?: keyof MaterialIconCodes | undefined;
+    onClick?: ((event: React.MouseEvent<HTMLElement, MouseEvent>) => void) | undefined;
+    children?: keyof MaterialIconCodes | undefined;
+    style?: React.CSSProperties | undefined;
 }) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=Icon.d.ts.map

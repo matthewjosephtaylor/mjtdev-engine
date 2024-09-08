@@ -1,4 +1,4 @@
-import { UseBoundStore, StoreApi } from "zustand";
+import type { UseBoundStore, StoreApi } from "zustand";
 
 export type State<T> = UseBoundStore<StoreApi<T>>;
 

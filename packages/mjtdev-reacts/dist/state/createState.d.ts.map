@@ -1,1 +1,1 @@
-{"version":3,"file":"createState.d.ts","sourceRoot":"","sources":["../../src/state/createState.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,eAAe,EAA6B,MAAM,SAAS,CAAC;AAGrE,eAAO,MAAM,WAAW,GAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,MAAM,CAAC,CAAC,KAAG,eAAe,CAAC,CAAC,CAYrE,CAAC"}
+{"version":3,"file":"createState.d.ts","sourceRoot":"","sources":["../../src/state/createState.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,eAAe,EAA6B,MAAM,SAAS,CAAC;AAG1E,eAAO,MAAM,WAAW,gDAYvB,CAAC"}
