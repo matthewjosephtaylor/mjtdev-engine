@@ -15,7 +15,8 @@
     "build-esbuild": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
     "build-types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
     "watch": "watch ./src 'npm run build'",
-    "version": "20240908.1745"
+    "version": "20240908.1745",
+    "build-release": "tsc -b && npm run build-types || true && ./scripts/version.sh"
   },
   "keywords": [],
   "author": "Matt Taylor @mjtdev",
