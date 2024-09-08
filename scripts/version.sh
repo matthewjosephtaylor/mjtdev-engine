@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Get the current date and time in YYYYMMDD.HHMM format
-VERSION=$(date +"%Y%m%d.%H%M")
+# Get the current date and time in YYYY.M.D-HHMM format
+VERSION=$(date +"%Y.%m.%d-%H%M")
 
 # Update the version in package.json
 sed -i '' "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" package.json
@@ -14,5 +14,3 @@ git commit -m "Update version to $VERSION"
 git tag "$VERSION"
 git remote | xargs -I {} git push {} --tags
 git remote | xargs -I {} git push {} --all
-
-
