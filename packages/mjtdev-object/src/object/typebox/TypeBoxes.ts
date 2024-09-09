@@ -5,7 +5,7 @@ import { typeTextToSchema } from "./typeTextToSchema";
 import { schemaToAnyOfs } from "./schemaToAnyOfs";
 import { schemaToTypeInfo } from "./schemaToTypeInfo";
 
-export type TypeInfo<T> = {
+export type TypeInfo<T = unknown> = {
   type: T;
   typeDeclaration: string;
   validate: (data: unknown) => boolean;

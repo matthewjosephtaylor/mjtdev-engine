@@ -1,8 +1,4 @@
 import type { TSchema } from "@sinclair/typebox";
-export declare const schemaToTypeInfo: (schema: TSchema) => {
-    type: unknown;
-    typeDeclaration: string;
-    validate: (data: unknown) => boolean;
-    schema: TSchema;
-};
+import type { TypeInfo } from "./TypeBoxes";
+export declare const schemaToTypeInfo: (schema: TSchema) => TypeInfo;
 //# sourceMappingURL=schemaToTypeInfo.d.ts.map

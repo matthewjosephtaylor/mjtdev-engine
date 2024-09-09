@@ -2,8 +2,9 @@
 import type { Static, TSchema } from "@sinclair/typebox";
 import { Value } from "@sinclair/typebox/value";
 import { generateTypeScriptType } from "./generateTypeScriptType";
+import type { TypeInfo } from "./TypeBoxes";
 
-export const schemaToTypeInfo = (schema: TSchema) => {
+export const schemaToTypeInfo = (schema: TSchema): TypeInfo => {
   // Retrieve the type name from the schema metadata
   const typeName = schema.$id ?? "UnnamedType";
 
