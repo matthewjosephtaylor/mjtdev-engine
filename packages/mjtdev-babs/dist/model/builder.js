@@ -27,7 +27,7 @@ import { ArcRotateCamera } from "@babylonjs/core/Cameras/arcRotateCamera";
 import { PBRMaterial } from "@babylonjs/core/Materials/PBR/pbrMaterial";
 import { Mesh } from "@babylonjs/core/Meshes/mesh";
 export const builder = async (props = {}) => {
-    const { path = [], exposure = 1.6, toneMappingEnabled = true, addDefaultLights = true, clearColor = "grey", scene = new Scene(createEngine()), } = props;
+    const { path = [], exposure = 1.6, toneMappingEnabled = true, addDefaultLights = false, clearColor = "grey", scene = new Scene(createEngine()), } = props;
     const paths = Array.isArray(path) ? path : [path];
     await Promise.all(paths.map(async (path) => {
         await loadDazFigure({ scene, path });
@@ -39,12 +39,12 @@ export const builder = async (props = {}) => {
     scene.imageProcessingConfiguration.toneMappingType =
         ImageProcessingConfiguration.TONEMAPPING_ACES;
     const highlightLayer = new HighlightLayer("highlightLayer", scene);
-    const camera = new UniversalCamera("camera1", v3(0, 1, 1), scene);
-    scene.activeCamera = camera;
+    // const camera = new UniversalCamera("camera1", v3(0, 1, 1), scene);
+    // scene.activeCamera = camera;
     if (addDefaultLights) {
         addDefaultLightsToScene(scene);
     }
-    camera.minZ = 0;
+    // camera.minZ = 0;
     const STATE = {
         lock: undefined,
         remaps: {},
@@ -301,7 +301,7 @@ export const builder = async (props = {}) => {
             return b;
         },
     };
-    b.reset();
+    // b.reset();
     return b;
 };
 //# sourceMappingURL=builder.js.map

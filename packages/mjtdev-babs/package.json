@@ -20,6 +20,12 @@
     "@types/offscreencanvas": "^2019.7.0",
     "typescript": "^5.4.5"
   },
+  "peerDependencies": {
+    "d3-array": "^3.1.1",
+    "@babylonjs/core": "^7.5.0",
+    "@babylonjs/loaders": "^7.5.0",
+    "@babylonjs/inspector": "^7.5.0"
+  },
   "dependencies": {
     "@mjtdev/animate": "^1.0.3",
     "@mjtdev/assert": "^1.0.0",
@@ -31,9 +37,6 @@
     "@mjtdev/noise": "^1.0.1",
     "@mjtdev/object": "^1.1.9",
     "@mjtdev/random": "^1.0.4",
-    "@mjtdev/string": "^1.0.0",
-    "d3-array": "^3.1.1",
-    "@babylonjs/core": "^7.5.0",
-    "@babylonjs/loaders": "^7.5.0"
+    "@mjtdev/string": "^1.0.0"
   }
 }

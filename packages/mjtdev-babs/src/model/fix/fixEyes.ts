@@ -82,29 +82,31 @@ export const fixEyes = (mesh: AbstractMesh) => {
     // material.albedoColor = c3("red");
   }
 
-  // 'white' of the eyes for g8 model
+  // moisture?
   if (mesh.name === "Genesis8Female.Shape_primitive10") {
     const material = mesh.material as PBRMaterial;
-    material.zOffset = -1;
-    // material.roughness = 0.5;
+    material.metallic = 0;
+    mesh.visibility = 0;
+    // // material.zOffset = -1;
+    // // material.roughness = 0.5;
+    // // material.clearCoat.isEnabled = true;
+    // // material.clearCoat.intensity = 1;
+    // // material.useLogarithmicDepth = true;
+
+    // // material.subSurface.isScatteringEnabled = true;
+    // // material.subSurface.scatteringDiffusionProfile = c3("grey");
+
+    // material.transparencyMode = 2;
     // material.clearCoat.isEnabled = true;
-    // material.clearCoat.intensity = 1;
-    // material.useLogarithmicDepth = true;
+    // material.clearCoat.intensity = 0.3;
+    // material.subSurface.isTranslucencyEnabled = true;
+    // material.subSurface.translucencyIntensity = 1;
+    // material.subSurface.translucencyIntensityTexture = material.albedoTexture;
+    // // material.albedoTexture.hasAlpha = true;
 
-    // material.subSurface.isScatteringEnabled = true;
-    // material.subSurface.scatteringDiffusionProfile = c3("grey");
-
-    material.transparencyMode = 2;
-    material.clearCoat.isEnabled = true;
-    material.clearCoat.intensity = 0.3;
-    material.subSurface.isTranslucencyEnabled = true;
-    material.subSurface.translucencyIntensity = 1;
-    material.subSurface.translucencyIntensityTexture = material.albedoTexture;
-    // material.albedoTexture.hasAlpha = true;
-
-    // visibility controls the 'redness' of the eyes
-    mesh.visibility = 0.4;
-    // mesh.setEnabled(false);
+    // // visibility controls the 'redness' of the eyes
+    // mesh.visibility = 0.4;
+    // // mesh.setEnabled(false);
   }
 
   // pupil mask (water layer)
@@ -123,6 +125,22 @@ export const fixEyes = (mesh: AbstractMesh) => {
     // mesh.visibility = 1;
   }
 
+  // iris
+  if (mesh.name === "Genesis8Female.Shape_primitive13") {
+    const material = mesh.material as PBRMaterial;
+    material.metallic = 0;
+  }
+
+  // sclarera
+  if (mesh.name === "Genesis8Female.Shape_primitive14") {
+    const material = mesh.material as PBRMaterial;
+    material.opacityTexture = null;
+    material.metallic = 0;
+    material.useAlphaFromAlbedoTexture = false;
+    if (material.albedoTexture) {
+      material.albedoTexture.level = 3;
+    }
+  }
   // bottom edge of eyelid
   if (mesh.name.endsWith("Eyelashes.Shape_primitive0")) {
     const material = mesh.material as PBRMaterial;

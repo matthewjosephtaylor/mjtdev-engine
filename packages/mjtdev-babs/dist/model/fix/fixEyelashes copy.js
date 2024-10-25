@@ -22,4 +22,4 @@ export const fixEyelashes = (scene) => {
         }
     });
 };
-//# sourceMappingURL=fixEyelashes.js.map
+//# sourceMappingURL=fixEyelashes%20copy.js.map

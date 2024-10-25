@@ -44,7 +44,7 @@ export const builder = async (
     path = [],
     exposure = 1.6,
     toneMappingEnabled = true,
-    addDefaultLights = true,
+    addDefaultLights = false,
     clearColor = "grey",
     scene = new Scene(createEngine()),
   } = props;
@@ -64,12 +64,12 @@ export const builder = async (
 
   const highlightLayer = new HighlightLayer("highlightLayer", scene);
 
-  const camera = new UniversalCamera("camera1", v3(0, 1, 1), scene);
-  scene.activeCamera = camera;
+  // const camera = new UniversalCamera("camera1", v3(0, 1, 1), scene);
+  // scene.activeCamera = camera;
   if (addDefaultLights) {
     addDefaultLightsToScene(scene);
   }
-  camera.minZ = 0;
+  // camera.minZ = 0;
   const STATE = {
     lock: undefined as string | undefined,
     remaps: {} as MorphRemaps,
@@ -339,6 +339,6 @@ export const builder = async (
       return b;
     },
   };
-  b.reset();
+  // b.reset();
   return b;
 };

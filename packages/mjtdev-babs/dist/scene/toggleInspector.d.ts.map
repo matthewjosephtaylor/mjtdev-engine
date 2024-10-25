@@ -1,1 +1,1 @@
-{"version":3,"file":"toggleInspector.d.ts","sourceRoot":"","sources":["../../src/scene/toggleInspector.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,iBAAiB,CAAC;AAE7C,eAAO,MAAM,eAAe,UAAW,KAAK,SAM3C,CAAC"}
+{"version":3,"file":"toggleInspector.d.ts","sourceRoot":"","sources":["../../src/scene/toggleInspector.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,iBAAiB,CAAC;AAG7C,OAAO,kCAAkC,CAAC;AAC1C,OAAO,sBAAsB,CAAC;AAE9B,eAAO,MAAM,eAAe,UAAW,KAAK,SAM3C,CAAC"}
