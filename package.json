@@ -1,6 +1,6 @@
 {
   "name": "@mjtdev/engine",
-  "version": "2024.9.9-1256",
+  "version": "2024.10.25-1350",
   "sideEffects": false,
   "description": "MJT in a box",
   "main": "dist/index.js",
