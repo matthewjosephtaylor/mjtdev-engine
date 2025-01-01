@@ -2,6 +2,7 @@
 
 
 ## 2025-01-01
+- updated build scripts ([fddfecf](https://github.com/matthewjosephtaylor/avatar-3d/commit/fddfecfff91e83825bdaec92a34521fb3d1a9dec)) by Matt Taylor
 - move to React-19 ([4e0cf25](https://github.com/matthewjosephtaylor/avatar-3d/commit/4e0cf2587185763f6e350c108991c872d41da907)) by Matt Taylor
 
 ## 2024-10-25
