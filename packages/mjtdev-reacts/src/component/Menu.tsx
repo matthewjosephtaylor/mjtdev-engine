@@ -1,5 +1,5 @@
-import React, { ReactChild } from "react";
-import { ReactNode } from "react";
+import React from "react";
+import type { ReactNode } from "react";
 import { Click } from "./Click";
 import { Grid } from "./Grid";
 
@@ -7,7 +7,7 @@ export type MenuItems = MenuItem[];
 export type MenuItem = [
   content: ReactNode,
   action: () => void,
-  toolTip?: ReactChild
+  toolTip?: ReactNode
 ];
 
 export const Menu = ({

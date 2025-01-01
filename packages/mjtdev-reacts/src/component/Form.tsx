@@ -1,5 +1,5 @@
 import { isDefined, Objects } from "@mjtdev/object";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type JSX } from "react";
 import { Grid } from "./Grid";
 
 export type FormValueType = "string" | "number" | "boolean" | "color";
@@ -9,7 +9,7 @@ export const INPUT_VALUE_CONTROLS: Record<
   (key: string, value?: string) => JSX.Element
 > = {
   string: (key, value) => (
-    <input key={`${key}-${value}`} name={key} defaultValue={value}></input>
+    <input key={`${key}-${value}`} name={key} defaultValue={value} />
   ),
   number: (key, value) => (
     <input
@@ -18,7 +18,7 @@ export const INPUT_VALUE_CONTROLS: Record<
       name={key}
       defaultValue={value}
       type="number"
-    ></input>
+    />
   ),
   boolean: (key, value) => (
     <input
@@ -27,7 +27,7 @@ export const INPUT_VALUE_CONTROLS: Record<
       name={key}
       defaultValue={value}
       type="checkbox"
-    ></input>
+    />
   ),
   color: (key, value) => (
     <input
@@ -36,7 +36,7 @@ export const INPUT_VALUE_CONTROLS: Record<
       name={key}
       defaultValue={value}
       type="color"
-    ></input>
+    />
   ),
 };
 

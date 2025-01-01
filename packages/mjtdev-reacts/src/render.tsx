@@ -1,12 +1,12 @@
-import { ReactChild, ReactNode } from "react";
+import type { ReactNode } from "react";
 import ReactDOM from "react-dom/client";
-import { RenderControl } from "./type/RenderControl";
+import type { RenderControl } from "./type/RenderControl";
 
-import { GuiContextProvider, GuiCtx } from "./ctx/GuiContextProvider";
-import React from "react";
+import type { GuiCtx } from "./ctx/GuiContextProvider";
+import { GuiContextProvider } from "./ctx/GuiContextProvider";
 
 export const render = (
-  node: ReactChild | ReactNode[],
+  node: ReactNode | ReactNode[],
   parent = document.body,
   container = document.createElement("div")
 ): RenderControl => {

@@ -7,7 +7,7 @@ import { useCustomEventListener } from "./hook/useCustomEventListener";
 export * from "./type/ReactTypes";
 export * from "./type/MaterialIconCodes";
 export declare const Reacts: {
-    render: (node: import("react").ReactNode[] | import("react").ReactChild, parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
+    render: (node: import("react").ReactNode | import("react").ReactNode[], parent?: HTMLElement, container?: HTMLDivElement) => import(".").RenderControl;
     useDropzone: typeof useDropzone;
     toRoutes: (routes: import("./component/type/RouteTable").RouteTable) => import("react").ReactNode[];
     createReactContext: <T extends object>(initial?: T | undefined) => import("./createReactContext").ReactContextContainer<T>;
@@ -23,7 +23,7 @@ export declare const Reacts: {
     useClickOutside: typeof useClickOutside;
     useEventListener: typeof useEventListener;
     useRenderCount: typeof useRenderCount;
-    useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | boolean | Iterable<import("react").ReactNode> | import("react/jsx-runtime").JSX.Element;
+    useAddToDesk: () => (node: import("react").ReactNode, id?: string) => string | number | bigint | boolean | Iterable<import("react").ReactNode> | Promise<string | number | bigint | boolean | import("react").ReactPortal | import("react").ReactElement<unknown, string | import("react").JSXElementConstructor<any>> | Iterable<import("react").ReactNode> | null | undefined> | import("react/jsx-runtime").JSX.Element;
     useRemoveFromDesk: () => () => void;
     useNav: () => (path: string) => void;
     usePreviousPath: () => any;

@@ -5,5 +5,5 @@ export declare const Frame: ({ children, routes, type, initialPath, index, }: {
     children: ReactNode;
     routes?: ReactNode;
     type?: "memory" | "hash" | undefined;
-}) => JSX.Element;
+}) => any;
 //# sourceMappingURL=Frame.d.ts.map

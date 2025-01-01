@@ -1,5 +1,7 @@
 import { isDefined, isUndefined } from "@mjtdev/object";
-import React, { ReactChild, ReactNode, useState } from "react";
+import type React from "react";
+import type { ReactNode } from "react";
+import { useState } from "react";
 import { useAddToDesk } from "../hook/useAddToDesk";
 import { useNav } from "../hook/useNav";
 import { Hover } from "./Hover";
@@ -18,8 +20,8 @@ export const Click = ({
   open?: ReactNode;
   openId?: string;
   tooltipDelayMills?: number;
-  tooltip?: ReactChild;
-  contextMenu?: ReactChild;
+  tooltip?: ReactNode;
+  contextMenu?: ReactNode;
   to?: string;
   children?: ReactNode;
 }) => {

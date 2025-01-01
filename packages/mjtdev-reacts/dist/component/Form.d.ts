@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import { type JSX } from "react";
 export type FormValueType = "string" | "number" | "boolean" | "color";
 export declare const INPUT_VALUE_CONTROLS: Record<FormValueType, (key: string, value?: string) => JSX.Element>;
 export declare const formEntryToFormLine: (key: string, valueType: FormValueType) => (import("react/jsx-runtime").JSX.Element | ((key: string, value?: string) => JSX.Element))[];

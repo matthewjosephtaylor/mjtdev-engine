@@ -1,10 +1,9 @@
-import { ReactChild } from "react";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 export type MenuItems = MenuItem[];
 export type MenuItem = [
     content: ReactNode,
     action: () => void,
-    toolTip?: ReactChild
+    toolTip?: ReactNode
 ];
 export declare const Menu: ({ items, direction, className, }: {
     className?: string | undefined;

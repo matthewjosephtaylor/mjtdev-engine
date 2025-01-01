@@ -17,17 +17,17 @@
   "author": "@mjtdev",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "react-router-dom": "^6.3.0",
-    "styled-components": "^5.3.5"
-  },
-  "dependencies": {
+    "styled-components": "^5.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^4.4.6",
+    "immer": "^10.0.2",
     "@mjtdev/assert": "^1.0.0",
     "@mjtdev/byte": "^1.0.1",
     "@mjtdev/html": "^1.0.0",
@@ -35,10 +35,10 @@
     "@mjtdev/input": "^1.0.5",
     "@mjtdev/math": "^1.0.5",
     "@mjtdev/object": "^1.1.9",
-    "@mjtdev/random": "^1.0.6",
+    "@mjtdev/random": "^1.0.6"
+  },
+  "dependencies": {
     "@monaco-editor/react": "^4.5.2",
-    "immer": "^10.0.2",
-    "zustand": "^4.4.6",
     "react-dropzone": "^11.5.1"
   }
 }

@@ -1,10 +1,12 @@
 import { isDefined } from "@mjtdev/object";
-import React, {
+import type { ReactNode } from "react";
+import type React from "react";
+import {
   createContext,
-  ReactNode,
   useContext,
   useEffect,
   useState,
+  type JSX,
 } from "react";
 
 export const createReactContext = <T extends object>(

@@ -3,8 +3,8 @@ import { isDefined } from "@mjtdev/object";
 import { useEffect, useRef, useState } from "react";
 import { bestVisiblePosition } from "./bestVisiblePosition";
 export const Hover = ({ setShow, children, className = "hover", }) => {
-    const parentRect = useRef();
-    const rect = useRef();
+    const parentRect = useRef(null);
+    const rect = useRef(null);
     // NOTE calculates bounding rect on this initial position!
     const [position, setPosition] = useState({ x: 0, y: 0 });
     useEffect(() => {

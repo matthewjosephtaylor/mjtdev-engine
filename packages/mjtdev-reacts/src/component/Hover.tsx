@@ -1,5 +1,7 @@
 import { isDefined } from "@mjtdev/object";
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
 import { bestVisiblePosition } from "./bestVisiblePosition";
 
 type Position = { x: number | string; y: number | string };
@@ -13,8 +15,8 @@ export const Hover = ({
   setShow?: React.Dispatch<React.SetStateAction<boolean>>;
   children: ReactNode;
 }) => {
-  const parentRect = useRef<DOMRect>();
-  const rect = useRef<DOMRect>();
+  const parentRect = useRef<DOMRect | null | undefined>(null);
+  const rect = useRef<DOMRect | null | undefined>(null);
 
   // NOTE calculates bounding rect on this initial position!
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
