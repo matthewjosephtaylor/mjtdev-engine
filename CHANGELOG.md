@@ -1,7 +1,11 @@
 # Changelog
 
 
+## 2025-01-03
+- introduced pnpm ([468c0f2](https://github.com/matthewjosephtaylor/avatar-3d/commit/468c0f2d68fcd01105e6419b206bf6a7653fc445)) by Matt Taylor
+
 ## 2025-01-01
+- build dist ([7c222af](https://github.com/matthewjosephtaylor/avatar-3d/commit/7c222aff0e49459f869aa5ddd197c87698f4f238)) by Matt Taylor
 - updated build scripts ([fddfecf](https://github.com/matthewjosephtaylor/avatar-3d/commit/fddfecfff91e83825bdaec92a34521fb3d1a9dec)) by Matt Taylor
 - move to React-19 ([4e0cf25](https://github.com/matthewjosephtaylor/avatar-3d/commit/4e0cf2587185763f6e350c108991c872d41da907)) by Matt Taylor
 
