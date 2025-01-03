@@ -27,7 +27,7 @@
     "@babylonjs/inspector": "^7.5.0"
   },
   "dependencies": {
-    "@mjtdev/animate": "^1.0.3",
+    "@mjtdev/animate": "^1.0.4",
     "@mjtdev/assert": "^1.0.0",
     "@mjtdev/color": "^1.0.7",
     "@mjtdev/image": "^1.0.6",

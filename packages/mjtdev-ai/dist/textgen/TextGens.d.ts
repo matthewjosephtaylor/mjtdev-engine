@@ -8,7 +8,7 @@ export declare const TextGens: {
         textgenParams: Partial<import("..").TextGenParams>;
         monitor: import("..").MonitorFunction;
     }>>;
-    textToTokens: (text: string) => string[];
+    textToTokens: (text: string) => number[];
     modelInfo: () => Promise<import("../type/ModelInfo").ModelInfo> | undefined;
     loadModel: (modelName: string, options?: Partial<{
         loader: "AutoGPTQ" | "ExLlama" | "ExLlama_HF";

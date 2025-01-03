@@ -15,7 +15,7 @@
     "build-esbuild": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
     "build-types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
     "watch": "watch ./src 'npm run build'",
-    "build-release": "npm run build-rollup && npm run build-types || true && npm run changelog && git add-commit 'build dist' && ./scripts/version.sh",
+    "build-release": "pnpm run build-rollup && pnpm run build-types || true && pnpm run changelog && git add-commit 'build dist' && ./scripts/version.sh",
     "changelog": "./scripts/changes.sh > CHANGELOG.md"
   },
   "keywords": [],
