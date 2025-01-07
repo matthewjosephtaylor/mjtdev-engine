@@ -21,7 +21,7 @@ export {
 export * from "@mjtdev/math";
 export * from "@mjtdev/nlp";
 export * from "@mjtdev/noise";
-// export * from "@mjtdev/message";
+export * from "@mjtdev/message";
 export {
   Arrays,
   Keys,
