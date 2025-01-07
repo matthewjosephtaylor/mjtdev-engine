@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "sideEffects": false,
   "description": "mjtdev message",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build-esbuild": "npx esbuild ./src/index.ts --bundle --target=es2022 '--external:crypto' --outfile=dist/index.js",
