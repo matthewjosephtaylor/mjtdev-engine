@@ -1,7 +1,11 @@
 # Changelog
 
 
+## 2025-01-07
+- re-introduced mjtdev-messages ([fbf26f4](https://github.com/matthewjosephtaylor/avatar-3d/commit/fbf26f47fe8786d0eaa1075ee9d3ded0432f80c4)) by Matt Taylor
+
 ## 2025-01-03
+- build dist ([1d9bf10](https://github.com/matthewjosephtaylor/avatar-3d/commit/1d9bf10635b922ab34caf367bc9ba8f0beb51b8a)) by Matt Taylor
 - introduced pnpm ([468c0f2](https://github.com/matthewjosephtaylor/avatar-3d/commit/468c0f2d68fcd01105e6419b206bf6a7653fc445)) by Matt Taylor
 
 ## 2025-01-01
