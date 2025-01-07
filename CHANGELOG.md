@@ -2,6 +2,8 @@
 
 
 ## 2025-01-07
+- fixed mjtdev-messages main: inside package.json to point to JS instead of TS ([53260a0](https://github.com/matthewjosephtaylor/avatar-3d/commit/53260a02a8570adf72f8120f247dbbbdf886b2e6)) by Matt Taylor
+- build dist ([58a111a](https://github.com/matthewjosephtaylor/avatar-3d/commit/58a111a0afd39c0e3931f09fc27ed17b7d313223)) by Matt Taylor
 - re-introduced mjtdev-messages ([fbf26f4](https://github.com/matthewjosephtaylor/avatar-3d/commit/fbf26f47fe8786d0eaa1075ee9d3ded0432f80c4)) by Matt Taylor
 
 ## 2025-01-03
